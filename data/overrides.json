@@ -1,0 +1,678 @@
+{
+ "Tour Down Under|Australia": {
+  "lat": -34.93,
+  "lon": 138.6
+ },
+ "Tour Down Under Women's Race|Australia": {
+  "lat": -34.93,
+  "lon": 138.6
+ },
+ "Tour El Salvador|El Salvador": {
+  "lat": 13.69,
+  "lon": -89.19
+ },
+ "Classica Camp de Morvedre|Spain": {
+  "lat": 39.68,
+  "lon": -0.28
+ },
+ "GP Castellón - Ruta de la Cerámica|Spain": {
+  "lat": 39.99,
+  "lon": -0.04
+ },
+ "Trofeo Marratxi - Felanitx|Spain": {
+  "lat": 39.64,
+  "lon": 2.76
+ },
+ "Trofeo Palma Feminina|Spain": {
+  "lat": 39.57,
+  "lon": 2.65
+ },
+ "Trofeo Binissalem - Andratx|Spain": {
+  "lat": 39.69,
+  "lon": 2.84
+ },
+ "Al Ula Tour|Saudi Arabia": {
+  "lat": 26.61,
+  "lon": 37.92
+ },
+ "Trofeo Calvià|Spain": {
+  "lat": 39.57,
+  "lon": 2.51
+ },
+ "Trofeo Ses Salines|Spain": {
+  "lat": 39.34,
+  "lon": 3.05
+ },
+ "Trofeo Serra Tramuntana|Spain": {
+  "lat": 39.77,
+  "lon": 2.71
+ },
+ "Cadel Evans Great Ocean Road Race|Australia": {
+  "lat": -38.15,
+  "lon": 144.36
+ },
+ "Trofeo Andratx - Pollença|Spain": {
+  "lat": 39.58,
+  "lon": 2.42
+ },
+ "GP La Marseillaise|France": {
+  "lat": 43.3,
+  "lon": 5.37
+ },
+ "Trofeo Palma|Spain": {
+  "lat": 39.57,
+  "lon": 2.65
+ },
+ "Etoile de Bessèges|France": {
+  "lat": 44.29,
+  "lon": 4.1
+ },
+ "UAE Tour Women|United Arab Emirates": {
+  "lat": 24.45,
+  "lon": 54.38
+ },
+ "UAE Tour|United Arab Emirates": {
+  "lat": 24.45,
+  "lon": 54.38
+ },
+ "Muscat Classic|Oman": {
+  "lat": 23.59,
+  "lon": 58.41
+ },
+ "Tour of Oman|Oman": {
+  "lat": 23.59,
+  "lon": 58.41
+ },
+ "Aveiro Fegion Champions Classic|Portugal": {
+  "lat": 40.64,
+  "lon": -8.65
+ },
+ "Vuelta CV Feminas|Spain": {
+  "lat": 39.47,
+  "lon": -0.38
+ },
+ "Setmana Volta Femenina Comunitat Valenciana|Spain": {
+  "lat": 39.47,
+  "lon": -0.38
+ },
+ "Figueira Champions Classic|Portugal": {
+  "lat": 40.15,
+  "lon": -8.86
+ },
+ "Clásica Jaén|Spain": {
+  "lat": 37.78,
+  "lon": -3.79
+ },
+ "Volta ao Algarve|Portugal": {
+  "lat": 37.02,
+  "lon": -7.93
+ },
+ "Classica de Almeria|Spain": {
+  "lat": 36.84,
+  "lon": -2.46
+ },
+ "Tour du Rwanda|Rwanda": {
+  "lat": -1.95,
+  "lon": 30.06
+ },
+ "Faun Ardèche Classic|France": {
+  "lat": 44.93,
+  "lon": 4.88
+ },
+ "Omloop Nieuwsblad|Belgium": {
+  "lat": 51.05,
+  "lon": 3.72
+ },
+ "Faun Drôme Classic|France": {
+  "lat": 45.04,
+  "lon": 5.05
+ },
+ "Kuurne-Brussels-Kuurne|Belgium": {
+  "lat": 50.85,
+  "lon": 3.29
+ },
+ "Omloop Van Het Hageland|Belgium": {
+  "lat": 50.99,
+  "lon": 4.84
+ },
+ "Dwars Door Het Hageland|Belgium": {
+  "lat": 50.99,
+  "lon": 4.84
+ },
+ "Le Samyn des Dames|Belgium": {
+  "lat": 50.39,
+  "lon": 3.78
+ },
+ "Le Samyn|Belgium": {
+  "lat": 50.39,
+  "lon": 3.78
+ },
+ "Trofeo Laigueglia|Italy": {
+  "lat": 44.0,
+  "lon": 8.15
+ },
+ "Vuelta a Extremadura Femenina|Spain": {
+  "lat": 38.92,
+  "lon": -6.34
+ },
+ "Ixina Leeuw-Oetingen|Belgium": {
+  "lat": 50.79,
+  "lon": 4.06
+ },
+ "Gooikse Pijl|Belgium": {
+  "lat": 50.79,
+  "lon": 4.06
+ },
+ "Tour de Taiwan|Taiwan": {
+  "lat": 25.03,
+  "lon": 121.57
+ },
+ "Trofeo Alfredo Binda|Italy": {
+  "lat": 45.92,
+  "lon": 8.66
+ },
+ "Noekere Koerse|Belgium": {
+  "lat": 50.91,
+  "lon": 3.5
+ },
+ "Nokere Koerse|Belgium": {
+  "lat": 50.91,
+  "lon": 3.5
+ },
+ "GP de Denain|France": {
+  "lat": 50.33,
+  "lon": 3.4
+ },
+ "Koksijde Classic|Belgium": {
+  "lat": 51.11,
+  "lon": 2.65
+ },
+ "Milano-Sanremo Donne|Italy": {
+  "lat": 43.82,
+  "lon": 7.78
+ },
+ "GP Jean-Pierre Monseré|Belgium": {
+  "lat": 50.95,
+  "lon": 3.12
+ },
+ "Princess Maha Chakri Sirindhorn's Cup Tour of Thailand|Thailand": {
+  "lat": 13.75,
+  "lon": 100.5
+ },
+ "Princess Maha Chakri Sirindhorn's Cup Women's Tour of Thailand|Thailand": {
+  "lat": 13.75,
+  "lon": 100.5
+ },
+ "Ronde Van Brugge|Belgium": {
+  "lat": 51.21,
+  "lon": 3.22
+ },
+ "Elfstedenronde|Belgium": {
+  "lat": 51.21,
+  "lon": 3.22
+ },
+ "Settimana Coppi e Bartali|Italy": {
+  "lat": 44.0,
+  "lon": 12.66
+ },
+ "E3 Saxo Classic|Belgium": {
+  "lat": 50.86,
+  "lon": 3.31
+ },
+ "La Roue Tourangelle|France": {
+  "lat": 47.39,
+  "lon": 0.69
+ },
+ "Paris-Camembert|France": {
+  "lat": 48.92,
+  "lon": 0.2
+ },
+ "La Route Adélie de Vitré|France": {
+  "lat": 48.12,
+  "lon": -1.21
+ },
+ "GP Miguel Indurain|Spain": {
+  "lat": 42.67,
+  "lon": -2.03
+ },
+ "Région Pays de la Loire Tour Féminin|France": {
+  "lat": 47.22,
+  "lon": -1.55
+ },
+ "Scheldeprijs|Belgium": {
+  "lat": 51.25,
+  "lon": 4.5
+ },
+ "Ronde Van Limburg|Belgium": {
+  "lat": 50.93,
+  "lon": 5.34
+ },
+ "Tour of Hainan|China": {
+  "lat": 20.04,
+  "lon": 110.2
+ },
+ "Brabantse Pijl|Belgium": {
+  "lat": 50.88,
+  "lon": 4.7
+ },
+ "Classic Grand Bescançon Doubs|France": {
+  "lat": 47.24,
+  "lon": 6.02
+ },
+ "GP Féminin de Chambéry|France": {
+  "lat": 45.57,
+  "lon": 5.92
+ },
+ "La Flèche Wallonne|Belgium": {
+  "lat": 50.52,
+  "lon": 5.24
+ },
+ "Omloop Van Borsele Women|Belgium": {
+  "lat": 51.43,
+  "lon": 3.74
+ },
+ "GP della Liberazione Donne|Italy": {
+  "lat": 41.9,
+  "lon": 12.5
+ },
+ "Tour de Romandie|Switzerland": {
+  "lat": 46.81,
+  "lon": 7.16
+ },
+ "Festival Elsy Jacobs|Luxembourg": {
+  "lat": 49.6,
+  "lon": 5.95
+ },
+ "Famenne Ardenne Classic|Belgium": {
+  "lat": 50.23,
+  "lon": 5.34
+ },
+ "La Classique Morbihan|France": {
+  "lat": 47.75,
+  "lon": -2.84
+ },
+ "GP du Morbihan Femmes|France": {
+  "lat": 47.75,
+  "lon": -2.84
+ },
+ "Baku-Khankendi Azerbaijan|Azerbaijan": {
+  "lat": 40.41,
+  "lon": 49.87
+ },
+ "Navaraa Women's Classic|Spain": {
+  "lat": 42.82,
+  "lon": -1.64
+ },
+ "Flèche du Sud|Luxembourg": {
+  "lat": 49.87,
+  "lon": 6.16
+ },
+ "Itzulia Women|Spain": {
+  "lat": 43.26,
+  "lon": -2.93
+ },
+ "Omloop Der Kempen Ladies|Belgium": {
+  "lat": 51.32,
+  "lon": 4.95
+ },
+ "Boucles de l'Aulne|France": {
+  "lat": 48.2,
+  "lon": -4.09
+ },
+ "Classique Dunkerque|France": {
+  "lat": 51.03,
+  "lon": 2.38
+ },
+ "4 Jours de Dunkerque|France": {
+  "lat": 51.03,
+  "lon": 2.38
+ },
+ "Emakumeen Saria|Spain": {
+  "lat": 43.32,
+  "lon": -1.98
+ },
+ "Donostia San Sebastian Klasikoa|Spain": {
+  "lat": 43.32,
+  "lon": -1.98
+ },
+ "GP Beiras e Serra da Estrela|Portugal": {
+  "lat": 40.28,
+  "lon": -7.5
+ },
+ "Vuelta a Burgos Feminas|Spain": {
+  "lat": 42.34,
+  "lon": -3.7
+ },
+ "Antwerp Port Epic Ladies|Belgium": {
+  "lat": 51.22,
+  "lon": 4.4
+ },
+ "Antwerp Port Epic - Sels Trophy|Belgium": {
+  "lat": 51.22,
+  "lon": 4.4
+ },
+ "Flanders Diamond Tour|Belgium": {
+  "lat": 51.22,
+  "lon": 4.4
+ },
+ "Argenta Classic - Deurne|Belgium": {
+  "lat": 51.22,
+  "lon": 4.47
+ },
+ "GP Criquelion|Belgium": {
+  "lat": 50.71,
+  "lon": 3.84
+ },
+ "Boucles de la Mayenne|France": {
+  "lat": 48.07,
+  "lon": -0.77
+ },
+ "Bretagne Ladies Tour|France": {
+  "lat": 48.11,
+  "lon": -1.68
+ },
+ "GP Ciudad de Eibar|Spain": {
+  "lat": 43.18,
+  "lon": -2.47
+ },
+ "Mercan'tour Classic Alpes-Maritimes|France": {
+  "lat": 43.7,
+  "lon": 7.27
+ },
+ "Tour of Estonia|Estonia": {
+  "lat": 59.44,
+  "lon": 24.75
+ },
+ "Heistse Pijl|Belgium": {
+  "lat": 51.07,
+  "lon": 4.73
+ },
+ "Alpes Grésivaudan Classic|France": {
+  "lat": 45.28,
+  "lon": 5.88
+ },
+ "Brussels Cycling Classic|Belgium": {
+  "lat": 50.85,
+  "lon": 4.35
+ },
+ "Dwars Door De Westhoek|Belgium": {
+  "lat": 51.03,
+  "lon": 2.86
+ },
+ "Circuit Franco-Belge|Belgium": {
+  "lat": 50.61,
+  "lon": 3.39
+ },
+ "Tour Féminin International des Pyrénées|France": {
+  "lat": 43.23,
+  "lon": 0.07
+ },
+ "Copenhagen Sprint|Denmark": {
+  "lat": 55.68,
+  "lon": 12.57
+ },
+ "Tour de Suisse Women|Switzerland": {
+  "lat": 46.95,
+  "lon": 7.45
+ },
+ "Tour of Slovenia|Slovenia": {
+  "lat": 46.06,
+  "lon": 14.51
+ },
+ "Vuelta a Catalunya Femenina|Spain": {
+  "lat": 41.98,
+  "lon": 2.82
+ },
+ "Andorra Classic|Andorra": {
+  "lat": 42.51,
+  "lon": 1.52
+ },
+ "Sibiu Tour|Romania": {
+  "lat": 45.8,
+  "lon": 24.15
+ },
+ "Tour of Magnificent Qinghai|China": {
+  "lat": 36.62,
+  "lon": 101.78
+ },
+ "La Périgord Ladies|France": {
+  "lat": 45.18,
+  "lon": 0.72
+ },
+ "La Picto en Nouvelle-Aquitaine|France": {
+  "lat": 46.58,
+  "lon": 0.34
+ },
+ "Clásica de Ordizia|Spain": {
+  "lat": 43.05,
+  "lon": -2.17
+ },
+ "China Xizang Trans-Himalaya|China": {
+  "lat": 29.65,
+  "lon": 91.12
+ },
+ "Circuito de Getxo|Spain": {
+  "lat": 43.36,
+  "lon": -3.01
+ },
+ "Arctic Race of Norway|Norway": {
+  "lat": 68.8,
+  "lon": 16.54
+ },
+ "GP Yvonne Reynders|Belgium": {
+  "lat": 50.63,
+  "lon": 5.57
+ },
+ "ADAC Cyclassics|Germany": {
+  "lat": 53.55,
+  "lon": 9.99
+ },
+ "Egmont Cycling Race Women|Belgium": {
+  "lat": 50.87,
+  "lon": 3.82
+ },
+ "GP Lucien Van Impe|Belgium": {
+  "lat": 50.94,
+  "lon": 3.99
+ },
+ "Konvert Kortrijk Koerse|Belgium": {
+  "lat": 50.83,
+  "lon": 3.26
+ },
+ "Muur Classic Geraardsbergen|Belgium": {
+  "lat": 50.77,
+  "lon": 3.88
+ },
+ "Kreiz Breizh Féminin|France": {
+  "lat": 48.27,
+  "lon": -3.57
+ },
+ "Bretagne Classic - Ouest France|France": {
+  "lat": 47.92,
+  "lon": -3.3
+ },
+ "GP Kranj|Slovenia": {
+  "lat": 46.24,
+  "lon": 14.36
+ },
+ "Philadelphia Cycling Classic|United States": {
+  "lat": 39.95,
+  "lon": -75.17
+ },
+ "Tour de Korea|South Korea": {
+  "lat": 37.57,
+  "lon": 126.98
+ },
+ "ZLM Tour|Netherlands": {
+  "lat": 51.5,
+  "lon": 3.89
+ },
+ "Classic Lorient Agglomération|France": {
+  "lat": 47.75,
+  "lon": -3.37
+ },
+ "Tout Commence En Finistère Ladies Classic|France": {
+  "lat": 48.0,
+  "lon": -4.1
+ },
+ "GP Industria & Artigianato|Italy": {
+  "lat": 43.85,
+  "lon": 10.84
+ },
+ "Pointe du Raz Ladies Classic|France": {
+  "lat": 48.04,
+  "lon": -4.66
+ },
+ "Tour of Binzhou|China": {
+  "lat": 37.38,
+  "lon": 118.02
+ },
+ "Giro della Toscana - Memorial Alfredo Martini|Italy": {
+  "lat": 43.66,
+  "lon": 10.63
+ },
+ "Coppa Sabatini|Italy": {
+  "lat": 43.54,
+  "lon": 10.72
+ },
+ "Boucles Drôme Ardèche Femmes|France": {
+  "lat": 44.93,
+  "lon": 4.89
+ },
+ "Tour of Taihu Lake|China": {
+  "lat": 31.49,
+  "lon": 120.31
+ },
+ "GP de Fourmies - La Voix du Nord|France": {
+  "lat": 50.01,
+  "lon": 4.05
+ },
+ "La Choralis Fourmies Féminine|France": {
+  "lat": 50.01,
+  "lon": 4.05
+ },
+ "Trofeo Matteotti|Italy": {
+  "lat": 42.46,
+  "lon": 14.21
+ },
+ "Il Giro d'Abruzzo|Italy": {
+  "lat": 42.46,
+  "lon": 14.21
+ },
+ "Women's Cycling GP Stuttgart|Germany": {
+  "lat": 48.78,
+  "lon": 9.18
+ },
+ "Chrono Féminin du Gatineau|Canada": {
+  "lat": 45.48,
+  "lon": -75.65
+ },
+ "GP de Wallonie Dames|Belgium": {
+  "lat": 50.47,
+  "lon": 4.87
+ },
+ "Tour of Luxembourg|Luxembourg": {
+  "lat": 49.61,
+  "lon": 6.13
+ },
+ "Tour of Huangshan|China": {
+  "lat": 29.71,
+  "lon": 118.34
+ },
+ "World Championships: Men's TT|Canada": {
+  "lat": 45.5,
+  "lon": -73.57
+ },
+ "World Championships: Women's TT|Canada": {
+  "lat": 45.5,
+  "lon": -73.57
+ },
+ "World Championships: Mixed Relay TT|Canada": {
+  "lat": 45.5,
+  "lon": -73.57
+ },
+ "World Championships: Women's Road Race|Canada": {
+  "lat": 45.5,
+  "lon": -73.57
+ },
+ "World Championships: Men's Road Race|Canada": {
+  "lat": 45.5,
+  "lon": -73.57
+ },
+ "Omloop Van Het Houtland|Belgium": {
+  "lat": 51.03,
+  "lon": 3.15
+ },
+ "Paris-Chauny|France": {
+  "lat": 49.62,
+  "lon": 3.22
+ },
+ "Tour de Langkawi|Malaysia": {
+  "lat": 3.14,
+  "lon": 101.69
+ },
+ "Cholet Agglo Tour|France": {
+  "lat": 47.06,
+  "lon": -0.88
+ },
+ "Giro dell'Emilia|Italy": {
+  "lat": 44.49,
+  "lon": 11.34
+ },
+ "Giro dell'Emilia Donne|Italy": {
+  "lat": 44.49,
+  "lon": 11.34
+ },
+ "Sparkassen Münsterland Giro|Germany": {
+  "lat": 51.96,
+  "lon": 7.63
+ },
+ "Binche-Chimay-Binche|Belgium": {
+  "lat": 50.41,
+  "lon": 4.17
+ },
+ "Tre Valle Varesine|Italy": {
+  "lat": 45.82,
+  "lon": 8.83
+ },
+ "Tre Valle Varesine|": {
+  "lat": 45.82,
+  "lon": 8.83
+ },
+ "Tour of Chongming Island|China": {
+  "lat": 31.4,
+  "lon": 121.5
+ },
+ "Il Lombardia|Italy": {
+  "lat": 45.7,
+  "lon": 9.67
+ },
+ "Sun Hung Kai Hong Kong Cyclothon|Hong Kong": {
+  "lat": 22.32,
+  "lon": 114.17
+ },
+ "Tour of Guangxi|China": {
+  "lat": 22.82,
+  "lon": 108.37
+ },
+ "Veneto Women|Italy": {
+  "lat": 45.67,
+  "lon": 12.24
+ },
+ "Veneto Classic|Italy": {
+  "lat": 45.67,
+  "lon": 12.24
+ },
+ "Chrono des Nations|France": {
+  "lat": 46.87,
+  "lon": -1.01
+ },
+ "Utsunomiya Japan Cup|Japan": {
+  "lat": 36.56,
+  "lon": 139.88
+ },
+ "Pionera Race|Spain": {
+  "lat": 38.97,
+  "lon": -0.18
+ }
+}

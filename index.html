@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte des courses UCI sur route</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root {
+    --ink: #e9eef8;
+    --panel: rgba(255, 255, 255, .78);
+    --panel-solid: #ffffff;
+    --line: rgba(40, 70, 140, .16);
+    --line-strong: rgba(40, 70, 140, .34);
+    --text: #101634;
+    --muted: #566190;
+    --wt: #e4156f;      /* WorldTour */
+    --pro: #0a93c9;     /* ProSeries et HC */
+    --other: #7b84c9;   /* autres classes */
+    --display: "Unbounded", "Trebuchet MS", system-ui, sans-serif;
+    --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; background: var(--ink); color: var(--text);
+               font-family: var(--body); font-size: 14px; }
+  button, input { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--pro); outline-offset: 2px; }
+
+  #map { position: fixed; inset: 0; background: var(--ink); }
+
+  .glass { background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+           -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+           box-shadow: 0 10px 40px rgba(30, 50, 110, .2); }
+
+  /* ---------- Panneau ---------- */
+  #panel { position: fixed; top: 14px; left: 14px; width: 340px; max-height: calc(100% - 28px - 150px);
+           z-index: 800; display: flex; flex-direction: column; overflow: hidden; }
+  #panel header { display: flex; align-items: flex-start; gap: 10px; padding: 16px 16px 12px; }
+  #panel h1 { margin: 0; font: 600 17px/1.25 var(--display); letter-spacing: -.01em; }
+  #panel header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  #fold { margin-left: auto; flex: none; width: 32px; height: 32px; border-radius: 10px; cursor: pointer;
+          background: transparent; border: 1px solid var(--line); line-height: 1; font-size: 18px; }
+  #fold:hover { border-color: var(--line-strong); }
+  #body { display: flex; flex-direction: column; min-height: 0; padding: 0 16px 16px; gap: 12px; }
+  #panel.folded #body { display: none; }
+
+  #q { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
+       background: rgba(255,255,255,.75); }
+  #q::placeholder { color: var(--muted); }
+  #q:focus { border-color: var(--pro); outline: none; box-shadow: 0 0 0 3px rgba(10,147,201,.2); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border-radius: 999px;
+          border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 13px; }
+  .chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 8px var(--c); }
+  .chip[aria-pressed="false"] { color: var(--muted); }
+  .chip[aria-pressed="false"] i { background: transparent; box-shadow: none; border: 1px solid var(--muted); }
+  .chip[aria-pressed="true"] { border-color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); }
+
+  .switches { display: grid; gap: 8px; }
+  .switch { display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--text); }
+  .switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .switch .tr { flex: none; width: 34px; height: 20px; border-radius: 999px; background: rgba(40,70,140,.12);
+                border: 1px solid var(--line); position: relative; transition: background .15s; }
+  .switch .tr::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px;
+                       border-radius: 50%; background: var(--muted); transition: transform .15s, background .15s; }
+  .switch input:checked + .tr { background: rgba(10,147,201,.22); border-color: var(--pro); }
+  .switch input:checked + .tr::after { transform: translateX(14px); background: var(--pro); }
+  .switch input:focus-visible + .tr { outline: 2px solid var(--pro); outline-offset: 2px; }
+
+  .listhead { display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+              border-top: 1px solid var(--line); padding-top: 12px; }
+  .listhead h2 { margin: 0; font: 600 13px/1.3 var(--display); }
+  .listhead span { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  #list { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 6px; min-height: 0;
+          scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+  #list li button { width: 100%; text-align: left; cursor: pointer; padding: 9px 11px 9px 14px; border-radius: 10px;
+                    border: 1px solid transparent; background: rgba(255,255,255,.7); position: relative; display: grid; gap: 2px; }
+  #list li button::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 3px; border-radius: 3px;
+                            background: var(--c); box-shadow: 0 0 10px var(--c); }
+  #list li button:hover { border-color: var(--line-strong); background: #fff; }
+  #list .n { font-weight: 600; }
+  #list .m { color: var(--muted); font-size: 12.5px; }
+  #empty { color: var(--muted); line-height: 1.5; margin: 0; }
+
+  /* ---------- Frise du temps ---------- */
+  #timeline { position: fixed; left: 368px; right: 14px; bottom: 34px; z-index: 800; padding: 14px 18px 10px; }
+  #tl-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  #date { font: 600 30px/1 var(--display); letter-spacing: -.02em; min-width: 190px; }
+  #date small { font-size: 14px; color: var(--muted); margin-left: 6px; font-weight: 500; }
+  .btn { padding: 8px 14px; border-radius: 10px; cursor: pointer; border: 1px solid var(--line); background: rgba(255,255,255,.75); }
+  .btn:hover { border-color: var(--line-strong); }
+  .btn.primary { border-color: var(--pro); background: rgba(10,147,201,.12); }
+  #tl-count { margin-left: auto; color: var(--muted); }
+  #track { position: relative; height: 54px; margin-top: 10px; }
+  #bars { position: absolute; inset: 0 0 18px 0; width: 100%; height: calc(100% - 18px); pointer-events: none; }
+  #bars rect { fill: rgba(60,90,170,.3); }
+  #today { position: absolute; top: 0; bottom: 18px; width: 1px; background: var(--wt); opacity: .8; pointer-events: none; }
+  #today span { position: absolute; top: -2px; left: 5px; font-size: 11px; color: var(--wt); white-space: nowrap; }
+  #ticks { position: absolute; left: 0; right: 0; bottom: 0; height: 16px; pointer-events: none; }
+  #ticks span { position: absolute; bottom: 0; font-size: 11.5px; color: var(--muted); transform: translateX(2px); }
+  #ticks span::before { content: ""; position: absolute; left: -2px; bottom: 15px; width: 1px; height: 5px; background: var(--line-strong); }
+  #slider { position: absolute; inset: 0 0 18px 0; width: 100%; height: calc(100% - 18px); margin: 0; background: transparent;
+            -webkit-appearance: none; appearance: none; cursor: ew-resize; }
+  #slider::-webkit-slider-runnable-track { height: 100%; background: transparent; }
+  #slider::-moz-range-track { height: 100%; background: transparent; }
+  #slider::-webkit-slider-thumb { -webkit-appearance: none; width: 4px; height: 100%; border-radius: 2px; border: 0;
+        background: var(--pro); box-shadow: 0 0 12px 2px rgba(10,147,201,.5); }
+  #slider::-moz-range-thumb { width: 4px; height: 100%; border-radius: 2px; border: 0; background: var(--pro);
+        box-shadow: 0 0 12px 2px rgba(10,147,201,.5); }
+
+  /* ---------- Marqueurs ---------- */
+  .dot { transition: fill-opacity .2s; }
+  .g-wt { color: var(--wt); } .g-pro { color: var(--pro); } .g-other { color: var(--other); }
+  .dot.on { filter: drop-shadow(0 0 5px currentColor); }
+  .ring { fill: none; transform-box: fill-box; transform-origin: center; animation: ping 2.4s ease-out infinite; }
+  @keyframes ping { 0% { r: 7px; opacity: .9; } 100% { r: 22px; opacity: 0; } }
+
+  /* ---------- Leaflet ---------- */
+  .leaflet-container { background: var(--ink); font-family: var(--body); }
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--panel-solid); color: var(--text);
+        border: 1px solid var(--line-strong); box-shadow: 0 8px 30px rgba(30,50,110,.25); }
+  .leaflet-popup-content-wrapper { border-radius: 12px; }
+  .leaflet-popup-content { margin: 12px 14px; line-height: 1.5; font-size: 13.5px; }
+  .leaflet-popup-content strong { font: 600 14px/1.3 var(--display); display: block; margin-bottom: 4px; }
+  .leaflet-popup-close-button { color: var(--muted) !important; }
+  .pop-muted { color: var(--muted); }
+  .new { display: inline-block; font: 600 11px/1.5 var(--body); padding: 0 8px; margin-left: 6px; border-radius: 999px;
+         color: var(--wt); border: 1px solid var(--wt); background: color-mix(in srgb, var(--wt) 10%, transparent); vertical-align: 1px; }
+  .leaflet-bar a { background: var(--panel-solid); color: var(--text); border-color: var(--line); }
+  .leaflet-bar a:hover { background: #eef3ff; }
+  .leaflet-tile-pane { filter: saturate(.55) brightness(1.04) contrast(.94); }
+  .leaflet-control-attribution { background: rgba(255,255,255,.78) !important; color: var(--muted) !important; }
+  .leaflet-control-attribution a { color: var(--muted) !important; }
+  .leaflet-top.leaflet-right { top: 0; }
+
+  /* ---------- Petits écrans ---------- */
+  @media (max-width: 760px) {
+    #panel { left: 10px; right: 10px; top: 10px; width: auto; max-height: 46vh; }
+    #timeline { left: 10px; right: 10px; bottom: 30px; padding: 10px 14px 8px; }
+    #date { font-size: 22px; min-width: 0; }
+    #tl-count { display: none; }
+    .leaflet-top.leaflet-right { top: 64px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ring { animation: none; opacity: .5; r: 12px; }
+    .dot, .switch .tr, .switch .tr::after { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div id="map" aria-label="Carte du monde des courses"></div>
+
+<aside id="panel" class="glass" aria-label="Filtres et courses du jour">
+  <header>
+    <div>
+      <h1>Courses UCI sur route</h1>
+      <p id="total">Chargement…</p>
+    </div>
+    <button id="fold" type="button" aria-expanded="true" aria-label="Replier le panneau">−</button>
+  </header>
+  <div id="body">
+    <input id="q" type="search" placeholder="Rechercher une course ou un pays" aria-label="Rechercher une course ou un pays">
+    <div class="chips" role="group" aria-label="Catégories">
+      <button class="chip" type="button" data-g="wt"    aria-pressed="true" style="--c: var(--wt)"><i></i>WorldTour</button>
+      <button class="chip" type="button" data-g="pro"   aria-pressed="true" style="--c: var(--pro)"><i></i>ProSeries et HC</button>
+      <button class="chip" type="button" data-g="other" aria-pressed="true" style="--c: var(--other)"><i></i>Autres classes</button>
+    </div>
+    <div class="switches">
+      <label class="switch"><input id="approx" type="checkbox" checked><span class="tr"></span>Afficher les positions approximatives</label>
+      <label class="switch"><input id="only" type="checkbox"><span class="tr"></span>Masquer les courses hors date</label>
+    </div>
+    <div class="listhead"><h2 id="list-title">En course</h2><span id="list-count"></span></div>
+    <ul id="list"></ul>
+    <p id="empty" hidden>Aucune course à cette date. Déplace la frise ou lance la lecture de la saison.</p>
+  </div>
+</aside>
+
+<section id="timeline" class="glass" aria-label="Frise de la saison">
+  <div id="tl-top">
+    <div id="date" aria-live="polite"></div>
+    <button id="play" class="btn primary" type="button">Lire la saison</button>
+    <button id="now" class="btn" type="button">Aujourd’hui</button>
+    <span id="tl-count"></span>
+  </div>
+  <div id="track">
+    <svg id="bars" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div id="today" hidden><span>aujourd’hui</span></div>
+    <div id="ticks"></div>
+    <input id="slider" type="range" min="0" max="1" step="1" value="0" aria-label="Date de la saison">
+  </div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const MONTHS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const SHORT  = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = id => document.getElementById(id);
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const COLORS = { wt: css("--wt"), pro: css("--pro"), other: css("--other") };
+const GROUP_NAME = { wt: "WorldTour", pro: "ProSeries / HC", other: "Autre classe" };
+
+const map = L.map("map", { minZoom: 2, zoomSnap: 0.5, worldCopyJump: true, zoomControl: false });
+L.control.zoom({ position: "topright" }).addTo(map);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 18,
+  attribution: "© les contributeurs d’OpenStreetMap"
+}).addTo(map);
+const layer = L.layerGroup().addTo(map);
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const dayOf = s => { const [y, m, d] = s.split("-").map(Number); return Math.round(Date.UTC(y, m - 1, d) / 864e5); };
+const dateOf = n => new Date(n * 864e5);
+const isNew = r => r.fs && (todayDay() - dayOf(r.fs)) <= 14;
+const todayDay = () => dayOf(new Date().toISOString().slice(0, 10));
+const short = n => { const d = dateOf(n); return `${d.getUTCDate()} ${SHORT[d.getUTCMonth()]}`; };
+const full  = n => { const d = dateOf(n); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const rangeText = r => r.a === r.b ? full(r.a) : `${short(r.a)} – ${short(r.b)} ${dateOf(r.b).getUTCFullYear()}`;
+
+function groupOf(classes) {
+  const c = (classes || []).join(" ");
+  if (/UWT|WWT/.test(c)) return "wt";
+  if (/Pro|HC/.test(c)) return "pro";
+  return "other";
+}
+// décalage stable : évite que des courses d'un même point se superposent
+function jitter(i, amount) {
+  const f = x => { const v = Math.sin(i * x) * 43758.5453; return v - Math.floor(v) - 0.5; };
+  return [f(12.9898) * amount, f(78.233) * amount];
+}
+
+let races = [], minDay = 0, maxDay = 0, viewMin = 0, viewMax = 0, day = 0, timer = null;
+const groupsOn = { wt: true, pro: true, other: true };
+
+function visible(r) {
+  if (!groupsOn[r.g]) return false;
+  if (!$("approx").checked && r.coords.precision === "country") return false;
+  const q = $("q").value.trim().toLowerCase();
+  if (q && !(r.name + " " + r.country).toLowerCase().includes(q)) return false;
+  if ($("only").checked && !isActive(r)) return false;
+  return true;
+}
+const isActive = r => r.a !== null && r.a <= day && day <= r.b;
+
+function update() {
+  const active = [];
+  for (const r of races) {
+    const show = visible(r);
+    const on = isActive(r);
+    if (!show) { layer.removeLayer(r.dot); layer.removeLayer(r.ring); continue; }
+    if (!layer.hasLayer(r.dot)) layer.addLayer(r.dot);
+    r.dot.setRadius(on ? 7 : 4.5);
+    r.dot.setStyle({ fillOpacity: on ? 0.95 : 0.42, opacity: on ? 1 : 0.6 });
+    r.dot.getElement()?.classList.toggle("on", on);
+    if (on) { if (!layer.hasLayer(r.ring)) layer.addLayer(r.ring); r.dot.bringToFront(); }
+    else layer.removeLayer(r.ring);
+    if (on) active.push(r);
+  }
+  active.sort((x, y) => ["wt","pro","other"].indexOf(x.g) - ["wt","pro","other"].indexOf(y.g) || x.name.localeCompare(y.name));
+
+  const d = dateOf(day);
+  $("date").innerHTML = `${d.getUTCDate()} ${SHORT[d.getUTCMonth()]}<small>${d.getUTCFullYear()}</small>`;
+  $("tl-count").textContent = `${active.length} ${active.length > 1 ? "courses" : "course"} en cours`;
+  $("list-title").textContent = `En course le ${d.getUTCDate()} ${SHORT[d.getUTCMonth()]}`;
+  $("list-count").textContent = active.length ? String(active.length) : "";
+  $("empty").hidden = active.length > 0;
+
+  const ul = $("list");
+  ul.replaceChildren();
+  for (const r of active) {
+    const li = document.createElement("li");
+    const b = document.createElement("button");
+    b.type = "button";
+    b.style.setProperty("--c", COLORS[r.g]);
+    const approx = r.coords.precision === "country" ? " (position approximative)" : "";
+    b.innerHTML = `<span class="n">${esc(r.name)}${isNew(r) ? '<span class="new">nouveau</span>' : ""}</span>` +
+                  `<span class="m">${esc(r.country)}, ${esc(r.classes.join(" / ") || GROUP_NAME[r.g])}${approx}</span>` +
+                  `<span class="m">${esc(rangeText(r))}</span>`;
+    b.addEventListener("click", () => focusOn(r));
+    li.appendChild(b);
+    ul.appendChild(li);
+  }
+  $("slider").value = day;
+}
+
+function focusOn(r) {
+  const z = Math.max(map.getZoom(), 6);
+  if (reduce) map.setView(r.dot.getLatLng(), z); else map.flyTo(r.dot.getLatLng(), z, { duration: 1.1 });
+  r.dot.openPopup();
+}
+
+function buildTimeline() {
+  const n = viewMax - viewMin + 1;
+  const counts = new Array(n).fill(0);
+  for (const r of races) {
+    if (r.a === null) continue;
+    for (let d = Math.max(r.a, viewMin); d <= Math.min(r.b, viewMax); d++) counts[d - viewMin]++;
+  }
+  const peak = Math.max(...counts, 1);
+  const svg = $("bars");
+  svg.setAttribute("viewBox", `0 0 ${n} 1`);
+  svg.innerHTML = counts.map((c, i) => {
+    const h = c / peak;
+    return `<rect x="${i}" y="${1 - h}" width="0.86" height="${h}"/>`;
+  }).join("");
+
+  const ticks = $("ticks");
+  ticks.replaceChildren();
+  for (let d = viewMin; d <= viewMax; d++) {
+    const dt = dateOf(d);
+    if (dt.getUTCDate() === 1) {
+      const s = document.createElement("span");
+      s.style.left = ((d - viewMin) / (n - 1) * 100) + "%";
+      s.textContent = dt.getUTCMonth() === 0 ? `${SHORT[0]} ${dt.getUTCFullYear()}` : SHORT[dt.getUTCMonth()];
+      ticks.appendChild(s);
+    }
+  }
+  const t = todayDay();
+  if (t >= viewMin && t <= viewMax) {
+    const el = $("today");
+    el.hidden = false;
+    el.style.left = ((t - viewMin) / (n - 1) * 100) + "%";
+  }
+  const slider = $("slider");
+  slider.min = viewMin; slider.max = viewMax;
+}
+
+function stop() { clearInterval(timer); timer = null; $("play").textContent = "Lire la saison"; }
+function play() {
+  if (timer) return stop();
+  if (day >= maxDay) day = minDay;
+  $("play").textContent = "Pause";
+  timer = setInterval(() => {
+    if (day >= maxDay) return stop();
+    day++; update();
+  }, 130);
+}
+
+async function init() {
+  const res = await fetch("data/races.json");
+  if (!res.ok) throw new Error("data/races.json introuvable");
+  const raw = await res.json();
+
+  races = raw.filter(r => r.coords).map((r, i) => {
+    const g = groupOf(r.classes);
+    const approx = r.coords.precision === "country";
+    const [dx, dy] = jitter(i + 1, approx ? 0.9 : 0.03);
+    const ll = [r.coords.lat + dy, r.coords.lon + dx];
+    const rr = {
+      name: r.name, country: r.country, classes: r.classes || [], coords: r.coords, g,
+      fs: r.first_seen || null,
+      a: r.start ? dayOf(r.start) : null,
+      b: r.start ? dayOf(r.end || r.start) : null
+    };
+    rr.dot = L.circleMarker(ll, {
+      radius: 4.5, color: COLORS[g], weight: 1.5, fillColor: COLORS[g], fillOpacity: 0.32,
+      dashArray: approx ? "2 3" : null, className: `dot g-${g}`
+    });
+    rr.ring = L.circleMarker(ll, { radius: 7, color: COLORS[g], weight: 1.5, fill: false, interactive: false, className: `ring g-${g}` });
+    rr.dot.bindPopup(() =>
+      `<strong>${esc(rr.name)}</strong>` +
+      `${esc(rr.country)}${isNew(rr) ? '<span class="new">nouveau</span>' : ""}<br>${rr.a === null ? "" : esc(rangeText(rr)) + "<br>"}` +
+      `<span class="pop-muted">${esc(rr.classes.join(" / ") || GROUP_NAME[g])}` +
+      `${approx ? "<br>Position approximative (centre du pays)" : ""}</span>`);
+    return rr;
+  });
+
+  const dated = races.filter(r => r.a !== null);
+  minDay = Math.min(...dated.map(r => r.a));
+  maxDay = Math.max(...dated.map(r => r.b));
+  // La date du jour est placée au milieu de la frise : la fenêtre est symétrique
+  // autour d'aujourd'hui et assez large pour atteindre toutes les courses.
+  const t = todayDay();
+  const half = Math.max(Math.abs(t - minDay), Math.abs(maxDay - t));
+  viewMin = t - half; viewMax = t + half;
+  day = t;
+
+  $("total").textContent = `${races.length} courses sur la saison ${dateOf(minDay).getUTCFullYear()}`;
+  buildTimeline();
+  map.fitBounds(L.latLngBounds(races.map(r => r.dot.getLatLng())).pad(0.1));
+  update();
+}
+
+// ---- interactions ----
+$("slider").addEventListener("input", e => { stop(); day = Number(e.target.value); update(); });
+$("play").addEventListener("click", play);
+$("now").addEventListener("click", () => {
+  stop(); day = Math.min(Math.max(todayDay(), viewMin), viewMax); update();
+});
+["q", "approx", "only"].forEach(id => $(id).addEventListener("input", update));
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  const on = c.getAttribute("aria-pressed") !== "true";
+  c.setAttribute("aria-pressed", String(on));
+  groupsOn[c.dataset.g] = on;
+  update();
+}));
+$("fold").addEventListener("click", () => {
+  const folded = $("panel").classList.toggle("folded");
+  $("fold").textContent = folded ? "+" : "−";
+  $("fold").setAttribute("aria-expanded", String(!folded));
+  $("fold").setAttribute("aria-label", folded ? "Déplier le panneau" : "Replier le panneau");
+});
+if (matchMedia("(max-width: 760px)").matches) $("fold").click();
+
+init().catch(e => {
+  $("total").textContent = "Erreur de chargement";
+  $("list").innerHTML = `<li><p id="empty">${esc(e.message)}. Lance le site avec : py -m http.server 8000</p></li>`;
+});
+</script>
+</body>
+</html>

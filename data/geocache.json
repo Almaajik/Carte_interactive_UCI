@@ -1,0 +1,732 @@
+{
+  "Tour Down Under, Australia": null,
+  "Australia": {
+    "lat": -24.7761086,
+    "lon": 134.755,
+    "display": "Australia"
+  },
+  "Tour El Salvador, El Salvador": null,
+  "El Salvador": {
+    "lat": 13.8000382,
+    "lon": -88.9140683,
+    "display": "El Salvador"
+  },
+  "Tour Down Under Women's Race, Australia": null,
+  "Classica Camp de Morvedre, Spain": null,
+  "Spain": {
+    "lat": 39.3260685,
+    "lon": -4.8379791,
+    "display": "Spain"
+  },
+  "GP Castellón - Ruta de la Cerámica, Spain": null,
+  "Trofeo Marratxi - Felanitx, Spain": null,
+  "Clàsica Comunitat Valenciana, Spain": {
+    "lat": 40.1205681,
+    "lon": -0.5822526,
+    "display": "Senda Clasica, Puebla de Arenoso, El Alto Mijares, Castelló / Castellón, Valencian Community, 44479, Spain"
+  },
+  "Trofeo Palma Feminina, Spain": null,
+  "Trofeo Binissalem - Andratx, Spain": null,
+  "Al Ula Tour, Saudi Arabia": null,
+  "Saudi Arabia": {
+    "lat": 25.6242618,
+    "lon": 42.3528328,
+    "display": "Saudi Arabia"
+  },
+  "Trofeo Calvià, Spain": null,
+  "Trofeo Ses Salines, Spain": null,
+  "Trofeo Serra Tramuntana, Spain": null,
+  "Cadel Evans Great Ocean Road Race, Australia": null,
+  "Trofeo Andratx - Pollença, Spain": null,
+  "GP La Marseillaise, France": null,
+  "France": {
+    "lat": 46.603354,
+    "lon": 1.8883335,
+    "display": "France"
+  },
+  "Pionera Race, Spain": null,
+  "Trofeo Palma, Spain": null,
+  "Etoile de Bessèges, France": null,
+  "Volta Comunitat Valenciana, Spain": {
+    "lat": 38.9112246,
+    "lon": -0.6507285,
+    "display": "Penya de la Volta, Vallada, la Costera, Valencia, Valencian Community, 46692, Spain"
+  },
+  "UAE Tour Women, United Arab Emirates": null,
+  "United Arab Emirates": {
+    "lat": 24.0002488,
+    "lon": 53.9994829,
+    "display": "United Arab Emirates"
+  },
+  "Muscat Classic, Oman": null,
+  "Oman": {
+    "lat": 21.0000287,
+    "lon": 57.0036901,
+    "display": "Oman"
+  },
+  "Tour of Oman, Oman": null,
+  "Aveiro Fegion Champions Classic, Portugal": null,
+  "Portugal": {
+    "lat": 39.6621648,
+    "lon": -8.1353519,
+    "display": "Portugal"
+  },
+  "Trofeo Oro in Euro, Italy": null,
+  "Italy": {
+    "lat": 42.6384261,
+    "lon": 12.674297,
+    "display": "Italy"
+  },
+  "Vuelta CV Feminas, Spain": null,
+  "Setmana Volta Femenina Comunitat Valenciana, Spain": null,
+  "Tour de La Provence, France": {
+    "lat": 44.1806612,
+    "lon": 6.6255715,
+    "display": "Le France, Place de la Tour, Colmars, Castellane, Alpes-de-Haute-Provence, Provence-Alpes-Côte d'Azur, Metropolitan France, 04370, France"
+  },
+  "Vuelta a Murcia, Spain": {
+    "lat": 38.1232602,
+    "lon": -1.0999237,
+    "display": "La Vuelta de la Rambla, Fortuna, Oriental, Region of Murcia, 30001, Spain"
+  },
+  "Figueira Champions Classic, Portugal": null,
+  "Clasica de Almeria, Spain": {
+    "lat": 37.2473018,
+    "lon": -1.8688043,
+    "display": "La Clásica, Calle Mayor, Vera, Almeria, Andalusia, 04620, Spain"
+  },
+  "Clásica Jaén, Spain": null,
+  "UAE Tour, United Arab Emirates": null,
+  "Volta ao Algarve, Portugal": null,
+  "Vuelta a Andalucia - Ruta del Sol, Spain": null,
+  "Classic Var, France": {
+    "lat": 43.4078379,
+    "lon": 6.0642511,
+    "display": "Classic All Blacks, Boulevard Saint-Louis, Brignoles, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83170, France"
+  },
+  "Classica de Almeria, Spain": null,
+  "Midwest Cycling Classic, Belgium": null,
+  "Belgium": {
+    "lat": 50.6402809,
+    "lon": 4.6667145,
+    "display": "Belgium"
+  },
+  "Tour des Alpes-Maritimes, France": {
+    "lat": 43.5742445,
+    "lon": 7.0211661,
+    "display": "Tour des Danys, Rue de Cannes, Les Escarrasses, Le Cannet, Grasse, Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France, 06110, France"
+  },
+  "Tour du Rwanda, Rwanda": null,
+  "Rwanda": {
+    "lat": -2.0002051,
+    "lon": 30.0003963,
+    "display": "Rwanda"
+  },
+  "Giro di Sardegna, Italy": {
+    "lat": 40.1245675,
+    "lon": 9.2832994,
+    "display": "Giro del Govossai, 'Onne/Fonni, Nuoro, Sardinia, 08023, Italy"
+  },
+  "Faun Ardèche Classic, France": null,
+  "Omloop Nieuwsblad, Belgium": null,
+  "Visit South Aegean GP, Greece": null,
+  "Greece": {
+    "lat": 38.9953683,
+    "lon": 21.9877132,
+    "display": "Greece"
+  },
+  "Faun Drôme Classic, France": null,
+  "Kuurne-Brussels-Kuurne, Belgium": null,
+  "Omloop Van Het Hageland, Belgium": null,
+  "Region On Dodecanese GP, Greece": null,
+  "Le Samyn des Dames, Belgium": null,
+  "Le Samyn, Belgium": null,
+  "Trofeo Laigueglia, Italy": null,
+  "Vuelta a Extremadura Femenina, Spain": null,
+  "Strade Bianche, Italy": {
+    "lat": 42.6343194,
+    "lon": 11.6675476,
+    "display": "Le strade bianche di Stampa alternativa, 25, Via Zuccarelli, Pitigliano, Unione di Comuni Montani Colline del Fiora, Grosseto, Tuscany, 58017, Italy"
+  },
+  "Paris-Nice, France": {
+    "lat": 48.8643222,
+    "lon": 2.3529673,
+    "display": "Paris Nice, 223, Rue Saint-Martin, Quartier Sainte-Avoye, 3rd Arrondissement, Paris, Ile-de-France, Metropolitan France, 75003, France"
+  },
+  "Tirreno-Adriatico, Italy": {
+    "lat": 43.456101,
+    "lon": 12.2444671,
+    "display": "Tirreno Adriatico, Via Martiri della Libertà, Città di Castello, Perugia, Umbria, 06012, Italy"
+  },
+  "Ixina Leeuw-Oetingen, Belgium": null,
+  "Tour de Taiwan, Taiwan": null,
+  "Taiwan": {
+    "lat": 23.9739374,
+    "lon": 120.9820179,
+    "display": "Taiwan"
+  },
+  "Trofeo Alfredo Binda, Italy": null,
+  "Milano-Torino, Italy": {
+    "lat": 43.5238448,
+    "lon": 13.2415044,
+    "display": "Con Gusto, 15, Via Rinaldi, Antico Quartiere Ebraico, Jesi, Ancona, Marche, 60035, Italy"
+  },
+  "Noekere Koerse, Belgium": null,
+  "Nokere Koerse, Belgium": null,
+  "GP de Denain, France": null,
+  "Koksijde Classic, Belgium": null,
+  "Milano-Sanremo, Italy": {
+    "lat": 43.8963645,
+    "lon": 8.0767352,
+    "display": "Vincitori Milano-Sanremo, Via Aurelia, Diano Marina, Provincia di Imperia, Liguria, 18913, Italy"
+  },
+  "Milano-Sanremo Donne, Italy": null,
+  "GP Jean-Pierre Monseré, Belgium": null,
+  "Volta a Catalunya, Spain": {
+    "lat": 41.3809446,
+    "lon": 2.1408629,
+    "display": "Plaça de la Volta Ciclista a Catalunya, Sants, Sants-Montjuïc, Barcelona, Barcelonès, Barcelona, Catalonia, Spain"
+  },
+  "Princess Maha Chakri Sirindhorn's Cup Tour of Thailand, Thailand": null,
+  "Thailand": {
+    "lat": 14.8971921,
+    "lon": 100.83273,
+    "display": "Thailand"
+  },
+  "Ronde Van Brugge, Belgium": null,
+  "Settimana Coppi e Bartali, Italy": null,
+  "E3 Saxo Classic, Belgium": null,
+  "GP Emilia, Italy": {
+    "lat": 44.4902497,
+    "lon": 11.3410978,
+    "display": "GP, 35, Via Massimo D'Azeglio, Quadrilatero, Galvani, Porto-Saragozza, Bologna, Emilia-Romagna, 40124, Italy"
+  },
+  "Gent-Wevelgem, Belgium": {
+    "lat": 50.8083068,
+    "lon": 3.1815827,
+    "display": "Gent-Wevelgem, 31, Vanackerestraat, Wevelgem, Kortrijk, West Flanders, Flanders, 8560, Belgium"
+  },
+  "La Roue Tourangelle, France": null,
+  "Paris-Camembert, France": null,
+  "Princess Maha Chakri Sirindhorn's Cup Women's Tour of Thailand, Thailand": null,
+  "Dwars Door Vlaanderen, Belgium": {
+    "lat": 50.8010128,
+    "lon": 3.7731329,
+    "display": "Dwars door Brakel-pad, Nederbrakel, Brakel, Oudenaarde, East Flanders, Flanders, 9660, Belgium"
+  },
+  "La Route Adélie de Vitré, France": null,
+  "GP Miguel Indurain, Spain": null,
+  "NXT Classic, Netherlands": null,
+  "Netherlands": {
+    "lat": 52.2434979,
+    "lon": 5.6343227,
+    "display": "Netherlands"
+  },
+  "Ronde Van Vlaanderen, Belgium": {
+    "lat": 51.2872382,
+    "lon": 5.159803,
+    "display": "Ronde Put, Mol, Turnhout, Antwerp, Flanders, Belgium"
+  },
+  "Itzulia Basque Country, Spain": {
+    "lat": 43.2584823,
+    "lon": -1.8889263,
+    "display": "PR-Gi 1004 Aldurako itzulia, Aldura gunea aldea, Errenteria, Gipuzkoa, Autonomous Community of the Basque Country, 20180, Spain"
+  },
+  "Ronde de Mouscron, Belgium": {
+    "lat": 50.6023342,
+    "lon": 3.4009729,
+    "display": "Chemin de Ronde, Faubourg de Valenciennes, Saint-Jean, Allain, Tournai, Tournai-Mouscron, Hainaut, Wallonia, 7500, Belgium"
+  },
+  "Région Pays de La Loire Tour, France": {
+    "lat": 47.1492026,
+    "lon": -1.6078601,
+    "display": "Météo-France Centre départemental de la Loire-Atlantique, Straed an Tour, Les Renardières, Saint-Aignan-Grandlieu, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44860, France"
+  },
+  "Région Pays de la Loire Tour Féminin, France": null,
+  "Scheldeprijs, Belgium": null,
+  "Paris-Roubaix, France": {
+    "lat": 43.2315926,
+    "lon": 0.0822779,
+    "display": "Le Paris-Roubaix, Rue du Maréchal Foch, Marcadieu, Tarbes, Hautes Pyrenees, Occitania, Metropolitan France, 65000, France"
+  },
+  "O Gran Camiño, Spain": {
+    "lat": 42.2514422,
+    "lon": -8.6113647,
+    "display": "Camiño Coto do Gran, Padrón, Saxamonde, Redondela, Vigo, Pontevedra, Galicia, 36813, Spain"
+  },
+  "Ronde Van Limburg, Belgium": null,
+  "Tour of Hainan, China": null,
+  "China": {
+    "lat": 34.5412252,
+    "lon": 108.9237067,
+    "display": "China"
+  },
+  "Brabantse Pijl, Belgium": null,
+  "Classic Grand Bescançon Doubs, France": null,
+  "Tour du Jura, France": {
+    "lat": 46.6682114,
+    "lon": 5.5511094,
+    "display": "Tour du Jura Sportif, Chemin des Quarts, Les Perrières, Lons-le-Saunier, Jura, Bourgogne – Franche-Comté, Metropolitan France, 39000, France"
+  },
+  "Amstel Gold Race, Netherlands": {
+    "lat": 50.8647519,
+    "lon": 5.8271865,
+    "display": "Amstel Gold Race Xperience, Plenkertstraat, Valkenburg, Valkenburg aan de Geul, Limburg, Netherlands, 6301 GK, Netherlands"
+  },
+  "GP Féminin de Chambéry, France": null,
+  "Tour of the Alps, Italy": null,
+  "La Flèche Wallonne, Belgium": null,
+  "Vuelta Asturias, Spain": {
+    "lat": 43.0062836,
+    "lon": -6.6148683,
+    "display": "La Vuelta, Xedré, Cangas del Narcea, Asturias, 33811, Spain"
+  },
+  "Omloop Van Borsele Women, Belgium": null,
+  "GP della Liberazione Donne, Italy": null,
+  "Liège-Bastogne-Liège, Belgium": {
+    "lat": 50.1827706,
+    "lon": 6.0247975,
+    "display": "Prussia Belgium Luxembourg No 75, Steinemannstraße, Thommen, Burg-Reuland, Gouvy, Verviers, Liège, Wallonia, 4791, Belgium"
+  },
+  "Tour of Türkiye, Türkiye": null,
+  "Türkiye": {
+    "lat": 39.294076,
+    "lon": 35.2316631,
+    "display": "Turkey"
+  },
+  "Tour de Romandie, Switzerland": null,
+  "Switzerland": {
+    "lat": 46.7985624,
+    "lon": 8.2319736,
+    "display": "Switzerland"
+  },
+  "Eschborn-Frankfurt, Germany": {
+    "lat": 50.1306875,
+    "lon": 8.577856,
+    "display": "Eschborner Dreieck;Eschborn, A 66, Sossenheim, West, Frankfurt, Hesse, 65936, Germany"
+  },
+  "GP Anicolor, Portugal": null,
+  "GP Immo Zone Vloer-en-Chapewerken, Belgium": null,
+  "Festival Elsy Jacobs, Luxembourg": null,
+  "Luxembourg": {
+    "lat": 49.8158683,
+    "lon": 6.1296751,
+    "display": "Luxembourg"
+  },
+  "Famenne Ardenne Classic, Belgium": null,
+  "Giro dell'Appennino, Italy": {
+    "lat": 44.55062,
+    "lon": 8.8877001,
+    "display": "Memoriale Albo d'Oro del Giro dell'Appennino, Via dei Marmi SP5 della Bocchetta (Antica Via Postumia), Pietralavezzara, Campomorone, Genoa, Liguria, 16014, Italy"
+  },
+  "Vuelta España Femenina, Spain": null,
+  "Tour of Hellas, Greece": null,
+  "Giro d'Italia, Italy": {
+    "lat": 44.1221124,
+    "lon": 12.3993372,
+    "display": "Piazzale Giro d'Italia, Sant'Angelo, Gatteo, Unione Rubicone e mare, Forlì-Cesena, Emilia-Romagna, 47043, Italy"
+  },
+  "La Classique Morbihan, France": null,
+  "GP du Morbihan, France": {
+    "lat": 47.6090853,
+    "lon": -2.7300277,
+    "display": "GP Tennis court, Chemin du Purgatoire à Moustérian, Le Purgatoire, Séné, Vannes, Morbihan, Brittany, Metropolitan France, 56860, France"
+  },
+  "GP du Morbihan Femmes, France": null,
+  "Baku-Khankendi Azerbaijan, Azerbaijan": null,
+  "Azerbaijan": {
+    "lat": 40.3936294,
+    "lon": 47.7872508,
+    "display": "Azerbaijan"
+  },
+  "Tro-Bro Léon, France": {
+    "lat": 48.5658029,
+    "lon": -4.5179885,
+    "display": "Résidence Tro Bro Léon, Saint-Sébastien, Lannilis, Brest, Finistère, Brittany, Metropolitan France, 29870, France"
+  },
+  "Trofee Maarten Wynants, Belgium": null,
+  "Navaraa Women's Classic, Spain": null,
+  "Flèche du Sud, Luxembourg": null,
+  "Tour de Hongrie, Hungary": {
+    "lat": 48.2612114,
+    "lon": 20.6169468,
+    "display": "Tour de Hongrie, Hadak útja, Alsóváros, Kazincbarcika, Kazincbarcikai járás, Borsod-Abaúj-Zemplén, Great Plain and North, 3700, Hungary"
+  },
+  "Circuit de Wallonie, Belgium": {
+    "lat": 50.6528869,
+    "lon": 5.5404203,
+    "display": "Ruisseau artificiel en circuit fermé, Ans, Liège, Wallonia, 4430, Belgium"
+  },
+  "Itzulia Women, Spain": null,
+  "Omloop Der Kempen Ladies, Belgium": null,
+  "Tour du Finistère, France": {
+    "lat": 48.4592018,
+    "lon": -5.1290076,
+    "display": "Lighthouse Créac'h, Route du Phare, Parluc'hen, Lampaul, Ushant, Brest, Finistère, Brittany, Metropolitan France, 29242, France"
+  },
+  "Boucles de l'Aulne, France": null,
+  "Rund um Köln, Germany": {
+    "lat": 50.9356093,
+    "lon": 6.9238199,
+    "display": "RUND UM WOHL, 2, Clarenbachstraße, Lindenthal, Cologne, North Rhine-Westphalia, 50931, Germany"
+  },
+  "Classique Dunkerque, France": null,
+  "Emakumeen Saria, Spain": null,
+  "4 Jours de Dunkerque, France": null,
+  "GP Beiras e Serra da Estrela, Portugal": null,
+  "Vuelta a Burgos Feminas, Spain": null,
+  "Veenendaal-Veenendaal, Netherlands": {
+    "lat": 52.0232042,
+    "lon": 5.5518002,
+    "display": "Veenendaal, Utrecht, Netherlands"
+  },
+  "Antwerp Port Epic Ladies, Belgium": null,
+  "GP Criquelion, Belgium": null,
+  "Antwerp Port Epic - Sels Trophy, Belgium": null,
+  "GP Mazda, Belgium": null,
+  "Boucles de la Mayenne, France": null,
+  "Bretagne Ladies Tour, France": null,
+  "Giro d'Italia Women, Italy": null,
+  "GP Ciudad de Eibar, Spain": null,
+  "Tour de Wallonie, Belgium": {
+    "lat": 50.6948774,
+    "lon": 4.3446117,
+    "display": "PolyPeptide Belgium, 297, Tour des Vaux, Sart-Moulin, Braine-l’Alleud, Braine-l'Alleud, Nivelles, Walloon Brabant, Wallonia, Belgium"
+  },
+  "Mercan'tour Classic Alpes-Maritimes, France": null,
+  "Tour of Estonia, Estonia": null,
+  "Estonia": {
+    "lat": 58.7523778,
+    "lon": 25.3319078,
+    "display": "Estonia"
+  },
+  "Heistse Pijl, Belgium": null,
+  "Alpes Grésivaudan Classic, France": null,
+  "Brussels Cycling Classic, Belgium": null,
+  "Dwars Door De Westhoek, Belgium": null,
+  "Tour Auvergne-Rhône-Alpes, France": {
+    "lat": 45.6314036,
+    "lon": 5.296323,
+    "display": "Xella France, Les Vagues, Saint-Savin, La Tour-du-Pin, Isère, Auvergne-Rhône-Alpes, Metropolitan France, 38300, France"
+  },
+  "Circuit Franco-Belge, Belgium": null,
+  "Tour Féminin International des Pyrénées, France": null,
+  "Copenhagen Sprint, Denmark": null,
+  "Denmark": {
+    "lat": 55.670249,
+    "lon": 10.3333283,
+    "display": "Denmark"
+  },
+  "Dwars Door Het Hageland, Belgium": null,
+  "Elfstedenronde, Belgium": null,
+  "Flanders Diamond Tour, Belgium": null,
+  "GP Gippingen, Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany": null,
+  "Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany": null,
+  "Baloise Belgium Tour, Belgium": null,
+  "Tour de Suisse, Switzerland": {
+    "lat": 47.645973,
+    "lon": 9.185936,
+    "display": "Tour de Suisse Mein Velo, 31, Seetalstrasse, Kreuzlingen, Bezirk Kreuzlingen, Thurgau, 8280, Switzerland"
+  },
+  "Tour de Suisse Women, Switzerland": null,
+  "Tour of Slovenia, Slovenia": null,
+  "Slovenia": {
+    "lat": 46.1199444,
+    "lon": 14.8153333,
+    "display": "Slovenia"
+  },
+  "La Route d'Occitanie, France": {
+    "lat": 44.10924,
+    "lon": 1.4311832,
+    "display": "France, 1868, Route de Cos, Sadoul, Mirabel, Montauban, Tarn-et-Garonne, Occitania, Metropolitan France, 82440, France"
+  },
+  "Vuelta a Catalunya Femenina, Spain": null,
+  "Andorra Classic, Andorra": null,
+  "Andorra": {
+    "lat": 42.5407167,
+    "lon": 1.5732033,
+    "display": "Andorra"
+  },
+  "Women Cycling Day, Germany": null,
+  "Germany": {
+    "lat": 51.1638175,
+    "lon": 10.4478313,
+    "display": "Germany"
+  },
+  "Sibiu Tour, Romania": null,
+  "Romania": {
+    "lat": 45.9852129,
+    "lon": 24.6859225,
+    "display": "Romania"
+  },
+  "Tour de France, France": {
+    "lat": 49.0056303,
+    "lon": 1.6916682,
+    "display": "Tour de France, Boulevard Sully, Les Explorateurs, Le Val Fourré, Mantes-la-Jolie, Yvelines, Ile-de-France, Metropolitan France, 78200, France"
+  },
+  "Argenta Classic - Deurne, Belgium": null,
+  "Tour of Magnificent Qinghai, China": null,
+  "Tour of Austria, Austria": null,
+  "Austria": {
+    "lat": 47.59397,
+    "lon": 14.12456,
+    "display": "Austria"
+  },
+  "Baloise Ladies Tour, Belgium": null,
+  "La Périgord Ladies, France": null,
+  "La Picto en Nouvelle-Aquitaine, France": null,
+  "Clásica de Ordizia, Spain": null,
+  "Clasica Castilla y Leon, Spain": {
+    "lat": 42.3407019,
+    "lon": -3.7292496,
+    "display": "Bicis La Clasica, 18, Calle Don Juan de Austria, Hospital del Rey, Distrito Oeste, Burgos, Castile and León, 09001, Spain"
+  },
+  "Tour de l'Ain, France": {
+    "lat": 46.0176255,
+    "lon": 5.3029011,
+    "display": "Tour de Bellegarde, Priay, Nantua, Ain, Auvergne-Rhône-Alpes, Metropolitan France, 01160, France"
+  },
+  "Tour of Denmark, Denmark": {
+    "lat": 55.6910612,
+    "lon": 12.576077,
+    "display": "Tour Østerbro, Lille Farimagsgade, Østervold, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1352, Denmark"
+  },
+  "Donostia San Sebastian Klasikoa, Spain": null,
+  "Tour de France Femmes, France": {
+    "lat": 47.2092772,
+    "lon": -1.7200333,
+    "display": "Tour à Plomb, Place des 12 Femmes en Colère, La Jarriais, Couëron, Nantes, Loire-Atlantique, Pays de la Loire, Metropolitan France, 44220, France"
+  },
+  "China Xizang Trans-Himalaya, China": null,
+  "Circuito de Getxo, Spain": null,
+  "Tour de Pologne, Poland": {
+    "lat": 50.7686321,
+    "lon": 15.7360089,
+    "display": "Meta Tour de Pologne, Olimpijska, Centrum, Karpacz, Karkonosze County, Lower Silesian Voivodeship, 58-540, Poland"
+  },
+  "Vuelta a Burgos, Spain": {
+    "lat": 42.879305,
+    "lon": -3.3625974,
+    "display": "Vuelta de Cueto, Ael, Merindad de Cuesta-Urria, Burgos, Castile and León, Spain"
+  },
+  "Volta a Portugal, Portugal": {
+    "lat": 41.2254824,
+    "lon": -8.4594455,
+    "display": "Homenagem aos sobradenses que venceram a volta a Portugal em bicicleta, Rua São João de Sobrado, Gandra, Sobrado, Valongo, Porto, 4440-315, Portugal"
+  },
+  "Arctic Race of Norway, Norway": null,
+  "Norway": {
+    "lat": 61.1529386,
+    "lon": 8.7876653,
+    "display": "Norway"
+  },
+  "Czech Tour, Czechia": {
+    "lat": 50.7243157,
+    "lon": 15.1667989,
+    "display": "Scandia - Czech tour, Poštovní, Centrum, Jablonec nad Nisou, okres Jablonec nad Nisou, Liberec Region, 466 01, Czechia"
+  },
+  "Tour de Pologne Women, Poland": null,
+  "Poland": {
+    "lat": 52.215933,
+    "lon": 19.134422,
+    "display": "Poland"
+  },
+  "GP Yvonne Reynders, Belgium": null,
+  "ADAC Cyclassics, Germany": null,
+  "La Polynormande, France": null,
+  "Egmont Cycling Race Women, Belgium": null,
+  "Tour du Limousin, France": {
+    "lat": 45.0499243,
+    "lon": -0.6479609,
+    "display": "Île de la Tour du Mont (Île Margaux), Margaux, Margaux-Cantenac, Lesparre-Médoc, Gironde, Nouvelle-Aquitaine, Metropolitan France, 33460, France"
+  },
+  "Deutschland Tour, Germany": {
+    "lat": 49.1475943,
+    "lon": 7.7548175,
+    "display": "Wölfe in Deutschland, Otto-Eisel-Pfad, Dahn, Dahner Felsenland, Südwestpfalz, Rhineland-Palatinate, 66994, Germany"
+  },
+  "Renewi Tour, Belgium": null,
+  "Tour of Britain Women, United Kingdom": null,
+  "United Kingdom": {
+    "lat": 54.7023545,
+    "lon": -3.2765753,
+    "display": "United Kingdom"
+  },
+  "GP Lucien Van Impe, Belgium": null,
+  "Konvert Kortrijk Koerse, Belgium": null,
+  "Vuelta a España, Spain": {
+    "lat": 42.512643,
+    "lon": -4.0092048,
+    "display": "Paseo Vuelta Ciclista a España Villadiego 2017, Urbanización la Curiela, Villadiego, Burgos, Castile and León, 09120, Spain"
+  },
+  "Tour du Poitou-Charentes en Nouvelle-Aquitaine, France": {
+    "lat": 45.8161669,
+    "lon": 1.1884331,
+    "display": "Le Puy du Tour, La Croix d'Envaud, Isle, Limoges, Haute-Vienne, Nouvelle-Aquitaine, Metropolitan France, 87170, France"
+  },
+  "Muur Classic Geraardsbergen, Belgium": null,
+  "Kreiz Breizh Féminin, France": null,
+  "Bretagne Classic - Ouest France, France": null,
+  "GP Kranj, Slovenia": null,
+  "Philadelphia Cycling Classic, United States": null,
+  "United States": {
+    "lat": 39.7837304,
+    "lon": -100.445882,
+    "display": "United States"
+  },
+  "Tour de Korea, South Korea": null,
+  "South Korea": {
+    "lat": 36.638392,
+    "lon": 127.6961188,
+    "display": "South Korea"
+  },
+  "Tour of Britain Men, United Kingdom": null,
+  "ZLM Tour, Netherlands": null,
+  "Classic Lorient Agglomération, France": null,
+  "Tout Commence En Finistère Ladies Classic, France": null,
+  "GP Industria & Artigianato, Italy": null,
+  "Pointe du Raz Ladies Classic, France": null,
+  "Tour of Binzhou, China": null,
+  "Giro della Toscana - Memorial Alfredo Martini, Italy": null,
+  "Coppa Sabatini, Italy": null,
+  "GP de Québec, Canada": {
+    "lat": 45.5461549,
+    "lon": -73.5989431,
+    "display": "Coiffure GP Oggi Elle et lui, Rue Saint-Zotique, La Petite-Patrie, Rosemont–La Petite-Patrie, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H2G 1J2, Canada"
+  },
+  "A Travers Les Hauts de France, France": {
+    "lat": 49.4823003,
+    "lon": 5.7159096,
+    "display": "À Travers les Hauts, Cons-la-Grandville, Val-de-Briey, Meurthe-et-Moselle, Grand Est, Metropolitan France, 54870, France"
+  },
+  "Boucles Drôme Ardèche Femmes, France": null,
+  "Memorial Marco Pantani, Italy": {
+    "lat": 44.3856796,
+    "lon": 7.121906,
+    "display": "Memorial Marco Pantani, Via Val d'Arma, Demonte, Cuneo, Piedmont, Italy"
+  },
+  "Tour of Taihu Lake, China": null,
+  "GP de Fourmies - La Voix du Nord, France": null,
+  "GP de Montréal, Canada": {
+    "lat": 45.5418598,
+    "lon": -73.6634547,
+    "display": "GP Restaurant, Rue Sauvé Ouest, Ahuntsic, Ahuntsic-Cartierville, Montreal, Urban agglomeration of Montreal, Montreal (administrative region), Quebec, H3L 3J6, Canada"
+  },
+  "La Choralis Fourmies Féminine, France": null,
+  "Trofeo Matteotti, Italy": null,
+  "Women's Cycling GP Stuttgart, Germany": null,
+  "Il Giro d'Abruzzo, Italy": null,
+  "Chrono Féminin du Gatineau, Canada": null,
+  "Canada": {
+    "lat": 61.0666922,
+    "lon": -107.991707,
+    "display": "Canada"
+  },
+  "GP de Wallonie, Belgium": {
+    "lat": 50.5829497,
+    "lon": 4.3511097,
+    "display": "GP Automobile, 8, Rue de la science, Parc d'activité économique de Nivelles Sud, Thines, Nivelles, Walloon Brabant, Wallonia, 1402, Belgium"
+  },
+  "GP de Wallonie Dames, Belgium": null,
+  "Okolo Slovenska, Slovakia": null,
+  "Slovakia": {
+    "lat": 48.7411522,
+    "lon": 19.4528646,
+    "display": "Slovakia"
+  },
+  "Tour of Luxembourg, Luxembourg": null,
+  "Tour du Gatineau, Canada": {
+    "lat": 45.4266892,
+    "lon": -75.7144052,
+    "display": "Place du Centre (Tour), 200, Promenade du Portage, Hull, Gatineau, Outaouais, Quebec, J8X 0A4, Canada"
+  },
+  "Kampioenscap Van Vlaanderen, Belgium": null,
+  "Tour of Huangshan, China": null,
+  "GP del Lazio, Italy": {
+    "lat": 41.8337032,
+    "lon": 12.835738,
+    "display": "Auto GP, 24/c, Via Valle del Formale, Borgo San Martino, Zagarolo, Roma Capitale, Lazio, 00039, Italy"
+  },
+  "Super 8 Classic, Belgium": null,
+  "Giro della Romagna, Italy": {
+    "lat": 44.1435359,
+    "lon": 11.6690657,
+    "display": "Monte Giro, Brisighella, Unione della Romagna Faentina, Ravenna, Emilia-Romagna, 48013, Italy"
+  },
+  "Gooikse Pijl, Belgium": null,
+  "World Championships: Men's TT, Canada": null,
+  "World Championships: Women's TT, Canada": null,
+  "World Championships: Mixed Relay TT, Canada": null,
+  "Omloop Van Het Houtland, Belgium": null,
+  "World Championships: Women's Road Race, Canada": null,
+  "Paris-Chauny, France": null,
+  "Tour de Langkawi, Malaysia": null,
+  "Malaysia": {
+    "lat": 4.5693754,
+    "lon": 102.2656823,
+    "display": "Malaysia"
+  },
+  "World Championships: Men's Road Race, Canada": null,
+  "Cholet Agglo Tour, France": null,
+  "Giro dell'Emilia, Italy": null,
+  "Giro dell'Emilia Donne, Italy": null,
+  "Sparkassen Münsterland Giro, Germany": null,
+  "Coppa Agostoni, Italy": {
+    "lat": 45.6005442,
+    "lon": 9.2341268,
+    "display": "Coppa Ugo Agostoni, Via Giosuè Carducci, Da là dal Punt, Lissone, Monza and Brianza, Lombardy, 20835, Italy"
+  },
+  "Tour de Vendée, France": {
+    "lat": 46.3240381,
+    "lon": -0.6655973,
+    "display": "Fossé de Tour Bri, Le Mazeau, Fontenay-le-Comte, Vendée, Pays de la Loire, Metropolitan France, 85420, France"
+  },
+  "Coppa Bernocchi, Italy": {
+    "lat": 44.9414742,
+    "lon": 9.1905788,
+    "display": "Torrente Ghiaia Coppa, Ca' Bernocchi, Borgoratto Mormorolo, Pavia, Lombardy, Italy"
+  },
+  "Binche-Chimay-Binche, Belgium": null,
+  "Tre Valle Varesine, ": null,
+  "Tre Valle Varesine, Italy": null,
+  "Gran Piemonte, Italy": {
+    "lat": 44.998351,
+    "lon": 8.299436,
+    "display": "Grana Monferrato, Asti, Piedmont, Italy"
+  },
+  "Tour of Chongming Island, China": null,
+  "Il Lombardia, Italy": null,
+  "Tour de Kyushu, Japan": {
+    "lat": 32.8056553,
+    "lon": 130.7033109,
+    "display": "Moto-Taiko Turret, Passage of Darkness, Honmaru, Chuo Ward, Kumamoto, Kumamoto Prefecture, 860-8601, Japan"
+  },
+  "Paris-Tours, France": {
+    "lat": 47.3951602,
+    "lon": 0.6858674,
+    "display": "Paris Tours Fleurs, Rue du Commerce, Tours Centre, Tours, Indre-et-Loire, Centre-Val de Loire, Metropolitan France, 37000, France"
+  },
+  "Sun Hung Kai Hong Kong Cyclothon, Hong Kong": null,
+  "Hong Kong": {
+    "lat": 22.2818333,
+    "lon": 114.1582831,
+    "display": "Hong Kong, China"
+  },
+  "Eneco Tour, Netherlands": null,
+  "Eneco Tour Women, Netherlands": null,
+  "Tour of Guangxi, China": null,
+  "Giro del Veneto, Italy": {
+    "lat": 45.9034482,
+    "lon": 11.9550304,
+    "display": "Sentiero SS. Gervasio e Protasio - Giro del Romit, Col Lonc, Segusino, Pieve del Grappa, Province of Treviso, Veneto, 31040, Italy"
+  },
+  "Veneto Women, Italy": null,
+  "Chrono des Nations, France": null,
+  "Utsunomiya Japan Cup, Japan": null,
+  "Japan": {
+    "lat": 36.5748441,
+    "lon": 139.2394179,
+    "display": "Japan"
+  },
+  "Veneto Classic, Italy": null
+}

@@ -1,0 +1,4107 @@
+[
+  {
+    "name": "Tour Down Under",
+    "country": "Australia",
+    "start": "2026-01-17",
+    "end": "2026-01-19",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": -34.93,
+      "lon": 138.6,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour El Salvador",
+    "country": "El Salvador",
+    "start": "2026-01-17",
+    "end": "2026-01-21",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 13.69,
+      "lon": -89.19,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour Down Under",
+    "country": "Australia",
+    "start": "2026-01-20",
+    "end": "2026-01-25",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": -34.93,
+      "lon": 138.6,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour Down Under Women's Race",
+    "country": "Australia",
+    "start": "2026-01-21",
+    "end": "2026-01-21",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": -34.93,
+      "lon": 138.6,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Classica Camp de Morvedre",
+    "country": "Spain",
+    "start": "2026-01-23",
+    "end": "2026-01-23",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.68,
+      "lon": -0.28,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Castellón - Ruta de la Cerámica",
+    "country": "Spain",
+    "start": "2026-01-24",
+    "end": "2026-01-24",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.99,
+      "lon": -0.04,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Marratxi - Felanitx",
+    "country": "Spain",
+    "start": "2026-01-24",
+    "end": "2026-01-24",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.64,
+      "lon": 2.76,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Clàsica Comunitat Valenciana",
+    "country": "Spain",
+    "start": "2026-01-25",
+    "end": "2026-01-25",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 40.1205681,
+      "lon": -0.5822526,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Trofeo Palma Feminina",
+    "country": "Spain",
+    "start": "2026-01-25",
+    "end": "2026-01-25",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.57,
+      "lon": 2.65,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Binissalem - Andratx",
+    "country": "Spain",
+    "start": "2026-01-26",
+    "end": "2026-01-26",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.69,
+      "lon": 2.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Al Ula Tour",
+    "country": "Saudi Arabia",
+    "start": "2026-01-27",
+    "end": "2026-01-31",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 26.61,
+      "lon": 37.92,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Calvià",
+    "country": "Spain",
+    "start": "2026-01-28",
+    "end": "2026-01-28",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.57,
+      "lon": 2.51,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Ses Salines",
+    "country": "Spain",
+    "start": "2026-01-29",
+    "end": "2026-01-29",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.34,
+      "lon": 3.05,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Serra Tramuntana",
+    "country": "Spain",
+    "start": "2026-01-30",
+    "end": "2026-01-30",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.77,
+      "lon": 2.71,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Cadel Evans Great Ocean Road Race",
+    "country": "Australia",
+    "start": "2026-01-31",
+    "end": "2026-01-31",
+    "classes": [
+      "1.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": -38.15,
+      "lon": 144.36,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Andratx - Pollença",
+    "country": "Spain",
+    "start": "2026-01-31",
+    "end": "2026-01-31",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.58,
+      "lon": 2.42,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Cadel Evans Great Ocean Road Race",
+    "country": "Australia",
+    "start": "2026-02-01",
+    "end": "2026-02-01",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": -38.15,
+      "lon": 144.36,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP La Marseillaise",
+    "country": "France",
+    "start": "2026-02-01",
+    "end": "2026-02-01",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.3,
+      "lon": 5.37,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Pionera Race",
+    "country": "Spain",
+    "start": "2026-02-01",
+    "end": "2026-02-01",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.3260685,
+      "lon": -4.8379791,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Trofeo Palma",
+    "country": "Spain",
+    "start": "2026-02-01",
+    "end": "2026-02-01",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.57,
+      "lon": 2.65,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Etoile de Bessèges",
+    "country": "France",
+    "start": "2026-02-04",
+    "end": "2026-02-08",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.29,
+      "lon": 4.1,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Volta Comunitat Valenciana",
+    "country": "Spain",
+    "start": "2026-02-04",
+    "end": "2026-02-08",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 38.9112246,
+      "lon": -0.6507285,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "UAE Tour Women",
+    "country": "United Arab Emirates",
+    "start": "2026-02-05",
+    "end": "2026-02-08",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 24.45,
+      "lon": 54.38,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Muscat Classic",
+    "country": "Oman",
+    "start": "2026-02-06",
+    "end": "2026-02-06",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 23.59,
+      "lon": 58.41,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Oman",
+    "country": "Oman",
+    "start": "2026-02-07",
+    "end": "2026-02-11",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 23.59,
+      "lon": 58.41,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Aveiro Fegion Champions Classic",
+    "country": "Portugal",
+    "start": "2026-02-08",
+    "end": "2026-02-08",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 40.64,
+      "lon": -8.65,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Oro in Euro",
+    "country": "Italy",
+    "start": "2026-02-08",
+    "end": "2026-02-08",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.6384261,
+      "lon": 12.674297,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Vuelta CV Feminas",
+    "country": "Spain",
+    "start": "2026-02-08",
+    "end": "2026-02-08",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.47,
+      "lon": -0.38,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Setmana Volta Femenina Comunitat Valenciana",
+    "country": "Spain",
+    "start": "2026-02-12",
+    "end": "2026-02-15",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.47,
+      "lon": -0.38,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de La Provence",
+    "country": "France",
+    "start": "2026-02-13",
+    "end": "2026-02-15",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.1806612,
+      "lon": 6.6255715,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Vuelta a Murcia",
+    "country": "Spain",
+    "start": "2026-02-13",
+    "end": "2026-02-14",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 38.1232602,
+      "lon": -1.0999237,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Figueira Champions Classic",
+    "country": "Portugal",
+    "start": "2026-02-14",
+    "end": "2026-02-14",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 40.15,
+      "lon": -8.86,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Clasica de Almeria",
+    "country": "Spain",
+    "start": "2026-02-15",
+    "end": "2026-02-15",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 37.2473018,
+      "lon": -1.8688043,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Clásica Jaén",
+    "country": "Spain",
+    "start": "2026-02-16",
+    "end": "2026-02-16",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 37.78,
+      "lon": -3.79,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "UAE Tour",
+    "country": "United Arab Emirates",
+    "start": "2026-02-16",
+    "end": "2026-02-22",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 24.45,
+      "lon": 54.38,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Volta ao Algarve",
+    "country": "Portugal",
+    "start": "2026-02-18",
+    "end": "2026-02-22",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 37.02,
+      "lon": -7.93,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Vuelta a Andalucia - Ruta del Sol",
+    "country": "Spain",
+    "start": "2026-02-18",
+    "end": "2026-02-22",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.3260685,
+      "lon": -4.8379791,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Classic Var",
+    "country": "France",
+    "start": "2026-02-21",
+    "end": "2026-02-21",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.4078379,
+      "lon": 6.0642511,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Classica de Almeria",
+    "country": "Spain",
+    "start": "2026-02-22",
+    "end": "2026-02-22",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 36.84,
+      "lon": -2.46,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Midwest Cycling Classic",
+    "country": "Belgium",
+    "start": "2026-02-22",
+    "end": "2026-02-22",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour des Alpes-Maritimes",
+    "country": "France",
+    "start": "2026-02-22",
+    "end": "2026-02-22",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.5742445,
+      "lon": 7.0211661,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour du Rwanda",
+    "country": "Rwanda",
+    "start": "2026-02-22",
+    "end": "2026-03-01",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": -1.95,
+      "lon": 30.06,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro di Sardegna",
+    "country": "Italy",
+    "start": "2026-02-25",
+    "end": "2026-03-01",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 40.1245675,
+      "lon": 9.2832994,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Faun Ardèche Classic",
+    "country": "France",
+    "start": "2026-02-28",
+    "end": "2026-02-28",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.93,
+      "lon": 4.88,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Omloop Nieuwsblad",
+    "country": "Belgium",
+    "start": "2026-02-28",
+    "end": "2026-02-28",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 51.05,
+      "lon": 3.72,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Visit South Aegean GP",
+    "country": "Greece",
+    "start": "2026-02-28",
+    "end": "2026-02-28",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 38.9953683,
+      "lon": 21.9877132,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Faun Drôme Classic",
+    "country": "France",
+    "start": "2026-03-01",
+    "end": "2026-03-01",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.04,
+      "lon": 5.05,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Kuurne-Brussels-Kuurne",
+    "country": "Belgium",
+    "start": "2026-03-01",
+    "end": "2026-03-01",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.85,
+      "lon": 3.29,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Omloop Van Het Hageland",
+    "country": "Belgium",
+    "start": "2026-03-01",
+    "end": "2026-03-01",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.99,
+      "lon": 4.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Region On Dodecanese GP",
+    "country": "Greece",
+    "start": "2026-03-01",
+    "end": "2026-03-01",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 38.9953683,
+      "lon": 21.9877132,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Le Samyn des Dames",
+    "country": "Belgium",
+    "start": "2026-03-02",
+    "end": "2026-03-02",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.39,
+      "lon": 3.78,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Le Samyn",
+    "country": "Belgium",
+    "start": "2026-03-03",
+    "end": "2026-03-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.39,
+      "lon": 3.78,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Laigueglia",
+    "country": "Italy",
+    "start": "2026-03-04",
+    "end": "2026-03-04",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.0,
+      "lon": 8.15,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Vuelta a Extremadura Femenina",
+    "country": "Spain",
+    "start": "2026-03-06",
+    "end": "2026-03-08",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 38.92,
+      "lon": -6.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Strade Bianche",
+    "country": "Italy",
+    "start": "2026-03-07",
+    "end": "2026-03-07",
+    "classes": [
+      "1.UWT",
+      "1.WWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 42.6343194,
+      "lon": 11.6675476,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Paris-Nice",
+    "country": "France",
+    "start": "2026-03-08",
+    "end": "2026-03-15",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.8643222,
+      "lon": 2.3529673,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tirreno-Adriatico",
+    "country": "Italy",
+    "start": "2026-03-09",
+    "end": "2026-03-15",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.456101,
+      "lon": 12.2444671,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Ixina Leeuw-Oetingen",
+    "country": "Belgium",
+    "start": "2026-03-11",
+    "end": "2026-03-11",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.79,
+      "lon": 4.06,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Taiwan",
+    "country": "Taiwan",
+    "start": "2026-03-15",
+    "end": "2026-03-19",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 25.03,
+      "lon": 121.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Alfredo Binda",
+    "country": "Italy",
+    "start": "2026-03-15",
+    "end": "2026-03-15",
+    "classes": [
+      "1.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.92,
+      "lon": 8.66,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Milano-Torino",
+    "country": "Italy",
+    "start": "2026-03-18",
+    "end": "2026-03-18",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.5238448,
+      "lon": 13.2415044,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Noekere Koerse",
+    "country": "Belgium",
+    "start": "2026-03-18",
+    "end": "2026-03-18",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.91,
+      "lon": 3.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Nokere Koerse",
+    "country": "Belgium",
+    "start": "2026-03-18",
+    "end": "2026-03-18",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.91,
+      "lon": 3.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP de Denain",
+    "country": "France",
+    "start": "2026-03-19",
+    "end": "2026-03-19",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.33,
+      "lon": 3.4,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Koksijde Classic",
+    "country": "Belgium",
+    "start": "2026-03-20",
+    "end": "2026-03-20",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.11,
+      "lon": 2.65,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Milano-Sanremo",
+    "country": "Italy",
+    "start": "2026-03-21",
+    "end": "2026-03-21",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.8963645,
+      "lon": 8.0767352,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Milano-Sanremo Donne",
+    "country": "Italy",
+    "start": "2026-03-21",
+    "end": "2026-03-21",
+    "classes": [
+      "1.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.82,
+      "lon": 7.78,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Jean-Pierre Monseré",
+    "country": "Belgium",
+    "start": "2026-03-22",
+    "end": "2026-03-22",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.95,
+      "lon": 3.12,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Volta a Catalunya",
+    "country": "Spain",
+    "start": "2026-03-23",
+    "end": "2026-03-29",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 41.3809446,
+      "lon": 2.1408629,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Princess Maha Chakri Sirindhorn's Cup Tour of Thailand",
+    "country": "Thailand",
+    "start": "2026-03-24",
+    "end": "2026-03-29",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 13.75,
+      "lon": 100.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Ronde Van Brugge",
+    "country": "Belgium",
+    "start": "2026-03-25",
+    "end": "2026-03-25",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.21,
+      "lon": 3.22,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Settimana Coppi e Bartali",
+    "country": "Italy",
+    "start": "2026-03-25",
+    "end": "2026-03-29",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.0,
+      "lon": 12.66,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Ronde Van Brugge",
+    "country": "Belgium",
+    "start": "2026-03-26",
+    "end": "2026-03-26",
+    "classes": [
+      "1.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.21,
+      "lon": 3.22,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "E3 Saxo Classic",
+    "country": "Belgium",
+    "start": "2026-03-27",
+    "end": "2026-03-27",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.86,
+      "lon": 3.31,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Emilia",
+    "country": "Italy",
+    "start": "2026-03-29",
+    "end": "2026-03-29",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.4902497,
+      "lon": 11.3410978,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Gent-Wevelgem",
+    "country": "Belgium",
+    "start": "2026-03-29",
+    "end": "2026-03-29",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.8083068,
+      "lon": 3.1815827,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "La Roue Tourangelle",
+    "country": "France",
+    "start": "2026-03-29",
+    "end": "2026-03-29",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.39,
+      "lon": 0.69,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Paris-Camembert",
+    "country": "France",
+    "start": "2026-03-31",
+    "end": "2026-03-31",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.92,
+      "lon": 0.2,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Princess Maha Chakri Sirindhorn's Cup Women's Tour of Thailand",
+    "country": "Thailand",
+    "start": "2026-03-31",
+    "end": "2026-04-02",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 13.75,
+      "lon": 100.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Dwars Door Vlaanderen",
+    "country": "Belgium",
+    "start": "2026-04-01",
+    "end": "2026-04-01",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.8010128,
+      "lon": 3.7731329,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "La Route Adélie de Vitré",
+    "country": "France",
+    "start": "2026-04-03",
+    "end": "2026-04-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.12,
+      "lon": -1.21,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Miguel Indurain",
+    "country": "Spain",
+    "start": "2026-04-04",
+    "end": "2026-04-04",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.67,
+      "lon": -2.03,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "NXT Classic",
+    "country": "Netherlands",
+    "start": "2026-04-04",
+    "end": "2026-04-04",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 52.2434979,
+      "lon": 5.6343227,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Ronde Van Vlaanderen",
+    "country": "Belgium",
+    "start": "2026-04-05",
+    "end": "2026-04-05",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 51.2872382,
+      "lon": 5.159803,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Itzulia Basque Country",
+    "country": "Spain",
+    "start": "2026-04-06",
+    "end": "2026-04-11",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.2584823,
+      "lon": -1.8889263,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Ronde de Mouscron",
+    "country": "Belgium",
+    "start": "2026-04-06",
+    "end": "2026-04-06",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6023342,
+      "lon": 3.4009729,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Région Pays de La Loire Tour",
+    "country": "France",
+    "start": "2026-04-07",
+    "end": "2026-04-10",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.1492026,
+      "lon": -1.6078601,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Région Pays de la Loire Tour Féminin",
+    "country": "France",
+    "start": "2026-04-08",
+    "end": "2026-04-08",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.22,
+      "lon": -1.55,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Scheldeprijs",
+    "country": "Belgium",
+    "start": "2026-04-08",
+    "end": "2026-04-08",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 51.25,
+      "lon": 4.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Paris-Roubaix",
+    "country": "France",
+    "start": "2026-04-12",
+    "end": "2026-04-12",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 43.2315926,
+      "lon": 0.0822779,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "O Gran Camiño",
+    "country": "Spain",
+    "start": "2026-04-14",
+    "end": "2026-04-18",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.2514422,
+      "lon": -8.6113647,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Ronde Van Limburg",
+    "country": "Belgium",
+    "start": "2026-04-15",
+    "end": "2026-04-15",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.93,
+      "lon": 5.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Hainan",
+    "country": "China",
+    "start": "2026-04-15",
+    "end": "2026-04-19",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 20.04,
+      "lon": 110.2,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Brabantse Pijl",
+    "country": "Belgium",
+    "start": "2026-04-17",
+    "end": "2026-04-17",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.88,
+      "lon": 4.7,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Classic Grand Bescançon Doubs",
+    "country": "France",
+    "start": "2026-04-17",
+    "end": "2026-04-17",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.24,
+      "lon": 6.02,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour du Jura",
+    "country": "France",
+    "start": "2026-04-18",
+    "end": "2026-04-18",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.6682114,
+      "lon": 5.5511094,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Amstel Gold Race",
+    "country": "Netherlands",
+    "start": "2026-04-19",
+    "end": "2026-04-19",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.8647519,
+      "lon": 5.8271865,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "GP Féminin de Chambéry",
+    "country": "France",
+    "start": "2026-04-19",
+    "end": "2026-04-19",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.57,
+      "lon": 5.92,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of the Alps",
+    "country": "Italy",
+    "start": "2026-04-20",
+    "end": "2026-04-24",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.6384261,
+      "lon": 12.674297,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "La Flèche Wallonne",
+    "country": "Belgium",
+    "start": "2026-04-22",
+    "end": "2026-04-22",
+    "classes": [
+      "1.UWT",
+      "1.WWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.52,
+      "lon": 5.24,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Vuelta Asturias",
+    "country": "Spain",
+    "start": "2026-04-23",
+    "end": "2026-04-26",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.0062836,
+      "lon": -6.6148683,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Omloop Van Borsele Women",
+    "country": "Belgium",
+    "start": "2026-04-25",
+    "end": "2026-04-25",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.43,
+      "lon": 3.74,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP della Liberazione Donne",
+    "country": "Italy",
+    "start": "2026-04-26",
+    "end": "2026-04-26",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 41.9,
+      "lon": 12.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Liège-Bastogne-Liège",
+    "country": "Belgium",
+    "start": "2026-04-26",
+    "end": "2026-04-26",
+    "classes": [
+      "1.WWT",
+      "1.UWT"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.1827706,
+      "lon": 6.0247975,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour of Türkiye",
+    "country": "Türkiye",
+    "start": "2026-04-26",
+    "end": "2026-05-03",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.294076,
+      "lon": 35.2316631,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour de Romandie",
+    "country": "Switzerland",
+    "start": "2026-04-28",
+    "end": "2026-05-03",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.81,
+      "lon": 7.16,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Eschborn-Frankfurt",
+    "country": "Germany",
+    "start": "2026-05-01",
+    "end": "2026-05-01",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.1306875,
+      "lon": 8.577856,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "GP Anicolor",
+    "country": "Portugal",
+    "start": "2026-05-01",
+    "end": "2026-05-03",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.6621648,
+      "lon": -8.1353519,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "GP Immo Zone Vloer-en-Chapewerken",
+    "country": "Belgium",
+    "start": "2026-05-01",
+    "end": "2026-05-01",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Festival Elsy Jacobs",
+    "country": "Luxembourg",
+    "start": "2026-05-02",
+    "end": "2026-05-02",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.6,
+      "lon": 5.95,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Famenne Ardenne Classic",
+    "country": "Belgium",
+    "start": "2026-05-03",
+    "end": "2026-05-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.23,
+      "lon": 5.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Festival Elsy Jacobs",
+    "country": "Luxembourg",
+    "start": "2026-05-03",
+    "end": "2026-05-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.6,
+      "lon": 5.95,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro dell'Appennino",
+    "country": "Italy",
+    "start": "2026-05-03",
+    "end": "2026-05-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.55062,
+      "lon": 8.8877001,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Vuelta España Femenina",
+    "country": "Spain",
+    "start": "2026-05-03",
+    "end": "2026-05-10",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 39.3260685,
+      "lon": -4.8379791,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour of Hellas",
+    "country": "Greece",
+    "start": "2026-05-06",
+    "end": "2026-05-10",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 38.9953683,
+      "lon": 21.9877132,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Giro d'Italia",
+    "country": "Italy",
+    "start": "2026-05-08",
+    "end": "2026-05-31",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.1221124,
+      "lon": 12.3993372,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "La Classique Morbihan",
+    "country": "France",
+    "start": "2026-05-08",
+    "end": "2026-05-08",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.75,
+      "lon": -2.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP du Morbihan",
+    "country": "France",
+    "start": "2026-05-09",
+    "end": "2026-05-09",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.6090853,
+      "lon": -2.7300277,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "GP du Morbihan Femmes",
+    "country": "France",
+    "start": "2026-05-09",
+    "end": "2026-05-09",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.75,
+      "lon": -2.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Baku-Khankendi Azerbaijan",
+    "country": "Azerbaijan",
+    "start": "2026-05-10",
+    "end": "2026-05-14",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 40.41,
+      "lon": 49.87,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tro-Bro Léon",
+    "country": "France",
+    "start": "2026-05-10",
+    "end": "2026-05-10",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.5658029,
+      "lon": -4.5179885,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Trofee Maarten Wynants",
+    "country": "Belgium",
+    "start": "2026-05-10",
+    "end": "2026-05-10",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Navaraa Women's Classic",
+    "country": "Spain",
+    "start": "2026-05-12",
+    "end": "2026-05-12",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.82,
+      "lon": -1.64,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Flèche du Sud",
+    "country": "Luxembourg",
+    "start": "2026-05-13",
+    "end": "2026-05-17",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.87,
+      "lon": 6.16,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Hongrie",
+    "country": "Hungary",
+    "start": "2026-05-13",
+    "end": "2026-05-17",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.2612114,
+      "lon": 20.6169468,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Circuit de Wallonie",
+    "country": "Belgium",
+    "start": "2026-05-14",
+    "end": "2026-05-14",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6528869,
+      "lon": 5.5404203,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Itzulia Women",
+    "country": "Spain",
+    "start": "2026-05-15",
+    "end": "2026-05-17",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.26,
+      "lon": -2.93,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Omloop Der Kempen Ladies",
+    "country": "Belgium",
+    "start": "2026-05-16",
+    "end": "2026-05-16",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.32,
+      "lon": 4.95,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour du Finistère",
+    "country": "France",
+    "start": "2026-05-16",
+    "end": "2026-05-16",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.4592018,
+      "lon": -5.1290076,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Boucles de l'Aulne",
+    "country": "France",
+    "start": "2026-05-17",
+    "end": "2026-05-17",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.2,
+      "lon": -4.09,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Rund um Köln",
+    "country": "Germany",
+    "start": "2026-05-17",
+    "end": "2026-05-17",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.9356093,
+      "lon": 6.9238199,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Classique Dunkerque",
+    "country": "France",
+    "start": "2026-05-19",
+    "end": "2026-05-19",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.03,
+      "lon": 2.38,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Emakumeen Saria",
+    "country": "Spain",
+    "start": "2026-05-19",
+    "end": "2026-05-19",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.32,
+      "lon": -1.98,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "4 Jours de Dunkerque",
+    "country": "France",
+    "start": "2026-05-20",
+    "end": "2026-05-24",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.03,
+      "lon": 2.38,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Beiras e Serra da Estrela",
+    "country": "Portugal",
+    "start": "2026-05-20",
+    "end": "2026-05-24",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 40.28,
+      "lon": -7.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Vuelta a Burgos Feminas",
+    "country": "Spain",
+    "start": "2026-05-21",
+    "end": "2026-05-24",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.34,
+      "lon": -3.7,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Veenendaal-Veenendaal",
+    "country": "Netherlands",
+    "start": "2026-05-22",
+    "end": "2026-05-22",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 52.0232042,
+      "lon": 5.5518002,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Veenendaal-Veenendaal",
+    "country": "Netherlands",
+    "start": "2026-05-23",
+    "end": "2026-05-23",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 52.0232042,
+      "lon": 5.5518002,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Antwerp Port Epic Ladies",
+    "country": "Belgium",
+    "start": "2026-05-24",
+    "end": "2026-05-24",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.22,
+      "lon": 4.4,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Criquelion",
+    "country": "Belgium",
+    "start": "2026-05-24",
+    "end": "2026-05-24",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.71,
+      "lon": 3.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Antwerp Port Epic - Sels Trophy",
+    "country": "Belgium",
+    "start": "2026-05-25",
+    "end": "2026-05-25",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.22,
+      "lon": 4.4,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Mazda",
+    "country": "Belgium",
+    "start": "2026-05-25",
+    "end": "2026-05-25",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Boucles de la Mayenne",
+    "country": "France",
+    "start": "2026-05-28",
+    "end": "2026-05-31",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.07,
+      "lon": -0.77,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Bretagne Ladies Tour",
+    "country": "France",
+    "start": "2026-05-28",
+    "end": "2026-05-31",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.11,
+      "lon": -1.68,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro d'Italia Women",
+    "country": "Italy",
+    "start": "2026-05-30",
+    "end": "2026-06-07",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.6384261,
+      "lon": 12.674297,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "GP Ciudad de Eibar",
+    "country": "Spain",
+    "start": "2026-05-31",
+    "end": "2026-05-31",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.18,
+      "lon": -2.47,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Wallonie",
+    "country": "Belgium",
+    "start": "2026-06-01",
+    "end": "2026-06-05",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6948774,
+      "lon": 4.3446117,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Mercan'tour Classic Alpes-Maritimes",
+    "country": "France",
+    "start": "2026-06-03",
+    "end": "2026-06-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.7,
+      "lon": 7.27,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Estonia",
+    "country": "Estonia",
+    "start": "2026-06-04",
+    "end": "2026-06-06",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 59.44,
+      "lon": 24.75,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Heistse Pijl",
+    "country": "Belgium",
+    "start": "2026-06-06",
+    "end": "2026-06-06",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.07,
+      "lon": 4.73,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Alpes Grésivaudan Classic",
+    "country": "France",
+    "start": "2026-06-07",
+    "end": "2026-06-07",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.28,
+      "lon": 5.88,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Brussels Cycling Classic",
+    "country": "Belgium",
+    "start": "2026-06-07",
+    "end": "2026-06-07",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.85,
+      "lon": 4.35,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Dwars Door De Westhoek",
+    "country": "Belgium",
+    "start": "2026-06-07",
+    "end": "2026-06-07",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.03,
+      "lon": 2.86,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour Auvergne-Rhône-Alpes",
+    "country": "France",
+    "start": "2026-06-07",
+    "end": "2026-06-14",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.6314036,
+      "lon": 5.296323,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Circuit Franco-Belge",
+    "country": "Belgium",
+    "start": "2026-06-10",
+    "end": "2026-06-10",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.61,
+      "lon": 3.39,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour Féminin International des Pyrénées",
+    "country": "France",
+    "start": "2026-06-12",
+    "end": "2026-06-14",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.23,
+      "lon": 0.07,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Copenhagen Sprint",
+    "country": "Denmark",
+    "start": "2026-06-13",
+    "end": "2026-06-13",
+    "classes": [
+      "1.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 55.68,
+      "lon": 12.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Dwars Door Het Hageland",
+    "country": "Belgium",
+    "start": "2026-06-13",
+    "end": "2026-06-13",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.99,
+      "lon": 4.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Copenhagen Sprint",
+    "country": "Denmark",
+    "start": "2026-06-14",
+    "end": "2026-06-14",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 55.68,
+      "lon": 12.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Elfstedenronde",
+    "country": "Belgium",
+    "start": "2026-06-14",
+    "end": "2026-06-14",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.21,
+      "lon": 3.22,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Flanders Diamond Tour",
+    "country": "Belgium",
+    "start": "2026-06-14",
+    "end": "2026-06-14",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.22,
+      "lon": 4.4,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Gippingen",
+    "country": "Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany",
+    "start": "2026-06-14",
+    "end": "2026-06-14",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": null
+  },
+  {
+    "name": "Baloise Belgium Tour",
+    "country": "Belgium",
+    "start": "2026-06-17",
+    "end": "2026-06-21",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour de Suisse",
+    "country": "Switzerland",
+    "start": "2026-06-17",
+    "end": "2026-06-21",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.645973,
+      "lon": 9.185936,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour de Suisse Women",
+    "country": "Switzerland",
+    "start": "2026-06-17",
+    "end": "2026-06-21",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.95,
+      "lon": 7.45,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Slovenia",
+    "country": "Slovenia",
+    "start": "2026-06-17",
+    "end": "2026-06-21",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.06,
+      "lon": 14.51,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "La Route d'Occitanie",
+    "country": "France",
+    "start": "2026-06-18",
+    "end": "2026-06-20",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.10924,
+      "lon": 1.4311832,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Vuelta a Catalunya Femenina",
+    "country": "Spain",
+    "start": "2026-06-19",
+    "end": "2026-06-21",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 41.98,
+      "lon": 2.82,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Andorra Classic",
+    "country": "Andorra",
+    "start": "2026-06-21",
+    "end": "2026-06-21",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.51,
+      "lon": 1.52,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Women Cycling Day",
+    "country": "Germany",
+    "start": "2026-06-21",
+    "end": "2026-06-21",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.1638175,
+      "lon": 10.4478313,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Sibiu Tour",
+    "country": "Romania",
+    "start": "2026-07-04",
+    "end": "2026-07-07",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.8,
+      "lon": 24.15,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de France",
+    "country": "France",
+    "start": "2026-07-04",
+    "end": "2026-07-26",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.0056303,
+      "lon": 1.6916682,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Argenta Classic - Deurne",
+    "country": "Belgium",
+    "start": "2026-07-05",
+    "end": "2026-07-05",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.22,
+      "lon": 4.47,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Magnificent Qinghai",
+    "country": "China",
+    "start": "2026-07-05",
+    "end": "2026-07-12",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 36.62,
+      "lon": 101.78,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Austria",
+    "country": "Austria",
+    "start": "2026-07-07",
+    "end": "2026-07-12",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.59397,
+      "lon": 14.12456,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Baloise Ladies Tour",
+    "country": "Belgium",
+    "start": "2026-07-15",
+    "end": "2026-07-19",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "La Périgord Ladies",
+    "country": "France",
+    "start": "2026-07-18",
+    "end": "2026-07-18",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.18,
+      "lon": 0.72,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "La Picto en Nouvelle-Aquitaine",
+    "country": "France",
+    "start": "2026-07-19",
+    "end": "2026-07-19",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.58,
+      "lon": 0.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Clásica de Ordizia",
+    "country": "Spain",
+    "start": "2026-07-25",
+    "end": "2026-07-25",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.05,
+      "lon": -2.17,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Clasica Castilla y Leon",
+    "country": "Spain",
+    "start": "2026-07-26",
+    "end": "2026-07-26",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.3407019,
+      "lon": -3.7292496,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour de l'Ain",
+    "country": "France",
+    "start": "2026-07-28",
+    "end": "2026-07-30",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.0176255,
+      "lon": 5.3029011,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour of Denmark",
+    "country": "Denmark",
+    "start": "2026-07-29",
+    "end": "2026-08-02",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 55.6910612,
+      "lon": 12.576077,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Donostia San Sebastian Klasikoa",
+    "country": "Spain",
+    "start": "2026-08-01",
+    "end": "2026-08-01",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.32,
+      "lon": -1.98,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de France Femmes",
+    "country": "France",
+    "start": "2026-08-01",
+    "end": "2026-08-09",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.2092772,
+      "lon": -1.7200333,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "China Xizang Trans-Himalaya",
+    "country": "China",
+    "start": "2026-08-02",
+    "end": "2026-08-06",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 29.65,
+      "lon": 91.12,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Circuito de Getxo",
+    "country": "Spain",
+    "start": "2026-08-02",
+    "end": "2026-08-02",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.36,
+      "lon": -3.01,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Pologne",
+    "country": "Poland",
+    "start": "2026-08-03",
+    "end": "2026-08-09",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.7686321,
+      "lon": 15.7360089,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Vuelta a Burgos",
+    "country": "Spain",
+    "start": "2026-08-04",
+    "end": "2026-08-08",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.879305,
+      "lon": -3.3625974,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Volta a Portugal",
+    "country": "Portugal",
+    "start": "2026-08-05",
+    "end": "2026-08-16",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 41.2254824,
+      "lon": -8.4594455,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Arctic Race of Norway",
+    "country": "Norway",
+    "start": "2026-08-13",
+    "end": "2026-08-16",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 68.8,
+      "lon": 16.54,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Czech Tour",
+    "country": "Czechia",
+    "start": "2026-08-13",
+    "end": "2026-08-16",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.7243157,
+      "lon": 15.1667989,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour de Pologne Women",
+    "country": "Poland",
+    "start": "2026-08-14",
+    "end": "2026-08-16",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 52.215933,
+      "lon": 19.134422,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "GP Yvonne Reynders",
+    "country": "Belgium",
+    "start": "2026-08-15",
+    "end": "2026-08-15",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.63,
+      "lon": 5.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "ADAC Cyclassics",
+    "country": "Germany",
+    "start": "2026-08-16",
+    "end": "2026-08-16",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 53.55,
+      "lon": 9.99,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "La Polynormande",
+    "country": "France",
+    "start": "2026-08-16",
+    "end": "2026-08-16",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.603354,
+      "lon": 1.8883335,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Egmont Cycling Race Women",
+    "country": "Belgium",
+    "start": "2026-08-18",
+    "end": "2026-08-18",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.87,
+      "lon": 3.82,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour du Limousin",
+    "country": "France",
+    "start": "2026-08-18",
+    "end": "2026-08-21",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.0499243,
+      "lon": -0.6479609,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Deutschland Tour",
+    "country": "Germany",
+    "start": "2026-08-19",
+    "end": "2026-08-23",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.1475943,
+      "lon": 7.7548175,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Renewi Tour",
+    "country": "Belgium",
+    "start": "2026-08-19",
+    "end": "2026-08-23",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour of Britain Women",
+    "country": "United Kingdom",
+    "start": "2026-08-19",
+    "end": "2026-08-23",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 54.7023545,
+      "lon": -3.2765753,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "GP Lucien Van Impe",
+    "country": "Belgium",
+    "start": "2026-08-20",
+    "end": "2026-08-20",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.94,
+      "lon": 3.99,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Konvert Kortrijk Koerse",
+    "country": "Belgium",
+    "start": "2026-08-21",
+    "end": "2026-08-21",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.83,
+      "lon": 3.26,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Vuelta a España",
+    "country": "Spain",
+    "start": "2026-08-22",
+    "end": "2026-09-13",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.512643,
+      "lon": -4.0092048,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour du Poitou-Charentes en Nouvelle-Aquitaine",
+    "country": "France",
+    "start": "2026-08-25",
+    "end": "2026-08-28",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.8161669,
+      "lon": 1.1884331,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Muur Classic Geraardsbergen",
+    "country": "Belgium",
+    "start": "2026-08-26",
+    "end": "2026-08-26",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.77,
+      "lon": 3.88,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Kreiz Breizh Féminin",
+    "country": "France",
+    "start": "2026-08-27",
+    "end": "2026-08-27",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.27,
+      "lon": -3.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Bretagne Classic - Ouest France",
+    "country": "France",
+    "start": "2026-08-30",
+    "end": "2026-08-30",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.92,
+      "lon": -3.3,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Kranj",
+    "country": "Slovenia",
+    "start": "2026-08-30",
+    "end": "2026-08-30",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.24,
+      "lon": 14.36,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Philadelphia Cycling Classic",
+    "country": "United States",
+    "start": "2026-08-30",
+    "end": "2026-08-30",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 39.95,
+      "lon": -75.17,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Korea",
+    "country": "South Korea",
+    "start": "2026-08-31",
+    "end": "2026-09-04",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 37.57,
+      "lon": 126.98,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Britain Men",
+    "country": "United Kingdom",
+    "start": "2026-09-02",
+    "end": "2026-09-06",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 54.7023545,
+      "lon": -3.2765753,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "ZLM Tour",
+    "country": "Netherlands",
+    "start": "2026-09-02",
+    "end": "2026-09-06",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.5,
+      "lon": 3.89,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Classic Lorient Agglomération",
+    "country": "France",
+    "start": "2026-09-05",
+    "end": "2026-09-05",
+    "classes": [
+      "1.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.75,
+      "lon": -3.37,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tout Commence En Finistère Ladies Classic",
+    "country": "France",
+    "start": "2026-09-05",
+    "end": "2026-09-05",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.0,
+      "lon": -4.1,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP Industria & Artigianato",
+    "country": "Italy",
+    "start": "2026-09-06",
+    "end": "2026-09-06",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.85,
+      "lon": 10.84,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Pointe du Raz Ladies Classic",
+    "country": "France",
+    "start": "2026-09-06",
+    "end": "2026-09-06",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.04,
+      "lon": -4.66,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour of Binzhou",
+    "country": "China",
+    "start": "2026-09-08",
+    "end": "2026-09-09",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 37.38,
+      "lon": 118.02,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro della Toscana - Memorial Alfredo Martini",
+    "country": "Italy",
+    "start": "2026-09-09",
+    "end": "2026-09-09",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.66,
+      "lon": 10.63,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Coppa Sabatini",
+    "country": "Italy",
+    "start": "2026-09-10",
+    "end": "2026-09-10",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 43.54,
+      "lon": 10.72,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP de Québec",
+    "country": "Canada",
+    "start": "2026-09-11",
+    "end": "2026-09-11",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5461549,
+      "lon": -73.5989431,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "A Travers Les Hauts de France",
+    "country": "France",
+    "start": "2026-09-12",
+    "end": "2026-09-12",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.4823003,
+      "lon": 5.7159096,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Boucles Drôme Ardèche Femmes",
+    "country": "France",
+    "start": "2026-09-12",
+    "end": "2026-09-13",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.93,
+      "lon": 4.89,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Memorial Marco Pantani",
+    "country": "Italy",
+    "start": "2026-09-12",
+    "end": "2026-09-12",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.3856796,
+      "lon": 7.121906,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour of Taihu Lake",
+    "country": "China",
+    "start": "2026-09-12",
+    "end": "2026-09-16",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 31.49,
+      "lon": 120.31,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP de Fourmies - La Voix du Nord",
+    "country": "France",
+    "start": "2026-09-13",
+    "end": "2026-09-13",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.01,
+      "lon": 4.05,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP de Montréal",
+    "country": "Canada",
+    "start": "2026-09-13",
+    "end": "2026-09-13",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5418598,
+      "lon": -73.6634547,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "La Choralis Fourmies Féminine",
+    "country": "France",
+    "start": "2026-09-13",
+    "end": "2026-09-13",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.01,
+      "lon": 4.05,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Trofeo Matteotti",
+    "country": "Italy",
+    "start": "2026-09-13",
+    "end": "2026-09-13",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.46,
+      "lon": 14.21,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Women's Cycling GP Stuttgart",
+    "country": "Germany",
+    "start": "2026-09-13",
+    "end": "2026-09-13",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.78,
+      "lon": 9.18,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Il Giro d'Abruzzo",
+    "country": "Italy",
+    "start": "2026-09-15",
+    "end": "2026-09-18",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 42.46,
+      "lon": 14.21,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Chrono Féminin du Gatineau",
+    "country": "Canada",
+    "start": "2026-09-16",
+    "end": "2026-09-16",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.48,
+      "lon": -75.65,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP de Wallonie",
+    "country": "Belgium",
+    "start": "2026-09-16",
+    "end": "2026-09-16",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.5829497,
+      "lon": 4.3511097,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "GP de Wallonie Dames",
+    "country": "Belgium",
+    "start": "2026-09-16",
+    "end": "2026-09-16",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.47,
+      "lon": 4.87,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Okolo Slovenska",
+    "country": "Slovakia",
+    "start": "2026-09-16",
+    "end": "2026-09-20",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 48.7411522,
+      "lon": 19.4528646,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour of Luxembourg",
+    "country": "Luxembourg",
+    "start": "2026-09-16",
+    "end": "2026-09-20",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.61,
+      "lon": 6.13,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour du Gatineau",
+    "country": "Canada",
+    "start": "2026-09-17",
+    "end": "2026-09-17",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.4266892,
+      "lon": -75.7144052,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Kampioenscap Van Vlaanderen",
+    "country": "Belgium",
+    "start": "2026-09-18",
+    "end": "2026-09-18",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour of Huangshan",
+    "country": "China",
+    "start": "2026-09-18",
+    "end": "2026-09-20",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 29.71,
+      "lon": 118.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "GP del Lazio",
+    "country": "Italy",
+    "start": "2026-09-19",
+    "end": "2026-09-19",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 41.8337032,
+      "lon": 12.835738,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Super 8 Classic",
+    "country": "Belgium",
+    "start": "2026-09-19",
+    "end": "2026-09-19",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.6402809,
+      "lon": 4.6667145,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Giro della Romagna",
+    "country": "Italy",
+    "start": "2026-09-20",
+    "end": "2026-09-20",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.1435359,
+      "lon": 11.6690657,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Gooikse Pijl",
+    "country": "Belgium",
+    "start": "2026-09-20",
+    "end": "2026-09-20",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 50.79,
+      "lon": 4.06,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "World Championships: Men's TT",
+    "country": "Canada",
+    "start": "2026-09-20",
+    "end": "2026-09-20",
+    "classes": [],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5,
+      "lon": -73.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "World Championships: Women's TT",
+    "country": "Canada",
+    "start": "2026-09-20",
+    "end": "2026-09-20",
+    "classes": [],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5,
+      "lon": -73.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "World Championships: Mixed Relay TT",
+    "country": "Canada",
+    "start": "2026-09-22",
+    "end": "2026-09-22",
+    "classes": [],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5,
+      "lon": -73.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Omloop Van Het Houtland",
+    "country": "Belgium",
+    "start": "2026-09-23",
+    "end": "2026-09-23",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.03,
+      "lon": 3.15,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "World Championships: Women's Road Race",
+    "country": "Canada",
+    "start": "2026-09-26",
+    "end": "2026-09-26",
+    "classes": [],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5,
+      "lon": -73.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Paris-Chauny",
+    "country": "France",
+    "start": "2026-09-27",
+    "end": "2026-09-27",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 49.62,
+      "lon": 3.22,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Langkawi",
+    "country": "Malaysia",
+    "start": "2026-09-27",
+    "end": "2026-10-04",
+    "classes": [
+      "2.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 3.14,
+      "lon": 101.69,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "World Championships: Men's Road Race",
+    "country": "Canada",
+    "start": "2026-09-27",
+    "end": "2026-09-27",
+    "classes": [],
+    "entries": 1,
+    "coords": {
+      "lat": 45.5,
+      "lon": -73.57,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Cholet Agglo Tour",
+    "country": "France",
+    "start": "2026-10-03",
+    "end": "2026-10-03",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.06,
+      "lon": -0.88,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro dell'Emilia",
+    "country": "Italy",
+    "start": "2026-10-03",
+    "end": "2026-10-03",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.49,
+      "lon": 11.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro dell'Emilia Donne",
+    "country": "Italy",
+    "start": "2026-10-03",
+    "end": "2026-10-03",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.49,
+      "lon": 11.34,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Sparkassen Münsterland Giro",
+    "country": "Germany",
+    "start": "2026-10-03",
+    "end": "2026-10-03",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 51.96,
+      "lon": 7.63,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Coppa Agostoni",
+    "country": "Italy",
+    "start": "2026-10-04",
+    "end": "2026-10-04",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.6005442,
+      "lon": 9.2341268,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour de Vendée",
+    "country": "France",
+    "start": "2026-10-04",
+    "end": "2026-10-04",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 46.3240381,
+      "lon": -0.6655973,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Coppa Bernocchi",
+    "country": "Italy",
+    "start": "2026-10-05",
+    "end": "2026-10-05",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.9414742,
+      "lon": 9.1905788,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Binche-Chimay-Binche",
+    "country": "Belgium",
+    "start": "2026-10-06",
+    "end": "2026-10-06",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 50.41,
+      "lon": 4.17,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tre Valle Varesine",
+    "country": "",
+    "start": "2026-10-06",
+    "end": "2026-10-06",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.82,
+      "lon": 8.83,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tre Valle Varesine",
+    "country": "Italy",
+    "start": "2026-10-06",
+    "end": "2026-10-06",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.82,
+      "lon": 8.83,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Gran Piemonte",
+    "country": "Italy",
+    "start": "2026-10-08",
+    "end": "2026-10-08",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 44.998351,
+      "lon": 8.299436,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Tour of Chongming Island",
+    "country": "China",
+    "start": "2026-10-09",
+    "end": "2026-10-11",
+    "classes": [
+      "2.WWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 31.4,
+      "lon": 121.5,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Il Lombardia",
+    "country": "Italy",
+    "start": "2026-10-10",
+    "end": "2026-10-10",
+    "classes": [
+      "1.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.7,
+      "lon": 9.67,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Tour de Kyushu",
+    "country": "Japan",
+    "start": "2026-10-10",
+    "end": "2026-10-12",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 32.8056553,
+      "lon": 130.7033109,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Paris-Tours",
+    "country": "France",
+    "start": "2026-10-11",
+    "end": "2026-10-11",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 47.3951602,
+      "lon": 0.6858674,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Sun Hung Kai Hong Kong Cyclothon",
+    "country": "Hong Kong",
+    "start": "2026-10-11",
+    "end": "2026-10-11",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 22.32,
+      "lon": 114.17,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Eneco Tour",
+    "country": "Netherlands",
+    "start": "2026-10-13",
+    "end": "2026-10-18",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 52.2434979,
+      "lon": 5.6343227,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Eneco Tour Women",
+    "country": "Netherlands",
+    "start": "2026-10-13",
+    "end": "2026-10-17",
+    "classes": [
+      "2.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 52.2434979,
+      "lon": 5.6343227,
+      "precision": "country"
+    }
+  },
+  {
+    "name": "Tour of Guangxi",
+    "country": "China",
+    "start": "2026-10-13",
+    "end": "2026-10-18",
+    "classes": [
+      "2.UWT"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 22.82,
+      "lon": 108.37,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Giro del Veneto",
+    "country": "Italy",
+    "start": "2026-10-14",
+    "end": "2026-10-14",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.9034482,
+      "lon": 11.9550304,
+      "precision": "place"
+    }
+  },
+  {
+    "name": "Veneto Women",
+    "country": "Italy",
+    "start": "2026-10-14",
+    "end": "2026-10-14",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.67,
+      "lon": 12.24,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Chrono des Nations",
+    "country": "France",
+    "start": "2026-10-18",
+    "end": "2026-10-18",
+    "classes": [
+      "1.1"
+    ],
+    "entries": 2,
+    "coords": {
+      "lat": 46.87,
+      "lon": -1.01,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Utsunomiya Japan Cup",
+    "country": "Japan",
+    "start": "2026-10-18",
+    "end": "2026-10-18",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 36.56,
+      "lon": 139.88,
+      "precision": "override"
+    }
+  },
+  {
+    "name": "Veneto Classic",
+    "country": "Italy",
+    "start": "2026-10-18",
+    "end": "2026-10-18",
+    "classes": [
+      "1.Pro"
+    ],
+    "entries": 1,
+    "coords": {
+      "lat": 45.67,
+      "lon": 12.24,
+      "precision": "override"
+    }
+  }
+]
