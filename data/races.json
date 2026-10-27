@@ -279,9 +279,9 @@
     ],
     "entries": 1,
     "coords": {
-      "lat": 39.3260685,
-      "lon": -4.8379791,
-      "precision": "country"
+      "lat": 38.97,
+      "lon": -0.18,
+      "precision": "override"
     }
   },
   {
@@ -1451,8 +1451,8 @@
     "start": "2026-04-19",
     "end": "2026-04-19",
     "classes": [
-      "1.WWT",
-      "1.UWT"
+      "1.UWT",
+      "1.WWT"
     ],
     "entries": 2,
     "coords": {
@@ -3866,7 +3866,7 @@
   },
   {
     "name": "Tre Valle Varesine",
-    "country": "",
+    "country": "Italy",
     "start": "2026-10-06",
     "end": "2026-10-06",
     "classes": [
@@ -3881,7 +3881,7 @@
   },
   {
     "name": "Tre Valle Varesine",
-    "country": "Italy",
+    "country": "",
     "start": "2026-10-06",
     "end": "2026-10-06",
     "classes": [
