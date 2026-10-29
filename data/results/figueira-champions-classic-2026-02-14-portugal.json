@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Portugal",
+ "end": "2026-02-14",
+ "fetched": "2026-10-29",
+ "key": "Figueira Champions Classic|2026-02-14|Portugal",
+ "name": "Figueira Champions Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "António Morgado ( POR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "4h 19' 13\""
+  },
+  {
+   "rank": 2,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Pau Martí ( ESP )",
+   "team": "NSN Cycling Team",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 4,
+   "rider": "Jarno Widar ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 5,
+   "rider": "Ion Izagirre ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 6,
+   "rider": "Brandon McNulty ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 7,
+   "rider": "Marc Hirschi ( SUI )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 8,
+   "rider": "Felix Großschartner ( AUT )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 9,
+   "rider": "Daniel Martínez ( COL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 10,
+   "rider": "Thomas Gloag ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 21\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-14",
+ "title": "2026 Figueira Champions Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_Figueira_Champions_Classic"
+}

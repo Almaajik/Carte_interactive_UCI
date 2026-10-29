@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Italy",
+ "end": "2026-10-03",
+ "fetched": "2026-10-29",
+ "key": "Giro dell'Emilia|2026-10-03|Italy",
+ "name": "Giro dell'Emilia",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Davide Piganzoli ( ITA )",
+   "team": "Visma–Lease a Bike",
+   "time": "4h 33' 19\""
+  },
+  {
+   "rank": 2,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 3,
+   "rider": "Oscar Onley ( GBR )",
+   "team": "Netcompany INEOS",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 4,
+   "rider": "Ben Tulett ( GBR )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 5\""
+  },
+  {
+   "rank": 5,
+   "rider": "Matteo Jorgenson ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 6,
+   "rider": "Ben Healy ( IRL )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 7,
+   "rider": "Lorenzo Fortunato ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 29\""
+  },
+  {
+   "rank": 8,
+   "rider": "Adam Yates ( GBR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 37\""
+  },
+  {
+   "rank": 9,
+   "rider": "Michael Storer ( AUS )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 45\""
+  },
+  {
+   "rank": 10,
+   "rider": "Brandon McNulty ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 45\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-03",
+ "title": "2026 Giro dell'Emilia",
+ "url": "https://en.wikipedia.org/wiki/2026_Giro_dell%27Emilia"
+}

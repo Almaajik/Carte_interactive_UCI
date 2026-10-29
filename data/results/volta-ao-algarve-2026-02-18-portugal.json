@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Portugal",
+ "end": "2026-02-22",
+ "fetched": "2026-10-29",
+ "key": "Volta ao Algarve|2026-02-18|Portugal",
+ "name": "Volta ao Algarve",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Juan Ayuso ( ESP )",
+   "team": "Lidl–Trek",
+   "time": "15h 51' 12\""
+  },
+  {
+   "rank": 2,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 14\""
+  },
+  {
+   "rank": 3,
+   "rider": "João Almeida ( POR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 59\""
+  },
+  {
+   "rank": 4,
+   "rider": "Oscar Onley ( GBR )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 1' 22\""
+  },
+  {
+   "rank": 5,
+   "rider": "Kévin Vauquelin ( FRA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 1' 40\""
+  },
+  {
+   "rank": 6,
+   "rider": "Matthew Riccitello ( USA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 1' 53\""
+  },
+  {
+   "rank": 7,
+   "rider": "Daniel Martínez ( COL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 1' 53\""
+  },
+  {
+   "rank": 8,
+   "rider": "Florian Lipowitz ( GER )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 15\""
+  },
+  {
+   "rank": 9,
+   "rider": "Thymen Arensman ( NED )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 2' 18\""
+  },
+  {
+   "rank": 10,
+   "rider": "Yannis Voisard ( SUI )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 2' 35\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-18",
+ "title": "2026 Volta ao Algarve",
+ "url": "https://en.wikipedia.org/wiki/2026_Volta_ao_Algarve"
+}

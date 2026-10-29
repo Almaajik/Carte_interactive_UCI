@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "Italy",
+ "end": "2026-03-29",
+ "fetched": "2026-10-29",
+ "key": "Settimana Coppi e Bartali|2026-03-25|Italy",
+ "name": "Settimana Coppi e Bartali",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "19h 01' 50\""
+  },
+  {
+   "rank": 2,
+   "rider": "Axel Laurance ( FRA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alan Hatherly ( RSA )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 27\""
+  },
+  {
+   "rank": 4,
+   "rider": "Thomas Pesenti ( ITA )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 5,
+   "rider": "Anton Schiffer ( GER )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 6,
+   "rider": "Matteo Fabbro ( ITA )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 7,
+   "rider": "Andrew August ( USA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 8,
+   "rider": "Giovanni Aleotti ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 9,
+   "rider": "Jardi Christiaan van der Lee ( NED )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 57\""
+  },
+  {
+   "rank": 10,
+   "rider": "Diego Ulissi ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 1' 03\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-25",
+ "title": "2026 Settimana Internazionale di Coppi e Bartali",
+ "url": "https://en.wikipedia.org/wiki/2026_Settimana_Internazionale_di_Coppi_e_Bartali"
+}

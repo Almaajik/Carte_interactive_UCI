@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Spain",
+ "end": "2026-02-15",
+ "fetched": "2026-10-29",
+ "key": "Clasica de Almeria|2026-02-15|Spain",
+ "name": "Clasica de Almeria",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Biniam Girmay ( ERI )",
+   "team": "NSN Cycling Team",
+   "time": "4h 10' 36\""
+  },
+  {
+   "rank": 2,
+   "rider": "Milan Fretin ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Matteo Moschetti ( ITA )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Dylan Groenewegen ( NED )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Phil Bauhaus ( GER )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Arnaud De Lie ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Enrico Zanoncello ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Pascal Ackermann ( GER )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Manuel Peñalver ( ESP )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Fernando Gaviria ( COL )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-15",
+ "title": "2026 Clásica de Almería",
+ "url": "https://en.wikipedia.org/wiki/2026_Cl%C3%A1sica_de_Almer%C3%ADa"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-06-14",
+ "fetched": "2026-10-29",
+ "key": "Tour Auvergne-Rhône-Alpes|2026-06-07|France",
+ "name": "Tour Auvergne-Rhône-Alpes",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Isaac del Toro ( MEX )",
+   "team": "UAE Team Emirates XRG",
+   "time": "29h 35' 05\""
+  },
+  {
+   "rank": 2,
+   "rider": "Luke Tuckwell ( AUS )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 54\""
+  },
+  {
+   "rank": 3,
+   "rider": "Juan Ayuso ( ESP )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 17\""
+  },
+  {
+   "rank": 4,
+   "rider": "Matteo Jorgenson ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 1' 36\""
+  },
+  {
+   "rank": 5,
+   "rider": "Tobias Halland Johannessen ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 1' 46\""
+  },
+  {
+   "rank": 6,
+   "rider": "Mattias Skjelmose ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 2' 41\""
+  },
+  {
+   "rank": 7,
+   "rider": "Cian Uijtdebroeks ( BEL )",
+   "team": "Movistar Team",
+   "time": "+ 3' 11\""
+  },
+  {
+   "rank": 8,
+   "rider": "Cristián Rodríguez ( ESP )",
+   "team": "XDS Astana Team",
+   "time": "+ 3' 15\""
+  },
+  {
+   "rank": 9,
+   "rider": "José Félix Parra ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 6' 25\""
+  },
+  {
+   "rank": 10,
+   "rider": "Guillaume Martin ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 7' 21\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-07",
+ "title": "2026 Tour Auvergne-Rhône-Alpes",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_Auvergne-Rh%C3%B4ne-Alpes"
+}

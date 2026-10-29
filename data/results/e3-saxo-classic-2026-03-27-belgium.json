@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.UWT"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-03-27",
+ "fetched": "2026-10-29",
+ "key": "E3 Saxo Classic|2026-03-27|Belgium",
+ "name": "E3 Saxo Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Mathieu van der Poel ( NED )",
+   "team": "Alpecin–Premier Tech",
+   "time": "4h 45' 15\""
+  },
+  {
+   "rank": 2,
+   "rider": "Per Strand Hagenes ( NOR )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 3,
+   "rider": "Florian Vermeersch ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 4,
+   "rider": "Stan Dewulf ( BEL )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 5,
+   "rider": "Jonas Abrahamsen ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 6,
+   "rider": "Tobias Lund Andresen ( DEN )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 7,
+   "rider": "Christophe Laporte ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 8,
+   "rider": "Gianni Vermeersch ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 9,
+   "rider": "Mads Pedersen ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 10,
+   "rider": "Matteo Trentin ( ITA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 24\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-27",
+ "title": "2026 E3 Saxo Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_E3_Saxo_Classic"
+}

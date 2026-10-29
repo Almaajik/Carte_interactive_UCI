@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Oman",
+ "end": "2026-02-06",
+ "fetched": "2026-10-29",
+ "key": "Muscat Classic|2026-02-06|Oman",
+ "name": "Muscat Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "4h 14' 36\""
+  },
+  {
+   "rank": 2,
+   "rider": "Adam Yates ( GBR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Luke Plapp ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 4\""
+  },
+  {
+   "rank": 4,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 5,
+   "rider": "Bart Lemmen ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 6,
+   "rider": "Rasmus Tiller ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 7,
+   "rider": "Rui Oliveira ( POR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 8,
+   "rider": "Henok Mulubrhan ( ERI )",
+   "team": "XDS Astana Team",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 9,
+   "rider": "Mauri Vansevenant ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 10,
+   "rider": "Natnael Tesfatsion ( ERI )",
+   "team": "Movistar Team",
+   "time": "+ 15\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-06",
+ "title": "2026 Muscat Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_Muscat_Classic"
+}

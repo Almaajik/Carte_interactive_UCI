@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "France",
+ "end": "2026-03-01",
+ "fetched": "2026-10-29",
+ "key": "Faun Drôme Classic|2026-03-01|France",
+ "name": "Faun Drôme Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "4h 14' 11\""
+  },
+  {
+   "rank": 2,
+   "rider": "Matteo Jorgenson ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Lenny Martinez ( FRA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 4,
+   "rider": "Quinten Hermans ( BEL )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 5,
+   "rider": "Paul Lapeira ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 6,
+   "rider": "Dorian Godon ( FRA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 7,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 8,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 9,
+   "rider": "Lukas Nerurkar ( GBR )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 10,
+   "rider": "Clément Venturini ( FRA )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 10\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-01",
+ "title": "2026 La Drôme Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_La_Dr%C3%B4me_Classic"
+}

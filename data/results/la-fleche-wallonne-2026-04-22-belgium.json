@@ -1,0 +1,78 @@
+{
+ "classes": [
+  "1.UWT",
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-04-22",
+ "fetched": "2026-10-29",
+ "key": "La Flèche Wallonne|2026-04-22|Belgium",
+ "name": "La Flèche Wallonne",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "4h 35' 29\""
+  },
+  {
+   "rank": 2,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 3,
+   "rider": "Ben Tulett ( GBR )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 4,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 5,
+   "rider": "Mattias Skjelmose ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 8\""
+  },
+  {
+   "rank": 6,
+   "rider": "Alex Baudin ( FRA )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 8\""
+  },
+  {
+   "rank": 7,
+   "rider": "Ion Izagirre ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 8,
+   "rider": "Lenny Martinez ( FRA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 9,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 10,
+   "rider": "Andreas Kron ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 10\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-22",
+ "title": "2026 La Flèche Wallonne",
+ "url": "https://en.wikipedia.org/wiki/2026_La_Fl%C3%A8che_Wallonne"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "Japan",
+ "end": "2026-10-12",
+ "fetched": "2026-10-29",
+ "key": "Tour de Kyushu|2026-10-10|Japan",
+ "name": "Tour de Kyushu",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Ivo Oliveira ( POR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "8h 47' 36\""
+  },
+  {
+   "rank": 2,
+   "rider": "Luke Mudgway ( NZL )",
+   "team": "Li-Ning Star",
+   "time": "+ 16\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alexandre Delettre ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 26\""
+  },
+  {
+   "rank": 4,
+   "rider": "Alessio Delle Vedove ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 26\""
+  },
+  {
+   "rank": 5,
+   "rider": "Alessandro Iacchi ( ITA )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 28\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jordan Jegat ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 29\""
+  },
+  {
+   "rank": 7,
+   "rider": "Mathias Bregnhøj ( DEN )",
+   "team": "Terengganu Cycling Team",
+   "time": "+ 29\""
+  },
+  {
+   "rank": 8,
+   "rider": "Yuma Koishi ( JPN )",
+   "team": "Kinan Racing Team",
+   "time": "+ 30\""
+  },
+  {
+   "rank": 9,
+   "rider": "Matteo Regnanti ( ITA )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 32\""
+  },
+  {
+   "rank": 10,
+   "rider": "Ben Granger ( GBR )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 32\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-10",
+ "title": "2026 Tour de Kyushu",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Kyushu"
+}

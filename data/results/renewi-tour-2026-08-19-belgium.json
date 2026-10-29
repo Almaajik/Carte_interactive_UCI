@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Belgium",
+ "end": "2026-08-23",
+ "fetched": "2026-10-29",
+ "key": "Renewi Tour|2026-08-19|Belgium",
+ "name": "Renewi Tour",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jasper Philipsen ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "19h 28' 57\""
+  },
+  {
+   "rank": 2,
+   "rider": "Jenno Berckmoes ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 14\""
+  },
+  {
+   "rank": 3,
+   "rider": "Olav Kooij ( NED )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 20\""
+  },
+  {
+   "rank": 4,
+   "rider": "Mike Teunissen ( NED )",
+   "team": "XDS Astana Team",
+   "time": "+ 32\""
+  },
+  {
+   "rank": 5,
+   "rider": "Quinten Hermans ( BEL )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 33\""
+  },
+  {
+   "rank": 6,
+   "rider": "Alec Segaert ( BEL )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 37\""
+  },
+  {
+   "rank": 7,
+   "rider": "Søren Wærenskjold ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 37\""
+  },
+  {
+   "rank": 8,
+   "rider": "Matteo Trentin ( ITA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 38\""
+  },
+  {
+   "rank": 9,
+   "rider": "Robert Donaldson ( GBR )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 39\""
+  },
+  {
+   "rank": 10,
+   "rider": "Filippo Fiorelli ( ITA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 40\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-19",
+ "title": "2026 Renewi Tour",
+ "url": "https://en.wikipedia.org/wiki/2026_Renewi_Tour"
+}

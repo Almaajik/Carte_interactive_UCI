@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Oman",
+ "end": "2026-02-11",
+ "fetched": "2026-10-29",
+ "key": "Tour of Oman|2026-02-07|Oman",
+ "name": "Tour of Oman",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "19h 33' 16\""
+  },
+  {
+   "rank": 2,
+   "rider": "Cristián Rodríguez ( ESP )",
+   "team": "XDS Astana Team",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 3,
+   "rider": "Adam Yates ( GBR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 4,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 5,
+   "rider": "Paul Double ( GBR )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 45\""
+  },
+  {
+   "rank": 6,
+   "rider": "Sebastian Berwick ( AUS )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 45\""
+  },
+  {
+   "rank": 7,
+   "rider": "Nairo Quintana ( COL )",
+   "team": "Movistar Team",
+   "time": "+ 52\""
+  },
+  {
+   "rank": 8,
+   "rider": "Diego Pescador ( COL )",
+   "team": "Movistar Team",
+   "time": "+ 53\""
+  },
+  {
+   "rank": 9,
+   "rider": "Martin Tjøtta ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 1' 06\""
+  },
+  {
+   "rank": 10,
+   "rider": "Louis Rouland ( FRA )",
+   "team": "Cofidis",
+   "time": "+ 1' 07\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-07",
+ "title": "2026 Tour of Oman",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Oman"
+}

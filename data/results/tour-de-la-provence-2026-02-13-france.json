@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-02-15",
+ "fetched": "2026-10-29",
+ "key": "Tour de La Provence|2026-02-13|France",
+ "name": "Tour de La Provence",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tadej Pogačar ( SLO )",
+   "team": "UAE Team Emirates XRG",
+   "time": "73h 56' 26\""
+  },
+  {
+   "rank": 2,
+   "rider": "Remco Evenepoel ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 6' 26\""
+  },
+  {
+   "rank": 3,
+   "rider": "Isaac del Toro ( MEX )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 9' 42\""
+  },
+  {
+   "rank": 4,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 11' 56\""
+  },
+  {
+   "rank": 5,
+   "rider": "Lenny Martinez ( FRA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 13' 02\""
+  },
+  {
+   "rank": 6,
+   "rider": "Mattias Skjelmose ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 14' 59\""
+  },
+  {
+   "rank": 7,
+   "rider": "Juan Ayuso ( ESP )",
+   "team": "Lidl–Trek",
+   "time": "+ 17' 48\""
+  },
+  {
+   "rank": 8,
+   "rider": "Richard Carapaz ( ECU )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 20' 00\""
+  },
+  {
+   "rank": 9,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 29' 28\""
+  },
+  {
+   "rank": 10,
+   "rider": "Jordan Jegat ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 33' 21\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-13",
+ "title": "2026 Tour de France",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_France"
+}

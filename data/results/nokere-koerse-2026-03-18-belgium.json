@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-03-18",
+ "fetched": "2026-10-29",
+ "key": "Nokere Koerse|2026-03-18|Belgium",
+ "name": "Nokere Koerse",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jasper Philipsen ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "3h 48' 45\""
+  },
+  {
+   "rank": 2,
+   "rider": "Jordi Meeus ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Juan Sebastián Molano ( COL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Emilien Jeannière ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Milan Menten ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Lukáš Kubiš ( SVK )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Jenthe Biermans ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Paul Penhoët ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Steffen De Schuyteneer ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "António Morgado ( POR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-18",
+ "title": "2026 Nokere Koerse",
+ "url": "https://en.wikipedia.org/wiki/2026_Nokere_Koerse"
+}

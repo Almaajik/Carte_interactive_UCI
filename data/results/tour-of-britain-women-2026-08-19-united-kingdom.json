@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "United Kingdom",
+ "end": "2026-08-23",
+ "fetched": "2026-10-29",
+ "key": "Tour of Britain Women|2026-08-19|United Kingdom",
+ "name": "Tour of Britain Women",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Kim Le Court-Pienaar ( MRI )",
+   "team": "AG Insurance–Soudal",
+   "time": "17h 02' 04\""
+  },
+  {
+   "rank": 2,
+   "rider": "Lorena Wiebes ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "+19\""
+  },
+  {
+   "rank": 3,
+   "rider": "Liane Lippert ( GER )",
+   "team": "Movistar Team",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 4,
+   "rider": "Caroline Andersson ( SWE )",
+   "team": "Liv AlUla Jayco",
+   "time": "+39\""
+  },
+  {
+   "rank": 5,
+   "rider": "Femke de Vries ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 6,
+   "rider": "Karlijn Swinkels ( NED )",
+   "team": "UAE Team L'Imad",
+   "time": "+ 46\""
+  },
+  {
+   "rank": 7,
+   "rider": "Mischa Bredewold ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 46\""
+  },
+  {
+   "rank": 8,
+   "rider": "Cecilie Uttrup Ludwig ( DEN )",
+   "team": "Canyon//SRAM",
+   "time": "+ 46\""
+  },
+  {
+   "rank": 9,
+   "rider": "Josie Nelson ( GBR )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 56\""
+  },
+  {
+   "rank": 10,
+   "rider": "Riejanne Markus ( NED )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 06\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-19",
+ "title": "2026 Tour of Britain Women",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Britain_Women"
+}

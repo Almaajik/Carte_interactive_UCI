@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "China",
+ "end": "2026-04-19",
+ "fetched": "2026-10-29",
+ "key": "Tour of Hainan|2026-04-15|China",
+ "name": "Tour of Hainan",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Guillermo Thomas Silva ( URU )",
+   "team": "XDS Astana Team",
+   "time": "20h 00' 18\""
+  },
+  {
+   "rank": 2,
+   "rider": "Xabier Berasategi ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 3,
+   "rider": "Thomas Pesenti ( ITA )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 4,
+   "rider": "Lorenzo Quartucci ( ITA )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 17\""
+  },
+  {
+   "rank": 5,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 18\""
+  },
+  {
+   "rank": 6,
+   "rider": "Nicolas Vinokurov ( KAZ )",
+   "team": "XDS Astana Team",
+   "time": "+ 19\""
+  },
+  {
+   "rank": 7,
+   "rider": "Clément Alleno ( FRA )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 8,
+   "rider": "Fabrizio Crozzolo ( ARG )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 9,
+   "rider": "Matteo Fabbro ( ITA )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 10,
+   "rider": "Mathias Bregnhøj ( DEN )",
+   "team": "Terengganu Cycling Team",
+   "time": "+ 24\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-15",
+ "title": "2026 Tour of Hainan",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Hainan"
+}

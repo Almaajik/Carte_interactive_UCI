@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-04-18",
+ "fetched": "2026-10-29",
+ "key": "O Gran Camiño|2026-04-14|Spain",
+ "name": "O Gran Camiño",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Adam Yates ( GBR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "14h 40' 53\""
+  },
+  {
+   "rank": 2,
+   "rider": "Jørgen Nordhagen ( NOR )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 32\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alessandro Pinarello ( ITA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 48\""
+  },
+  {
+   "rank": 4,
+   "rider": "Abel Balderstone ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 1' 49\""
+  },
+  {
+   "rank": 5,
+   "rider": "Iván Romeo ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 2' 19\""
+  },
+  {
+   "rank": 6,
+   "rider": "José Félix Parra ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 3' 07\""
+  },
+  {
+   "rank": 7,
+   "rider": "Txomin Juaristi ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 3' 27\""
+  },
+  {
+   "rank": 8,
+   "rider": "George Bennett ( NZL )",
+   "team": "NSN Cycling Team",
+   "time": "+ 3' 43\""
+  },
+  {
+   "rank": 9,
+   "rider": "Jesús Herrada ( ESP )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 3' 48\""
+  },
+  {
+   "rank": 10,
+   "rider": "Artem Nych",
+   "team": "Anicolor / Campicarn",
+   "time": "+ 4' 05\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-14",
+ "title": "2026 O Gran Camiño",
+ "url": "https://en.wikipedia.org/wiki/2026_O_Gran_Cami%C3%B1o"
+}

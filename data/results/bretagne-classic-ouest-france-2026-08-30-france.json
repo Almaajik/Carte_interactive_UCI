@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.UWT"
+ ],
+ "classification": "Result",
+ "country": "France",
+ "end": "2026-08-30",
+ "fetched": "2026-10-29",
+ "key": "Bretagne Classic - Ouest France|2026-08-30|France",
+ "name": "Bretagne Classic - Ouest France",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "5h 21' 13\""
+  },
+  {
+   "rank": 2,
+   "rider": "Alexander Kamp ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 4\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alessandro Borgo ( ITA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 4,
+   "rider": "Emil Herzog ( GER )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 5,
+   "rider": "Jenno Berckmoes ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 6,
+   "rider": "Paul Lapeira ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 7,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 8,
+   "rider": "Rick Pluimers ( NED )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alexandre Delettre ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 10,
+   "rider": "Andrea Vendrame ( ITA )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 10\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-30",
+ "title": "2026 Bretagne Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_Bretagne_Classic"
+}

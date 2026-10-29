@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-08-09",
+ "fetched": "2026-10-29",
+ "key": "Tour de France Femmes|2026-08-01|France",
+ "name": "Tour de France Femmes",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Demi Vollering ( NED )",
+   "team": "FDJ United–Suez",
+   "time": "30h 54' 51\""
+  },
+  {
+   "rank": 2,
+   "rider": "Katarzyna Niewiadoma-Phinney ( POL )",
+   "team": "Canyon//SRAM",
+   "time": "+ 1' 18\""
+  },
+  {
+   "rank": 3,
+   "rider": "Elisa Longo Borghini ( ITA )",
+   "team": "UAE Team L'Imad",
+   "time": "+ 4' 19\""
+  },
+  {
+   "rank": 4,
+   "rider": "Antonia Niedermaier ( GER )",
+   "team": "Canyon//SRAM",
+   "time": "+ 5' 10\""
+  },
+  {
+   "rank": 5,
+   "rider": "Paula Blasi ( ESP )",
+   "team": "UAE Team L'Imad",
+   "time": "+ 6' 13\""
+  },
+  {
+   "rank": 6,
+   "rider": "Cédrine Kerbaol ( FRA )",
+   "team": "EF Education–Oatly",
+   "time": "+ 6' 41\""
+  },
+  {
+   "rank": 7,
+   "rider": "Dominika Włodarczyk ( POL )",
+   "team": "UAE Team L'Imad",
+   "time": "+ 7' 53\""
+  },
+  {
+   "rank": 8,
+   "rider": "Isabella Holmgren ( CAN )",
+   "team": "Lidl–Trek",
+   "time": "+ 9' 12\""
+  },
+  {
+   "rank": 9,
+   "rider": "Kimberley Le Court-Pienaar ( MRI )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 14' 04\""
+  },
+  {
+   "rank": 10,
+   "rider": "Niamh Fisher-Black ( NZL )",
+   "team": "Lidl–Trek",
+   "time": "+ 15' 14\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-01",
+ "title": "2026 Tour de France Femmes",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_France_Femmes"
+}

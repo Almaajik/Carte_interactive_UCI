@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-03-29",
+ "fetched": "2026-10-29",
+ "key": "Volta a Catalunya|2026-03-23|Spain",
+ "name": "Volta a Catalunya",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jonas Vingegaard ( DEN )",
+   "team": "Visma–Lease a Bike",
+   "time": "25h 56' 36\""
+  },
+  {
+   "rank": 2,
+   "rider": "Lenny Martinez ( FRA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 22\""
+  },
+  {
+   "rank": 3,
+   "rider": "Florian Lipowitz ( GER )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 1' 30\""
+  },
+  {
+   "rank": 4,
+   "rider": "Valentin Paret-Peintre ( FRA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 43\""
+  },
+  {
+   "rank": 5,
+   "rider": "Remco Evenepoel ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 13\""
+  },
+  {
+   "rank": 6,
+   "rider": "Felix Gall ( AUT )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 3' 17\""
+  },
+  {
+   "rank": 7,
+   "rider": "Mattias Skjelmose ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 4' 11\""
+  },
+  {
+   "rank": 8,
+   "rider": "Cian Uijtdebroeks ( BEL )",
+   "team": "Movistar Team",
+   "time": "+ 5' 20\""
+  },
+  {
+   "rank": 9,
+   "rider": "Matthew Riccitello ( USA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 5' 25\""
+  },
+  {
+   "rank": 10,
+   "rider": "Richard Carapaz ( ECU )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 5' 36\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-23",
+ "title": "2026 Volta a Catalunya",
+ "url": "https://en.wikipedia.org/wiki/2026_Volta_a_Catalunya"
+}

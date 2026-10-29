@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Italy",
+ "end": "2026-03-15",
+ "fetched": "2026-10-29",
+ "key": "Tirreno-Adriatico|2026-03-09|Italy",
+ "name": "Tirreno-Adriatico",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Isaac del Toro ( MEX )",
+   "team": "UAE Team Emirates XRG",
+   "time": "28h 02' 14\""
+  },
+  {
+   "rank": 2,
+   "rider": "Matteo Jorgenson ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 40\""
+  },
+  {
+   "rank": 3,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 42\""
+  },
+  {
+   "rank": 4,
+   "rider": "Tobias Halland Johannessen ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 1' 14\""
+  },
+  {
+   "rank": 5,
+   "rider": "Primož Roglič ( SLO )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 1' 21\""
+  },
+  {
+   "rank": 6,
+   "rider": "Giulio Ciccone ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 26\""
+  },
+  {
+   "rank": 7,
+   "rider": "Santiago Buitrago ( COL )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 49\""
+  },
+  {
+   "rank": 8,
+   "rider": "Ben Healy ( IRL )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 1' 55\""
+  },
+  {
+   "rank": 9,
+   "rider": "Magnus Sheffield ( USA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 2' 02\""
+  },
+  {
+   "rank": 10,
+   "rider": "Alessandro Pinarello ( ITA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 2' 06\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-09",
+ "title": "2026 Tirreno–Adriatico",
+ "url": "https://en.wikipedia.org/wiki/2026_Tirreno%E2%80%93Adriatico"
+}

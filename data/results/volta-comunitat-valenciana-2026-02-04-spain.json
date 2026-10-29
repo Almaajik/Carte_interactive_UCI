@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-02-08",
+ "fetched": "2026-10-29",
+ "key": "Volta Comunitat Valenciana|2026-02-04|Spain",
+ "name": "Volta Comunitat Valenciana",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Remco Evenepoel ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "13h 10' 12\""
+  },
+  {
+   "rank": 2,
+   "rider": "João Almeida ( POR )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 31\""
+  },
+  {
+   "rank": 3,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 4,
+   "rider": "Antonio Tiberi ( ITA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 36\""
+  },
+  {
+   "rank": 5,
+   "rider": "Brandon McNulty ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 6,
+   "rider": "Magnus Sheffield ( USA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 1' 16\""
+  },
+  {
+   "rank": 7,
+   "rider": "Aleksandr Vlasov",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 02\""
+  },
+  {
+   "rank": 8,
+   "rider": "Ben Turner ( GBR )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 2' 10\""
+  },
+  {
+   "rank": 9,
+   "rider": "Riley Sheehan ( USA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 2' 15\""
+  },
+  {
+   "rank": 10,
+   "rider": "Viktor Soenens ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 2' 17\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-04",
+ "title": "2026 Volta a la Comunitat Valenciana",
+ "url": "https://en.wikipedia.org/wiki/2026_Volta_a_la_Comunitat_Valenciana"
+}

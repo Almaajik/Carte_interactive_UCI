@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-09-13",
+ "fetched": "2026-10-29",
+ "key": "Vuelta a España|2026-08-22|Spain",
+ "name": "Vuelta a España",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Enric Mas ( ESP )",
+   "team": "Movistar Team",
+   "time": "73h 52' 55\""
+  },
+  {
+   "rank": 2,
+   "rider": "Primož Roglič ( SLO )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 15\""
+  },
+  {
+   "rank": 3,
+   "rider": "Felix Gall ( AUT )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 2' 44\""
+  },
+  {
+   "rank": 4,
+   "rider": "Richard Carapaz ( ECU )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 6' 54\""
+  },
+  {
+   "rank": 5,
+   "rider": "Sepp Kuss ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 8' 45\""
+  },
+  {
+   "rank": 6,
+   "rider": "Oscar Onley ( GBR )",
+   "team": "Netcompany INEOS",
+   "time": "+ 9' 28\""
+  },
+  {
+   "rank": 7,
+   "rider": "Jakob Omrzel ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 10' 38\""
+  },
+  {
+   "rank": 8,
+   "rider": "Clément Berthet ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 11' 41\""
+  },
+  {
+   "rank": 9,
+   "rider": "Cristián Rodríguez ( ESP )",
+   "team": "XDS Astana Team",
+   "time": "+ 11' 59\""
+  },
+  {
+   "rank": 10,
+   "rider": "Harold Tejada ( COL )",
+   "team": "XDS Astana Team",
+   "time": "+ 12' 51\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-22",
+ "title": "2026 Vuelta a España",
+ "url": "https://en.wikipedia.org/wiki/2026_Vuelta_a_Espa%C3%B1a"
+}

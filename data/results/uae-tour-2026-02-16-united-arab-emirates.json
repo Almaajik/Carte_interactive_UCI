@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "United Arab Emirates",
+ "end": "2026-02-22",
+ "fetched": "2026-10-29",
+ "key": "UAE Tour|2026-02-16|United Arab Emirates",
+ "name": "UAE Tour",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Isaac del Toro ( MEX )",
+   "team": "UAE Team Emirates XRG",
+   "time": "21h 10' 30\""
+  },
+  {
+   "rank": 2,
+   "rider": "Antonio Tiberi ( ITA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 20\""
+  },
+  {
+   "rank": 3,
+   "rider": "Luke Plapp ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 1' 14\""
+  },
+  {
+   "rank": 4,
+   "rider": "Harold Tejada ( COL )",
+   "team": "XDS Astana Team",
+   "time": "+ 1' 25\""
+  },
+  {
+   "rank": 5,
+   "rider": "Felix Gall ( AUT )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 1' 34\""
+  },
+  {
+   "rank": 6,
+   "rider": "Lennert Van Eetvelt ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 1' 44\""
+  },
+  {
+   "rank": 7,
+   "rider": "Derek Gee-West ( CAN )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 47\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jørgen Nordhagen ( NOR )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 1' 55\""
+  },
+  {
+   "rank": 9,
+   "rider": "Tobias Halland Johannessen ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 2' 08\""
+  },
+  {
+   "rank": 10,
+   "rider": "Remco Evenepoel ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 25\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-16",
+ "title": "2026 UAE Tour",
+ "url": "https://en.wikipedia.org/wiki/2026_UAE_Tour"
+}

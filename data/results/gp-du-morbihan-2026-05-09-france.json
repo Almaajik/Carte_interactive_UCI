@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "France",
+ "end": "2026-05-09",
+ "fetched": "2026-10-29",
+ "key": "GP du Morbihan|2026-05-09|France",
+ "name": "GP du Morbihan",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "4h 35' 17\""
+  },
+  {
+   "rank": 2,
+   "rider": "Noa Isidore ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Paul Lapeira ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Thibaud Gruel ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Clément Venturini ( FRA )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Axel Zingle ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Valentin Ferron ( FRA )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Riley Sheehan ( USA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Brent Van Moer ( BEL )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Axel Mariault ( FRA )",
+   "team": "CIC Pro Cycling Academy",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-05-09",
+ "title": "2026 Grand Prix du Morbihan",
+ "url": "https://en.wikipedia.org/wiki/2026_Grand_Prix_du_Morbihan"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Poland",
+ "end": "2026-08-09",
+ "fetched": "2026-10-29",
+ "key": "Tour de Pologne|2026-08-03|Poland",
+ "name": "Tour de Pologne",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Marco Brenner ( GER )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "24h 33' 49\""
+  },
+  {
+   "rank": 2,
+   "rider": "Finn Fisher-Black ( NZL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 3,
+   "rider": "Iván Romeo ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 16\""
+  },
+  {
+   "rank": 4,
+   "rider": "Louis Barré ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 19\""
+  },
+  {
+   "rank": 5,
+   "rider": "Bart Lemmen ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 20\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jan Christen ( SUI )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 7,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 25\""
+  },
+  {
+   "rank": 8,
+   "rider": "Matteo Sobrero ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 28\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alberto Bettiol ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 30\""
+  },
+  {
+   "rank": 10,
+   "rider": "Aleksandr Vlasov",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 34\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-03",
+ "title": "2026 Tour de Pologne",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Pologne"
+}

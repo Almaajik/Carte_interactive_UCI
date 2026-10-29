@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "Stage 1",
+ "country": "Spain",
+ "end": "2026-02-14",
+ "fetched": "2026-10-29",
+ "key": "Vuelta a Murcia|2026-02-13|Spain",
+ "name": "Vuelta a Murcia",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Marc Soler ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "1h 50′ 39″"
+  },
+  {
+   "rank": 2,
+   "rider": "Julius Johansen ( DEN )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 19\""
+  },
+  {
+   "rank": 3,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 40\""
+  },
+  {
+   "rank": 4,
+   "rider": "Pello Bilbao ( ESP )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 01\""
+  },
+  {
+   "rank": 5,
+   "rider": "Igor Arrieta ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 01\""
+  },
+  {
+   "rank": 6,
+   "rider": "Tim Wellens ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 01\""
+  },
+  {
+   "rank": 7,
+   "rider": "Héctor Álvarez ( ESP )",
+   "team": "Spain",
+   "time": "+ 1' 01\""
+  },
+  {
+   "rank": 8,
+   "rider": "Matej Mohorič ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 01\""
+  },
+  {
+   "rank": 9,
+   "rider": "Matyáš Kopecký ( CZE )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 1' 01\""
+  },
+  {
+   "rank": 10,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 15\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-13",
+ "title": "2026 Vuelta a Murcia",
+ "url": "https://en.wikipedia.org/wiki/2026_Vuelta_a_Murcia"
+}

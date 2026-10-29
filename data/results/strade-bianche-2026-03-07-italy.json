@@ -1,0 +1,78 @@
+{
+ "classes": [
+  "1.UWT",
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Italy",
+ "end": "2026-03-07",
+ "fetched": "2026-10-29",
+ "key": "Strade Bianche|2026-03-07|Italy",
+ "name": "Strade Bianche",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tadej Pogačar ( SLO )",
+   "team": "UAE Team Emirates XRG",
+   "time": "4h 45' 15\""
+  },
+  {
+   "rank": 2,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 1' 00\""
+  },
+  {
+   "rank": 3,
+   "rider": "Isaac del Toro ( MEX )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 09\""
+  },
+  {
+   "rank": 4,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 2' 04\""
+  },
+  {
+   "rank": 5,
+   "rider": "Gianni Vermeersch ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 04\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jan Christen ( SUI )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 2' 07\""
+  },
+  {
+   "rank": 7,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2' 14\""
+  },
+  {
+   "rank": 8,
+   "rider": "Matteo Jorgenson ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 2' 20\""
+  },
+  {
+   "rank": 9,
+   "rider": "Andreas Kron ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 3' 46\""
+  },
+  {
+   "rank": 10,
+   "rider": "Wout van Aert ( BEL )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 3' 46\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-07",
+ "title": "2026 Strade Bianche",
+ "url": "https://en.wikipedia.org/wiki/2026_Strade_Bianche"
+}

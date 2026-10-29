@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Luxembourg",
+ "end": "2026-09-20",
+ "fetched": "2026-10-29",
+ "key": "Tour of Luxembourg|2026-09-16|Luxembourg",
+ "name": "Tour of Luxembourg",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Davide Piganzoli ( ITA )",
+   "team": "Visma–Lease a Bike",
+   "time": "16h 22' 17\""
+  },
+  {
+   "rank": 2,
+   "rider": "Mattéo Vercher ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 52\""
+  },
+  {
+   "rank": 3,
+   "rider": "Thomas Gachignard ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 54\""
+  },
+  {
+   "rank": 4,
+   "rider": "Aurélien Paret-Peintre ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 1' 03\""
+  },
+  {
+   "rank": 5,
+   "rider": "Igor Arrieta ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 25\""
+  },
+  {
+   "rank": 6,
+   "rider": "Tijmen Graat ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 2' 10\""
+  },
+  {
+   "rank": 7,
+   "rider": "Søren Kragh Andersen ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 2' 16\""
+  },
+  {
+   "rank": 8,
+   "rider": "Sam Oomen ( NED )",
+   "team": "Lidl–Trek",
+   "time": "+ 2' 16\""
+  },
+  {
+   "rank": 9,
+   "rider": "Pepijn Reinderink ( NED )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 2' 24\""
+  },
+  {
+   "rank": 10,
+   "rider": "Eike Behrens ( GER )",
+   "team": "Team Lotto–Kern Haus Outlet Montabaur",
+   "time": "+ 2' 33\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-16",
+ "title": "2026 Tour de Luxembourg",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Luxembourg"
+}

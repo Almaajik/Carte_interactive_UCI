@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Belgium",
+ "end": "2026-06-05",
+ "fetched": "2026-10-29",
+ "key": "Tour de Wallonie|2026-06-01|Belgium",
+ "name": "Tour de Wallonie",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Ben Oliver ( NZL )",
+   "team": "Modern Adventure Pro Cycling",
+   "time": "21h 15' 51\""
+  },
+  {
+   "rank": 2,
+   "rider": "Riley Sheehan ( USA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 3,
+   "rider": "Arnaud De Lie ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 5\""
+  },
+  {
+   "rank": 4,
+   "rider": "Laurence Pithie ( NZL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 5,
+   "rider": "Anders Foldager ( DEN )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 20\""
+  },
+  {
+   "rank": 6,
+   "rider": "Kim Heiduk ( GER )",
+   "team": "Netcompany INEOS",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 7,
+   "rider": "Adrien Boichis ( FRA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 26\""
+  },
+  {
+   "rank": 8,
+   "rider": "Carlos Canal ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 27\""
+  },
+  {
+   "rank": 9,
+   "rider": "Lennert Teugels ( BEL )",
+   "team": "Tarteletto–Isorex",
+   "time": "+ 35\""
+  },
+  {
+   "rank": 10,
+   "rider": "Henri Vandenabeele ( BEL )",
+   "team": "Team Flanders–Baloise",
+   "time": "+ 35\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-01",
+ "title": "2026 Tour de Wallonie",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Wallonie"
+}

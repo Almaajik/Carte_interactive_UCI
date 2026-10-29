@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-05-17",
+ "fetched": "2026-10-29",
+ "key": "Itzulia Women|2026-05-15|Spain",
+ "name": "Itzulia Women",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Mischa Bredewold ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "10h 15' 56\""
+  },
+  {
+   "rank": 2,
+   "rider": "Yara Kastelijn ( NED )",
+   "team": "Fenix–Premier Tech",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 3,
+   "rider": "Lauren Dickson ( GBR )",
+   "team": "FDJ United–Suez",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 4,
+   "rider": "Riejanne Markus ( NED )",
+   "team": "Lidl–Trek",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 5,
+   "rider": "Antonia Niedermaier ( GER )",
+   "team": "Canyon//SRAM Zondacrypto",
+   "time": "+ 29\""
+  },
+  {
+   "rank": 6,
+   "rider": "Évita Muzic ( FRA )",
+   "team": "FDJ United–Suez",
+   "time": "+ 36\""
+  },
+  {
+   "rank": 7,
+   "rider": "Usoa Ostolaza ( ESP )",
+   "team": "Laboral Kutxa–Fundación Euskadi",
+   "time": "+ 43\""
+  },
+  {
+   "rank": 8,
+   "rider": "Juliette Berthet ( FRA )",
+   "team": "FDJ United–Suez",
+   "time": "+ 43\""
+  },
+  {
+   "rank": 9,
+   "rider": "Dominika Włodarczyk ( POL )",
+   "team": "UAE Team ADQ",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 10,
+   "rider": "Ricarda Bauernfeind ( GER )",
+   "team": "Lidl–Trek",
+   "time": "+ 45\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-05-15",
+ "title": "2026 Itzulia Women",
+ "url": "https://en.wikipedia.org/wiki/2026_Itzulia_Women"
+}

@@ -1,0 +1,78 @@
+{
+ "classes": [
+  "1.WWT",
+  "1.UWT"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-02-28",
+ "fetched": "2026-10-29",
+ "key": "Omloop Nieuwsblad|2026-02-28|Belgium",
+ "name": "Omloop Nieuwsblad",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Mathieu van der Poel ( NED )",
+   "team": "Alpecin–Premier Tech",
+   "time": "4h 53' 55\""
+  },
+  {
+   "rank": 2,
+   "rider": "Tim van Dijke ( NED )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 3,
+   "rider": "Florian Vermeersch ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 24\""
+  },
+  {
+   "rank": 4,
+   "rider": "Christophe Laporte ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 53\""
+  },
+  {
+   "rank": 5,
+   "rider": "Aimé De Gendt ( BEL )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 54\""
+  },
+  {
+   "rank": 6,
+   "rider": "Tobias Lund Andresen ( DEN )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 57\""
+  },
+  {
+   "rank": 7,
+   "rider": "Jordi Meeus ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 57\""
+  },
+  {
+   "rank": 8,
+   "rider": "Anthony Turgis ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 57\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alexis Renard ( FRA )",
+   "team": "Cofidis",
+   "time": "+ 57\""
+  },
+  {
+   "rank": 10,
+   "rider": "Luke Lamperti ( USA )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 57\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-28",
+ "title": "2026 Omloop Het Nieuwsblad",
+ "url": "https://en.wikipedia.org/wiki/2026_Omloop_Het_Nieuwsblad"
+}

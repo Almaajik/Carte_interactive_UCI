@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Italy",
+ "end": "2026-09-10",
+ "fetched": "2026-10-29",
+ "key": "Coppa Sabatini|2026-09-10|Italy",
+ "name": "Coppa Sabatini",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "4h 40' 55\""
+  },
+  {
+   "rank": 2,
+   "rider": "Clément Venturini ( FRA )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Alexandre Delettre ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Ludovico Crescioli ( ITA )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Markus Hoelgaard ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Lukas Nerurkar ( GBR )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-10",
+ "title": "2026 Coppa Sabatini",
+ "url": "https://en.wikipedia.org/wiki/2026_Coppa_Sabatini"
+}

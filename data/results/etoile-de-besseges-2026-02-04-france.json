@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-02-08",
+ "fetched": "2026-10-29",
+ "key": "Etoile de Bessèges|2026-02-04|France",
+ "name": "Etoile de Bessèges",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Ewen Costiou ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "13h 59' 22\""
+  },
+  {
+   "rank": 2,
+   "rider": "Paul Lapeira ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 3,
+   "rider": "Maxime Decomble ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 4,
+   "rider": "Lukáš Kubiš ( SVK )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 5,
+   "rider": "Niklas Larsen ( DEN )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 17\""
+  },
+  {
+   "rank": 6,
+   "rider": "Dylan Teuns ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 32\""
+  },
+  {
+   "rank": 7,
+   "rider": "Mathieu Kockelmann ( LUX )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 32\""
+  },
+  {
+   "rank": 8,
+   "rider": "Clément Izquierdo ( FRA )",
+   "team": "Cofidis",
+   "time": "+ 36\""
+  },
+  {
+   "rank": 9,
+   "rider": "Xabier Azparren ( ESP )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 38\""
+  },
+  {
+   "rank": 10,
+   "rider": "Léandre Lozouet ( FRA )",
+   "team": "CIC Pro Cycling Academy",
+   "time": "+ 39\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-04",
+ "title": "2026 Étoile de Bessèges",
+ "url": "https://en.wikipedia.org/wiki/2026_%C3%89toile_de_Bess%C3%A8ges"
+}

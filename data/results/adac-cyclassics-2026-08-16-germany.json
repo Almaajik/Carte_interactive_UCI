@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.UWT"
+ ],
+ "classification": "Result",
+ "country": "Germany",
+ "end": "2026-08-16",
+ "fetched": "2026-10-29",
+ "key": "ADAC Cyclassics|2026-08-16|Germany",
+ "name": "ADAC Cyclassics",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Paul Magnier ( FRA )",
+   "team": "Soudal–Quick-Step",
+   "time": "4h 17' 55\""
+  },
+  {
+   "rank": 2,
+   "rider": "Mike Teunissen ( NED )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Laurence Pithie ( NZL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Paul Penhoët ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Henri Uhlig ( GER )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Milan Fretin ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Noah Hobbs ( GBR )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Søren Wærenskjold ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Huub Artz ( NED )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Arnaud de Lie ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-16",
+ "title": "2026 Hamburg Cyclassics",
+ "url": "https://en.wikipedia.org/wiki/2026_Hamburg_Cyclassics"
+}

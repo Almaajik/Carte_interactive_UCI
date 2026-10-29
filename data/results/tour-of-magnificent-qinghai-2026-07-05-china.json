@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "China",
+ "end": "2026-07-12",
+ "fetched": "2026-10-29",
+ "key": "Tour of Magnificent Qinghai|2026-07-05|China",
+ "name": "Tour of Magnificent Qinghai",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jonathan Klever Caicedo ( ECU )",
+   "team": "Wheeltop Rotor Chengdu Team",
+   "time": "24h 23' 26\""
+  },
+  {
+   "rank": 2,
+   "rider": "Jan Castellon ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 3,
+   "rider": "Henok Mulubrhan ( ERI )",
+   "team": "XDS Astana Team",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 4,
+   "rider": "Eric Antonio Fagúndez ( URU )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 4,
+   "rider": "Alex Tolio ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 39\""
+  },
+  {
+   "rank": 6,
+   "rider": "Fernando Tercero ( ESP )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 2' 31\""
+  },
+  {
+   "rank": 7,
+   "rider": "Eduardo Sepúlveda ( ARG )",
+   "team": "Li-Ning Star",
+   "time": "+ 3' 58\""
+  },
+  {
+   "rank": 8,
+   "rider": "Luca Covili ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 4' 02\""
+  },
+  {
+   "rank": 9,
+   "rider": "Emanuel Buchmann ( GER )",
+   "team": "Cofidis",
+   "time": "+ 6' 42\""
+  },
+  {
+   "rank": 10,
+   "rider": "Cristián Rodríguez ( ESP )",
+   "team": "XDS Astana Team",
+   "time": "+ 7' 02\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-07-05",
+ "title": "2026 Tour of Magnificent Qinghai",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Magnificent_Qinghai"
+}

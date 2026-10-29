@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Germany",
+ "end": "2026-10-03",
+ "fetched": "2026-10-29",
+ "key": "Sparkassen Münsterland Giro|2026-10-03|Germany",
+ "name": "Sparkassen Münsterland Giro",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Olav Kooij ( NED )",
+   "team": "Decathlon CMA CGM",
+   "time": "4h 08' 31\""
+  },
+  {
+   "rank": 2,
+   "rider": "Jordi Meeus ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Frits Biesterbos ( NED )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Anthony Turgis ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Hugo Hofstetter ( FRA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Florian Dauphin ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Milan Fretin ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jasper Philipsen ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Søren Wærenskjold ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Arvid de Kleijn ( NED )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-03",
+ "title": "2026 Münsterland Giro",
+ "url": "https://en.wikipedia.org/wiki/2026_M%C3%BCnsterland_Giro"
+}

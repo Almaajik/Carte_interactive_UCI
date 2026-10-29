@@ -1,0 +1,78 @@
+{
+ "classes": [
+  "1.WWT",
+  "1.UWT"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-04-01",
+ "fetched": "2026-10-29",
+ "key": "Dwars Door Vlaanderen|2026-04-01|Belgium",
+ "name": "Dwars Door Vlaanderen",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Filippo Ganna ( ITA )",
+   "team": "INEOS Grenadiers",
+   "time": "3h 48' 27\""
+  },
+  {
+   "rank": 2,
+   "rider": "Wout van Aert ( BEL )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Søren Wærenskjold ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Biniam Girmay ( ERI )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Laurence Pithie ( NZL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Orluis Aular ( VEN )",
+   "team": "Movistar Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Christophe Laporte ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jasper Philipsen ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Vito Braet ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Mads Pedersen ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-01",
+ "title": "2026 Dwars door Vlaanderen",
+ "url": "https://en.wikipedia.org/wiki/2026_Dwars_door_Vlaanderen"
+}

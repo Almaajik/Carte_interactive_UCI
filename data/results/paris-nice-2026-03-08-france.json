@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-03-15",
+ "fetched": "2026-10-29",
+ "key": "Paris-Nice|2026-03-08|France",
+ "name": "Paris-Nice",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jonas Vingegaard ( DEN )",
+   "team": "Visma–Lease a Bike",
+   "time": "25h 25' 11\""
+  },
+  {
+   "rank": 2,
+   "rider": "Daniel Martínez ( COL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 4' 23\""
+  },
+  {
+   "rank": 3,
+   "rider": "Georg Steinhauser ( GER )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 6' 07\""
+  },
+  {
+   "rank": 4,
+   "rider": "Kévin Vauquelin ( FRA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 6' 24\""
+  },
+  {
+   "rank": 5,
+   "rider": "Lenny Martinez ( FRA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 7' 31\""
+  },
+  {
+   "rank": 6,
+   "rider": "Marc Soler ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 9' 09\""
+  },
+  {
+   "rank": 7,
+   "rider": "Ion Izagirre ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 9' 19\""
+  },
+  {
+   "rank": 8,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 10' 23\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alex Baudin ( FRA )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 10' 33\""
+  },
+  {
+   "rank": 10,
+   "rider": "Harold Tejada ( COL )",
+   "team": "XDS Astana Team",
+   "time": "+ 11' 40\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-08",
+ "title": "2026 Paris–Nice",
+ "url": "https://en.wikipedia.org/wiki/2026_Paris%E2%80%93Nice"
+}

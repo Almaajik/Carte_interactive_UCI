@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Italy",
+ "end": "2026-03-15",
+ "fetched": "2026-10-29",
+ "key": "Trofeo Alfredo Binda|2026-03-15|Italy",
+ "name": "Trofeo Alfredo Binda",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Karlijn Swinkels ( NED )",
+   "team": "UAE Team ADQ",
+   "time": "3h 53' 17\""
+  },
+  {
+   "rank": 2,
+   "rider": "Anna van der Breggen ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Mie Bjørndal Ottestad ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 4,
+   "rider": "Blanka Vas ( HUN )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 47\""
+  },
+  {
+   "rank": 5,
+   "rider": "Letizia Borghesi ( ITA )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 47\""
+  },
+  {
+   "rank": 6,
+   "rider": "Marianne Vos ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 47\""
+  },
+  {
+   "rank": 7,
+   "rider": "Lotte Kopecky ( BEL )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 47\""
+  },
+  {
+   "rank": 8,
+   "rider": "Noemi Rüegg ( SUI )",
+   "team": "EF Education–Oatly",
+   "time": "+ 47\""
+  },
+  {
+   "rank": 9,
+   "rider": "Célia Gery ( FRA )",
+   "team": "FDJ United–Suez",
+   "time": "+ 47\""
+  },
+  {
+   "rank": 10,
+   "rider": "Shirin van Anrooij ( NED )",
+   "team": "Lidl–Trek",
+   "time": "+ 47\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-15",
+ "title": "2026 Trofeo Alfredo Binda-Comune di Cittiglio",
+ "url": "https://en.wikipedia.org/wiki/2026_Trofeo_Alfredo_Binda-Comune_di_Cittiglio"
+}

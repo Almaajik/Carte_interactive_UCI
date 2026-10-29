@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-04-08",
+ "fetched": "2026-10-29",
+ "key": "Scheldeprijs|2026-04-08|Belgium",
+ "name": "Scheldeprijs",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tim Merlier ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "4h 25' 01\""
+  },
+  {
+   "rank": 2,
+   "rider": "Pavel Bittner ( CZE )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Emilien Jeannière ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Dušan Rajović ( SRB )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Žak Eržen ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Hugo Hofstetter ( FRA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "David Dekker ( NED )",
+   "team": "BEAT CC p/b Saxo",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jasper Philipsen ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Steffen De Schuyteneer ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Tom Crabbe ( BEL )",
+   "team": "Team Flanders–Baloise",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-08",
+ "title": "2026 Scheldeprijs",
+ "url": "https://en.wikipedia.org/wiki/2026_Scheldeprijs"
+}

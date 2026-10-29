@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "France",
+ "end": "2026-02-28",
+ "fetched": "2026-10-29",
+ "key": "Faun Ardèche Classic|2026-02-28|France",
+ "name": "Faun Ardèche Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "4h 37' 22\""
+  },
+  {
+   "rank": 2,
+   "rider": "Jan Christen ( SUI )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 48\""
+  },
+  {
+   "rank": 3,
+   "rider": "Lenny Martinez ( FRA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 48\""
+  },
+  {
+   "rank": 4,
+   "rider": "Matteo Jorgenson ( USA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 1' 48\""
+  },
+  {
+   "rank": 5,
+   "rider": "Mattias Skjelmose ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 2' 07\""
+  },
+  {
+   "rank": 6,
+   "rider": "Davide Piganzoli ( ITA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 2' 18\""
+  },
+  {
+   "rank": 7,
+   "rider": "Egan Bernal ( COL )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 2' 34\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jefferson Alveiro Cepeda ( ECU )",
+   "team": "Movistar Team",
+   "time": "+ 3' 46\""
+  },
+  {
+   "rank": 9,
+   "rider": "Igor Arrieta ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 4' 16\""
+  },
+  {
+   "rank": 10,
+   "rider": "Mattéo Vercher ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 4' 21\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-28",
+ "title": "2026 Ardèche Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_Ard%C3%A8che_Classic"
+}

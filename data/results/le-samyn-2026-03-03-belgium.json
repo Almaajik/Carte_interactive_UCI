@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.1"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-03-03",
+ "fetched": "2026-10-29",
+ "key": "Le Samyn|2026-03-03|Belgium",
+ "name": "Le Samyn",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jordi Meeus ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "4h 19' 39\""
+  },
+  {
+   "rank": 2,
+   "rider": "Laurenz Rex ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Hugo Hofstetter ( FRA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Jenthe Biermans ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Lukáš Kubiš ( SVK )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Matys Grisel ( FRA )",
+   "team": "Lotto–Groupe Wanty",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Matevž Govekar ( SVN )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Florian Sénéchal ( FRA )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Florian Dauphin ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Steffen De Schuyteneer ( BEL )",
+   "team": "Lotto–Groupe Wanty",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-03",
+ "title": "2026 Le Samyn",
+ "url": "https://en.wikipedia.org/wiki/2026_Le_Samyn"
+}

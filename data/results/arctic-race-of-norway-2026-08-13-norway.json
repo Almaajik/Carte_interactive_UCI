@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Norway",
+ "end": "2026-08-16",
+ "fetched": "2026-10-29",
+ "key": "Arctic Race of Norway|2026-08-13|Norway",
+ "name": "Arctic Race of Norway",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Guillermo Thomas Silva ( URU )",
+   "team": "XDS Astana Team",
+   "time": "15h 34' 12\""
+  },
+  {
+   "rank": 2,
+   "rider": "Lennert Van Eetvelt ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 14\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alessandro Pinarello ( ITA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 25\""
+  },
+  {
+   "rank": 4,
+   "rider": "Felix Engelhardt ( GER )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 35\""
+  },
+  {
+   "rank": 5,
+   "rider": "Sebastian Berwick ( AUS )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 36\""
+  },
+  {
+   "rank": 6,
+   "rider": "Thomas Bonnet ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 39\""
+  },
+  {
+   "rank": 7,
+   "rider": "Wout Poels ( NED )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 40\""
+  },
+  {
+   "rank": 8,
+   "rider": "Cedrik Bakke Christophersen ( NOR )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 42\""
+  },
+  {
+   "rank": 9,
+   "rider": "Joris Delbove ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 10,
+   "rider": "Johannes Kulset ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 55\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-13",
+ "title": "2026 Arctic Race of Norway",
+ "url": "https://en.wikipedia.org/wiki/2026_Arctic_Race_of_Norway"
+}
