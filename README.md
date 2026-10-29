@@ -1,29 +1,37 @@
 # Carte des courses UCI
 
-## Lancer le site avec les comptes
+## Site
 
-Depuis la racine du dépôt, installe les dépendances puis démarre l’application :
+Le site est statique et peut être publié avec GitHub Pages. Les classements sont servis depuis `data/results/`.
+
+## Comptes et collection
+
+Les comptes utilisent Supabase Auth avec email et mot de passe. La progression est sauvegardée dans la table `public.user_collections`; la sécurité au niveau des lignes (RLS) garantit qu’un utilisateur ne peut lire ou modifier que sa propre collection. Le tableau de bord Supabase permet de consulter la table avec **Database → Table Editor**.
+
+1. Crée un projet Supabase.
+2. Dans **SQL Editor**, exécute `supabase/migrations/202610290001_user_collections.sql`.
+3. Active la confirmation email et définis une longueur minimale de mot de passe de 12 caractères dans les réglages Auth.
+4. Dans les URL de redirection autorisées, ajoute `https://almaajik.github.io/Carte_interactive_UCI/collection.html` et `http://localhost:8000/collection.html` pour le développement local.
+5. Copie l’URL du projet et sa clé `publishable` dans `supabase-config.js`.
+6. Publie les changements sur GitHub Pages.
+
+La clé publishable est destinée au navigateur. Les politiques RLS protègent les données. Ne mets jamais une clé `secret` ou `service_role` dans ce dépôt ou dans le code du site.
+
+À la première connexion, la collection invitée est fusionnée avec le compte. La déconnexion retire les données de compte du stockage local de l’appareil. Pour les comptes déjà créés avec l’ancien serveur Flask local, les utilisateurs et mots de passe ne sont pas migrés; les collections invitées restent importables lors de la première connexion Supabase.
+
+La récupération de mot de passe est gérée par Supabase Auth; configure aussi l’URL du site publiée dans **Authentication → URL Configuration**.
+
+## Tests locaux
+
+Ouvre `index.html` avec un serveur statique, ou exécute :
 
 ```powershell
-python -m pip install -r requirements.txt
-python app.py
+python -m http.server 8000
 ```
 
-Ouvre `http://127.0.0.1:8000`. Utilise cette adresse plutôt que `python -m http.server` : l’API de comptes doit partager la même origine que les pages. Le port 8000 conserve aussi l’accès à l’éventuelle collection invitée du site local.
+Sans configuration Supabase, la carte, les classements et les boosters restent utilisables en mode invité. Les fonctions de compte affichent un message demandant de configurer Supabase.
 
-## Comptes
-
-Les comptes utilisent un nom de 3 à 24 lettres, chiffres, tirets ou underscores, et un mot de passe de 12 à 128 caractères. Les mots de passe sont hachés; les collections sont enregistrées dans `instance/accounts.sqlite3`. Ce dossier est ignoré par Git : sauvegarde-le si tu veux conserver les comptes.
-
-La collection invitée est fusionnée avec le compte à la première connexion. La progression du compte est ensuite synchronisée au serveur. La déconnexion retire la copie locale de cet appareil. Il n’y a pas encore de récupération de mot de passe ni de vérification email.
-
-## Hébergement
-
-Cette application n’est pas compatible avec un hébergement de fichiers statiques seul. Sur un serveur, installe les dépendances, monte un stockage persistant pour la base SQLite et définis `APP_ENV=production`, `SECRET_KEY` (une valeur aléatoire longue), `HOST=0.0.0.0` et `PORT` selon l’hébergeur. `DATABASE_PATH` peut définir l’emplacement de la base.
-
-Place Waitress derrière un proxy HTTPS en production. Le mode production exige `SECRET_KEY` et marque les cookies de session `Secure`; ne désactive pas HTTPS pour contourner ce réglage.
-
-## Tests
+Les tests Python des scripts de calendrier et de résultats se lancent avec :
 
 ```powershell
 python -m unittest discover -s tests -v
