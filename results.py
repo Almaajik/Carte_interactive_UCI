@@ -36,9 +36,12 @@ DIR = Path("data/results")
 INDEX = DIR / "index.json"
 MISSES = DIR / "misses.json"
 API = "https://en.wikipedia.org/w/api.php"
-HEADERS = {"User-Agent": "carte-courses-uci/0.1 (projet perso; contact: ton-adresse@exemple.com)"}  # mets ton contact
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL")
+HEADERS = {"User-Agent": f"CarteInteractiveUCI/0.1 ({CONTACT_EMAIL})" if CONTACT_EMAIL else "CarteInteractiveUCI/0.1"}
 RETRY_DAYS = 14
 MAX_ROWS = 200
+WOMEN_RE = re.compile(r"\b(?:women|woman|female|femmes?|dames|feminas?|femininas?|femeninas?|femminil[ei]|féminines?)\b", re.I)
+MEN_RE = re.compile(r"\b(?:men|male|hommes?)\b", re.I)
 
 
 # ---------------------------------------------------------------- utilitaires
@@ -67,18 +70,30 @@ def race_key(r: dict) -> str:
 
 
 # ---------------------------------------------------------------- Wikipédia
-def wiki_title(name: str, year: str):
+def is_womens_race(r: dict) -> bool:
+    classes = " ".join(r.get("classes", []))
+    return bool(re.search(r"\b[12]\.WWT\b", classes, re.I) or WOMEN_RE.search(r["name"]))
+
+
+def wiki_title(name: str, year: str, women_race: bool = False):
     """Trouve la page de l'édition (ex. « 2026 Il Lombardia »)."""
+    query = f"{year} {name}" + (" women's race" if women_race else "")
     r = requests.get(API, headers=HEADERS, timeout=30, params={
-        "action": "query", "list": "search", "srsearch": f"{year} {name}",
-        "srlimit": 6, "format": "json", "formatversion": 2})
+        "action": "query", "list": "search", "srsearch": query,
+        "srlimit": 10, "format": "json", "formatversion": 2})
     r.raise_for_status()
     best, best_score = None, 0.0
     for hit in r.json().get("query", {}).get("search", []):
         t = hit["title"]
         if not t.startswith(year) or re.search(r"\bstage\b|\bnational\b", t, re.I):
             continue
-        score = difflib.SequenceMatcher(None, norm(name), norm(t[len(year):])).ratio()
+        title_text = t[len(year):]
+        title_is_women = bool(WOMEN_RE.search(title_text))
+        if not women_race and title_is_women:
+            continue
+        score = difflib.SequenceMatcher(None, norm(name), norm(WOMEN_RE.sub("", title_text))).ratio()
+        if women_race:
+            score += 0.25 if title_is_women else -0.15
         if score > best_score:
             best, best_score = t, score
     return best if best_score >= 0.6 else None
@@ -122,7 +137,7 @@ def columns(table):
     return idx if "rank" in idx and "rider" in idx else None
 
 
-def parse_results(html: str, stage_race: bool):
+def parse_results(html: str, stage_race: bool, women_race: bool = False, title: str = ""):
     """Renvoie {'classification', 'rows'} ou None si aucun tableau de classement n'est trouvé."""
     soup = BeautifulSoup(html, "html.parser")
     candidates = []
@@ -131,9 +146,27 @@ def parse_results(html: str, stage_race: bool):
         if not idx:
             continue
         heading = table.find_previous(["h2", "h3", "h4"])
-        candidates.append((table, idx, heading.get_text(" ", strip=True) if heading else ""))
+        caption = table.find("caption")
+        label = " ".join((
+            heading.get_text(" ", strip=True) if heading else "",
+            caption.get_text(" ", strip=True) if caption else "",
+        ))
+        gender = "women" if WOMEN_RE.search(label) else "men" if MEN_RE.search(label) else None
+        candidates.append((table, idx, label, gender))
     if not candidates:
         return None
+
+    title_is_women = bool(WOMEN_RE.search(title))
+    if women_race:
+        matching = [c for c in candidates if c[3] == "women"]
+        if matching:
+            candidates = matching
+        elif any(c[3] == "men" for c in candidates) or not title_is_women:
+            return None
+    else:
+        candidates = [c for c in candidates if c[3] != "women"]
+        if not candidates:
+            return None
 
     pick = candidates[0]
     if stage_race:
@@ -141,7 +174,7 @@ def parse_results(html: str, stage_race: bool):
             if re.search(r"general|overall|final", c[2], re.I):
                 pick = c
                 break
-    table, idx, heading = pick
+    table, idx, heading, _ = pick
 
     rows = []
     for tr in table.find_all("tr")[1:]:
@@ -167,11 +200,13 @@ def parse_results(html: str, stage_race: bool):
 
 def fetch_result(r: dict):
     year = r["start"][:4]
-    title = wiki_title(r["name"], year)
+    women_race = is_womens_race(r)
+    title = wiki_title(r["name"], year, women_race=women_race)
     if not title:
         return None, "page Wikipédia introuvable"
     time.sleep(0.5)
-    parsed = parse_results(wiki_html(title), stage_race=r["start"] != r["end"])
+    parsed = parse_results(wiki_html(title), stage_race=r["start"] != r["end"],
+                           women_race=women_race, title=title)
     if not parsed:
         return None, f"pas de tableau de classement sur « {title} »"
     return {
@@ -183,12 +218,12 @@ def fetch_result(r: dict):
 
 
 # ---------------------------------------------------------------- programme principal
-def run_test(name: str, year: str):
-    title = wiki_title(name, year)
+def run_test(name: str, year: str, women_race: bool = False):
+    title = wiki_title(name, year, women_race=women_race)
     print("Page trouvée :", title)
     if not title:
         return
-    parsed = parse_results(wiki_html(title), stage_race=False)
+    parsed = parse_results(wiki_html(title), stage_race=False, women_race=women_race, title=title)
     if not parsed:
         print("Aucun tableau de classement reconnu.")
         return
@@ -203,9 +238,10 @@ def main():
     ap.add_argument("--force", action="store_true", help="réessaie aussi les courses abandonnées")
     ap.add_argument("--race")
     ap.add_argument("--year")
+    ap.add_argument("--women", action="store_true", help="teste un résultat féminin")
     args = ap.parse_args()
     if args.race:
-        return run_test(args.race, args.year or TODAY[:4])
+        return run_test(args.race, args.year or TODAY[:4], women_race=args.women)
 
     races = load(RACES, [])
     index, misses = load(INDEX, {}), load(MISSES, {})
