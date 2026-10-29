@@ -121,9 +121,10 @@
                 justify-content: space-between; padding: 12px; overflow: hidden; border: 1px solid #c9d1c7; border-radius: 5px;
                 color: var(--ink); background: var(--card); box-shadow: 0 3px 0 rgba(24,62,52,.08);
                 animation: reveal .42s both; animation-delay: var(--delay, 0ms); }
-  .rider-card[data-rarity="winner"] { --rarity: var(--coral); }
-  .rider-card[data-rarity="podium"] { --rarity: var(--gold); }
-  .rider-card[data-rarity="top10"] { --rarity: var(--teal); }
+  .rider-card[data-rarity="legendary"] { --rarity: var(--coral); }
+  .rider-card[data-rarity="epic"] { --rarity: var(--gold); }
+  .rider-card[data-rarity="rare"] { --rarity: var(--teal); }
+  .rider-card[data-rarity="common"] { --rarity: var(--ink-soft); }
   .rider-card::before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 5px; background: var(--rarity); }
   .rider-card::after { content: ""; position: absolute; inset: 5px 0 auto; height: 43%; opacity: .12; pointer-events: none;
                        background: repeating-linear-gradient(135deg, transparent 0 10px, var(--rarity) 10px 11px); }
@@ -261,9 +262,12 @@
       <div class="stage-copy">
         <span class="stage-label">Le paquet du jour</span>
         <h2>Un nouveau peloton t’attend.</h2>
-        <p>Chaque paquet réunit cinq coureurs issus des classements disponibles, avec des places garanties pour les meilleurs résultats.</p>
-        <div class="guarantees" aria-label="Contenu garanti">
-          <span class="guarantee">1 vainqueur</span><span class="guarantee">1 podium</span><span class="guarantee">3 top 10</span>
+        <p>Cinq coureurs distincts. La rareté reflète leur meilleure place dans les classements enregistrés.</p>
+        <div class="guarantees" aria-label="Probabilités par carte et chances par paquet de cinq">
+          <span class="guarantee">Légendaire 3% · 14% / booster</span>
+          <span class="guarantee">Épique 12% · 47% / booster</span>
+          <span class="guarantee">Rare 30% · 83% / booster</span>
+          <span class="guarantee">Commune 55% · 98% / booster</span>
         </div>
         <div class="pack-action">
           <button class="open-button" id="open-pack" type="button" disabled>Chargement des classements…</button>
@@ -294,8 +298,8 @@
       <div class="collection-tools">
         <input id="search-cards" type="search" placeholder="Nom ou équipe" aria-label="Rechercher dans la collection">
         <select id="filter-rarity" aria-label="Filtrer par rareté">
-          <option value="all">Toutes les raretés</option><option value="winner">Vainqueurs</option>
-          <option value="podium">Podiums</option><option value="top10">Top 10</option><option value="peloton">Peloton</option>
+          <option value="all">Toutes les raretés</option><option value="legendary">Légendaires</option>
+          <option value="epic">Épiques</option><option value="rare">Rares</option><option value="common">Communes</option>
         </select>
         <button class="text-button" id="reset-collection" type="button">Effacer la collection</button>
       </div>
@@ -303,7 +307,7 @@
     <div class="collection-grid" id="collection-grid"></div>
     <div class="empty-state" id="collection-empty">Aucune carte pour l’instant. Ouvre ton premier booster.</div>
   </section>
-  <p class="footer-note" id="storage-note">Cartes générées à partir des classements disponibles. Collection invitée enregistrée sur cet appareil.</p>
+  <p class="footer-note" id="storage-note">Profils extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. La rareté reflète le meilleur rang enregistré; chaque carte renvoie à son classement source. Collection invitée enregistrée sur cet appareil.</p>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
@@ -319,8 +323,15 @@ const supabaseClient = window.supabase?.createClient && SUPABASE_CONFIG.url?.sta
   ? window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.publishableKey)
   : null;
 const DUST_COST = 100;
-const PACK_SLOTS = ["winner", "podium", "top10", "top10", "top10"];
-const RARITY_LABEL = { winner: "Vainqueur", podium: "Podium", top10: "Top 10", peloton: "Peloton" };
+const PACK_SIZE = 5;
+const RARITY_DROPS = [
+  { rarity: "legendary", label: "Légendaire", weight: 3 },
+  { rarity: "epic", label: "Épique", weight: 12 },
+  { rarity: "rare", label: "Rare", weight: 30 },
+  { rarity: "common", label: "Commune", weight: 55 },
+];
+const RARITY_LABEL = Object.fromEntries(RARITY_DROPS.map(drop => [drop.rarity, drop.label]));
+const RARITY_ORDER = Object.fromEntries(RARITY_DROPS.map((drop, index) => [drop.rarity, index]));
 const MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
@@ -331,15 +342,17 @@ const dateLabel = value => {
   const [year, month, day] = value.split("-").map(Number);
   return `${day} ${MONTHS[month - 1]} ${year}`;
 };
-const rarityOf = rank => rank === 1 ? "winner" : rank <= 3 ? "podium" : rank <= 10 ? "top10" : "peloton";
-const dustOf = rarity => rarity === "winner" ? 30 : rarity === "podium" ? 20 : 12;
+const rarityOf = rank => rank === 1 ? "legendary" : rank <= 3 ? "epic" : rank <= 10 ? "rare" : "common";
+const dustOf = rarity => ({ legendary: 40, epic: 25, rare: 10, common: 4 })[rarity] || 0;
+const migrateCard = card => RARITY_LABEL[card?.rarity] ? card : { ...card, rarity: rarityOf(Number(card?.bestRank || card?.rank) || 11) };
 
 function readState() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    return { riders: saved.riders && typeof saved.riders === "object" ? saved.riders : {}, dust: Number(saved.dust) || 0,
+    const riders = saved.riders && typeof saved.riders === "object" ? saved.riders : {};
+    return { riders: Object.fromEntries(Object.entries(riders).map(([id, card]) => [id, migrateCard(card)])), dust: Number(saved.dust) || 0,
              freeDate: saved.freeDate || "", packsOpened: Number(saved.packsOpened) || 0,
-             lastPack: Array.isArray(saved.lastPack) ? saved.lastPack : [] };
+         lastPack: Array.isArray(saved.lastPack) ? saved.lastPack.map(migrateCard) : [] };
   } catch { return { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] }; }
 }
 
@@ -627,12 +640,22 @@ async function loadPool() {
       pool.push(...batch.flat());
       note.textContent = `${Math.min(i + 12, entries.length)} / ${entries.length} classements chargés`;
     }
-    if (!pool.some(card => card.rarity === "winner") || !pool.some(card => card.rarity === "podium") || !pool.some(card => card.rarity === "top10")) {
-      throw new Error("Pas assez de classements pour composer un booster");
+    const catalogue = new Map();
+    for (const appearance of pool) {
+      const current = catalogue.get(appearance.id);
+      if (!current) {
+        catalogue.set(appearance.id, { ...appearance, bestRank: appearance.rank, appearances: 1 });
+      } else {
+        current.appearances += 1;
+        if (appearance.rank < current.bestRank || (appearance.rank === current.bestRank && appearance.date > current.date)) {
+          Object.assign(current, appearance, { bestRank: appearance.rank, appearances: current.appearances });
+        }
+      }
     }
-    const uniqueCount = new Set(pool.map(card => card.id)).size;
-    $("pool-summary").innerHTML = `<strong>${uniqueCount}</strong> coureurs · <strong>${entries.length}</strong> classements`;
-    note.textContent = `${pool.length} cartes possibles · résultat réel, pas de stats inventées`;
+    pool = [...catalogue.values()].map(card => ({ ...card, rank: card.bestRank, rarity: rarityOf(card.bestRank) }));
+    if (pool.length < PACK_SIZE) throw new Error("Pas assez de coureurs pour composer un booster");
+    $("pool-summary").innerHTML = `<strong>${pool.length}</strong> coureurs uniques · <strong>${entries.length}</strong> classements`;
+    note.textContent = `${pool.length} coureurs uniques · meilleures places issues des résultats enregistrés`;
     refreshUI();
   } catch (error) {
     button.disabled = true;
@@ -670,7 +693,7 @@ function renderCard(card, options = {}) {
     ? `<a href="${esc(link)}" aria-label="Voir le classement de ${esc(card.race)}"><h3 class="rider-name">${esc(card.rider)}</h3></a>`
     : `<h3 class="rider-name">${esc(card.rider)}</h3>`;
   return `<article class="rider-card" data-rarity="${esc(card.rarity)}" style="--delay:${delay}ms">
-    <div class="rider-top"><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span><span class="rank-tag">RANG ${card.rank}</span></div>
+    <div class="rider-top"><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span><span class="rank-tag">MEILLEUR RANG ${card.bestRank || card.rank}</span></div>
     <div class="rider-illustration">${riderArt(card)}</div>
     <div class="rider-copy">${riderMarkup}<p class="rider-team">${esc(card.team)}</p></div>
     <div class="rider-bottom"><span class="rider-race">${esc(card.race)}<br>${esc(dateLabel(card.date))}</span>
@@ -698,7 +721,7 @@ function renderCollection() {
   const records = Object.values(state.riders).filter(card => {
     const matchesText = !query || normalize(`${card.rider} ${card.team} ${card.race}`).includes(query);
     return matchesText && (filter === "all" || card.rarity === filter);
-  }).sort((a, b) => a.bestRank - b.bestRank || a.rider.localeCompare(b.rider, "fr"));
+  }).sort((a, b) => RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity] || a.bestRank - b.bestRank || a.rider.localeCompare(b.rider, "fr"));
   $("collection-grid").innerHTML = records.map(card => renderCard(card, { count: card.count })).join("");
   $("collection-empty").hidden = records.length > 0;
   if (!Object.keys(state.riders).length) $("collection-empty").textContent = "Ton classeur est vide. Ouvre ton premier booster.";
@@ -716,7 +739,17 @@ function refreshUI() {
   if (pool.length) $("pack-note").textContent = freeAvailable ? "Un paquet gratuit chaque jour" : canExchange ? "Un booster gratuit est déjà ouvert aujourd’hui" : `Encore ${DUST_COST - state.dust} poussières pour un booster`;
 }
 
-function chooseCard(rarity, used) {
+function chooseCard(used) {
+  const roll = Math.random() * 100;
+  let total = 0;
+  let rarity = RARITY_DROPS[RARITY_DROPS.length - 1].rarity;
+  for (const drop of RARITY_DROPS) {
+    total += drop.weight;
+    if (roll < total) {
+      rarity = drop.rarity;
+      break;
+    }
+  }
   const exact = pool.filter(card => card.rarity === rarity && !used.has(card.id));
   const candidates = exact.length ? exact : pool.filter(card => !used.has(card.id));
   const card = candidates[Math.floor(Math.random() * candidates.length)];
@@ -731,7 +764,7 @@ function openPack() {
   if (freeAvailable) state.freeDate = today();
   else state.dust -= DUST_COST;
   const used = new Set();
-  const cards = PACK_SLOTS.map(rarity => chooseCard(rarity, used)).filter(Boolean);
+  const cards = Array.from({ length: PACK_SIZE }, () => chooseCard(used)).filter(Boolean);
   for (const card of cards) {
     const existing = state.riders[card.id];
     if (existing) {
