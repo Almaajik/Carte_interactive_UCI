@@ -16,8 +16,10 @@ corriger), "override" (corrigé à la main).
 overrides.json : {"Brabantse Pijl|Belgium": {"lat": 50.88, "lon": 4.70}, ...}
 """
 import json
+import os
 import re
 import time
+import unicodedata
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -27,7 +29,10 @@ RAW = Path("data/races_raw.json")
 OUT = Path("data/races.json")
 CACHE = Path("data/geocache.json")
 OVERRIDES = Path("data/overrides.json")
-HEADERS = {"User-Agent": "carte-courses-uci/0.1 (projet perso)"}  # mets ton contact
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL")
+HEADERS = {"User-Agent": f"CarteInteractiveUCI/0.1 ({CONTACT_EMAIL})" if CONTACT_EMAIL else "CarteInteractiveUCI/0.1"}
+NEGATIVE_CACHE_TTL_DAYS = 30
+NEGATIVE_CACHE_KEY = "_not_found"
 
 CLASS_RE = re.compile(r"\b[12]\.(?:UWT|WWT|Pro|HC|Ncup|1|2)\b")
 
@@ -74,7 +79,7 @@ def merge(raw: list) -> list:
 def nominatim(q: str):
     r = requests.get(
         "https://nominatim.openstreetmap.org/search",
-        params={"q": q, "format": "json", "limit": 1, "accept-language": "en"},
+        params={"q": q, "format": "json", "limit": 1, "accept-language": "en", "addressdetails": 1},
         headers=HEADERS,
         timeout=30,
     )
@@ -82,16 +87,65 @@ def nominatim(q: str):
     data = r.json()
     if not data:
         return None
+    address = data[0].get("address") or {}
     return {"lat": float(data[0]["lat"]), "lon": float(data[0]["lon"]),
-            "display": data[0].get("display_name", "")}
+            "display": data[0].get("display_name", ""),
+            "country": address.get("country")}
+
+
+def canonical_country(country: str) -> str:
+    country = unicodedata.normalize("NFD", country.casefold())
+    country = "".join(c for c in country if unicodedata.category(c) != "Mn")
+    normalized = re.sub(r"[^a-z0-9]+", " ", country).strip()
+    aliases = {
+        "czechia": "czech republic",
+        "cote d ivoire": "ivory coast",
+        "ivory coast": "ivory coast",
+        "russian federation": "russia",
+        "russia": "russia",
+        "turkiye": "turkey",
+        "turkey": "turkey",
+        "united states": "united states of america",
+        "united states of america": "united states of america",
+    }
+    return aliases.get(normalized, normalized)
+
+
+def country_matches(expected: str, hit: dict) -> bool:
+    actual = hit.get("country")
+    if actual:
+        return canonical_country(expected) == canonical_country(actual)
+    # Older cache entries only contain display_name; compare full address components.
+    return any(canonical_country(part.strip()) == canonical_country(expected)
+               for part in hit.get("display", "").split(","))
+
+
+def save_cache(cache: dict):
+    CACHE.parent.mkdir(parents=True, exist_ok=True)
+    CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def lookup(q: str, cache: dict):
-    if q not in cache:
-        cache[q] = nominatim(q)
-        CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
-        time.sleep(1.1)  # limite Nominatim : 1 requête/seconde
-    return cache[q]
+    cached = cache.get(q)
+    if q in cache and cached is None:
+        cached = {NEGATIVE_CACHE_KEY: date.today().isoformat()}
+        cache[q] = cached
+        save_cache(cache)
+    if isinstance(cached, dict) and NEGATIVE_CACHE_KEY in cached:
+        try:
+            age = date.today() - date.fromisoformat(cached[NEGATIVE_CACHE_KEY])
+        except (TypeError, ValueError):
+            age = timedelta(days=NEGATIVE_CACHE_TTL_DAYS)
+        if age < timedelta(days=NEGATIVE_CACHE_TTL_DAYS):
+            return None
+    elif q in cache:
+        return cached
+
+    result = nominatim(q)
+    cache[q] = result if result is not None else {NEGATIVE_CACHE_KEY: date.today().isoformat()}
+    save_cache(cache)
+    time.sleep(1.1)  # limite Nominatim : 1 requête/seconde
+    return result
 
 
 def locate(race: dict, cache: dict, overrides: dict):
@@ -101,7 +155,7 @@ def locate(race: dict, cache: dict, overrides: dict):
 
     hit = lookup(f"{race['name']}, {race['country']}", cache)
     # on n'accepte le résultat que s'il est bien dans le bon pays
-    if hit and race["country"] and race["country"].lower() in hit["display"].lower():
+    if hit and race["country"] and country_matches(race["country"], hit):
         return {"lat": hit["lat"], "lon": hit["lon"], "precision": "place"}
 
     hit = lookup(race["country"], cache) if race["country"] else None

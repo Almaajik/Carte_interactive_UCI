@@ -12,6 +12,8 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
     steps:
       - uses: actions/checkout@v4
 
