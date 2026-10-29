@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Malaysia",
+ "end": "2026-10-04",
+ "fetched": "2026-10-29",
+ "key": "Tour de Langkawi|2026-09-27|Malaysia",
+ "name": "Tour de Langkawi",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Lennart Jasch ( GER )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "28h 57' 04\""
+  },
+  {
+   "rank": 2,
+   "rider": "Abel Balderstone ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 26\""
+  },
+  {
+   "rank": 3,
+   "rider": "Jan Castellon ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 42\""
+  },
+  {
+   "rank": 4,
+   "rider": "José Manuel Díaz ( ESP )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 5,
+   "rider": "Eivind Broholt Fougner ( NOR )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 1' 37\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jorge Gutiérrez ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 1' 55\""
+  },
+  {
+   "rank": 7,
+   "rider": "Josh Burnett ( NZL )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 2' 56\""
+  },
+  {
+   "rank": 8,
+   "rider": "Mathias Bregnhøj ( DEN )",
+   "team": "Terengganu Cycling Team",
+   "time": "+ 2' 58\""
+  },
+  {
+   "rank": 9,
+   "rider": "Mathis Le Berre ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 3' 23\""
+  },
+  {
+   "rank": 10,
+   "rider": "Cedrik Bakke Christophersen ( NOR )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 3' 30\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-27",
+ "title": "2026 Tour de Langkawi",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Langkawi"
+}

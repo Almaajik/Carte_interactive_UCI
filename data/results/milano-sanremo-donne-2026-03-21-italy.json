@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Italy",
+ "end": "2026-03-21",
+ "fetched": "2026-10-29",
+ "key": "Milano-Sanremo Donne|2026-03-21|Italy",
+ "name": "Milano-Sanremo Donne",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Lotte Kopecky ( BEL )",
+   "team": "Team SD Worx–Protime",
+   "time": "3h 47' 17\""
+  },
+  {
+   "rank": 2,
+   "rider": "Noemi Rüegg ( SUI )",
+   "team": "EF Education–Oatly",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Eleonora Gasparrini ( ITA )",
+   "team": "UAE Team ADQ",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Puck Pieterse ( NED )",
+   "team": "Fenix–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Dominika Włodarczyk ( POL )",
+   "team": "UAE Team ADQ",
+   "time": "+ 4\""
+  },
+  {
+   "rank": 6,
+   "rider": "Lorena Wiebes ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 7,
+   "rider": "Ally Wollaston ( NZL )",
+   "team": "FDJ United–Suez",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 8,
+   "rider": "Elisa Balsamo ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 9,
+   "rider": "Charlotte Kool ( NED )",
+   "team": "Fenix–Premier Tech",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 10,
+   "rider": "Chiara Consonni ( ITA )",
+   "team": "Canyon//SRAM Zondacrypto",
+   "time": "+ 9\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-21",
+ "title": "2026 Milan–San Remo Women",
+ "url": "https://en.wikipedia.org/wiki/2026_Milan%E2%80%93San_Remo_Women"
+}

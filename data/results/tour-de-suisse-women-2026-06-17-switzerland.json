@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "Switzerland",
+ "end": "2026-06-21",
+ "fetched": "2026-10-29",
+ "key": "Tour de Suisse Women|2026-06-17|Switzerland",
+ "name": "Tour de Suisse Women",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Marlen Reusser ( SUI )",
+   "team": "Movistar Team",
+   "time": "11h 58' 35\""
+  },
+  {
+   "rank": 2,
+   "rider": "Cédrine Kerbaol ( FRA )",
+   "team": "EF Education–Oatly",
+   "time": "+ 1' 31\""
+  },
+  {
+   "rank": 3,
+   "rider": "Katarzyna Niewiadoma-Phinney ( POL )",
+   "team": "Canyon//SRAM",
+   "time": "+ 2' 02\""
+  },
+  {
+   "rank": 4,
+   "rider": "Kim Le Court-Pienaar ( MRI )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 2' 48\""
+  },
+  {
+   "rank": 5,
+   "rider": "Femke de Vries ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 2' 54\""
+  },
+  {
+   "rank": 6,
+   "rider": "Steffi Häberlin ( SUI )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 5' 04\""
+  },
+  {
+   "rank": 7,
+   "rider": "Sarah Van Dam ( CAN )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 5' 26\""
+  },
+  {
+   "rank": 8,
+   "rider": "Juliette Berthet ( FRA )",
+   "team": "FDJ United–Suez",
+   "time": "+ 9' 41\""
+  },
+  {
+   "rank": 9,
+   "rider": "Elisa Longo Borghini ( ITA )",
+   "team": "UAE Team ADQ",
+   "time": "+ 10' 16\""
+  },
+  {
+   "rank": 10,
+   "rider": "Yara Kastelijn ( NED )",
+   "team": "Fenix–Premier Tech",
+   "time": "+ 11' 02\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-17",
+ "title": "2026 Tour de Suisse Women",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Suisse_Women"
+}

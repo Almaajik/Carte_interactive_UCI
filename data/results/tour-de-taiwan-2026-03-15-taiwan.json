@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "Taiwan",
+ "end": "2026-03-19",
+ "fetched": "2026-10-29",
+ "key": "Tour de Taiwan|2026-03-15|Taiwan",
+ "name": "Tour de Taiwan",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Matys Grisel ( FRA )",
+   "team": "Lotto–Intermarché",
+   "time": "13h 37' 18\""
+  },
+  {
+   "rank": 2,
+   "rider": "Matthew Fox ( AUS )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 4\""
+  },
+  {
+   "rank": 3,
+   "rider": "Jordi López ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 5\""
+  },
+  {
+   "rank": 4,
+   "rider": "Nil Gimeno ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 5,
+   "rider": "Dylan Hopkins ( AUS )",
+   "team": "Roojai Insurance Winspace",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 6,
+   "rider": "Iván Cobo ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 7,
+   "rider": "Fergus Browning ( AUS )",
+   "team": "Terengganu Cycling Team",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 8,
+   "rider": "Carter Bettles ( AUS )",
+   "team": "Roojai Insurance Winspace",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 9,
+   "rider": "Lorenzo Quartucci ( ITA )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 14\""
+  },
+  {
+   "rank": 10,
+   "rider": "Yuma Koishi ( JPN )",
+   "team": "Kinan Racing Team",
+   "time": "+ 14\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-15",
+ "title": "2026 Tour de Taiwan",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Taiwan"
+}

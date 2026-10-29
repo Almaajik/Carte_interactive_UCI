@@ -1,0 +1,78 @@
+{
+ "classes": [
+  "1.UWT",
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Netherlands",
+ "end": "2026-04-19",
+ "fetched": "2026-10-29",
+ "key": "Amstel Gold Race|2026-04-19|Netherlands",
+ "name": "Amstel Gold Race",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Remco Evenepoel ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "5h 59' 40\""
+  },
+  {
+   "rank": 2,
+   "rider": "Mattias Skjelmose ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 1\""
+  },
+  {
+   "rank": 3,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 4,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 5,
+   "rider": "Emiel Verstrynge ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 6,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 7,
+   "rider": "Mauri Vansevenant ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 8,
+   "rider": "Albert Withen Philipsen ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 9,
+   "rider": "Ewen Costiou ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 10,
+   "rider": "Marco Frigo ( ITA )",
+   "team": "NSN Cycling Team",
+   "time": "+ 1' 59\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-19",
+ "title": "2026 Amstel Gold Race",
+ "url": "https://en.wikipedia.org/wiki/2026_Amstel_Gold_Race"
+}

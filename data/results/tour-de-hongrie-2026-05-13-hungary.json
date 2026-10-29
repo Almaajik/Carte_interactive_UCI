@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Hungary",
+ "end": "2026-05-17",
+ "fetched": "2026-10-29",
+ "key": "Tour de Hongrie|2026-05-13|Hungary",
+ "name": "Tour de Hongrie",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jakob Söderqvist ( SWE )",
+   "team": "Lidl–Trek",
+   "time": "16h 57' 21\""
+  },
+  {
+   "rank": 2,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 40\""
+  },
+  {
+   "rank": 3,
+   "rider": "Luke Plapp ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 49\""
+  },
+  {
+   "rank": 4,
+   "rider": "Junior Lecerf ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 56\""
+  },
+  {
+   "rank": 5,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 1' 14\""
+  },
+  {
+   "rank": 6,
+   "rider": "Walter Calzoni ( ITA )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 1' 14\""
+  },
+  {
+   "rank": 7,
+   "rider": "Adrià Pericas ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 21\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jakob Omrzel ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 25\""
+  },
+  {
+   "rank": 9,
+   "rider": "Attila Valter ( HUN )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 34\""
+  },
+  {
+   "rank": 10,
+   "rider": "Artem Fofonov ( FRA )",
+   "team": "XDS Astana Team",
+   "time": "+ 1' 38\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-05-13",
+ "title": "2026 Tour de Hongrie",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Hongrie"
+}

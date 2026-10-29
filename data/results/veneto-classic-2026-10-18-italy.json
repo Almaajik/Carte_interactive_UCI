@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Italy",
+ "end": "2026-10-18",
+ "fetched": "2026-10-29",
+ "key": "Veneto Classic|2026-10-18|Italy",
+ "name": "Veneto Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Brandon McNulty ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "3h 32' 57\""
+  },
+  {
+   "rank": 2,
+   "rider": "Anthon Charmig ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 1' 06\""
+  },
+  {
+   "rank": 3,
+   "rider": "Pavel Sivakov ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 32\""
+  },
+  {
+   "rank": 4,
+   "rider": "Clément Berthet ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 1' 53\""
+  },
+  {
+   "rank": 5,
+   "rider": "Marc Hirschi ( SUI )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 2' 02\""
+  },
+  {
+   "rank": 6,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 2' 09\""
+  },
+  {
+   "rank": 7,
+   "rider": "Quinten Hermans ( BEL )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2' 10\""
+  },
+  {
+   "rank": 8,
+   "rider": "Marcel Camprubí ( ESP )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2' 20\""
+  },
+  {
+   "rank": 9,
+   "rider": "Diego Ulissi ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 2' 20\""
+  },
+  {
+   "rank": 10,
+   "rider": "Benoît Cosnefroy ( FRA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 2' 20\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-18",
+ "title": "2026 Veneto Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_Veneto_Classic"
+}

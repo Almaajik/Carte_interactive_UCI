@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Denmark",
+ "end": "2026-06-13",
+ "fetched": "2026-10-29",
+ "key": "Copenhagen Sprint|2026-06-13|Denmark",
+ "name": "Copenhagen Sprint",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jasper Philipsen ( BEL )",
+   "team": "Alpecin–Premier Tech",
+   "time": "4h 48' 21\""
+  },
+  {
+   "rank": 2,
+   "rider": "Tobias Lund Andresen ( DEN )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Sam Welsford ( AUS )",
+   "team": "Netcompany INEOS",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Tord Gudmestad ( NOR )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Danny van Poppel ( NED )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Max Walscheid ( GER )",
+   "team": "Lidl–Trek",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Frits Biesterbos ( NED )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Jason Tesson ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Rune Herregodts ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Søren Kragh Andersen ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-13",
+ "title": "2026 Copenhagen Sprint (men's race)",
+ "url": "https://en.wikipedia.org/wiki/2026_Copenhagen_Sprint_%28men%27s_race%29"
+}

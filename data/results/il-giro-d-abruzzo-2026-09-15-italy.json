@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "Italy",
+ "end": "2026-09-18",
+ "fetched": "2026-10-29",
+ "key": "Il Giro d'Abruzzo|2026-09-15|Italy",
+ "name": "Il Giro d'Abruzzo",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Kévin Vauquelin ( FRA )",
+   "team": "Netcompany INEOS",
+   "time": "15h 03' 12\""
+  },
+  {
+   "rank": 2,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 5\""
+  },
+  {
+   "rank": 4,
+   "rider": "Nicola Conci ( ITA )",
+   "team": "XDS Astana Development Team",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 5,
+   "rider": "Lennart Jasch ( GER )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 6,
+   "rider": "Dorian Godon ( FRA )",
+   "team": "Netcompany INEOS",
+   "time": "+ 16\""
+  },
+  {
+   "rank": 7,
+   "rider": "Ludovico Crescioli ( ITA )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 17\""
+  },
+  {
+   "rank": 8,
+   "rider": "Diego Ulissi ( ITA )",
+   "team": "XDS Astana Development Team",
+   "time": "+ 17\""
+  },
+  {
+   "rank": 9,
+   "rider": "Nicolò Garibbo ( ITA )",
+   "team": "Team UKYO",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 10,
+   "rider": "Domenico Pozzovivo ( ITA )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 27\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-15",
+ "title": "2026 Giro d'Abruzzo",
+ "url": "https://en.wikipedia.org/wiki/2026_Giro_d%27Abruzzo"
+}

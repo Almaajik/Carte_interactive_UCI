@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "Final general classification",
+ "country": "Portugal",
+ "end": "2026-08-16",
+ "fetched": "2026-10-29",
+ "key": "Volta a Portugal|2026-08-05|Portugal",
+ "name": "Volta a Portugal",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Alexis Guérin ( FRA )",
+   "team": "Anicolor / Campicarn",
+   "time": "30h 21' 07\""
+  },
+  {
+   "rank": 2,
+   "rider": "Artem Nych ( RUS )",
+   "team": "Anicolor / Campicarn",
+   "time": "+ 1' 02\""
+  },
+  {
+   "rank": 3,
+   "rider": "Pedro Silva ( POR )",
+   "team": "Feira dos Sofás–Boavista",
+   "time": "+ 4' 37\""
+  },
+  {
+   "rank": 4,
+   "rider": "José Fernandes ( POR )",
+   "team": "GI Group Holding–Simoldes–UDO",
+   "time": "+ 4' 47\""
+  },
+  {
+   "rank": 5,
+   "rider": "Adrià Pericas ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 5' 38\""
+  },
+  {
+   "rank": 6,
+   "rider": "Tiago Antunes ( POR )",
+   "team": "Efapel Cycling",
+   "time": "+ 5' 53\""
+  },
+  {
+   "rank": 7,
+   "rider": "Jokin Murguialday ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 6' 47\""
+  },
+  {
+   "rank": 8,
+   "rider": "Emanuel Duarte ( POR )",
+   "team": "Credibom / LA Alumínios / Marcos Car",
+   "time": "+ 6' 54\""
+  },
+  {
+   "rank": 9,
+   "rider": "Rui Carvalho ( POR )",
+   "team": "GI Group Holding–Simoldes–UDO",
+   "time": "+ 10' 42\""
+  },
+  {
+   "rank": 10,
+   "rider": "Diogo Barbosa ( POR )",
+   "team": "Team Tavira / Crédito Agrícola",
+   "time": "+ 12' 06\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-05",
+ "title": "2026 Volta a Portugal",
+ "url": "https://en.wikipedia.org/wiki/2026_Volta_a_Portugal"
+}

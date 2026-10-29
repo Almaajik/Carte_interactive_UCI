@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-03-01",
+ "fetched": "2026-10-29",
+ "key": "Kuurne-Brussels-Kuurne|2026-03-01|Belgium",
+ "name": "Kuurne-Brussels-Kuurne",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Matthew Brennan ( GBR )",
+   "team": "Visma–Lease a Bike",
+   "time": "4h 26' 05\""
+  },
+  {
+   "rank": 2,
+   "rider": "Luca Mozzato ( ITA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Matteo Trentin ( ITA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Matevž Govekar ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Mike Teunissen ( NED )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Laurenz Rex ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Tobias Lund Andresen ( DEN )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Cees Bol ( NED )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Luke Lamperti ( USA )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Jordi Meeus ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-01",
+ "title": "2026 Kuurne–Brussels–Kuurne",
+ "url": "https://en.wikipedia.org/wiki/2026_Kuurne%E2%80%93Brussels%E2%80%93Kuurne"
+}

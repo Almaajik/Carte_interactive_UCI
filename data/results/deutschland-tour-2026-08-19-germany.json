@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Germany",
+ "end": "2026-08-23",
+ "fetched": "2026-10-29",
+ "key": "Deutschland Tour|2026-08-19|Germany",
+ "name": "Deutschland Tour",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Isaac del Toro ( MEX )",
+   "team": "UAE Team Emirates XRG",
+   "time": "17h 39' 48\""
+  },
+  {
+   "rank": 2,
+   "rider": "Louis Barré ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 53\""
+  },
+  {
+   "rank": 3,
+   "rider": "Marc Hirschi ( SUI )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 1' 08\""
+  },
+  {
+   "rank": 4,
+   "rider": "Andrea Raccagni ( ITA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 24\""
+  },
+  {
+   "rank": 5,
+   "rider": "Mathias Vacek ( CZE )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 25\""
+  },
+  {
+   "rank": 6,
+   "rider": "Natnael Tesfatsion ( ERI )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 25\""
+  },
+  {
+   "rank": 7,
+   "rider": "Gorka Sorarrain ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 1' 26\""
+  },
+  {
+   "rank": 8,
+   "rider": "Stefano Oldani ( ITA )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 1' 28\""
+  },
+  {
+   "rank": 9,
+   "rider": "Max Schachmann ( GER )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 28\""
+  },
+  {
+   "rank": 10,
+   "rider": "Edgar Cadena ( MEX )",
+   "team": "Team Storck–MRW BAU",
+   "time": "+ 1' 33\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-19",
+ "title": "2026 Deutschland Tour",
+ "url": "https://en.wikipedia.org/wiki/2026_Deutschland_Tour"
+}

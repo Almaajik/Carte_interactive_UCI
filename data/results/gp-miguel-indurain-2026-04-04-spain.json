@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Spain",
+ "end": "2026-04-04",
+ "fetched": "2026-10-29",
+ "key": "GP Miguel Indurain|2026-04-04|Spain",
+ "name": "GP Miguel Indurain",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Ion Izagirre ( ESP )",
+   "team": "Cofidis",
+   "time": "5h 00' 29\""
+  },
+  {
+   "rank": 2,
+   "rider": "Quinn Simmons ( USA )",
+   "team": "Lidl–Trek",
+   "time": "+ 6\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alex Baudin ( FRA )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 4,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 5,
+   "rider": "Andrea Bagioli ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 6,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 7,
+   "rider": "Lennert Van Eetvelt ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 8,
+   "rider": "Clément Champoussin ( FRA )",
+   "team": "XDS Astana Team",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 9,
+   "rider": "Markel Beloki ( ESP )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 10\""
+  },
+  {
+   "rank": 10,
+   "rider": "Haimar Etxeberria ( ESP )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 10\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-04",
+ "title": "2026 GP Miguel Induráin",
+ "url": "https://en.wikipedia.org/wiki/2026_GP_Miguel_Indur%C3%A1in"
+}

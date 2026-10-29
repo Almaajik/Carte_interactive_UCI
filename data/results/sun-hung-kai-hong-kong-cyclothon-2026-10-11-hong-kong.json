@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.1"
+ ],
+ "classification": "Result",
+ "country": "Hong Kong",
+ "end": "2026-10-11",
+ "fetched": "2026-10-29",
+ "key": "Sun Hung Kai Hong Kong Cyclothon|2026-10-11|Hong Kong",
+ "name": "Sun Hung Kai Hong Kong Cyclothon",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Paul Magnier ( FRA )",
+   "team": "Soudal–Quick-Step",
+   "time": "2h 03' 30\""
+  },
+  {
+   "rank": 2,
+   "rider": "Max Kanter ( GER )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Matteo Moschetti ( ITA )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Robert Donaldson ( GBR )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Lionel Taminiaux ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Marcin Budziński ( POL )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Nicolo Buratti ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Joseph Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Gari Ugarte ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Emīls Liepiņš ( LAT )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 3\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-11",
+ "title": "2026 Hong Kong Cyclothon",
+ "url": "https://en.wikipedia.org/wiki/2026_Hong_Kong_Cyclothon"
+}

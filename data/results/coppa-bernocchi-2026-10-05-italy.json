@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Italy",
+ "end": "2026-10-05",
+ "fetched": "2026-10-29",
+ "key": "Coppa Bernocchi|2026-10-05|Italy",
+ "name": "Coppa Bernocchi",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Noa Isidore ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "3h 53' 28\""
+  },
+  {
+   "rank": 2,
+   "rider": "Tommaso Dati ( ITA )",
+   "team": "Team UKYO",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Orluis Aular ( VEN )",
+   "team": "Movistar Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Alessandro Romele ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Dorian Godon ( FRA )",
+   "team": "Netcompany INEOS",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Pepijn Reinderink ( NED )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Davide Donati ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Andrea Vendrame ( ITA )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Filippo Baroncini ( ITA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Sakarias Koller Løland ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-05",
+ "title": "2026 Coppa Bernocchi",
+ "url": "https://en.wikipedia.org/wiki/2026_Coppa_Bernocchi"
+}

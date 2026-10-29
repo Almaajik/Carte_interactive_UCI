@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Italy",
+ "end": "2026-04-24",
+ "fetched": "2026-10-29",
+ "key": "Tour of the Alps|2026-04-20|Italy",
+ "name": "Tour of the Alps",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "19h 01' 52\""
+  },
+  {
+   "rank": 2,
+   "rider": "Egan Bernal ( COL )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 40\""
+  },
+  {
+   "rank": 3,
+   "rider": "Thymen Arensman ( NED )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 4,
+   "rider": "Michael Storer ( AUS )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 1' 09\""
+  },
+  {
+   "rank": 5,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 1' 45\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jakob Omrzel ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 55\""
+  },
+  {
+   "rank": 7,
+   "rider": "Chris Harper ( AUS )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 1' 55\""
+  },
+  {
+   "rank": 8,
+   "rider": "Ben O'Connor ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 1' 59\""
+  },
+  {
+   "rank": 9,
+   "rider": "Aleksandr Vlasov",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 51\""
+  },
+  {
+   "rank": 10,
+   "rider": "Giovanni Aleotti ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 3' 11\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-20",
+ "title": "2026 Tour of the Alps",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_the_Alps"
+}

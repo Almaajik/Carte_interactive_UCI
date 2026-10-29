@@ -1,0 +1,78 @@
+{
+ "classes": [
+  "1.WWT",
+  "1.UWT"
+ ],
+ "classification": "Result",
+ "country": "France",
+ "end": "2026-04-12",
+ "fetched": "2026-10-29",
+ "key": "Paris-Roubaix|2026-04-12|France",
+ "name": "Paris-Roubaix",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Wout van Aert ( BEL )",
+   "team": "Visma–Lease a Bike",
+   "time": "5h 16' 52\""
+  },
+  {
+   "rank": 2,
+   "rider": "Tadej Pogačar ( SLO )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Jasper Stuyven ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 4,
+   "rider": "Mathieu van der Poel ( NED )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 5,
+   "rider": "Christophe Laporte ( FRA )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 6,
+   "rider": "Mick van Dijke ( NED )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 7,
+   "rider": "Mads Pedersen ( DEN )",
+   "team": "Lidl–Trek",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 8,
+   "rider": "Stefan Bissegger ( SUI )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 20\""
+  },
+  {
+   "rank": 9,
+   "rider": "Nils Politt ( GER )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 2' 36\""
+  },
+  {
+   "rank": 10,
+   "rider": "Mike Teunissen ( NED )",
+   "team": "XDS Astana Team",
+   "time": "+ 2' 36\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-12",
+ "title": "2026 Paris–Roubaix",
+ "url": "https://en.wikipedia.org/wiki/2026_Paris%E2%80%93Roubaix"
+}

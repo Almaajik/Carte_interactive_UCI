@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "Australia",
+ "end": "2026-01-19",
+ "fetched": "2026-10-29",
+ "key": "Tour Down Under|2026-01-17|Australia",
+ "name": "Tour Down Under",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jay Vine ( AUS )",
+   "team": "UAE Team Emirates XRG",
+   "time": "16h 44' 54\""
+  },
+  {
+   "rank": 2,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 1' 03\""
+  },
+  {
+   "rank": 3,
+   "rider": "Harry Sweeny ( AUS )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 1' 12\""
+  },
+  {
+   "rank": 4,
+   "rider": "Marco Brenner ( GER )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 1' 14\""
+  },
+  {
+   "rank": 5,
+   "rider": "Andreas Kron ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 1' 16\""
+  },
+  {
+   "rank": 6,
+   "rider": "Andrea Raccagni Noviero ( ITA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 19\""
+  },
+  {
+   "rank": 7,
+   "rider": "Anthon Charmig ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 1' 23\""
+  },
+  {
+   "rank": 8,
+   "rider": "Filippo Zana ( ITA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 23\""
+  },
+  {
+   "rank": 9,
+   "rider": "Matteo Sobrero ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 27\""
+  },
+  {
+   "rank": 10,
+   "rider": "Ben O'Connor ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 1' 28\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-01-17",
+ "title": "2026 Tour Down Under",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_Down_Under"
+}

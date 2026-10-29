@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.1"
+ ],
+ "classification": "Results",
+ "country": "Italy",
+ "end": "2026-09-12",
+ "fetched": "2026-10-29",
+ "key": "Memorial Marco Pantani|2026-09-12|Italy",
+ "name": "Memorial Marco Pantani",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Ion Izagirre ( ESP )",
+   "team": "Cofidis",
+   "time": "4h 23' 43\""
+  },
+  {
+   "rank": 2,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "s.t."
+  },
+  {
+   "rank": 3,
+   "rider": "Mikkel Honoré ( DEN )",
+   "team": "EF Education–EasyPost",
+   "time": "s.t."
+  },
+  {
+   "rank": 4,
+   "rider": "Michael Storer ( AUS )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "s.t."
+  },
+  {
+   "rank": 5,
+   "rider": "Markus Hoelgaard ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 23\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jai Hindley ( AUS )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "s.t."
+  },
+  {
+   "rank": 7,
+   "rider": "Joris Delbove ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "s.t."
+  },
+  {
+   "rank": 8,
+   "rider": "Antonio Tiberi ( ITA )",
+   "team": "Team Bahrain Victorious",
+   "time": "s.t."
+  },
+  {
+   "rank": 9,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 25\""
+  },
+  {
+   "rank": 10,
+   "rider": "Dorian Godon ( FRA )",
+   "team": "Netcompany INEOS",
+   "time": "+ 30\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-12",
+ "title": "2026 Memorial Marco Pantani",
+ "url": "https://en.wikipedia.org/wiki/2026_Memorial_Marco_Pantani"
+}

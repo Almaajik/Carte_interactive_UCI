@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-07-30",
+ "fetched": "2026-10-29",
+ "key": "Tour de l'Ain|2026-07-28|France",
+ "name": "Tour de l'Ain",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Markel Beloki ( ESP )",
+   "team": "EF Education–EasyPost",
+   "time": "10h 46' 15\""
+  },
+  {
+   "rank": 2,
+   "rider": "Axel Mariault ( FRA )",
+   "team": "CIC Pro Cycling Academy",
+   "time": "+ 52\""
+  },
+  {
+   "rank": 3,
+   "rider": "Jamie Meehan ( IRL )",
+   "team": "Cofidis",
+   "time": "+ 55\""
+  },
+  {
+   "rank": 4,
+   "rider": "Henrique Bravo ( BRA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 55\""
+  },
+  {
+   "rank": 5,
+   "rider": "Rémi Arsac ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 55\""
+  },
+  {
+   "rank": 6,
+   "rider": "Nicola Conci ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 55\""
+  },
+  {
+   "rank": 7,
+   "rider": "Jefferson Alexander Cepeda ( COL )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 1' 00\""
+  },
+  {
+   "rank": 8,
+   "rider": "Huw Buck Jones ( GBR )",
+   "team": "Bourg-en-Bresse Ain Cyclisme",
+   "time": "+ 1' 00\""
+  },
+  {
+   "rank": 9,
+   "rider": "Adam Howell ( GBR )",
+   "team": "Bourg-en-Bresse Ain Cyclisme",
+   "time": "+ 2' 17\""
+  },
+  {
+   "rank": 10,
+   "rider": "José Said Cisneros ( MEX )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 2' 19\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-07-28",
+ "title": "2026 Tour de l'Ain",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_l%27Ain"
+}

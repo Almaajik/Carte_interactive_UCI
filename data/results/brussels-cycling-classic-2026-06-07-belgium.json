@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-06-07",
+ "fetched": "2026-10-29",
+ "key": "Brussels Cycling Classic|2026-06-07|Belgium",
+ "name": "Brussels Cycling Classic",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jordi Meeus ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "4h 32' 54\""
+  },
+  {
+   "rank": 2,
+   "rider": "Milan Fretin ( BEL )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Biniam Girmay ( ERI )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Frits Biesterbos ( NED )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Arvid de Kleijn ( NED )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Tobias Müller ( GER )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Anthony Turgis ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Toon Aerts ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Anders Foldager ( DEN )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Paul Penhoët ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-07",
+ "title": "2026 Brussels Cycling Classic",
+ "url": "https://en.wikipedia.org/wiki/2026_Brussels_Cycling_Classic"
+}

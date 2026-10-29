@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "United Arab Emirates",
+ "end": "2026-02-08",
+ "fetched": "2026-10-29",
+ "key": "UAE Tour Women|2026-02-05|United Arab Emirates",
+ "name": "UAE Tour Women",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Elisa Longo Borghini ( ITA )",
+   "team": "UAE Team ADQ",
+   "time": "13h 06' 32\""
+  },
+  {
+   "rank": 2,
+   "rider": "Monica Trinca Colonel ( ITA )",
+   "team": "Liv AlUla Jayco",
+   "time": "+ 16\""
+  },
+  {
+   "rank": 3,
+   "rider": "Femke de Vries ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 17\""
+  },
+  {
+   "rank": 4,
+   "rider": "Kimberley Le Court ( MRI )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 1' 07\""
+  },
+  {
+   "rank": 5,
+   "rider": "Katarzyna Niewiadoma ( POL )",
+   "team": "Canyon//SRAM Zondacrypto",
+   "time": "+ 1' 09\""
+  },
+  {
+   "rank": 6,
+   "rider": "Eleonora Ciabocco ( ITA )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 1' 25\""
+  },
+  {
+   "rank": 7,
+   "rider": "Niamh Fisher-Black ( NZL )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 29\""
+  },
+  {
+   "rank": 8,
+   "rider": "Steffi Häberlin ( SUI )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 1' 45\""
+  },
+  {
+   "rank": 9,
+   "rider": "Justine Ghekiere ( BEL )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 1' 47\""
+  },
+  {
+   "rank": 10,
+   "rider": "Juliette Berthet ( FRA )",
+   "team": "FDJ United–Suez",
+   "time": "+ 1' 48\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-05",
+ "title": "2026 UAE Tour Women",
+ "url": "https://en.wikipedia.org/wiki/2026_UAE_Tour_Women"
+}

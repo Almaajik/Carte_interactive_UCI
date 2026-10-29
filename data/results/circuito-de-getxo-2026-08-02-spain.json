@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.1"
+ ],
+ "classification": "Result",
+ "country": "Spain",
+ "end": "2026-08-02",
+ "fetched": "2026-10-29",
+ "key": "Circuito de Getxo|2026-08-02|Spain",
+ "name": "Circuito de Getxo",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Natnael Tesfatsion ( ERI )",
+   "team": "Movistar Team",
+   "time": "3h 58' 49\""
+  },
+  {
+   "rank": 2,
+   "rider": "Pau Miquel ( ESP )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Marcel Camprubí ( ESP )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Ludovico Crescioli ( ITA )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Giulio Ciccone ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Jordi López ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Mathieu Burgaudeau ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "César Pérez ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 4\""
+  },
+  {
+   "rank": 10,
+   "rider": "Dario Giuliano ( FRA )",
+   "team": "Team Polti VisitMalta",
+   "time": "+ 8\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-02",
+ "title": "2026 Circuito de Getxo",
+ "url": "https://en.wikipedia.org/wiki/2026_Circuito_de_Getxo"
+}

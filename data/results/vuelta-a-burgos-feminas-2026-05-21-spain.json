@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-05-24",
+ "fetched": "2026-10-29",
+ "key": "Vuelta a Burgos Feminas|2026-05-21|Spain",
+ "name": "Vuelta a Burgos Feminas",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Yara Kastelijn ( NED )",
+   "team": "Fenix–Premier Tech",
+   "time": "13h 20' 04\""
+  },
+  {
+   "rank": 2,
+   "rider": "Évita Muzic ( FRA )",
+   "team": "FDJ United–Suez",
+   "time": "+ 20\""
+  },
+  {
+   "rank": 3,
+   "rider": "Usoa Ostolaza ( SPA )",
+   "team": "Laboral Kutxa–Fundación Euskadi",
+   "time": "+ 31\""
+  },
+  {
+   "rank": 4,
+   "rider": "Mireia Benito ( SPA )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 5,
+   "rider": "Mischa Bredewold ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 49\""
+  },
+  {
+   "rank": 6,
+   "rider": "Shirin van Anrooij ( NED )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 13\""
+  },
+  {
+   "rank": 7,
+   "rider": "Amanda Spratt ( AUS )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 13\""
+  },
+  {
+   "rank": 8,
+   "rider": "Cédrine Kerbaol ( FRA )",
+   "team": "EF Education–Oatly",
+   "time": "+ 1' 24\""
+  },
+  {
+   "rank": 9,
+   "rider": "Nadia Gontova ( CAN )",
+   "team": "Liv AlUla Jayco",
+   "time": "+ 1' 24\""
+  },
+  {
+   "rank": 10,
+   "rider": "Maud Oudeman ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 1' 41\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-05-21",
+ "title": "2026 Vuelta a Burgos Feminas",
+ "url": "https://en.wikipedia.org/wiki/2026_Vuelta_a_Burgos_Feminas"
+}

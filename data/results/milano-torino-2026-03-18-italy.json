@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Italy",
+ "end": "2026-03-18",
+ "fetched": "2026-10-29",
+ "key": "Milano-Torino|2026-03-18|Italy",
+ "name": "Milano-Torino",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "3h 48' 45\""
+  },
+  {
+   "rank": 2,
+   "rider": "Tobias Halland Johannessen ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 4\""
+  },
+  {
+   "rank": 3,
+   "rider": "Primož Roglič ( SLO )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 5\""
+  },
+  {
+   "rank": 4,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 5,
+   "rider": "Cian Uijtdebroeks ( BEL )",
+   "team": "Movistar Team",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 6,
+   "rider": "Jefferson Alexander Cepeda ( ECU )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 15\""
+  },
+  {
+   "rank": 7,
+   "rider": "Sebastian Berwick ( AUS )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 18\""
+  },
+  {
+   "rank": 8,
+   "rider": "Lorenzo Fortunato ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 25\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 36\""
+  },
+  {
+   "rank": 10,
+   "rider": "Michael Storer ( AUS )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 41\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-03-18",
+ "title": "2026 Milano–Torino",
+ "url": "https://en.wikipedia.org/wiki/2026_Milano%E2%80%93Torino"
+}

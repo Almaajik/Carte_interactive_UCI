@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Czechia",
+ "end": "2026-08-16",
+ "fetched": "2026-10-29",
+ "key": "Czech Tour|2026-08-13|Czechia",
+ "name": "Czech Tour",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Andrew August ( USA )",
+   "team": "Netcompany INEOS",
+   "time": "15h 08' 12\""
+  },
+  {
+   "rank": 2,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 7\""
+  },
+  {
+   "rank": 3,
+   "rider": "Domenico Pozzovivo ( ITA )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 40\""
+  },
+  {
+   "rank": 4,
+   "rider": "Filippo Turconi ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 51\""
+  },
+  {
+   "rank": 5,
+   "rider": "Nicolas Breuillard ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 54\""
+  },
+  {
+   "rank": 6,
+   "rider": "Max Bock ( GER )",
+   "team": "Red Bull–Bora–Hansgrohe Rookies",
+   "time": "+ 59\""
+  },
+  {
+   "rank": 7,
+   "rider": "Václav Ježek ( CZE )",
+   "team": "Kasper Crypto4me",
+   "time": "+ 1' 03\""
+  },
+  {
+   "rank": 8,
+   "rider": "Embret Svestad-Bårdseng ( NOR )",
+   "team": "Netcompany INEOS",
+   "time": "+ 1' 08\""
+  },
+  {
+   "rank": 9,
+   "rider": "Jan Hirt ( CZE )",
+   "team": "NSN Cycling Team",
+   "time": "+ 1' 24\""
+  },
+  {
+   "rank": 10,
+   "rider": "Alex Tolio ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 1' 44\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-13",
+ "title": "2026 Czech Tour",
+ "url": "https://en.wikipedia.org/wiki/2026_Czech_Tour"
+}

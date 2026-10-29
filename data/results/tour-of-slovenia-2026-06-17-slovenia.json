@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Slovenia",
+ "end": "2026-06-21",
+ "fetched": "2026-10-29",
+ "key": "Tour of Slovenia|2026-06-17|Slovenia",
+ "name": "Tour of Slovenia",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Florian Lipowitz ( GER )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "19h 45' 44\""
+  },
+  {
+   "rank": 2,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 42\""
+  },
+  {
+   "rank": 3,
+   "rider": "Jakob Omrzel ( SLO )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 2' 06\""
+  },
+  {
+   "rank": 4,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 2' 49\""
+  },
+  {
+   "rank": 5,
+   "rider": "Sebastian Berwick ( AUS )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 2' 55\""
+  },
+  {
+   "rank": 6,
+   "rider": "Samuel Fernández ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 2' 57\""
+  },
+  {
+   "rank": 7,
+   "rider": "Joel Nicolau ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 3' 21\""
+  },
+  {
+   "rank": 8,
+   "rider": "Alex Tolio ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 3' 24\""
+  },
+  {
+   "rank": 9,
+   "rider": "Luca Covili ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 3' 37\""
+  },
+  {
+   "rank": 10,
+   "rider": "Iván Cobo ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 4' 15\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-17",
+ "title": "2026 Tour of Slovenia",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Slovenia"
+}

@@ -1,0 +1,175 @@
+{
+ "classes": [],
+ "classification": "Riders' standings",
+ "country": "Canada",
+ "end": "2026-09-20",
+ "fetched": "2026-10-29",
+ "key": "World Championships: Women's TT|2026-09-20|Canada",
+ "name": "World Championships: Women's TT",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Máximo Quiles",
+   "team": "CFMoto Aspar Team"
+  },
+  {
+   "rank": 2,
+   "rider": "David Almansa",
+   "team": "Liqui Moly Dynavolt Intact GP"
+  },
+  {
+   "rank": 3,
+   "rider": "Brian Uriarte",
+   "team": "Red Bull KTM Ajo"
+  },
+  {
+   "rank": 4,
+   "rider": "Álvaro Carpe",
+   "team": "Red Bull KTM Ajo"
+  },
+  {
+   "rank": 5,
+   "rider": "Adrián Fernández",
+   "team": "Leopard Racing"
+  },
+  {
+   "rank": 6,
+   "rider": "Marco Morelli",
+   "team": "CFMoto Aspar Team"
+  },
+  {
+   "rank": 7,
+   "rider": "Valentín Perrone",
+   "team": "Red Bull KTM Tech3"
+  },
+  {
+   "rank": 8,
+   "rider": "Veda Pratama",
+   "team": "Honda Team Asia"
+  },
+  {
+   "rank": 9,
+   "rider": "Hakim Danish",
+   "team": "Aeon Credit – MT Helmets – MSi"
+  },
+  {
+   "rank": 10,
+   "rider": "Matteo Bertelle",
+   "team": "LevelUp – MTA"
+  },
+  {
+   "rank": 11,
+   "rider": "Rico Salmela",
+   "team": "Red Bull KTM Tech3"
+  },
+  {
+   "rank": 12,
+   "rider": "Adrián Cruces",
+   "team": "CIP Green Power"
+  },
+  {
+   "rank": 13,
+   "rider": "Guido Pini",
+   "team": "Leopard Racing"
+  },
+  {
+   "rank": 14,
+   "rider": "Joel Esteban",
+   "team": "LevelUp – MTA"
+  },
+  {
+   "rank": 15,
+   "rider": "Casey O'Gorman",
+   "team": "Sic58 Squadra Corse"
+  },
+  {
+   "rank": 16,
+   "rider": "Joel Kelso",
+   "team": "Gryd Racing"
+  },
+  {
+   "rank": 17,
+   "rider": "Eddie O'Shea",
+   "team": "Gryd Racing"
+  },
+  {
+   "rank": 18,
+   "rider": "David Muñoz",
+   "team": "Liqui Moly Dynavolt Intact GP"
+  },
+  {
+   "rank": 19,
+   "rider": "Jesús Ríos",
+   "team": "Rivacold Snipers Team"
+  },
+  {
+   "rank": 20,
+   "rider": "Ryusei Yamanaka",
+   "team": "Aeon Credit – MT Helmets – MSi"
+  },
+  {
+   "rank": 21,
+   "rider": "Scott Ogden",
+   "team": "CIP Green Power"
+  },
+  {
+   "rank": 22,
+   "rider": "David González",
+   "team": "Liqui Moly Dynavolt Intact GP"
+  },
+  {
+   "rank": 23,
+   "rider": "Marcos Uriarte",
+   "team": "Liqui Moly Dynavolt Intact GP"
+  },
+  {
+   "rank": 24,
+   "rider": "Cormac Buchanan",
+   "team": "Code Motorsports"
+  },
+  {
+   "rank": 25,
+   "rider": "Leo Rammerstorfer",
+   "team": "Sic58 Squadra Corse"
+  },
+  {
+   "rank": 26,
+   "rider": "Kiattisak Singhapong",
+   "team": "Honda Team Asia"
+  },
+  {
+   "rank": 27,
+   "rider": "Zen Mitani",
+   "team": "Honda Team Asia"
+  },
+  {
+   "rank": 28,
+   "rider": "Ruché Moodley",
+   "team": "Code Motorsports"
+  },
+  {
+   "rank": 29,
+   "rider": "Ryota Ogiwara",
+   "team": "Code Motorsports"
+  },
+  {
+   "rank": 30,
+   "rider": "Nicola Carraro",
+   "team": "Rivacold Snipers Team"
+  },
+  {
+   "rank": 31,
+   "rider": "Leonardo Abruzzo",
+   "team": "Code Motorsports"
+  },
+  {
+   "rank": 32,
+   "rider": "Eduardo Gutiérrez",
+   "team": "Code Motorsports"
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-20",
+ "title": "2026 Moto3 World Championship",
+ "url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "Azerbaijan",
+ "end": "2026-05-14",
+ "fetched": "2026-10-29",
+ "key": "Baku-Khankendi Azerbaijan|2026-05-10|Azerbaijan",
+ "name": "Baku-Khankendi Azerbaijan",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Josh Burnett ( NZL )",
+   "team": "Burgos Burpellet BH",
+   "time": "19h 6' 43\""
+  },
+  {
+   "rank": 2,
+   "rider": "Henok Mulueberhan ( ERI )",
+   "team": "XDS Astana Team",
+   "time": "+ 3\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alexandre Balmer ( SUI )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 7\""
+  },
+  {
+   "rank": 4,
+   "rider": "Eric Fagúndez ( URU )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 14\""
+  },
+  {
+   "rank": 5,
+   "rider": "Luca Covili ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 6,
+   "rider": "Urko Berrade ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 7,
+   "rider": "Santiago Umba ( COL )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 8,
+   "rider": "Diego Uriarte ( ESP )",
+   "team": "Equipo Kern Pharma",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alessio Martinelli ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 22\""
+  },
+  {
+   "rank": 10,
+   "rider": "Carlos García Pierna ( ESP )",
+   "team": "Burgos Burpellet BH",
+   "time": "+ 22\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-05-10",
+ "title": "2026 Baku-Khankendi Azerbaijan Cycling Race",
+ "url": "https://en.wikipedia.org/wiki/2026_Baku-Khankendi_Azerbaijan_Cycling_Race"
+}

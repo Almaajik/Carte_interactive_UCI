@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Italy",
+ "end": "2026-10-08",
+ "fetched": "2026-10-29",
+ "key": "Gran Piemonte|2026-10-08|Italy",
+ "name": "Gran Piemonte",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Dorian Godon ( FRA )",
+   "team": "Netcompany INEOS",
+   "time": "4h 06' 19\""
+  },
+  {
+   "rank": 2,
+   "rider": "Anthon Charmig ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Alberto Bettiol ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Lukas Nerurkar ( GBR )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 5,
+   "rider": "Quinten Hermans ( BEL )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 6,
+   "rider": "Fred Wright ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 7,
+   "rider": "Afonso Eulálio ( POR )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 8,
+   "rider": "Michael Matthews ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 9,
+   "rider": "Jhonatan Narváez ( COL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 10,
+   "rider": "Pau Martí ( ESP )",
+   "team": "NSN Cycling Team",
+   "time": "+ 2\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-08",
+ "title": "2026 Gran Piemonte",
+ "url": "https://en.wikipedia.org/wiki/2026_Gran_Piemonte"
+}

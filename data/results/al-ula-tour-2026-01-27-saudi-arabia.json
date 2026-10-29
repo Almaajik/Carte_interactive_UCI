@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Saudi Arabia",
+ "end": "2026-01-31",
+ "fetched": "2026-10-29",
+ "key": "Al Ula Tour|2026-01-27|Saudi Arabia",
+ "name": "Al Ula Tour",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Jan Christen ( SUI )",
+   "team": "UAE Team Emirates XRG",
+   "time": "17h 23' 43\""
+  },
+  {
+   "rank": 2,
+   "rider": "Sergio Higuita ( COL )",
+   "team": "XDS Astana Team",
+   "time": "+ 13\""
+  },
+  {
+   "rank": 3,
+   "rider": "Igor Arrieta ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 21\""
+  },
+  {
+   "rank": 4,
+   "rider": "Stefan De Bod ( RSA )",
+   "team": "Modern Adventure Pro Cycling",
+   "time": "+ 25\""
+  },
+  {
+   "rank": 5,
+   "rider": "Afonso Eulálio ( POR )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 29\""
+  },
+  {
+   "rank": 6,
+   "rider": "Yannis Voisard ( SUI )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 7,
+   "rider": "Nicolas Vinokurov ( KAZ )",
+   "team": "XDS Astana Team",
+   "time": "+ 35\""
+  },
+  {
+   "rank": 8,
+   "rider": "Mauri Vansevenant ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 36\""
+  },
+  {
+   "rank": 9,
+   "rider": "Jan Castellon ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 37\""
+  },
+  {
+   "rank": 10,
+   "rider": "Bjoern Koerdt ( GBR )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 38\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-01-27",
+ "title": "2026 AlUla Tour",
+ "url": "https://en.wikipedia.org/wiki/2026_AlUla_Tour"
+}

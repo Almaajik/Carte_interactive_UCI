@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "France",
+ "end": "2026-04-10",
+ "fetched": "2026-10-29",
+ "key": "Région Pays de La Loire Tour|2026-04-07|France",
+ "name": "Région Pays de La Loire Tour",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Antoine L'Hote ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "16h 08' 56\""
+  },
+  {
+   "rank": 2,
+   "rider": "Alexander Kamp ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 3,
+   "rider": "Corbin Strong ( NZL )",
+   "team": "NSN Cycling Team",
+   "time": "+ 18\""
+  },
+  {
+   "rank": 4,
+   "rider": "Clément Venturini ( FRA )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 25\""
+  },
+  {
+   "rank": 5,
+   "rider": "Martin Marcellusi ( ITA )",
+   "team": "Bardiani–CSF 7 Saber",
+   "time": "+ 31\""
+  },
+  {
+   "rank": 6,
+   "rider": "Killian Théot ( FRA )",
+   "team": "Van Rysel–Roubaix",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 7,
+   "rider": "Lander Loockx ( BEL )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 8,
+   "rider": "Gorka Sorarrain ( ESP )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 9,
+   "rider": "Axel van der Tuuk ( NED )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 10,
+   "rider": "Bryan Coquard ( FRA )",
+   "team": "Cofidis",
+   "time": "+ 35\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-07",
+ "title": "2026 Région Pays de la Loire Tour",
+ "url": "https://en.wikipedia.org/wiki/2026_R%C3%A9gion_Pays_de_la_Loire_Tour"
+}

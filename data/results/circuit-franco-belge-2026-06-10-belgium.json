@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Belgium",
+ "end": "2026-06-10",
+ "fetched": "2026-10-29",
+ "key": "Circuit Franco-Belge|2026-06-10|Belgium",
+ "name": "Circuit Franco-Belge",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Corbin Strong ( NZL )",
+   "team": "NSN Cycling Team",
+   "time": "4h 32' 18\""
+  },
+  {
+   "rank": 2,
+   "rider": "Anders Foldager ( DEN )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Paul Magnier ( FRA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Rick Pluimers ( NED )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Jenno Berckmoes ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Francisco Joel Peñuela ( VEN )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Clément Venturini ( FRA )",
+   "team": "Unibet Rose Rockets",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Eduard Prades ( SPA )",
+   "team": "Caja Rural–Seguros RGA",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Marijn van den Berg ( NED )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Alexandre Delettre ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 3\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-10",
+ "title": "2026 Circuit Franco-Belge",
+ "url": "https://en.wikipedia.org/wiki/2026_Circuit_Franco-Belge"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-08-08",
+ "fetched": "2026-10-29",
+ "key": "Vuelta a Burgos|2026-08-04|Spain",
+ "name": "Vuelta a Burgos",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Felix Gall ( AUT )",
+   "team": "Decathlon CMA CGM",
+   "time": "19h 36' 15\""
+  },
+  {
+   "rank": 2,
+   "rider": "Oscar Onley ( GBR )",
+   "team": "Netcompany INEOS",
+   "time": "+ 5\""
+  },
+  {
+   "rank": 3,
+   "rider": "Giulio Ciccone ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 4,
+   "rider": "Giulio Pellizzari ( ITA )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 5,
+   "rider": "Enric Mas ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 41\""
+  },
+  {
+   "rank": 6,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 50\""
+  },
+  {
+   "rank": 7,
+   "rider": "Léo Bisiaux ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 1' 52\""
+  },
+  {
+   "rank": 8,
+   "rider": "Markel Beloki ( ESP )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 1' 56\""
+  },
+  {
+   "rank": 9,
+   "rider": "Matteo Vanhuffel ( BEL )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 1' 57\""
+  },
+  {
+   "rank": 10,
+   "rider": "Lorenzo Fortunato ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 2' 02\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-08-04",
+ "title": "2026 Vuelta a Burgos",
+ "url": "https://en.wikipedia.org/wiki/2026_Vuelta_a_Burgos"
+}

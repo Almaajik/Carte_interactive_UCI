@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Results",
+ "country": "Japan",
+ "end": "2026-10-18",
+ "fetched": "2026-10-29",
+ "key": "Utsunomiya Japan Cup|2026-10-18|Japan",
+ "name": "Utsunomiya Japan Cup",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Quinn Simmons ( USA )",
+   "team": "Lidl–Trek",
+   "time": "3h 33' 02\""
+  },
+  {
+   "rank": 2,
+   "rider": "Ben Healy ( IRE )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Jenno Berckmoes ( BEL )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 1' 12\""
+  },
+  {
+   "rank": 4,
+   "rider": "Jordan Jegat ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 1' 12\""
+  },
+  {
+   "rank": 5,
+   "rider": "Nicolò Garibbo ( ITA )",
+   "team": "Team UKYO",
+   "time": "+ 1' 12\""
+  },
+  {
+   "rank": 6,
+   "rider": "Julien Bernard ( FRA )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 12\""
+  },
+  {
+   "rank": 7,
+   "rider": "Sam Maisonobe ( FRA )",
+   "team": "Cofidis",
+   "time": "+ 1' 15\""
+  },
+  {
+   "rank": 8,
+   "rider": "Federico Iacomoni ( ITA )",
+   "team": "Team UKYO",
+   "time": "+ 1' 57\""
+  },
+  {
+   "rank": 9,
+   "rider": "Baptiste Vadic ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 1' 57\""
+  },
+  {
+   "rank": 10,
+   "rider": "Alexandre Delettre ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 1' 57\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-18",
+ "title": "2026 Japan Cup",
+ "url": "https://en.wikipedia.org/wiki/2026_Japan_Cup"
+}

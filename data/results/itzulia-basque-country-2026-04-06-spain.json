@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-04-11",
+ "fetched": "2026-10-29",
+ "key": "Itzulia Basque Country|2026-04-06|Spain",
+ "name": "Itzulia Basque Country",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "20h 07' 35\""
+  },
+  {
+   "rank": 2,
+   "rider": "Florian Lipowitz ( GER )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 2' 30\""
+  },
+  {
+   "rank": 3,
+   "rider": "Tobias Halland Johannessen ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 2' 33\""
+  },
+  {
+   "rank": 4,
+   "rider": "Ion Izagirre ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 3' 50\""
+  },
+  {
+   "rank": 5,
+   "rider": "Clément Champoussin ( FRA )",
+   "team": "XDS Astana Team",
+   "time": "+ 4' 43\""
+  },
+  {
+   "rank": 6,
+   "rider": "Pello Bilbao ( ESP )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 5' 03\""
+  },
+  {
+   "rank": 7,
+   "rider": "Javier Romo ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 5' 05\""
+  },
+  {
+   "rank": 8,
+   "rider": "Igor Arrieta ( ESP )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 5' 25\""
+  },
+  {
+   "rank": 9,
+   "rider": "Alex Baudin ( FRA )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 5' 41\""
+  },
+  {
+   "rank": 10,
+   "rider": "Kévin Vauquelin ( FRA )",
+   "team": "INEOS Grenadiers",
+   "time": "+ 7' 33\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-04-06",
+ "title": "2026 Tour of the Basque Country",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_the_Basque_Country"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.WWT"
+ ],
+ "classification": "General classification",
+ "country": "Italy",
+ "end": "2026-06-07",
+ "fetched": "2026-10-29",
+ "key": "Giro d'Italia Women|2026-05-30|Italy",
+ "name": "Giro d'Italia Women",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Demi Vollering ( NED )",
+   "team": "FDJ United–Suez",
+   "time": "29h 54' 19\""
+  },
+  {
+   "rank": 2,
+   "rider": "Antonia Niedermaier ( GER )",
+   "team": "Canyon//SRAM",
+   "time": "+ 30\""
+  },
+  {
+   "rank": 3,
+   "rider": "Anna van der Breggen ( NED )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 1' 37\""
+  },
+  {
+   "rank": 4,
+   "rider": "Elisa Longo Borghini ( ITA )",
+   "team": "UAE Team ADQ",
+   "time": "+ 2' 44\""
+  },
+  {
+   "rank": 5,
+   "rider": "Niamh Fisher-Black ( NZL )",
+   "team": "Lidl–Trek",
+   "time": "+ 3' 26\""
+  },
+  {
+   "rank": 6,
+   "rider": "Femke de Vries ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 5' 07\""
+  },
+  {
+   "rank": 7,
+   "rider": "Isabella Holmgren ( CAN )",
+   "team": "Lidl–Trek",
+   "time": "+ 7' 10\""
+  },
+  {
+   "rank": 8,
+   "rider": "Urška Žigart ( SLO )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 12' 39\""
+  },
+  {
+   "rank": 9,
+   "rider": "Valentina Cavallar ( AUT )",
+   "team": "Team SD Worx–Protime",
+   "time": "+ 13' 12\""
+  },
+  {
+   "rank": 10,
+   "rider": "Lore De Schepper ( BEL )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 13' 29\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-05-30",
+ "title": "2026 Giro d'Italia Women",
+ "url": "https://en.wikipedia.org/wiki/2026_Giro_d%27Italia_Women"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.UWT"
+ ],
+ "classification": "Results",
+ "country": "Italy",
+ "end": "2026-10-10",
+ "fetched": "2026-10-29",
+ "key": "Il Lombardia|2026-10-10|Italy",
+ "name": "Il Lombardia",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Paul Seixas ( FRA )",
+   "team": "Decathlon CMA CGM",
+   "time": "5h 49' 28\""
+  },
+  {
+   "rank": 2,
+   "rider": "Enric Mas ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 48\""
+  },
+  {
+   "rank": 3,
+   "rider": "Giulio Ciccone ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 1' 05\""
+  },
+  {
+   "rank": 4,
+   "rider": "Remco Evenepoel ( BEL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 5,
+   "rider": "Brandon McNulty ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 6,
+   "rider": "Thomas Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 7,
+   "rider": "Pello Bilbao ( ESP )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 8,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 9,
+   "rider": "Filippo Zana ( ITA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 1' 20\""
+  },
+  {
+   "rank": 10,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 1' 20\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-10-10",
+ "title": "2026 Il Lombardia",
+ "url": "https://en.wikipedia.org/wiki/2026_Il_Lombardia"
+}

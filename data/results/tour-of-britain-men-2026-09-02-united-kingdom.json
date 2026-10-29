@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "Stage 1",
+ "country": "United Kingdom",
+ "end": "2026-09-06",
+ "fetched": "2026-10-29",
+ "key": "Tour of Britain Men|2026-09-02|United Kingdom",
+ "name": "Tour of Britain Men",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Lewis Askey ( GBR )",
+   "team": "NSN Cycling Team",
+   "time": "4h 02' 44\""
+  },
+  {
+   "rank": 2,
+   "rider": "Filippo Ganna ( ITA )",
+   "team": "Netcompany INEOS",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 3,
+   "rider": "Tim Wellens ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 2\""
+  },
+  {
+   "rank": 4,
+   "rider": "Jasper Stuyven ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 5,
+   "rider": "Daan Hoole ( NED )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 6,
+   "rider": "Matteo Trentin ( ITA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 9\""
+  },
+  {
+   "rank": 7,
+   "rider": "Florian Vermeersch ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 8,
+   "rider": "Elliot Rowe ( GBR )",
+   "team": "Great Britain",
+   "time": "+ 19\""
+  },
+  {
+   "rank": 9,
+   "rider": "Rick Pluimers ( NED )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 19\""
+  },
+  {
+   "rank": 10,
+   "rider": "Paul Wright ( NZL )",
+   "team": "Modern Adventure Pro Cycling",
+   "time": "+ 26\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-02",
+ "title": "2026 Tour of Britain",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Britain"
+}

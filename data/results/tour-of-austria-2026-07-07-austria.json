@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "Stage 1",
+ "country": "Austria",
+ "end": "2026-07-12",
+ "fetched": "2026-10-29",
+ "key": "Tour of Austria|2026-07-07|Austria",
+ "name": "Tour of Austria",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Gregor Mühlberger ( AUT )",
+   "team": "National Team",
+   "time": "4h 21' 02\""
+  },
+  {
+   "rank": 2,
+   "rider": "Kevin Vermaerke ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 3,
+   "rider": "Héctor Álvarez ( ESP )",
+   "team": "Lidl–Trek",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 4,
+   "rider": "Bauke Mollema ( NED )",
+   "team": "Lidl–Trek",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 5,
+   "rider": "Andrea Bagioli ( ITA )",
+   "team": "Lidl–Trek",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 6,
+   "rider": "Michael Gogl ( AUT )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 7,
+   "rider": "Finlay Pickering ( GBR )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 8,
+   "rider": "Paul Double ( GBR )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 9,
+   "rider": "Carlos Rodríguez ( ESP )",
+   "team": "Netcompany INEOS",
+   "time": "+ 11\""
+  },
+  {
+   "rank": 10,
+   "rider": "Andrew August ( USA )",
+   "team": "Netcompany INEOS",
+   "time": "+ 11\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-07-07",
+ "title": "2026 Tour of Austria",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Austria"
+}

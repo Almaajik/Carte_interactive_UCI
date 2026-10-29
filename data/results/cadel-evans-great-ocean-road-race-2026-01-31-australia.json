@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.WWT"
+ ],
+ "classification": "Result",
+ "country": "Australia",
+ "end": "2026-01-31",
+ "fetched": "2026-10-29",
+ "key": "Cadel Evans Great Ocean Road Race|2026-01-31|Australia",
+ "name": "Cadel Evans Great Ocean Road Race",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tobias Lund Andresen ( DEN )",
+   "team": "Decathlon CMA CGM",
+   "time": "4h 15' 25\""
+  },
+  {
+   "rank": 2,
+   "rider": "Matthew Brennan ( GBR )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Brady Gilmore ( AUS )",
+   "team": "NSN Cycling Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Mauro Schmid ( SUI )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Natnael Tesfatsion ( ERI )",
+   "team": "Movistar Team",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Laurence Pithie ( NZL )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Filippo Zana ( ITA )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Gal Glivar ( SLO )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Francesco Busatto ( ITA )",
+   "team": "Alpecin–Premier Tech",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Aaron Gate ( NZL )",
+   "team": "XDS Astana Team",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-01-31",
+ "title": "2026 Cadel Evans Great Ocean Road Race",
+ "url": "https://en.wikipedia.org/wiki/2026_Cadel_Evans_Great_Ocean_Road_Race"
+}

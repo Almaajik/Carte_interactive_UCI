@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.Pro"
+ ],
+ "classification": "Result",
+ "country": "Italy",
+ "end": "2026-09-06",
+ "fetched": "2026-10-29",
+ "key": "GP Industria & Artigianato|2026-09-06|Italy",
+ "name": "GP Industria & Artigianato",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "4h 32' 47\""
+  },
+  {
+   "rank": 2,
+   "rider": "Christian Scaroni ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 3,
+   "rider": "Anthon Charmig ( DEN )",
+   "team": "Uno-X Mobility",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 4,
+   "rider": "Roger Adrià ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 5,
+   "rider": "Alessandro Fancellu ( ITA )",
+   "team": "MBH Bank CSB Telecom Fort",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 6,
+   "rider": "Antonio Tiberi ( ITA )",
+   "team": "Team Bahrain Victorious",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 7,
+   "rider": "Thomas Gachignard ( FRA )",
+   "team": "Team TotalEnergies",
+   "time": "+ 12\""
+  },
+  {
+   "rank": 8,
+   "rider": "Mathys Rondel ( FRA )",
+   "team": "Tudor Pro Cycling Team",
+   "time": "+ 18\""
+  },
+  {
+   "rank": 9,
+   "rider": "Ben O'Connor ( AUS )",
+   "team": "Team Jayco–AlUla",
+   "time": "+ 28\""
+  },
+  {
+   "rank": 10,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 40'\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-06",
+ "title": "2026 GP Industria & Artigianato di Larciano",
+ "url": "https://en.wikipedia.org/wiki/2026_GP_Industria_%26_Artigianato_di_Larciano"
+}

@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.UWT"
+ ],
+ "classification": "General classification",
+ "country": "Switzerland",
+ "end": "2026-06-21",
+ "fetched": "2026-10-29",
+ "key": "Tour de Suisse|2026-06-17|Switzerland",
+ "name": "Tour de Suisse",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Tadej Pogačar ( SLO )",
+   "team": "UAE Team Emirates XRG",
+   "time": "15h 08' 43\""
+  },
+  {
+   "rank": 2,
+   "rider": "Richard Carapaz ( ECU )",
+   "team": "EF Education–EasyPost",
+   "time": "+ 6' 32\""
+  },
+  {
+   "rank": 3,
+   "rider": "Mathias Vacek ( CZE )",
+   "team": "Lidl–Trek",
+   "time": "+ 6' 53\""
+  },
+  {
+   "rank": 4,
+   "rider": "Tobias Foss ( NOR )",
+   "team": "Netcompany INEOS",
+   "time": "+ 7' 34\""
+  },
+  {
+   "rank": 5,
+   "rider": "Ilan Van Wilder ( BEL )",
+   "team": "Soudal–Quick-Step",
+   "time": "+ 7' 51\""
+  },
+  {
+   "rank": 6,
+   "rider": "Brandon McNulty ( USA )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 7' 53\""
+  },
+  {
+   "rank": 7,
+   "rider": "Matthew Riccitello ( USA )",
+   "team": "Decathlon CMA CGM",
+   "time": "+ 8' 48\""
+  },
+  {
+   "rank": 8,
+   "rider": "Primož Roglič ( SLO )",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 9' 23\""
+  },
+  {
+   "rank": 9,
+   "rider": "Sergio Higuita ( COL )",
+   "team": "XDS Astana Team",
+   "time": "+ 9' 26\""
+  },
+  {
+   "rank": 10,
+   "rider": "Bart Lemmen ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 9' 44\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-06-17",
+ "title": "2026 Tour de Suisse",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_de_Suisse"
+}

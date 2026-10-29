@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.Pro"
+ ],
+ "classification": "General classification",
+ "country": "Spain",
+ "end": "2026-02-22",
+ "fetched": "2026-10-29",
+ "key": "Vuelta a Andalucia - Ruta del Sol|2026-02-18|Spain",
+ "name": "Vuelta a Andalucia - Ruta del Sol",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Iván Romeo ( ESP )",
+   "team": "Movistar Team",
+   "time": "18h 47' 10\""
+  },
+  {
+   "rank": 2,
+   "rider": "Andreas Leknessund ( NOR )",
+   "team": "Uno-X Mobility",
+   "time": "+ 7\""
+  },
+  {
+   "rank": 3,
+   "rider": "Tom Pidcock ( GBR )",
+   "team": "Pinarello–Q36.5 Pro Cycling Team",
+   "time": "+ 27\""
+  },
+  {
+   "rank": 4,
+   "rider": "Jan Christen ( SUI )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 5,
+   "rider": "Romain Grégoire ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 44\""
+  },
+  {
+   "rank": 6,
+   "rider": "Alex Aranburu ( ESP )",
+   "team": "Cofidis",
+   "time": "+ 51\""
+  },
+  {
+   "rank": 7,
+   "rider": "Aleksandr Vlasov",
+   "team": "Red Bull–Bora–Hansgrohe",
+   "time": "+ 54\""
+  },
+  {
+   "rank": 8,
+   "rider": "Clément Braz Afonso ( FRA )",
+   "team": "Groupama–FDJ United",
+   "time": "+ 56\""
+  },
+  {
+   "rank": 9,
+   "rider": "Tim Wellens ( BEL )",
+   "team": "UAE Team Emirates XRG",
+   "time": "+ 1' 03\""
+  },
+  {
+   "rank": 10,
+   "rider": "Jon Barrenetxea ( ESP )",
+   "team": "Movistar Team",
+   "time": "+ 1' 11\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-02-18",
+ "title": "2026 Vuelta a Andalucía",
+ "url": "https://en.wikipedia.org/wiki/2026_Vuelta_a_Andaluc%C3%ADa"
+}

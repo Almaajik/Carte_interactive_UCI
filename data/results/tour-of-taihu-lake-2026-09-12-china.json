@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "2.1"
+ ],
+ "classification": "General classification",
+ "country": "China",
+ "end": "2026-09-16",
+ "fetched": "2026-10-29",
+ "key": "Tour of Taihu Lake|2026-09-12|China",
+ "name": "Tour of Taihu Lake",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Matteo Malucelli ( ITA )",
+   "team": "XDS Astana Team",
+   "time": "12h 05' 43\""
+  },
+  {
+   "rank": 2,
+   "rider": "Joshua Giddings ( GBR )",
+   "team": "Lotto–Intermarché",
+   "time": "+ 14\""
+  },
+  {
+   "rank": 3,
+   "rider": "Gleb Syritsa",
+   "team": "XDS Astana Team",
+   "time": "+ 23\""
+  },
+  {
+   "rank": 4,
+   "rider": "Cameron Scott ( AUS )",
+   "team": "Li-Ning Star",
+   "time": "+ 31\""
+  },
+  {
+   "rank": 5,
+   "rider": "Markus Pajur ( EST )",
+   "team": "FNIX–SCOM–Hengxiang Cycling Team",
+   "time": "+ 31\""
+  },
+  {
+   "rank": 6,
+   "rider": "Paul Hennequin ( FRA )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 32\""
+  },
+  {
+   "rank": 7,
+   "rider": "Dušan Rajović ( SRB )",
+   "team": "Solution Tech NIPPO Rali",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 8,
+   "rider": "Lucas De Rossi ( FRA )",
+   "team": "China Anta–Mentech Cycling Team",
+   "time": "+ 34\""
+  },
+  {
+   "rank": 9,
+   "rider": "Gari Ugarte ( ESP )",
+   "team": "Euskaltel–Euskadi",
+   "time": "+ 35\""
+  },
+  {
+   "rank": 10,
+   "rider": "Luke Mudgway ( NZL )",
+   "team": "Li-Ning Star",
+   "time": "+ 36\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-09-12",
+ "title": "2026 Tour of Taihu Lake",
+ "url": "https://en.wikipedia.org/wiki/2026_Tour_of_Taihu_Lake"
+}
