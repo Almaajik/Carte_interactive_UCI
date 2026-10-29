@@ -316,6 +316,7 @@
 <script>
 const STORAGE_KEY = "uci-peloton-collection-v1";
 const ACCOUNT_OWNER_KEY = "uci-peloton-account-owner-v1";
+const ACCOUNT_DIRTY_KEY = "uci-peloton-account-dirty-v1";
 const EMPTY_COLLECTION = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
 const SUPABASE_CONFIG = window.SUPABASE_CONFIG || {};
 const supabaseClient = window.supabase?.createClient && SUPABASE_CONFIG.url?.startsWith("https://")
@@ -369,6 +370,7 @@ function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
   catch { showToast("Le navigateur n’a pas pu enregistrer la collection."); }
   if (accountUser) {
+    localStorage.setItem(ACCOUNT_DIRTY_KEY, accountUser.id);
     clearTimeout(cloudSaveTimer);
     cloudSaveTimer = setTimeout(syncCollection, 350);
   }
@@ -399,6 +401,13 @@ function mergeCollections(remote, local) {
     };
   }
   return merged;
+}
+
+function resolveAccountCollection(remote, local, ownerId, dirtyOwner, userId) {
+  if (ownerId === userId) {
+    return mergeCollections(remote, dirtyOwner === userId ? local : { ...EMPTY_COLLECTION });
+  }
+  return mergeCollections(remote, ownerId ? { ...EMPTY_COLLECTION } : local);
 }
 
 async function loadAccountSession() {
@@ -443,8 +452,9 @@ async function loadCloudCollection() {
     .eq("user_id", accountUser.id).maybeSingle();
   if (error) throw error;
   const ownerId = localStorage.getItem(ACCOUNT_OWNER_KEY);
-  const localCollection = ownerId && ownerId !== accountUser.id ? { ...EMPTY_COLLECTION } : state;
-  state = mergeCollections(data?.payload || { ...EMPTY_COLLECTION }, localCollection);
+  const dirtyOwner = localStorage.getItem(ACCOUNT_DIRTY_KEY);
+  const remoteCollection = data?.payload || { ...EMPTY_COLLECTION };
+  state = resolveAccountCollection(remoteCollection, state, ownerId, dirtyOwner, accountUser.id);
   localStorage.setItem(ACCOUNT_OWNER_KEY, accountUser.id);
   saveState();
   clearTimeout(cloudSaveTimer);
@@ -460,6 +470,7 @@ async function syncCollection() {
       updated_at: new Date().toISOString(),
     });
     if (error) throw error;
+    if (localStorage.getItem(ACCOUNT_DIRTY_KEY) === accountUser.id) localStorage.removeItem(ACCOUNT_DIRTY_KEY);
     $("account-sync-status").textContent = "Collection synchronisée";
     return true;
   } catch (error) {
@@ -557,6 +568,7 @@ async function logoutAccount() {
     state = { ...EMPTY_COLLECTION };
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(ACCOUNT_OWNER_KEY);
+    localStorage.removeItem(ACCOUNT_DIRTY_KEY);
     refreshUI();
     $("account-dialog").close();
   } catch (error) {
@@ -597,6 +609,7 @@ function watchAuthChanges() {
       if (hadAccount) {
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(ACCOUNT_OWNER_KEY);
+        localStorage.removeItem(ACCOUNT_DIRTY_KEY);
         state = { ...EMPTY_COLLECTION };
       }
       refreshUI();
