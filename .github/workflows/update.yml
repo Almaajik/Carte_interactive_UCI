@@ -2,12 +2,12 @@ name: Mise à jour du calendrier
 
 on:
   schedule:
-    - cron: "17 5 * * *"
-  workflow_dispatch:
+    - cron: "17 5 * * *"   # tous les jours à 05:17 UTC
+  workflow_dispatch:        # permet aussi de le lancer à la main
 
 permissions:
-  contents: write
-  issues: write
+  contents: write           # pour enregistrer les fichiers de data/
+  issues: write             # pour signaler les nouveautés
 
 jobs:
   update:
@@ -23,6 +23,10 @@ jobs:
       - run: pip install -r requirements.txt
 
       - run: python sync.py
+
+      # vainqueurs et classements : si Wikipédia ne répond pas, ça ne bloque pas le calendrier
+      - run: python results.py
+        continue-on-error: true
 
       - name: Enregistrer les changements
         run: |
