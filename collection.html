@@ -60,6 +60,7 @@
   .account-message { min-height: 20px; margin: 10px 0 0 !important; color: var(--coral) !important; font-size: 13px; }
   .account-user { margin-bottom: 15px !important; color: var(--ink) !important; font-weight: 700; }
   .account-server-note { color: var(--muted); font-size: 12px; }
+  .account-recovery { justify-self: start; padding: 2px 0; }
   .shell { width: min(1320px, calc(100% - 48px)); margin: 0 auto; }
   .hero { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 36px 0 26px; }
   .eyebrow { margin: 0 0 8px; color: var(--coral); font: 500 11px/1.3 var(--mono); text-transform: uppercase; }
@@ -215,20 +216,22 @@
   <div class="account-content" id="account-signed-out">
     <p>Connecte-toi pour retrouver ta collection sur tes autres appareils. Ta collection invitée sera fusionnée avec ton compte.</p>
     <form class="account-form" id="account-form">
-      <label>Nom d’utilisateur<input id="account-username" name="username" type="text" minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" autocomplete="username" required></label>
-      <label>Mot de passe<input id="account-password" name="password" type="password" minlength="12" maxlength="128" autocomplete="current-password" required></label>
+      <label>Email<input id="account-email" name="email" type="email" maxlength="254" autocomplete="email" required></label>
+      <label><span id="account-password-label">Mot de passe</span><input id="account-password" name="password" type="password" minlength="12" maxlength="128" autocomplete="current-password" required></label>
       <div class="account-actions">
         <button class="account-submit" id="account-login" type="button">Connexion</button>
         <button class="account-secondary" id="account-register" type="button">Créer un compte</button>
+        <button class="account-submit" id="account-password-update" type="button" hidden>Enregistrer le mot de passe</button>
       </div>
+      <button class="text-button account-recovery" id="account-recovery" type="button">Mot de passe oublié ?</button>
     </form>
-    <p class="account-note">12 caractères minimum. Pas d’adresse email demandée; la récupération de mot de passe n’est pas encore disponible.</p>
+    <p class="account-note">12 caractères minimum. Un email de confirmation est envoyé à l’inscription.</p>
     <p class="account-message" id="account-message" role="status" aria-live="polite"></p>
-    <p class="account-server-note">Compte synchronisé sur le serveur de ce site.</p>
+    <p class="account-server-note">Compte sécurisé par Supabase Auth.</p>
   </div>
   <div class="account-content" id="account-signed-in" hidden>
     <p class="account-user" id="account-user-label"></p>
-    <p>Ta collection est sauvegardée sur ce serveur et synchronisée à ta prochaine connexion.</p>
+    <p>Ta collection est sauvegardée dans ton espace Supabase et synchronisée entre tes appareils.</p>
     <p class="account-message" id="account-sync-status" role="status" aria-live="polite"></p>
     <button class="account-secondary" id="account-logout" type="button">Se déconnecter</button>
   </div>
@@ -304,8 +307,17 @@
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script>
 const STORAGE_KEY = "uci-peloton-collection-v1";
+const ACCOUNT_OWNER_KEY = "uci-peloton-account-owner-v1";
+const EMPTY_COLLECTION = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
+const SUPABASE_CONFIG = window.SUPABASE_CONFIG || {};
+const supabaseClient = window.supabase?.createClient && SUPABASE_CONFIG.url?.startsWith("https://")
+  && SUPABASE_CONFIG.publishableKey?.startsWith("sb_publishable_")
+  ? window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.publishableKey)
+  : null;
 const DUST_COST = 100;
 const PACK_SLOTS = ["winner", "podium", "top10", "top10", "top10"];
 const RARITY_LABEL = { winner: "Vainqueur", podium: "Podium", top10: "Top 10", peloton: "Peloton" };
@@ -336,8 +348,8 @@ let pool = [];
 let activeTab = "booster";
 let toastTimer = null;
 let accountUser = null;
-let csrfToken = "";
 let cloudSaveTimer = null;
+let accountMode = "signin";
 
 function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
@@ -375,84 +387,127 @@ function mergeCollections(remote, local) {
   return merged;
 }
 
-async function getAccountSession() {
-  const response = await fetch("/api/session", { credentials: "same-origin" });
-  if (!response.ok) throw new Error("Le serveur de comptes est indisponible.");
-  const data = await response.json();
-  csrfToken = data.csrfToken || "";
-  return data;
-}
-
 async function loadAccountSession() {
+  if (!supabaseClient) {
+    $("account-open").title = "Configure l’URL Supabase et la clé publishable dans supabase-config.js.";
+    refreshUI();
+    return;
+  }
   try {
-    const data = await getAccountSession();
-    accountUser = data.user;
-    if (accountUser) {
-      state = mergeCollections(data.collection, state);
-      saveState();
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) throw error;
+    accountUser = data.session?.user || null;
+    if (accountUser) await loadCloudCollection();
+    else if (localStorage.getItem(ACCOUNT_OWNER_KEY)) {
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(ACCOUNT_OWNER_KEY);
+      state = { ...EMPTY_COLLECTION };
     }
     refreshUI();
-  } catch {
-    $("account-open").title = "Lance le site avec app.py pour utiliser les comptes.";
+  } catch (error) {
+    $("account-message").textContent = error.message;
   }
 }
 
-async function syncCollection() {
+async function loadCloudCollection() {
   if (!accountUser) return;
+  const { data, error } = await supabaseClient.from("user_collections").select("payload")
+    .eq("user_id", accountUser.id).maybeSingle();
+  if (error) throw error;
+  const ownerId = localStorage.getItem(ACCOUNT_OWNER_KEY);
+  const localCollection = ownerId && ownerId !== accountUser.id ? { ...EMPTY_COLLECTION } : state;
+  state = mergeCollections(data?.payload || { ...EMPTY_COLLECTION }, localCollection);
+  localStorage.setItem(ACCOUNT_OWNER_KEY, accountUser.id);
+  saveState();
+  clearTimeout(cloudSaveTimer);
+  await syncCollection();
+}
+
+async function syncCollection() {
+  if (!accountUser || !supabaseClient) return true;
   try {
-    let response = await fetch("/api/collection", {
-      method: "PUT", credentials: "same-origin",
-      headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
-      body: JSON.stringify(state),
+    const { error } = await supabaseClient.from("user_collections").upsert({
+      user_id: accountUser.id,
+      payload: state,
+      updated_at: new Date().toISOString(),
     });
-    if (response.status === 403) {
-      await getAccountSession();
-      response = await fetch("/api/collection", {
-        method: "PUT", credentials: "same-origin",
-        headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
-        body: JSON.stringify(state),
-      });
-    }
-    if (!response.ok) throw new Error((await response.json()).error || "Échec de synchronisation.");
+    if (error) throw error;
     $("account-sync-status").textContent = "Collection synchronisée";
+    return true;
   } catch (error) {
     $("account-sync-status").textContent = error.message;
+    return false;
   }
 }
 
 function refreshAccountUI() {
   const signedIn = Boolean(accountUser);
-  $("account-open").textContent = signedIn ? accountUser.username : "Compte";
+  $("account-open").textContent = signedIn ? accountUser.email : "Compte";
   $("account-signed-out").hidden = signedIn;
   $("account-signed-in").hidden = !signedIn;
-  $("account-user-label").textContent = signedIn ? `Connecté·e en tant que ${accountUser.username}` : "";
+  $("account-user-label").textContent = signedIn ? `Connecté·e en tant que ${accountUser.email}` : "";
   $("storage-note").textContent = signedIn
-    ? "Cartes générées à partir des classements disponibles. Collection synchronisée sur ce serveur."
+    ? "Cartes générées à partir des classements disponibles. Collection synchronisée avec Supabase."
     : "Cartes générées à partir des classements disponibles. Collection invitée enregistrée sur cet appareil.";
 }
 
-async function authenticate(path) {
+async function authenticate(mode) {
   const message = $("account-message");
-  const buttons = [$("account-login"), $("account-register")];
+  const buttons = [$("account-login"), $("account-register"), $("account-password-update")];
   message.textContent = "";
+  const emailInput = $("account-email");
+  const passwordInput = $("account-password");
+  if (mode === "password-recovery") {
+    if (!emailInput.reportValidity()) return;
+  } else if (!$("account-form").reportValidity()) return;
   buttons.forEach(button => { button.disabled = true; });
   try {
-    await getAccountSession();
-    const response = await fetch(path, {
-      method: "POST", credentials: "same-origin",
-      headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
-      body: JSON.stringify({ username: $("account-username").value.trim(), password: $("account-password").value }),
-    });
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.error || "Connexion impossible.");
+    if (!supabaseClient) throw new Error("Configure d’abord ton projet Supabase dans supabase-config.js.");
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+    let data;
+    if (mode === "register") {
+      const response = await supabaseClient.auth.signUp({
+        email, password,
+        options: { emailRedirectTo: `${location.origin}${location.pathname}` },
+      });
+      if (response.error) throw response.error;
+      data = response.data;
+      if (!data.session) {
+        message.textContent = "Compte créé. Confirme ton email avec le lien reçu, puis connecte-toi.";
+        $("account-password").value = "";
+        return;
+      }
+    } else if (mode === "password-recovery") {
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+        redirectTo: `${location.origin}${location.pathname}`,
+      });
+      if (error) throw error;
+      message.textContent = "Si cette adresse possède un compte, un lien de réinitialisation va lui être envoyé.";
+      return;
+    } else if (mode === "password-update") {
+      const { data: updated, error } = await supabaseClient.auth.updateUser({ password });
+      if (error) throw error;
+      accountUser = updated.user;
+      await loadCloudCollection();
+      refreshUI();
+      $("account-form").reset();
+      accountMode = "signin";
+      setAccountMode("signin");
+      $("account-dialog").close();
+      showToast("Mot de passe mis à jour");
+      return;
+    } else {
+      const response = await supabaseClient.auth.signInWithPassword({ email, password });
+      if (response.error) throw response.error;
+      data = response.data;
+    }
     accountUser = data.user;
-    await getAccountSession();
-    state = mergeCollections(data.collection, state);
-    saveState();
+    await loadCloudCollection();
     refreshUI();
     $("account-form").reset();
     $("account-dialog").close();
-    showToast(`Collection synchronisée avec ${accountUser.username}`);
+    showToast(`Collection synchronisée avec ${accountUser.email}`);
   } catch (error) {
     message.textContent = error.message;
   } finally {
@@ -465,16 +520,13 @@ async function logoutAccount() {
   button.disabled = true;
   try {
     clearTimeout(cloudSaveTimer);
-    await syncCollection();
-    await getAccountSession();
-    const response = await fetch("/api/logout", {
-      method: "POST", credentials: "same-origin", headers: { "X-CSRF-Token": csrfToken },
-    });
-    if (!response.ok) throw new Error("Déconnexion impossible.");
+    if (!await syncCollection()) throw new Error("La collection n’a pas pu être synchronisée; reste connecté pour éviter de perdre tes changements.");
+    const { error } = await supabaseClient.auth.signOut({ scope: "local" });
+    if (error) throw error;
     accountUser = null;
-    csrfToken = "";
-    state = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
+    state = { ...EMPTY_COLLECTION };
     localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(ACCOUNT_OWNER_KEY);
     refreshUI();
     $("account-dialog").close();
   } catch (error) {
@@ -482,6 +534,47 @@ async function logoutAccount() {
   } finally {
     button.disabled = false;
   }
+}
+
+function setAccountMode(mode) {
+  accountMode = mode;
+  const recovering = mode === "password-update";
+  $("account-title").textContent = recovering ? "Nouveau mot de passe" : "Ton compte";
+  $("account-password-label").textContent = recovering ? "Nouveau mot de passe" : "Mot de passe";
+  $("account-password").autocomplete = recovering ? "new-password" : "current-password";
+  $("account-login").hidden = recovering;
+  $("account-register").hidden = recovering;
+  $("account-recovery").hidden = recovering;
+  $("account-password-update").hidden = !recovering;
+  $("account-message").textContent = "";
+}
+
+function watchAuthChanges() {
+  if (!supabaseClient) return;
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    if (event === "PASSWORD_RECOVERY") {
+      accountUser = session?.user || null;
+      $("account-signed-out").hidden = false;
+      $("account-signed-in").hidden = true;
+      setAccountMode("password-update");
+      if (!$("account-dialog").open) $("account-dialog").showModal();
+      return;
+    }
+    if (event === "SIGNED_OUT") {
+      const hadAccount = Boolean(localStorage.getItem(ACCOUNT_OWNER_KEY));
+      accountUser = null;
+      if (hadAccount) {
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(ACCOUNT_OWNER_KEY);
+        state = { ...EMPTY_COLLECTION };
+      }
+      refreshUI();
+      return;
+    }
+    if (session?.user && session.user.id !== accountUser?.id) {
+      setTimeout(loadAccountSession, 0);
+    }
+  });
 }
 
 function riderIdentity(rawName) {
@@ -652,15 +745,16 @@ function selectTab(tab) {
 
 $("open-pack").addEventListener("click", openPack);
 $("account-open").addEventListener("click", async () => {
-  $("account-message").textContent = "";
-  if (accountUser) $("account-sync-status").textContent = "Collection synchronisée sur ce serveur.";
-  try { await getAccountSession(); }
-  catch { $("account-message").textContent = "Serveur indisponible. Lance l’application avec app.py pour utiliser les comptes."; }
+  setAccountMode("signin");
+  if (!supabaseClient) $("account-message").textContent = "Configure l’URL du projet et la clé publishable dans supabase-config.js.";
+  else if (accountUser) $("account-sync-status").textContent = "Collection synchronisée avec Supabase.";
   $("account-dialog").showModal();
 });
 $("account-close").addEventListener("click", () => $("account-dialog").close());
-$("account-login").addEventListener("click", () => authenticate("/api/login"));
-$("account-register").addEventListener("click", () => authenticate("/api/register"));
+$("account-login").addEventListener("click", () => authenticate("signin"));
+$("account-register").addEventListener("click", () => authenticate("register"));
+$("account-recovery").addEventListener("click", () => authenticate("password-recovery"));
+$("account-password-update").addEventListener("click", () => authenticate("password-update"));
 $("account-logout").addEventListener("click", logoutAccount);
 $("account-dialog").addEventListener("click", event => {
   if (event.target === $("account-dialog")) $("account-dialog").close();
@@ -675,6 +769,7 @@ $("reset-collection").addEventListener("click", () => {
   saveState(); refreshUI(); showToast("Collection effacée");
 });
 
+watchAuthChanges();
 refreshUI();
 loadPool();
 loadAccountSession();
