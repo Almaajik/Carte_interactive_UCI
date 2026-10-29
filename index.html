@@ -102,6 +102,17 @@
   .arrow:hover { border-color: var(--c, var(--pro)); background: #fff; }
   .arrow[hidden] { display: none; }
   .arrow svg { width: 18px; height: 18px; }
+  #list li { position: relative; }
+  #list li button.has-detail { padding-right: 82px; }
+  #list li .detail { position: absolute; top: 9px; right: 10px; }
+  .w { color: var(--text); font-size: 13px; font-weight: 500; }
+  .detail { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+            text-decoration: none; color: var(--text); border: 1px solid var(--c, var(--pro));
+            background: color-mix(in srgb, var(--c, var(--pro)) 12%, transparent); }
+  .detail:hover { background: color-mix(in srgb, var(--c, var(--pro)) 24%, transparent); }
+  .detail[hidden] { display: none; }
+  #f-winner { font-weight: 600; margin: 0 0 5px; }
+  #f-detail { margin-top: 8px; }
   #list li button.focused { border-color: var(--c); background: #fff; box-shadow: 0 0 0 1px var(--c) inset; }
 
   /* ---------- Frise du temps ---------- */
@@ -205,8 +216,10 @@
   <div id="f-body">
     <div id="f-line"></div>
     <h2 id="f-name"></h2>
+    <div id="f-winner" hidden></div>
     <div id="f-info"></div>
     <div id="f-dates"></div>
+    <a id="f-detail" class="detail" href="#" hidden>Détail</a>
   </div>
   <button id="f-next" class="arrow" type="button" aria-label="Course suivante">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
@@ -249,6 +262,7 @@ const layer = L.layerGroup().addTo(map);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const dayOf = s => { const [y, m, d] = s.split("-").map(Number); return Math.round(Date.UTC(y, m - 1, d) / 864e5); };
 const dateOf = n => new Date(n * 864e5);
+const detailHref = r => `results.html?race=${encodeURIComponent(r.res.slug)}`;
 const isNew = r => r.fs && (todayDay() - dayOf(r.fs)) <= 14;
 const todayDay = () => dayOf(new Date().toISOString().slice(0, 10));
 const short = n => { const d = dateOf(n); return `${d.getUTCDate()} ${SHORT[d.getUTCMonth()]}`; };
@@ -347,6 +361,11 @@ function paintFocus() {
   const approx = cur.coords.precision === "country" ? " (position approximative)" : "";
   $("f-info").innerHTML = `<i class="sw"></i><span>${esc(cur.classes.join(" / ") || GROUP_NAME[cur.g])}, ${esc(cur.country)}${approx}</span>`;
   $("f-dates").textContent = rangeText(cur);
+  $("f-winner").hidden = $("f-detail").hidden = !cur.res;
+  if (cur.res) {
+    $("f-winner").textContent = `Vainqueur : ${cur.res.winner}`;
+    $("f-detail").href = detailHref(cur);
+  }
   $("f-prev").hidden = $("f-next").hidden = n < 2;
   document.querySelector("#list li button.focused")?.scrollIntoView({ block: "nearest" });
 }
@@ -400,10 +419,18 @@ function update() {
     b.style.setProperty("--c", COLORS[r.g]);
     const approx = r.coords.precision === "country" ? " (position approximative)" : "";
     b.innerHTML = `<span class="n">${esc(r.name)}${isNew(r) ? '<span class="new">nouveau</span>' : ""}</span>` +
+                  (r.res ? `<span class="w">Vainqueur : ${esc(r.res.winner)}</span>` : "") +
                   `<span class="m">${esc(r.country)}, ${esc(r.classes.join(" / ") || GROUP_NAME[r.g])}${approx}</span>` +
                   `<span class="m">${esc(rangeText(r))}</span>`;
     b.addEventListener("click", () => setFocus(i));
     li.appendChild(b);
+    if (r.res) {
+      b.classList.add("has-detail");
+      const a = document.createElement("a");
+      a.className = "detail"; a.textContent = "Détail"; a.href = detailHref(r);
+      a.style.setProperty("--c", COLORS[r.g]);
+      li.appendChild(a);
+    }
     ul.appendChild(li);
   });
   $("slider").value = day;
@@ -464,6 +491,8 @@ async function init() {
   const res = await fetch("data/races.json");
   if (!res.ok) throw new Error("data/races.json introuvable");
   const raw = await res.json();
+  let resIndex = {};   // vainqueurs (facultatif : absent tant que results.py n'a rien trouvé)
+  try { const rj = await fetch("data/results/index.json"); if (rj.ok) resIndex = await rj.json(); } catch (e) { /* pas de résultats */ }
 
   races = raw.filter(r => r.coords).map((r, i) => {
     const g = groupOf(r.classes);
@@ -478,6 +507,7 @@ async function init() {
     };
     rr.key = `${rr.name}|${r.start}|${rr.country}`;
     rr.score = scoreOf(rr);
+    rr.res = resIndex[rr.key] || null;
     rr.dot = L.circleMarker(ll, {
       radius: 4.5, color: COLORS[g], weight: 1.5, fillColor: COLORS[g], fillOpacity: 0.32,
       dashArray: approx ? "2 3" : null, className: `dot g-${g}`
@@ -485,9 +515,11 @@ async function init() {
     rr.ring = L.circleMarker(ll, { radius: 7, color: COLORS[g], weight: 1.5, fill: false, interactive: false, className: `ring g-${g}` });
     rr.dot.bindPopup(() =>
       `<strong>${esc(rr.name)}</strong>` +
+      (rr.res ? `<span class="w" style="display:block">Vainqueur : ${esc(rr.res.winner)}</span>` : "") +
       `${esc(rr.country)}${isNew(rr) ? '<span class="new">nouveau</span>' : ""}<br>${rr.a === null ? "" : esc(rangeText(rr)) + "<br>"}` +
       `<span class="pop-muted">${esc(rr.classes.join(" / ") || GROUP_NAME[g])}` +
-      `${approx ? "<br>Position approximative (centre du pays)" : ""}</span>`);
+      `${approx ? "<br>Position approximative (centre du pays)" : ""}</span>` +
+      (rr.res ? `<br><a class="detail" style="--c:${COLORS[g]};margin-top:8px" href="${detailHref(rr)}">Détail</a>` : ""));
     return rr;
   });
 
