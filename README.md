@@ -24,6 +24,10 @@ Le bouton portant le nom d’utilisateur ouvre `profile.html`, où il est possib
 
 La récupération de mot de passe est gérée par Supabase Auth et redirige vers `profile.html`; configure cette URL publiée dans **Authentication → URL Configuration**.
 
+### Réinitialiser une collection
+
+Dans `supabase/scripts/reset_user_collection.sql`, remplace `REMPLACER_PAR_EMAIL` par l’adresse du compte à réinitialiser, puis exécute le fichier dans **SQL Editor**. Cela remet à zéro les cartes, poussières et boosters, sans supprimer le compte ni son nom de profil. L’action est irréversible.
+
 ## Tests locaux
 
 Ouvre `index.html` avec un serveur statique, ou exécute :
