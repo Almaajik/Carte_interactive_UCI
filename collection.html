@@ -348,6 +348,7 @@ let pool = [];
 let activeTab = "booster";
 let toastTimer = null;
 let accountUser = null;
+let accountProfile = null;
 let cloudSaveTimer = null;
 let accountMode = "signin";
 
@@ -397,7 +398,10 @@ async function loadAccountSession() {
     const { data, error } = await supabaseClient.auth.getSession();
     if (error) throw error;
     accountUser = data.session?.user || null;
-    if (accountUser) await loadCloudCollection();
+    if (accountUser) {
+      await loadAccountProfile();
+      await loadCloudCollection();
+    }
     else if (localStorage.getItem(ACCOUNT_OWNER_KEY)) {
       localStorage.removeItem(STORAGE_KEY);
       localStorage.removeItem(ACCOUNT_OWNER_KEY);
@@ -407,6 +411,17 @@ async function loadAccountSession() {
   } catch (error) {
     $("account-message").textContent = error.message;
   }
+}
+
+async function loadAccountProfile() {
+  if (!accountUser) {
+    accountProfile = null;
+    return;
+  }
+  const { data, error } = await supabaseClient.from("profiles").select("username")
+    .eq("user_id", accountUser.id).maybeSingle();
+  if (error) throw error;
+  accountProfile = data;
 }
 
 async function loadCloudCollection() {
@@ -442,10 +457,10 @@ async function syncCollection() {
 
 function refreshAccountUI() {
   const signedIn = Boolean(accountUser);
-  $("account-open").textContent = signedIn ? accountUser.email : "Compte";
+  $("account-open").textContent = signedIn ? accountProfile?.username || accountUser.email : "Compte";
   $("account-signed-out").hidden = signedIn;
   $("account-signed-in").hidden = !signedIn;
-  $("account-user-label").textContent = signedIn ? `Connecté·e en tant que ${accountUser.email}` : "";
+  $("account-user-label").textContent = signedIn ? `Connecté·e en tant que ${accountProfile?.username || accountUser.email}` : "";
   $("storage-note").textContent = signedIn
     ? "Cartes générées à partir des classements disponibles. Collection synchronisée avec Supabase."
     : "Cartes générées à partir des classements disponibles. Collection invitée enregistrée sur cet appareil.";
@@ -480,7 +495,7 @@ async function authenticate(mode) {
       }
     } else if (mode === "password-recovery") {
       const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-        redirectTo: `${location.origin}${location.pathname}`,
+        redirectTo: `${location.origin}${location.pathname.replace(/collection\.html$/, "profile.html")}?recovery=1`,
       });
       if (error) throw error;
       message.textContent = "Si cette adresse possède un compte, un lien de réinitialisation va lui être envoyé.";
@@ -503,6 +518,7 @@ async function authenticate(mode) {
       data = response.data;
     }
     accountUser = data.user;
+    await loadAccountProfile();
     await loadCloudCollection();
     refreshUI();
     $("account-form").reset();
@@ -524,6 +540,7 @@ async function logoutAccount() {
     const { error } = await supabaseClient.auth.signOut({ scope: "local" });
     if (error) throw error;
     accountUser = null;
+    accountProfile = null;
     state = { ...EMPTY_COLLECTION };
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(ACCOUNT_OWNER_KEY);
@@ -563,6 +580,7 @@ function watchAuthChanges() {
     if (event === "SIGNED_OUT") {
       const hadAccount = Boolean(localStorage.getItem(ACCOUNT_OWNER_KEY));
       accountUser = null;
+      accountProfile = null;
       if (hadAccount) {
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(ACCOUNT_OWNER_KEY);
@@ -745,6 +763,10 @@ function selectTab(tab) {
 
 $("open-pack").addEventListener("click", openPack);
 $("account-open").addEventListener("click", async () => {
+  if (accountUser) {
+    location.href = "profile.html";
+    return;
+  }
   setAccountMode("signin");
   if (!supabaseClient) $("account-message").textContent = "Configure l’URL du projet et la clé publishable dans supabase-config.js.";
   else if (accountUser) $("account-sync-status").textContent = "Collection synchronisée avec Supabase.";
