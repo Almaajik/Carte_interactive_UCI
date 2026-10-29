@@ -86,6 +86,24 @@
   #list .m { color: var(--muted); font-size: 12.5px; }
   #empty { color: var(--muted); line-height: 1.5; margin: 0; }
 
+  /* ---------- Course mise en avant ---------- */
+  #focus { position: fixed; top: 14px; left: 368px; right: 74px; max-width: 540px; z-index: 790;
+           display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 18px;
+           border-left: 3px solid var(--c, var(--pro)); }
+  #focus[hidden] { display: none; }
+  #f-body { flex: 1; min-width: 0; }
+  #f-line { color: var(--muted); font-size: 12.5px; }
+  #f-name { margin: 2px 0 5px; font: 600 16px/1.25 var(--display); letter-spacing: -.01em; overflow-wrap: anywhere; }
+  #f-info, #f-dates { display: flex; align-items: center; gap: 8px; font-size: 13.5px; }
+  #f-dates { color: var(--muted); }
+  .sw { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 8px var(--c); }
+  .arrow { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line);
+           background: rgba(255,255,255,.8); cursor: pointer; display: grid; place-items: center; }
+  .arrow:hover { border-color: var(--c, var(--pro)); background: #fff; }
+  .arrow[hidden] { display: none; }
+  .arrow svg { width: 18px; height: 18px; }
+  #list li button.focused { border-color: var(--c); background: #fff; box-shadow: 0 0 0 1px var(--c) inset; }
+
   /* ---------- Frise du temps ---------- */
   #timeline { position: fixed; left: 368px; right: 14px; bottom: 34px; z-index: 800; padding: 14px 18px 10px; }
   #tl-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
@@ -142,6 +160,7 @@
     #panel { left: 10px; right: 10px; top: 10px; width: auto; max-height: 46vh; }
     #timeline { left: 10px; right: 10px; bottom: 30px; padding: 10px 14px 8px; }
     #date { font-size: 22px; min-width: 0; }
+    #focus { top: auto; bottom: 172px; left: 10px; right: 10px; max-width: none; }
     #tl-count { display: none; }
     .leaflet-top.leaflet-right { top: 64px; }
   }
@@ -178,6 +197,21 @@
     <p id="empty" hidden>Aucune course à cette date. Déplace la frise ou lance la lecture de la saison.</p>
   </div>
 </aside>
+
+<section id="focus" class="glass" aria-label="Course mise en avant" hidden>
+  <button id="f-prev" class="arrow" type="button" aria-label="Course précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <div id="f-body">
+    <div id="f-line"></div>
+    <h2 id="f-name"></h2>
+    <div id="f-info"></div>
+    <div id="f-dates"></div>
+  </div>
+  <button id="f-next" class="arrow" type="button" aria-label="Course suivante">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</section>
 
 <section id="timeline" class="glass" aria-label="Frise de la saison">
   <div id="tl-top">
@@ -246,6 +280,87 @@ function visible(r) {
 }
 const isActive = r => r.a !== null && r.a <= day && day <= r.b;
 
+// ---------- Course mise en avant ----------
+// Importance : classe UCI (WorldTour > ProSeries > HC > 1.1/2.1 > 1.2/2.2), +0,5 pour une
+// course par étapes, +1 pour les grandes courses (grands tours, monuments), mondiaux en tête.
+// La durée départage les ex æquo. Le calendrier ne distingue pas hommes et femmes.
+const BIG = /Tour de France|Giro d.Italia|Vuelta (a )?Espa|Milano-Sanremo|Ronde van Vlaanderen|Tour of Flanders|Paris-Roubaix|Li[eè]ge|Il Lombardia/i;
+function scoreOf(r) {
+  let s = 0;
+  for (const c of r.classes) {
+    let v = 0;
+    if (/UWT|WWT/.test(c)) v = 6;
+    else if (/Pro/.test(c)) v = 5;
+    else if (/HC/.test(c)) v = 4.5;
+    else if (/Ncup/.test(c)) v = 1;
+    else if (/^[12]\.1$/.test(c)) v = 3;
+    else if (/^[12]\.2$/.test(c)) v = 2;
+    if (v && c.startsWith("2.")) v += 0.5;
+    s = Math.max(s, v);
+  }
+  if (BIG.test(r.name)) s += 1;
+  if (/^World Championships/i.test(r.name)) s = 9;
+  const days = r.a === null ? 0 : r.b - r.a + 1;
+  return s + Math.min(days, 21) / 100;
+}
+
+let activeList = [], focusIdx = 0, lastSig = "", ready = false, flyTimer = null, flyTarget = null;
+const focusRing = L.circleMarker([0, 0], { radius: 17, weight: 3, fill: false, interactive: false, className: "focus-ring" });
+
+function flyNow(r) {
+  if (!r) return;
+  clearTimeout(flyTimer); flyTimer = null;
+  const base = r.coords.precision === "country" ? 5 : 7;
+  const z = Math.min(Math.max(map.getZoom(), base), 9);
+  if (reduce) map.setView(r.dot.getLatLng(), z, { animate: false });
+  else map.flyTo(r.dot.getLatLng(), z, { duration: 0.9 });
+}
+// pendant le glissement ou la lecture, on ne vole pas plus d'une fois toutes les 180 ms
+function scheduleFly(r) {
+  flyTarget = r;
+  if (flyTimer) return;
+  flyTimer = setTimeout(() => { flyTimer = null; flyNow(flyTarget); }, 180);
+}
+
+function paintFocus() {
+  const n = activeList.length;
+  const cur = activeList[focusIdx] || null;
+  for (const r of activeList) r.dot.setRadius(r === cur ? 10 : 7);
+  if (cur) {
+    focusRing.setLatLng(cur.dot.getLatLng());
+    focusRing.setStyle({ color: COLORS[cur.g] });
+    if (!layer.hasLayer(focusRing)) layer.addLayer(focusRing);
+    focusRing.bringToFront();
+    cur.dot.bringToFront();
+  } else {
+    layer.removeLayer(focusRing);
+  }
+
+  const card = $("focus");
+  card.hidden = !cur;
+  document.querySelectorAll("#list li button").forEach((b, i) => b.classList.toggle("focused", i === focusIdx));
+  if (!cur) return;
+  card.style.setProperty("--c", COLORS[cur.g]);
+  $("f-line").textContent = n < 2 ? "Seule course du jour"
+    : focusIdx === 0 ? `1 sur ${n}, la plus importante du jour` : `${focusIdx + 1} sur ${n}`;
+  $("f-name").innerHTML = esc(cur.name) + (isNew(cur) ? '<span class="new">nouveau</span>' : "");
+  const approx = cur.coords.precision === "country" ? " (position approximative)" : "";
+  $("f-info").innerHTML = `<i class="sw"></i><span>${esc(cur.classes.join(" / ") || GROUP_NAME[cur.g])}, ${esc(cur.country)}${approx}</span>`;
+  $("f-dates").textContent = rangeText(cur);
+  $("f-prev").hidden = $("f-next").hidden = n < 2;
+  document.querySelector("#list li button.focused")?.scrollIntoView({ block: "nearest" });
+}
+
+function setFocus(i) {
+  focusIdx = i;
+  paintFocus();
+  flyNow(activeList[i]);
+}
+function step(d) {
+  const n = activeList.length;
+  if (n > 1) setFocus((focusIdx + d + n) % n);
+}
+
 function update() {
   const active = [];
   for (const r of races) {
@@ -260,7 +375,14 @@ function update() {
     else layer.removeLayer(r.ring);
     if (on) active.push(r);
   }
-  active.sort((x, y) => ["wt","pro","other"].indexOf(x.g) - ["wt","pro","other"].indexOf(y.g) || x.name.localeCompare(y.name));
+  active.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name));
+
+  // si la liste des courses du jour change, on repart de la plus importante
+  const sig = active.map(r => r.key).join("|");
+  const changed = sig !== lastSig;
+  lastSig = sig;
+  activeList = active;
+  if (changed) focusIdx = 0;
 
   const d = dateOf(day);
   $("date").innerHTML = `${d.getUTCDate()} ${SHORT[d.getUTCMonth()]}<small>${d.getUTCFullYear()}</small>`;
@@ -271,7 +393,7 @@ function update() {
 
   const ul = $("list");
   ul.replaceChildren();
-  for (const r of active) {
+  active.forEach((r, i) => {
     const li = document.createElement("li");
     const b = document.createElement("button");
     b.type = "button";
@@ -280,17 +402,15 @@ function update() {
     b.innerHTML = `<span class="n">${esc(r.name)}${isNew(r) ? '<span class="new">nouveau</span>' : ""}</span>` +
                   `<span class="m">${esc(r.country)}, ${esc(r.classes.join(" / ") || GROUP_NAME[r.g])}${approx}</span>` +
                   `<span class="m">${esc(rangeText(r))}</span>`;
-    b.addEventListener("click", () => focusOn(r));
+    b.addEventListener("click", () => setFocus(i));
     li.appendChild(b);
     ul.appendChild(li);
-  }
+  });
   $("slider").value = day;
-}
 
-function focusOn(r) {
-  const z = Math.max(map.getZoom(), 6);
-  if (reduce) map.setView(r.dot.getLatLng(), z); else map.flyTo(r.dot.getLatLng(), z, { duration: 1.1 });
-  r.dot.openPopup();
+  paintFocus();
+  if (changed && ready && active.length) scheduleFly(active[0]);
+  ready = true;
 }
 
 function buildTimeline() {
@@ -356,6 +476,8 @@ async function init() {
       a: r.start ? dayOf(r.start) : null,
       b: r.start ? dayOf(r.end || r.start) : null
     };
+    rr.key = `${rr.name}|${r.start}|${rr.country}`;
+    rr.score = scoreOf(rr);
     rr.dot = L.circleMarker(ll, {
       radius: 4.5, color: COLORS[g], weight: 1.5, fillColor: COLORS[g], fillOpacity: 0.32,
       dashArray: approx ? "2 3" : null, className: `dot g-${g}`
@@ -388,6 +510,8 @@ async function init() {
 // ---- interactions ----
 $("slider").addEventListener("input", e => { stop(); day = Number(e.target.value); update(); });
 $("play").addEventListener("click", play);
+$("f-prev").addEventListener("click", () => step(-1));
+$("f-next").addEventListener("click", () => step(1));
 $("now").addEventListener("click", () => {
   stop(); day = Math.min(Math.max(todayDay(), viewMin), viewMax); update();
 });
