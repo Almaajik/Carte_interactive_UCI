@@ -9,25 +9,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #e9eef8; --panel: rgba(255,255,255,.82); --line: rgba(40,70,140,.16); --line-strong: rgba(40,70,140,.34);
-    --text: #101634; --muted: #566190; --wt: #e4156f; --pro: #0a93c9; --other: #7b84c9;
+    --ink: #edf1e9; --panel: rgba(252,252,247,.94); --line: rgba(31,57,48,.16); --line-strong: rgba(31,57,48,.34);
+    --text: #172a25; --muted: #52665e; --wt: #d94f38; --pro: #087f78; --other: #a17416;
     --display: "Unbounded", "Trebuchet MS", system-ui, sans-serif;
     --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   * { box-sizing: border-box; }
   html { background: var(--ink); }
   body { margin: 0; min-height: 100%; color: var(--text); font: 15px/1.5 var(--body);
-         background: radial-gradient(900px 500px at 85% -10%, rgba(10,147,201,.18), transparent 60%),
-                     radial-gradient(800px 500px at -10% 10%, rgba(228,21,111,.12), transparent 60%), var(--ink); }
-  :focus-visible { outline: 2px solid var(--pro); outline-offset: 2px; }
+      background: radial-gradient(900px 500px at 85% -10%, rgba(8,127,120,.15), transparent 60%),
+        radial-gradient(800px 500px at -10% 10%, rgba(217,79,56,.11), transparent 60%), var(--ink); }
+    :focus-visible { outline: 3px solid var(--pro); outline-offset: 2px; }
   main { max-width: 860px; margin: 0 auto; padding: 22px 16px 60px; }
   .back { display: inline-flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none; font-weight: 600;
-          padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); }
+      padding: 8px 14px; border-radius: 6px; border: 1px solid var(--line-strong); background: var(--panel); }
   .back:hover { border-color: var(--line-strong); }
-  .card { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px;
-          box-shadow: 0 10px 40px rgba(30,50,110,.14); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); overflow: hidden; }
+    .card { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+      box-shadow: 0 12px 34px rgba(22,43,35,.14); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); overflow: hidden; }
   header { padding: 22px 22px 16px; border-left: 4px solid var(--c, var(--pro)); }
-  h1 { margin: 0 0 6px; font: 600 clamp(20px, 4vw, 28px)/1.2 var(--display); letter-spacing: -.01em; overflow-wrap: anywhere; }
+  h1 { margin: 0 0 6px; font: 600 26px/1.2 var(--display); overflow-wrap: anywhere; }
   .meta { color: var(--muted); }
   .winner { margin-top: 12px; font-weight: 600; }
   .winner small { font-weight: 500; color: var(--muted); }
@@ -35,15 +35,22 @@
   table { width: 100%; border-collapse: collapse; min-width: 520px; }
   th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
   td.rider { white-space: normal; font-weight: 600; }
-  th { position: sticky; top: 0; background: #f3f6fd; font-size: 13px; color: var(--muted); font-weight: 600; }
+  th { position: sticky; top: 0; background: #edf3ee; font-size: 13px; color: var(--muted); font-weight: 600; }
   td.rank, th.rank { width: 56px; text-align: right; font-variant-numeric: tabular-nums; }
   td.time { font-variant-numeric: tabular-nums; color: var(--muted); }
-  tbody tr:hover { background: rgba(255,255,255,.7); }
+  tbody tr:hover { background: rgba(8,127,120,.06); }
   tr.p1 td.rank, tr.p2 td.rank, tr.p3 td.rank { font-weight: 700; color: var(--c, var(--pro)); }
   footer { padding: 14px 22px 18px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
   footer a { color: var(--text); }
   .msg { padding: 28px 22px; color: var(--muted); }
   .note { padding: 10px 22px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
+  @media (max-width: 520px) {
+    main { padding: 14px 10px 40px; }
+    header { padding: 18px 16px 14px; }
+    h1 { font-size: 20px; }
+    th, td { padding: 9px 10px; }
+    footer { padding: 12px 16px 16px; }
+  }
 </style>
 </head>
 <body>
@@ -60,7 +67,7 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const fmt = s => { const [y, m, d] = s.split("-").map(Number); return `${d} ${MONTHS[m - 1]} ${y}`; };
 const colorFor = classes => {
   const c = (classes || []).join(" ");
-  return /UWT|WWT/.test(c) ? "#e4156f" : /Pro|HC/.test(c) ? "#0a93c9" : "#7b84c9";
+  return /UWT|WWT/.test(c) ? "#d94f38" : /Pro|HC/.test(c) ? "#087f78" : "#a17416";
 };
 
 async function main() {

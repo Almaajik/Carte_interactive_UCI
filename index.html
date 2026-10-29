@@ -10,16 +10,16 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
   :root {
-    --ink: #e9eef8;
-    --panel: rgba(255, 255, 255, .78);
-    --panel-solid: #ffffff;
-    --line: rgba(40, 70, 140, .16);
-    --line-strong: rgba(40, 70, 140, .34);
-    --text: #101634;
-    --muted: #566190;
-    --wt: #e4156f;      /* WorldTour */
-    --pro: #0a93c9;     /* ProSeries et HC */
-    --other: #7b84c9;   /* autres classes */
+    --ink: #edf1e9;
+    --panel: rgba(252, 252, 247, .94);
+    --panel-solid: #fcfcf7;
+    --line: rgba(31, 57, 48, .16);
+    --line-strong: rgba(31, 57, 48, .34);
+    --text: #172a25;
+    --muted: #52665e;
+    --wt: #d94f38;      /* WorldTour */
+    --pro: #087f78;     /* ProSeries et HC */
+    --other: #a17416;   /* autres classes */
     --display: "Unbounded", "Trebuchet MS", system-ui, sans-serif;
     --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
@@ -27,33 +27,36 @@
   html, body { height: 100%; margin: 0; background: var(--ink); color: var(--text);
                font-family: var(--body); font-size: 14px; }
   button, input { font: inherit; color: inherit; }
-  :focus-visible { outline: 2px solid var(--pro); outline-offset: 2px; }
+  :focus-visible { outline: 3px solid var(--pro); outline-offset: 2px; }
 
   #map { position: fixed; inset: 0; background: var(--ink); }
 
-  .glass { background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
-           -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
-           box-shadow: 0 10px 40px rgba(30, 50, 110, .2); }
+  .glass { background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+           -webkit-backdrop-filter: blur(14px) saturate(125%); backdrop-filter: blur(14px) saturate(125%);
+           box-shadow: 0 12px 34px rgba(22, 43, 35, .18); }
 
   /* ---------- Panneau ---------- */
-  #panel { position: fixed; top: 14px; left: 14px; width: 340px; max-height: calc(100% - 28px - 150px);
+  #panel { position: fixed; top: 14px; left: 14px; width: 352px; max-height: calc(100% - 28px - 150px);
            z-index: 800; display: flex; flex-direction: column; overflow: hidden; }
-  #panel header { display: flex; align-items: flex-start; gap: 10px; padding: 16px 16px 12px; }
-  #panel h1 { margin: 0; font: 600 17px/1.25 var(--display); letter-spacing: -.01em; }
+  #panel header { display: flex; align-items: flex-start; gap: 10px; padding: 17px 17px 13px;
+                  border-top: 3px solid var(--wt); }
+  #panel h1 { margin: 0; font: 600 16px/1.3 var(--display); }
   #panel header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
-  #fold { margin-left: auto; flex: none; width: 32px; height: 32px; border-radius: 10px; cursor: pointer;
+  #collection-link { display: inline-block; margin-top: 7px; color: var(--pro); font-size: 12px; font-weight: 700; text-decoration: none; }
+  #collection-link:hover { color: var(--wt); text-decoration: underline; }
+  #fold { margin-left: auto; flex: none; width: 32px; height: 32px; border-radius: 8px; cursor: pointer;
           background: transparent; border: 1px solid var(--line); line-height: 1; font-size: 18px; }
   #fold:hover { border-color: var(--line-strong); }
   #body { display: flex; flex-direction: column; min-height: 0; padding: 0 16px 16px; gap: 12px; }
   #panel.folded #body { display: none; }
 
-  #q { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
-       background: rgba(255,255,255,.75); }
+    #q { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line-strong);
+      background: rgba(255,255,255,.88); }
   #q::placeholder { color: var(--muted); }
-  #q:focus { border-color: var(--pro); outline: none; box-shadow: 0 0 0 3px rgba(10,147,201,.2); }
+  #q:focus { border-color: var(--pro); outline: none; box-shadow: 0 0 0 3px rgba(8,127,120,.16); }
 
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border-radius: 999px;
+  .chip { display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; border-radius: 7px;
           border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 13px; }
   .chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 8px var(--c); }
   .chip[aria-pressed="false"] { color: var(--muted); }
@@ -63,11 +66,11 @@
   .switches { display: grid; gap: 8px; }
   .switch { display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--text); }
   .switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-  .switch .tr { flex: none; width: 34px; height: 20px; border-radius: 999px; background: rgba(40,70,140,.12);
+  .switch .tr { flex: none; width: 34px; height: 20px; border-radius: 999px; background: rgba(31,57,48,.12);
                 border: 1px solid var(--line); position: relative; transition: background .15s; }
   .switch .tr::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px;
                        border-radius: 50%; background: var(--muted); transition: transform .15s, background .15s; }
-  .switch input:checked + .tr { background: rgba(10,147,201,.22); border-color: var(--pro); }
+  .switch input:checked + .tr { background: rgba(8,127,120,.18); border-color: var(--pro); }
   .switch input:checked + .tr::after { transform: translateX(14px); background: var(--pro); }
   .switch input:focus-visible + .tr { outline: 2px solid var(--pro); outline-offset: 2px; }
 
@@ -77,8 +80,8 @@
   .listhead span { color: var(--muted); font-size: 13px; white-space: nowrap; }
   #list { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 6px; min-height: 0;
           scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
-  #list li button { width: 100%; text-align: left; cursor: pointer; padding: 9px 11px 9px 14px; border-radius: 10px;
-                    border: 1px solid transparent; background: rgba(255,255,255,.7); position: relative; display: grid; gap: 2px; }
+  #list li button { width: 100%; text-align: left; cursor: pointer; padding: 9px 11px 9px 14px; border-radius: 7px;
+                    border: 1px solid transparent; background: rgba(255,255,255,.84); position: relative; display: grid; gap: 2px; }
   #list li button::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 3px; border-radius: 3px;
                             background: var(--c); box-shadow: 0 0 10px var(--c); }
   #list li button:hover { border-color: var(--line-strong); background: #fff; }
@@ -87,17 +90,17 @@
   #empty { color: var(--muted); line-height: 1.5; margin: 0; }
 
   /* ---------- Course mise en avant ---------- */
-  #focus { position: fixed; top: 14px; left: 368px; right: 74px; max-width: 540px; z-index: 790;
+  #focus { position: fixed; top: 14px; left: 380px; right: 74px; max-width: 540px; z-index: 790;
            display: flex; align-items: center; gap: 12px; padding: 12px 12px 12px 18px;
            border-left: 3px solid var(--c, var(--pro)); }
   #focus[hidden] { display: none; }
   #f-body { flex: 1; min-width: 0; }
   #f-line { color: var(--muted); font-size: 12.5px; }
-  #f-name { margin: 2px 0 5px; font: 600 16px/1.25 var(--display); letter-spacing: -.01em; overflow-wrap: anywhere; }
+  #f-name { margin: 2px 0 5px; font: 600 16px/1.3 var(--display); overflow-wrap: anywhere; }
   #f-info, #f-dates { display: flex; align-items: center; gap: 8px; font-size: 13.5px; }
   #f-dates { color: var(--muted); }
   .sw { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 8px var(--c); }
-  .arrow { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line);
+  .arrow { flex: none; width: 38px; height: 38px; border-radius: 8px; border: 1px solid var(--line-strong);
            background: rgba(255,255,255,.8); cursor: pointer; display: grid; place-items: center; }
   .arrow:hover { border-color: var(--c, var(--pro)); background: #fff; }
   .arrow[hidden] { display: none; }
@@ -106,7 +109,7 @@
   #list li button.has-detail { padding-right: 82px; }
   #list li .detail { position: absolute; top: 9px; right: 10px; }
   .w { color: var(--text); font-size: 13px; font-weight: 500; }
-  .detail { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+  .detail { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;
             text-decoration: none; color: var(--text); border: 1px solid var(--c, var(--pro));
             background: color-mix(in srgb, var(--c, var(--pro)) 12%, transparent); }
   .detail:hover { background: color-mix(in srgb, var(--c, var(--pro)) 24%, transparent); }
@@ -116,17 +119,19 @@
   #list li button.focused { border-color: var(--c); background: #fff; box-shadow: 0 0 0 1px var(--c) inset; }
 
   /* ---------- Frise du temps ---------- */
-  #timeline { position: fixed; left: 368px; right: 14px; bottom: 34px; z-index: 800; padding: 14px 18px 10px; }
+  #timeline { position: fixed; left: 380px; right: 14px; bottom: 20px; z-index: 800; padding: 14px 18px 10px;
+              border-top: 3px solid var(--pro); }
   #tl-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-  #date { font: 600 30px/1 var(--display); letter-spacing: -.02em; min-width: 190px; }
+  #date { font: 600 28px/1 var(--display); min-width: 190px; }
   #date small { font-size: 14px; color: var(--muted); margin-left: 6px; font-weight: 500; }
-  .btn { padding: 8px 14px; border-radius: 10px; cursor: pointer; border: 1px solid var(--line); background: rgba(255,255,255,.75); }
+  .btn { padding: 8px 14px; border-radius: 7px; cursor: pointer; border: 1px solid var(--line-strong); background: rgba(255,255,255,.88); }
   .btn:hover { border-color: var(--line-strong); }
-  .btn.primary { border-color: var(--pro); background: rgba(10,147,201,.12); }
+  .btn.primary { border-color: var(--pro); background: var(--pro); color: #fff; font-weight: 600; }
+  .btn.primary:hover { background: #066a64; }
   #tl-count { margin-left: auto; color: var(--muted); }
   #track { position: relative; height: 54px; margin-top: 10px; }
   #bars { position: absolute; inset: 0 0 18px 0; width: 100%; height: calc(100% - 18px); pointer-events: none; }
-  #bars rect { fill: rgba(60,90,170,.3); }
+  #bars rect { fill: rgba(8,127,120,.32); }
   #today { position: absolute; top: 0; bottom: 18px; width: 1px; background: var(--wt); opacity: .8; pointer-events: none; }
   #today span { position: absolute; top: -2px; left: 5px; font-size: 11px; color: var(--wt); white-space: nowrap; }
   #ticks { position: absolute; left: 0; right: 0; bottom: 0; height: 16px; pointer-events: none; }
@@ -136,10 +141,10 @@
             -webkit-appearance: none; appearance: none; cursor: ew-resize; }
   #slider::-webkit-slider-runnable-track { height: 100%; background: transparent; }
   #slider::-moz-range-track { height: 100%; background: transparent; }
-  #slider::-webkit-slider-thumb { -webkit-appearance: none; width: 4px; height: 100%; border-radius: 2px; border: 0;
-        background: var(--pro); box-shadow: 0 0 12px 2px rgba(10,147,201,.5); }
+    #slider::-webkit-slider-thumb { -webkit-appearance: none; width: 4px; height: 100%; border-radius: 2px; border: 0;
+      background: var(--pro); box-shadow: 0 0 10px 2px rgba(8,127,120,.38); }
   #slider::-moz-range-thumb { width: 4px; height: 100%; border-radius: 2px; border: 0; background: var(--pro);
-        box-shadow: 0 0 12px 2px rgba(10,147,201,.5); }
+        box-shadow: 0 0 10px 2px rgba(8,127,120,.38); }
 
   /* ---------- Marqueurs ---------- */
   .dot { transition: fill-opacity .2s; }
@@ -150,9 +155,9 @@
 
   /* ---------- Leaflet ---------- */
   .leaflet-container { background: var(--ink); font-family: var(--body); }
-  .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--panel-solid); color: var(--text);
-        border: 1px solid var(--line-strong); box-shadow: 0 8px 30px rgba(30,50,110,.25); }
-  .leaflet-popup-content-wrapper { border-radius: 12px; }
+    .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--panel-solid); color: var(--text);
+      border: 1px solid var(--line-strong); box-shadow: 0 8px 26px rgba(22,43,35,.2); }
+    .leaflet-popup-content-wrapper { border-radius: 8px; }
   .leaflet-popup-content { margin: 12px 14px; line-height: 1.5; font-size: 13.5px; }
   .leaflet-popup-content strong { font: 600 14px/1.3 var(--display); display: block; margin-bottom: 4px; }
   .leaflet-popup-close-button { color: var(--muted) !important; }
@@ -160,18 +165,21 @@
   .new { display: inline-block; font: 600 11px/1.5 var(--body); padding: 0 8px; margin-left: 6px; border-radius: 999px;
          color: var(--wt); border: 1px solid var(--wt); background: color-mix(in srgb, var(--wt) 10%, transparent); vertical-align: 1px; }
   .leaflet-bar a { background: var(--panel-solid); color: var(--text); border-color: var(--line); }
-  .leaflet-bar a:hover { background: #eef3ff; }
-  .leaflet-tile-pane { filter: saturate(.55) brightness(1.04) contrast(.94); }
-  .leaflet-control-attribution { background: rgba(255,255,255,.78) !important; color: var(--muted) !important; }
+  .leaflet-bar a:hover { background: #edf3ee; }
+  .leaflet-tile-pane { filter: saturate(.48) brightness(1.06) contrast(.96); }
+  .leaflet-control-attribution { background: rgba(252,252,247,.88) !important; color: var(--muted) !important; }
   .leaflet-control-attribution a { color: var(--muted) !important; }
   .leaflet-top.leaflet-right { top: 0; }
 
   /* ---------- Petits écrans ---------- */
   @media (max-width: 760px) {
-    #panel { left: 10px; right: 10px; top: 10px; width: auto; max-height: 46vh; }
-    #timeline { left: 10px; right: 10px; bottom: 30px; padding: 10px 14px 8px; }
+    #panel { left: max(10px, env(safe-area-inset-left)); right: max(10px, env(safe-area-inset-right));
+         top: max(10px, env(safe-area-inset-top)); width: auto; max-height: 46vh; }
+    #timeline { left: max(10px, env(safe-area-inset-left)); right: max(10px, env(safe-area-inset-right));
+          bottom: max(10px, env(safe-area-inset-bottom)); padding: 10px 12px 8px; }
     #date { font-size: 22px; min-width: 0; }
-    #focus { top: auto; bottom: 172px; left: 10px; right: 10px; max-width: none; }
+    #focus { top: auto; bottom: calc(190px + env(safe-area-inset-bottom));
+         left: max(10px, env(safe-area-inset-left)); right: max(10px, env(safe-area-inset-right)); max-width: none; }
     #tl-count { display: none; }
     .leaflet-top.leaflet-right { top: 64px; }
   }
@@ -189,6 +197,7 @@
     <div>
       <h1>Courses UCI sur route</h1>
       <p id="total">Chargement…</p>
+      <a id="collection-link" href="collection.html">Ma collection →</a>
     </div>
     <button id="fold" type="button" aria-expanded="true" aria-label="Replier le panneau">−</button>
   </header>
@@ -457,12 +466,17 @@ function buildTimeline() {
 
   const ticks = $("ticks");
   ticks.replaceChildren();
+  const monthsInView = (viewMax - viewMin) / 30.4375;
+  const monthSpacing = $("track").clientWidth / monthsInView;
+  const tickEveryMonths = Math.max(1, Math.ceil(46 / monthSpacing));
   for (let d = viewMin; d <= viewMax; d++) {
     const dt = dateOf(d);
-    if (dt.getUTCDate() === 1) {
+    const monthIndex = dt.getUTCFullYear() * 12 + dt.getUTCMonth();
+    if (dt.getUTCDate() === 1 && monthIndex % tickEveryMonths === 0) {
       const s = document.createElement("span");
       s.style.left = ((d - viewMin) / (n - 1) * 100) + "%";
-      s.textContent = dt.getUTCMonth() === 0 ? `${SHORT[0]} ${dt.getUTCFullYear()}` : SHORT[dt.getUTCMonth()];
+      s.textContent = dt.getUTCMonth() === 0 ? `janv. '${String(dt.getUTCFullYear()).slice(-2)}` : SHORT[dt.getUTCMonth()];
+      s.title = `${MONTHS[dt.getUTCMonth()]} ${dt.getUTCFullYear()}`;
       ticks.appendChild(s);
     }
   }
@@ -475,6 +489,11 @@ function buildTimeline() {
   const slider = $("slider");
   slider.min = viewMin; slider.max = viewMax;
 }
+
+const timelineObserver = new ResizeObserver(() => {
+  if (viewMax > viewMin) buildTimeline();
+});
+timelineObserver.observe($("track"));
 
 function stop() { clearInterval(timer); timer = null; $("play").textContent = "Lire la saison"; }
 function play() {
