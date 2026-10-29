@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#183e34">
+<title>Le Peloton - Collection UCI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f0f2e8; --card: #fffef7; --ink: #183e34; --ink-soft: #31574b;
+    --muted: #62766b; --line: #cbd4c8; --coral: #dc553f; --teal: #16877e; --gold: #b98524;
+    --mono: "DM Mono", "Courier New", monospace;
+    --body: "Hanken Grotesk", system-ui, sans-serif;
+    --display: "Unbounded", "Trebuchet MS", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; color: var(--ink); font: 15px/1.45 var(--body); background-color: var(--paper);
+         background-image: repeating-linear-gradient(135deg, rgba(24,62,52,.025) 0 1px, transparent 1px 9px); }
+  button, input, select { font: inherit; color: inherit; }
+  button, a, select { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  [hidden] { display: none !important; }
+  .masthead { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+              padding: 10px max(24px, calc((100vw - 1320px) / 2)); color: var(--paper); background: var(--ink); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+  .brand-mark { width: 25px; height: 25px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; transform: skew(-12deg); }
+  .brand-mark i { background: var(--coral); }
+  .brand-mark i:nth-child(2) { background: #e9c66e; }
+  .brand-mark i:nth-child(3) { background: #67b7a5; }
+  .brand-name { font: 600 12px/1 var(--display); }
+  .back { color: #d6e0d5; font-weight: 600; text-decoration: none; }
+  .back:hover { color: #fff; }
+  .masthead-actions { display: flex; align-items: center; gap: 18px; }
+  .account-open { min-height: 36px; padding: 0 12px; border: 1px solid rgba(238,244,233,.3); border-radius: 4px;
+                  max-width: 180px; overflow: hidden; color: #f7f5e9; background: transparent; cursor: pointer; font-weight: 600;
+                  text-overflow: ellipsis; white-space: nowrap; }
+  .account-open:hover { border-color: #e8c66f; color: #e8c66f; }
+  .account-dialog { width: min(460px, calc(100% - 28px)); padding: 0; border: 1px solid var(--line); border-radius: 7px;
+                    color: var(--ink); background: var(--paper); box-shadow: 0 24px 80px rgba(10,30,24,.32); }
+  .account-dialog::backdrop { background: rgba(15,35,29,.62); backdrop-filter: blur(3px); }
+  .account-dialog-head { display: flex; align-items: start; justify-content: space-between; gap: 20px; padding: 22px 24px 14px;
+                         border-bottom: 1px solid var(--line); }
+  .account-dialog-head h2 { margin: 0; font: 600 19px/1.3 var(--display); }
+  .account-dialog-head .eyebrow { margin-bottom: 7px; }
+  .dialog-close { width: 34px; height: 34px; border: 1px solid var(--line-strong); border-radius: 4px;
+                  background: transparent; cursor: pointer; font-size: 19px; line-height: 1; }
+  .account-content { padding: 20px 24px 24px; }
+  .account-content > p { margin: 0 0 16px; color: var(--muted); }
+  .account-form { display: grid; gap: 13px; }
+  .account-form label { display: grid; gap: 5px; font-size: 13px; font-weight: 600; }
+  .account-form input { width: 100%; height: 42px; padding: 0 11px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--card); }
+  .account-submit { min-height: 42px; padding: 0 14px; border: 0; border-radius: 4px; color: white; background: var(--ink); cursor: pointer; font-weight: 700; }
+  .account-submit:hover { background: var(--teal); }
+  .account-secondary { min-height: 40px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 4px; background: transparent; cursor: pointer; font-weight: 600; }
+  .account-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 2px; }
+  .account-note { margin: 12px 0 0 !important; color: var(--muted); font-size: 12px; }
+  .account-message { min-height: 20px; margin: 10px 0 0 !important; color: var(--coral) !important; font-size: 13px; }
+  .account-user { margin-bottom: 15px !important; color: var(--ink) !important; font-weight: 700; }
+  .account-server-note { color: var(--muted); font-size: 12px; }
+  .shell { width: min(1320px, calc(100% - 48px)); margin: 0 auto; }
+  .hero { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 36px 0 26px; }
+  .eyebrow { margin: 0 0 8px; color: var(--coral); font: 500 11px/1.3 var(--mono); text-transform: uppercase; }
+  h1 { max-width: 720px; margin: 0; font: 600 32px/1.18 var(--display); }
+  .hero-note { max-width: 410px; margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+  .stats { display: flex; flex: none; align-items: end; gap: 24px; padding-bottom: 4px; }
+  .stat { min-width: 76px; }
+  .stat strong { display: block; font: 600 24px/1 var(--display); font-variant-numeric: tabular-nums; }
+  .stat span { display: block; margin-top: 6px; color: var(--muted); font: 11px/1.3 var(--mono); text-transform: uppercase; }
+  .tabs { display: flex; align-items: center; gap: 4px; padding: 4px; border-bottom: 1px solid var(--line); }
+  .tab { min-height: 42px; padding: 0 17px; border: 0; border-radius: 5px 5px 0 0; background: transparent;
+         color: var(--muted); cursor: pointer; font-weight: 600; }
+  .tab[aria-selected="true"] { color: var(--ink); background: #dfe8dd; box-shadow: inset 0 -3px var(--coral); }
+  .tab:hover { color: var(--ink); }
+  .view { padding: 24px 0 56px; }
+  .pack-stage { min-height: 342px; display: grid; grid-template-columns: minmax(0, 1fr) 310px; align-items: center; gap: 32px;
+                padding: 34px 46px; overflow: hidden; border-radius: 7px; color: #f7f5e9; background: var(--ink);
+                background-image: linear-gradient(110deg, transparent 55%, rgba(244,239,214,.045) 55% 56%, transparent 56%),
+                                  repeating-linear-gradient(135deg, transparent 0 18px, rgba(244,239,214,.025) 18px 19px); }
+  .stage-copy { max-width: 650px; }
+  .stage-label { display: inline-flex; align-items: center; gap: 8px; color: #edcc7a; font: 500 11px/1.3 var(--mono); text-transform: uppercase; }
+  .stage-label::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px rgba(220,85,63,.18); }
+  h2 { margin: 12px 0 10px; font: 600 25px/1.25 var(--display); }
+  .stage-copy p { max-width: 530px; margin: 0; color: #c5d2c7; }
+  .guarantees { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 24px; }
+  .guarantee { padding: 6px 9px; border: 1px solid rgba(226,237,221,.24); border-radius: 4px;
+               color: #e4ecdf; font: 11px/1.3 var(--mono); }
+  .pack-action { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .open-button { min-height: 46px; padding: 0 19px; border: 0; border-radius: 4px; color: #fff9e9; background: var(--coral);
+                 cursor: pointer; font-weight: 700; transition: background .16s, transform .16s; }
+  .open-button:hover:not(:disabled) { background: #c94633; transform: translateY(-1px); }
+  .open-button:disabled { cursor: not-allowed; opacity: .48; }
+  .pack-note { color: #b9c9bc; font: 11px/1.4 var(--mono); }
+  .pack-art-wrap { position: relative; display: grid; place-items: center; min-height: 250px; }
+  .pack-art { position: relative; width: 190px; height: 246px; display: flex; flex-direction: column; justify-content: space-between;
+              padding: 18px 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.62); border-radius: 5px;
+              color: var(--ink); background: #e8c66f; box-shadow: 14px 18px 0 rgba(5,20,16,.22), 0 22px 46px rgba(0,0,0,.24);
+              transform: rotate(5deg); transition: transform .3s; }
+  .pack-art-wrap:hover .pack-art { transform: rotate(1deg) translateY(-4px); }
+  .pack-art::before { content: ""; position: absolute; inset: 0; opacity: .27;
+                      background: repeating-linear-gradient(135deg, transparent 0 11px, #183e34 11px 12px); }
+  .pack-art-top, .pack-art-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 8px;
+                                    font: 500 9px/1.4 var(--mono); text-transform: uppercase; }
+  .pack-art-main { position: relative; z-index: 1; align-self: center; text-align: center; }
+  .pack-art-main strong { display: block; font: 600 21px/1.2 var(--display); }
+  .pack-art-main span { display: block; margin-top: 6px; font: 500 10px/1.3 var(--mono); }
+  .pack-art-bottom { align-items: end; }
+  .pack-number { font: 600 34px/.9 var(--display); }
+  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 26px 0 12px;
+                  border-bottom: 1px solid var(--line); }
+  .section-head h2 { margin: 0; font: 600 17px/1.3 var(--display); }
+  .section-head p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  .opening-grid, .collection-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; padding-top: 17px; }
+  .empty-state, .loading-state { padding: 42px 18px; border-bottom: 1px solid var(--line); color: var(--muted); text-align: center; }
+  .loading-state { font: 12px/1.5 var(--mono); }
+  .error-state { color: var(--coral); }
+  .rider-card { --rarity: var(--teal); position: relative; min-width: 0; aspect-ratio: .73; display: flex; flex-direction: column;
+                justify-content: space-between; padding: 12px; overflow: hidden; border: 1px solid #c9d1c7; border-radius: 5px;
+                color: var(--ink); background: var(--card); box-shadow: 0 3px 0 rgba(24,62,52,.08);
+                animation: reveal .42s both; animation-delay: var(--delay, 0ms); }
+  .rider-card[data-rarity="winner"] { --rarity: var(--coral); }
+  .rider-card[data-rarity="podium"] { --rarity: var(--gold); }
+  .rider-card[data-rarity="top10"] { --rarity: var(--teal); }
+  .rider-card::before { content: ""; position: absolute; top: 0; right: 0; left: 0; height: 5px; background: var(--rarity); }
+  .rider-card::after { content: ""; position: absolute; inset: 5px 0 auto; height: 43%; opacity: .12; pointer-events: none;
+                       background: repeating-linear-gradient(135deg, transparent 0 10px, var(--rarity) 10px 11px); }
+  .rider-top, .rider-bottom { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 6px; }
+  .rarity-tag, .rank-tag, .country-tag { font: 500 9px/1.3 var(--mono); text-transform: uppercase; }
+  .rarity-tag { color: var(--rarity); }
+  .rank-tag { color: var(--ink-soft); }
+  .rider-illustration { position: absolute; inset: 42px 8px auto; height: 49%; display: grid; place-items: center;
+                       color: var(--rarity); opacity: .92; }
+  .rider-illustration svg { width: 100%; max-height: 145px; }
+  .rider-copy { position: relative; z-index: 2; margin-top: auto; padding-top: 108px; }
+  .rider-name { margin: 0; font: 600 14px/1.22 var(--display); overflow-wrap: anywhere; }
+  .rider-team { min-height: 18px; margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.25; }
+  .rider-bottom { align-items: end; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+  .rider-race { max-width: 76%; color: var(--ink-soft); font-size: 10px; line-height: 1.25; }
+  .rider-count { flex: none; display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid var(--line);
+                 border-radius: 50%; color: var(--ink); font: 500 10px/1 var(--mono); }
+  .rider-card a { color: inherit; text-decoration: none; }
+  .rider-card a:hover .rider-name { color: var(--coral); }
+  .rider-card .country-tag { color: var(--muted); }
+  .collection-tools { display: flex; align-items: center; gap: 9px; }
+  .collection-tools input, .collection-tools select { height: 38px; padding: 0 10px; border: 1px solid var(--line-strong);
+                                                       border-radius: 4px; background: var(--card); }
+  .collection-tools input { width: min(230px, 30vw); }
+  .text-button { padding: 8px 10px; border: 0; background: transparent; color: var(--coral); cursor: pointer; font-weight: 600; }
+  .text-button:hover { text-decoration: underline; }
+  .collection-summary { display: flex; align-items: baseline; gap: 8px; color: var(--muted); font: 11px/1.4 var(--mono); }
+  .collection-summary strong { color: var(--ink); font-size: 15px; }
+  .toast { position: fixed; right: 20px; bottom: 20px; z-index: 10; max-width: min(360px, calc(100vw - 40px));
+           padding: 12px 15px; border-radius: 5px; color: #fff; background: var(--ink); box-shadow: 0 7px 24px rgba(10,30,24,.24);
+           animation: reveal .2s both; }
+  .footer-note { padding: 14px 0 28px; color: var(--muted); font-size: 12px; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 850px) {
+    .hero { align-items: start; flex-direction: column; gap: 20px; }
+    .stats { gap: 22px; }
+    .pack-stage { grid-template-columns: minmax(0, 1fr) 220px; gap: 14px; padding: 28px; }
+    .pack-art { width: 160px; height: 215px; }
+    .opening-grid, .collection-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .masthead { min-height: 56px; padding: 10px 12px; }
+    .masthead-actions { gap: 8px; }
+    .account-open { min-height: 34px; padding: 0 8px; font-size: 12px; }
+    .back { font-size: 12px; }
+    .account-dialog-head { padding: 18px 18px 12px; }
+    .account-content { padding: 16px 18px 20px; }
+    .shell { width: calc(100% - 32px); }
+    .hero { padding: 26px 0 20px; }
+    h1 { font-size: 24px; }
+    .hero-note { font-size: 14px; }
+    .stat strong { font-size: 20px; }
+    .stats { width: 100%; justify-content: space-between; gap: 10px; }
+    .pack-stage { grid-template-columns: 1fr; padding: 24px 20px; }
+    .pack-art-wrap { min-height: 230px; }
+    .pack-art { width: 150px; height: 205px; }
+    .opening-grid, .collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .rider-card { padding: 10px; }
+    .rider-name { font-size: 12px; }
+    .rider-copy { padding-top: 86px; }
+    .rider-illustration { height: 43%; }
+    .section-head { align-items: start; flex-direction: column; }
+    .collection-tools { width: 100%; flex-wrap: wrap; }
+    .collection-tools input { flex: 1; width: 100%; }
+    .collection-tools select { flex: 1; }
+    .collection-tools .text-button { margin-left: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="index.html" aria-label="Le Peloton, retour à la carte">
+    <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="brand-name">LE PELOTON</span>
+  </a>
+  <div class="masthead-actions">
+    <button class="account-open" id="account-open" type="button">Compte</button>
+    <a class="back" href="index.html">← Carte des courses</a>
+  </div>
+</header>
+
+<dialog class="account-dialog" id="account-dialog" aria-labelledby="account-title">
+  <div class="account-dialog-head">
+    <div><p class="eyebrow">Le Peloton · membre</p><h2 id="account-title">Ton compte</h2></div>
+    <button class="dialog-close" id="account-close" type="button" aria-label="Fermer">×</button>
+  </div>
+  <div class="account-content" id="account-signed-out">
+    <p>Connecte-toi pour retrouver ta collection sur tes autres appareils. Ta collection invitée sera fusionnée avec ton compte.</p>
+    <form class="account-form" id="account-form">
+      <label>Nom d’utilisateur<input id="account-username" name="username" type="text" minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" autocomplete="username" required></label>
+      <label>Mot de passe<input id="account-password" name="password" type="password" minlength="12" maxlength="128" autocomplete="current-password" required></label>
+      <div class="account-actions">
+        <button class="account-submit" id="account-login" type="button">Connexion</button>
+        <button class="account-secondary" id="account-register" type="button">Créer un compte</button>
+      </div>
+    </form>
+    <p class="account-note">12 caractères minimum. Pas d’adresse email demandée; la récupération de mot de passe n’est pas encore disponible.</p>
+    <p class="account-message" id="account-message" role="status" aria-live="polite"></p>
+    <p class="account-server-note">Compte synchronisé sur le serveur de ce site.</p>
+  </div>
+  <div class="account-content" id="account-signed-in" hidden>
+    <p class="account-user" id="account-user-label"></p>
+    <p>Ta collection est sauvegardée sur ce serveur et synchronisée à ta prochaine connexion.</p>
+    <p class="account-message" id="account-sync-status" role="status" aria-live="polite"></p>
+    <button class="account-secondary" id="account-logout" type="button">Se déconnecter</button>
+  </div>
+</dialog>
+
+<main class="shell">
+  <section class="hero" aria-labelledby="page-title">
+    <div>
+      <p class="eyebrow">Collection UCI · Saison 2026</p>
+      <h1 id="page-title">Les coureurs<br>font la course.</h1>
+      <p class="hero-note">Ouvre un booster, retrouve les grands noms du calendrier et complète ton peloton au fil des résultats.</p>
+    </div>
+    <div class="stats" aria-label="Statistiques de collection">
+      <div class="stat"><strong id="stat-unique">0</strong><span>coureurs</span></div>
+      <div class="stat"><strong id="stat-total">0</strong><span>cartes</span></div>
+      <div class="stat"><strong id="stat-dust">0</strong><span>poussières</span></div>
+    </div>
+  </section>
+
+  <nav class="tabs" role="tablist" aria-label="Vues de la collection">
+    <button class="tab" id="tab-booster" type="button" role="tab" aria-selected="true" aria-controls="view-booster">Boosters</button>
+    <button class="tab" id="tab-collection" type="button" role="tab" aria-selected="false" aria-controls="view-collection">Ma collection</button>
+  </nav>
+
+  <section class="view" id="view-booster" role="tabpanel" aria-labelledby="tab-booster">
+    <div class="pack-stage">
+      <div class="stage-copy">
+        <span class="stage-label">Le paquet du jour</span>
+        <h2>Un nouveau peloton t’attend.</h2>
+        <p>Chaque paquet réunit cinq coureurs issus des classements disponibles, avec des places garanties pour les meilleurs résultats.</p>
+        <div class="guarantees" aria-label="Contenu garanti">
+          <span class="guarantee">1 vainqueur</span><span class="guarantee">1 podium</span><span class="guarantee">3 top 10</span>
+        </div>
+        <div class="pack-action">
+          <button class="open-button" id="open-pack" type="button" disabled>Chargement des classements…</button>
+          <span class="pack-note" id="pack-note" aria-live="polite">Connexion aux résultats de la saison</span>
+        </div>
+      </div>
+      <div class="pack-art-wrap" aria-hidden="true">
+        <div class="pack-art">
+          <div class="pack-art-top"><span>UCI · 2026</span><span>01 / 05</span></div>
+          <div class="pack-art-main"><strong>LE<br>PELOTON</strong><span>COLLECTOR SERIES</span></div>
+          <div class="pack-art-bottom"><span>5 coureurs<br>1 paquet / jour</span><span class="pack-number">26</span></div>
+        </div>
+      </div>
+    </div>
+    <section aria-labelledby="opening-title">
+      <div class="section-head">
+        <div><h2 id="opening-title">Ton dernier booster</h2><p id="opening-subtitle">Les cartes révélées apparaîtront ici.</p></div>
+        <span class="collection-summary" id="pool-summary">Classements en préparation</span>
+      </div>
+      <div class="opening-grid" id="opening-grid"></div>
+      <div class="empty-state" id="opening-empty">Le paquet attend son premier départ.</div>
+    </section>
+  </section>
+
+  <section class="view" id="view-collection" role="tabpanel" aria-labelledby="tab-collection" hidden>
+    <div class="section-head">
+      <div><h2>Le classeur</h2><p id="collection-subtitle">Les coureurs déjà trouvés, doublons compris.</p></div>
+      <div class="collection-tools">
+        <input id="search-cards" type="search" placeholder="Nom ou équipe" aria-label="Rechercher dans la collection">
+        <select id="filter-rarity" aria-label="Filtrer par rareté">
+          <option value="all">Toutes les raretés</option><option value="winner">Vainqueurs</option>
+          <option value="podium">Podiums</option><option value="top10">Top 10</option><option value="peloton">Peloton</option>
+        </select>
+        <button class="text-button" id="reset-collection" type="button">Effacer la collection</button>
+      </div>
+    </div>
+    <div class="collection-grid" id="collection-grid"></div>
+    <div class="empty-state" id="collection-empty">Aucune carte pour l’instant. Ouvre ton premier booster.</div>
+  </section>
+  <p class="footer-note" id="storage-note">Cartes générées à partir des classements disponibles. Collection invitée enregistrée sur cet appareil.</p>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+const STORAGE_KEY = "uci-peloton-collection-v1";
+const DUST_COST = 100;
+const PACK_SLOTS = ["winner", "podium", "top10", "top10", "top10"];
+const RARITY_LABEL = { winner: "Vainqueur", podium: "Podium", top10: "Top 10", peloton: "Peloton" };
+const MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+const $ = id => document.getElementById(id);
+const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+const normalize = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+const dateLabel = value => {
+  if (!value) return "Saison 2026";
+  const [year, month, day] = value.split("-").map(Number);
+  return `${day} ${MONTHS[month - 1]} ${year}`;
+};
+const rarityOf = rank => rank === 1 ? "winner" : rank <= 3 ? "podium" : rank <= 10 ? "top10" : "peloton";
+const dustOf = rarity => rarity === "winner" ? 30 : rarity === "podium" ? 20 : 12;
+
+function readState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    return { riders: saved.riders && typeof saved.riders === "object" ? saved.riders : {}, dust: Number(saved.dust) || 0,
+             freeDate: saved.freeDate || "", packsOpened: Number(saved.packsOpened) || 0,
+             lastPack: Array.isArray(saved.lastPack) ? saved.lastPack : [] };
+  } catch { return { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] }; }
+}
+
+let state = readState();
+let pool = [];
+let activeTab = "booster";
+let toastTimer = null;
+let accountUser = null;
+let csrfToken = "";
+let cloudSaveTimer = null;
+
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+  catch { showToast("Le navigateur n’a pas pu enregistrer la collection."); }
+  if (accountUser) {
+    clearTimeout(cloudSaveTimer);
+    cloudSaveTimer = setTimeout(syncCollection, 350);
+  }
+}
+
+function mergeCollections(remote, local) {
+  const merged = {
+    riders: { ...(remote?.riders || {}) },
+    dust: Math.max(Number(remote?.dust) || 0, Number(local?.dust) || 0),
+    freeDate: [remote?.freeDate || "", local?.freeDate || ""].sort().at(-1),
+    packsOpened: Math.max(Number(remote?.packsOpened) || 0, Number(local?.packsOpened) || 0),
+    lastPack: (Number(remote?.packsOpened) || 0) >= (Number(local?.packsOpened) || 0)
+      ? (remote?.lastPack || []) : (local?.lastPack || []),
+  };
+  for (const [id, guest] of Object.entries(local?.riders || {})) {
+    const saved = merged.riders[id];
+    if (!saved) {
+      merged.riders[id] = guest;
+      continue;
+    }
+    const count = Math.max(Number(saved.count) || 1, Number(guest.count) || 1);
+    const bestRank = Math.min(Number(saved.bestRank || saved.rank) || Infinity, Number(guest.bestRank || guest.rank) || Infinity);
+    merged.riders[id] = {
+      ...(Number(guest.bestRank || guest.rank) < Number(saved.bestRank || saved.rank) ? guest : saved),
+      count,
+      duplicates: Math.max(Number(saved.duplicates) || 0, Number(guest.duplicates) || 0, count - 1),
+      bestRank,
+    };
+  }
+  return merged;
+}
+
+async function getAccountSession() {
+  const response = await fetch("/api/session", { credentials: "same-origin" });
+  if (!response.ok) throw new Error("Le serveur de comptes est indisponible.");
+  const data = await response.json();
+  csrfToken = data.csrfToken || "";
+  return data;
+}
+
+async function loadAccountSession() {
+  try {
+    const data = await getAccountSession();
+    accountUser = data.user;
+    if (accountUser) {
+      state = mergeCollections(data.collection, state);
+      saveState();
+    }
+    refreshUI();
+  } catch {
+    $("account-open").title = "Lance le site avec app.py pour utiliser les comptes.";
+  }
+}
+
+async function syncCollection() {
+  if (!accountUser) return;
+  try {
+    let response = await fetch("/api/collection", {
+      method: "PUT", credentials: "same-origin",
+      headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+      body: JSON.stringify(state),
+    });
+    if (response.status === 403) {
+      await getAccountSession();
+      response = await fetch("/api/collection", {
+        method: "PUT", credentials: "same-origin",
+        headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+        body: JSON.stringify(state),
+      });
+    }
+    if (!response.ok) throw new Error((await response.json()).error || "Échec de synchronisation.");
+    $("account-sync-status").textContent = "Collection synchronisée";
+  } catch (error) {
+    $("account-sync-status").textContent = error.message;
+  }
+}
+
+function refreshAccountUI() {
+  const signedIn = Boolean(accountUser);
+  $("account-open").textContent = signedIn ? accountUser.username : "Compte";
+  $("account-signed-out").hidden = signedIn;
+  $("account-signed-in").hidden = !signedIn;
+  $("account-user-label").textContent = signedIn ? `Connecté·e en tant que ${accountUser.username}` : "";
+  $("storage-note").textContent = signedIn
+    ? "Cartes générées à partir des classements disponibles. Collection synchronisée sur ce serveur."
+    : "Cartes générées à partir des classements disponibles. Collection invitée enregistrée sur cet appareil.";
+}
+
+async function authenticate(path) {
+  const message = $("account-message");
+  const buttons = [$("account-login"), $("account-register")];
+  message.textContent = "";
+  buttons.forEach(button => { button.disabled = true; });
+  try {
+    await getAccountSession();
+    const response = await fetch(path, {
+      method: "POST", credentials: "same-origin",
+      headers: { "Content-Type": "application/json", "X-CSRF-Token": csrfToken },
+      body: JSON.stringify({ username: $("account-username").value.trim(), password: $("account-password").value }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "Connexion impossible.");
+    accountUser = data.user;
+    await getAccountSession();
+    state = mergeCollections(data.collection, state);
+    saveState();
+    refreshUI();
+    $("account-form").reset();
+    $("account-dialog").close();
+    showToast(`Collection synchronisée avec ${accountUser.username}`);
+  } catch (error) {
+    message.textContent = error.message;
+  } finally {
+    buttons.forEach(button => { button.disabled = false; });
+  }
+}
+
+async function logoutAccount() {
+  const button = $("account-logout");
+  button.disabled = true;
+  try {
+    clearTimeout(cloudSaveTimer);
+    await syncCollection();
+    await getAccountSession();
+    const response = await fetch("/api/logout", {
+      method: "POST", credentials: "same-origin", headers: { "X-CSRF-Token": csrfToken },
+    });
+    if (!response.ok) throw new Error("Déconnexion impossible.");
+    accountUser = null;
+    csrfToken = "";
+    state = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
+    localStorage.removeItem(STORAGE_KEY);
+    refreshUI();
+    $("account-dialog").close();
+  } catch (error) {
+    $("account-sync-status").textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function riderIdentity(rawName) {
+  const match = String(rawName ?? "").match(/\(\s*([A-Z]{3})\s*\)\s*$/);
+  const countryCode = match ? match[1] : "";
+  const name = String(rawName ?? "").replace(/\s*\(\s*[A-Z]{3}\s*\)\s*$/, "").trim();
+  return { id: `${normalize(name)}${countryCode ? `-${countryCode.toLowerCase()}` : ""}`, name, countryCode };
+}
+
+async function loadPool() {
+  const button = $("open-pack");
+  const note = $("pack-note");
+  try {
+    const response = await fetch("data/results/index.json");
+    if (!response.ok) throw new Error("Index des résultats introuvable");
+    const index = await response.json();
+    const entries = Object.values(index).filter(entry => entry && /^[a-z0-9-]+$/.test(entry.slug));
+    for (let i = 0; i < entries.length; i += 12) {
+      const batch = await Promise.all(entries.slice(i, i + 12).map(async entry => {
+        try {
+          const resultResponse = await fetch(`data/results/${entry.slug}.json`);
+          if (!resultResponse.ok) return [];
+          const result = await resultResponse.json();
+          return (result.rows || []).filter(row => Number.isInteger(row.rank) && row.rider).map(row => {
+            const identity = riderIdentity(row.rider);
+            return { id: identity.id, rider: identity.name, countryCode: identity.countryCode, team: row.team || "Équipe inconnue",
+                     rank: row.rank, rarity: rarityOf(row.rank), race: result.name, date: result.start, slug: entry.slug,
+                     country: result.country || "", classes: result.classes || [] };
+          });
+        } catch { return []; }
+      }));
+      pool.push(...batch.flat());
+      note.textContent = `${Math.min(i + 12, entries.length)} / ${entries.length} classements chargés`;
+    }
+    if (!pool.some(card => card.rarity === "winner") || !pool.some(card => card.rarity === "podium") || !pool.some(card => card.rarity === "top10")) {
+      throw new Error("Pas assez de classements pour composer un booster");
+    }
+    const uniqueCount = new Set(pool.map(card => card.id)).size;
+    $("pool-summary").innerHTML = `<strong>${uniqueCount}</strong> coureurs · <strong>${entries.length}</strong> classements`;
+    note.textContent = `${pool.length} cartes possibles · résultat réel, pas de stats inventées`;
+    refreshUI();
+  } catch (error) {
+    button.disabled = true;
+    button.textContent = "Classements indisponibles";
+    note.textContent = error.message;
+    $("opening-empty").textContent = "Impossible de charger les classements. Ouvre cette page depuis le site ou relance le serveur.";
+    $("opening-empty").classList.add("error-state");
+  }
+}
+
+function classTone(classes) {
+  const value = (classes || []).join(" ");
+  return /UWT|WWT/.test(value) ? "var(--coral)" : /Pro|HC/.test(value) ? "var(--teal)" : "var(--gold)";
+}
+
+function riderArt(card) {
+  const tone = classTone(card.classes);
+  return `<svg viewBox="0 0 220 145" fill="none" aria-hidden="true" style="color:${tone}">
+    <circle cx="48" cy="108" r="27" stroke="currentColor" stroke-width="3" opacity=".55"/>
+    <circle cx="170" cy="108" r="27" stroke="currentColor" stroke-width="3" opacity=".55"/>
+    <path d="M48 108h48l28-49 46 49-36-2-22-35-20 37" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+    <circle cx="120" cy="25" r="11" fill="currentColor" opacity=".92"/>
+    <path d="m111 39-23 23 25 12 19-25m-27 4 22 17-11 20m11-52 23 7 12 18m-41-1-20 25-16 1" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m102 46 21-7 14 15-24 13-22-9z" fill="var(--card)" stroke="currentColor" stroke-width="2"/>
+    <path d="m84 61-16 3m71-10 15-4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 137h192" stroke="currentColor" stroke-width="1" opacity=".22"/>
+  </svg>`;
+}
+
+function renderCard(card, options = {}) {
+  const count = options.count || 0;
+  const delay = options.delay || 0;
+  const link = card.slug ? `results.html?race=${encodeURIComponent(card.slug)}` : "";
+  const riderMarkup = link
+    ? `<a href="${esc(link)}" aria-label="Voir le classement de ${esc(card.race)}"><h3 class="rider-name">${esc(card.rider)}</h3></a>`
+    : `<h3 class="rider-name">${esc(card.rider)}</h3>`;
+  return `<article class="rider-card" data-rarity="${esc(card.rarity)}" style="--delay:${delay}ms">
+    <div class="rider-top"><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span><span class="rank-tag">RANG ${card.rank}</span></div>
+    <div class="rider-illustration">${riderArt(card)}</div>
+    <div class="rider-copy">${riderMarkup}<p class="rider-team">${esc(card.team)}</p></div>
+    <div class="rider-bottom"><span class="rider-race">${esc(card.race)}<br>${esc(dateLabel(card.date))}</span>
+      <span class="rider-count" aria-label="${count ? `${count} exemplaires` : "Nouvelle carte"}">${count || card.countryCode || "+"}</span></div>
+  </article>`;
+}
+
+function renderStats() {
+  const records = Object.values(state.riders);
+  $("stat-unique").textContent = String(records.length);
+  $("stat-total").textContent = String(records.reduce((total, card) => total + card.count, 0));
+  $("stat-dust").textContent = String(state.dust);
+}
+
+function renderOpening() {
+  const hasCards = state.lastPack.length > 0;
+  $("opening-empty").hidden = hasCards;
+  $("opening-grid").innerHTML = hasCards ? state.lastPack.map((card, index) => renderCard(card, { delay: index * 75 })).join("") : "";
+  $("opening-subtitle").textContent = hasCards ? `Booster no ${state.packsOpened} · ${dateLabel(state.lastPack[0].date)}` : "Les cartes révélées apparaîtront ici.";
+}
+
+function renderCollection() {
+  const query = normalize($("search-cards").value);
+  const filter = $("filter-rarity").value;
+  const records = Object.values(state.riders).filter(card => {
+    const matchesText = !query || normalize(`${card.rider} ${card.team} ${card.race}`).includes(query);
+    return matchesText && (filter === "all" || card.rarity === filter);
+  }).sort((a, b) => a.bestRank - b.bestRank || a.rider.localeCompare(b.rider, "fr"));
+  $("collection-grid").innerHTML = records.map(card => renderCard(card, { count: card.count })).join("");
+  $("collection-empty").hidden = records.length > 0;
+  if (!Object.keys(state.riders).length) $("collection-empty").textContent = "Ton classeur est vide. Ouvre ton premier booster.";
+  else if (!records.length) $("collection-empty").textContent = "Aucun coureur ne correspond à ces filtres.";
+}
+
+function refreshUI() {
+  renderStats(); renderOpening(); renderCollection();
+  refreshAccountUI();
+  const freeAvailable = state.freeDate !== today();
+  const canExchange = !freeAvailable && state.dust >= DUST_COST;
+  const button = $("open-pack");
+  button.disabled = pool.length === 0 || (!freeAvailable && !canExchange);
+  button.textContent = freeAvailable ? "Ouvrir le booster du jour" : canExchange ? `Échanger ${DUST_COST} poussières` : "Prochain booster demain";
+  if (pool.length) $("pack-note").textContent = freeAvailable ? "Un paquet gratuit chaque jour" : canExchange ? "Un booster gratuit est déjà ouvert aujourd’hui" : `Encore ${DUST_COST - state.dust} poussières pour un booster`;
+}
+
+function chooseCard(rarity, used) {
+  const exact = pool.filter(card => card.rarity === rarity && !used.has(card.id));
+  const candidates = exact.length ? exact : pool.filter(card => !used.has(card.id));
+  const card = candidates[Math.floor(Math.random() * candidates.length)];
+  if (!card) return null;
+  used.add(card.id);
+  return card;
+}
+
+function openPack() {
+  const freeAvailable = state.freeDate !== today();
+  if (!freeAvailable && state.dust < DUST_COST) return;
+  if (freeAvailable) state.freeDate = today();
+  else state.dust -= DUST_COST;
+  const used = new Set();
+  const cards = PACK_SLOTS.map(rarity => chooseCard(rarity, used)).filter(Boolean);
+  for (const card of cards) {
+    const existing = state.riders[card.id];
+    if (existing) {
+      existing.count += 1; existing.duplicates += 1; state.dust += dustOf(card.rarity);
+      if (card.rank < existing.bestRank) Object.assign(existing, card, { count: existing.count, duplicates: existing.duplicates, bestRank: card.rank });
+    } else state.riders[card.id] = { ...card, count: 1, duplicates: 0, bestRank: card.rank };
+  }
+  state.packsOpened += 1;
+  state.lastPack = cards;
+  saveState(); refreshUI();
+  showToast(`${cards.filter(card => state.riders[card.id].count === 1).length} nouveaux coureurs dans ton classeur`);
+  $("opening-title").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+
+function showToast(message) {
+  const toast = $("toast"); toast.textContent = message; toast.hidden = false; clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { toast.hidden = true; }, 3200);
+}
+
+function selectTab(tab) {
+  activeTab = tab;
+  const boosterSelected = tab === "booster";
+  $("tab-booster").setAttribute("aria-selected", String(boosterSelected));
+  $("tab-collection").setAttribute("aria-selected", String(!boosterSelected));
+  $("view-booster").hidden = !boosterSelected;
+  $("view-collection").hidden = boosterSelected;
+  if (!boosterSelected) renderCollection();
+}
+
+$("open-pack").addEventListener("click", openPack);
+$("account-open").addEventListener("click", async () => {
+  $("account-message").textContent = "";
+  if (accountUser) $("account-sync-status").textContent = "Collection synchronisée sur ce serveur.";
+  try { await getAccountSession(); }
+  catch { $("account-message").textContent = "Serveur indisponible. Lance l’application avec app.py pour utiliser les comptes."; }
+  $("account-dialog").showModal();
+});
+$("account-close").addEventListener("click", () => $("account-dialog").close());
+$("account-login").addEventListener("click", () => authenticate("/api/login"));
+$("account-register").addEventListener("click", () => authenticate("/api/register"));
+$("account-logout").addEventListener("click", logoutAccount);
+$("account-dialog").addEventListener("click", event => {
+  if (event.target === $("account-dialog")) $("account-dialog").close();
+});
+$("tab-booster").addEventListener("click", () => selectTab("booster"));
+$("tab-collection").addEventListener("click", () => selectTab("collection"));
+$("search-cards").addEventListener("input", renderCollection);
+$("filter-rarity").addEventListener("change", renderCollection);
+$("reset-collection").addEventListener("click", () => {
+  if (!confirm("Effacer la collection enregistrée sur cet appareil ?")) return;
+  state = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
+  saveState(); refreshUI(); showToast("Collection effacée");
+});
+
+refreshUI();
+loadPool();
+loadAccountSession();
+</script>
+</body>
+</html>
