@@ -135,6 +135,13 @@
   .rider-illustration { position: absolute; inset: 42px 8px auto; height: 49%; display: grid; place-items: center;
                        color: var(--rarity); opacity: .92; }
   .rider-illustration svg { width: 100%; max-height: 145px; }
+  .rider-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .2s; }
+  .rider-illustration.has-photo svg { display: none; }
+  .rider-illustration.has-photo .rider-photo { opacity: 1; }
+  .photo-credit { position: absolute; right: 3px; bottom: 1px; left: 3px; z-index: 2; overflow: hidden;
+                  padding: 2px 4px; color: var(--ink); background: rgba(255,254,247,.88); font: 8px/1.2 var(--mono);
+                  text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+  .photo-credit:hover { color: var(--coral); }
   .rider-copy { position: relative; z-index: 2; margin-top: auto; padding-top: 108px; }
   .rider-name { margin: 0; font: 600 14px/1.22 var(--display); overflow-wrap: anywhere; }
   .rider-team { min-height: 18px; margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.25; }
@@ -157,6 +164,8 @@
            padding: 12px 15px; border-radius: 5px; color: #fff; background: var(--ink); box-shadow: 0 7px 24px rgba(10,30,24,.24);
            animation: reveal .2s both; }
   .footer-note { padding: 14px 0 28px; color: var(--muted); font-size: 12px; }
+  .footer-note a { color: inherit; }
+  .footer-note a:hover { color: var(--coral); }
   @keyframes reveal { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
   @media (max-width: 850px) {
     .hero { align-items: start; flex-direction: column; gap: 20px; }
@@ -307,7 +316,7 @@
     <div class="collection-grid" id="collection-grid"></div>
     <div class="empty-state" id="collection-empty">Aucune carte pour l’instant. Ouvre ton premier booster.</div>
   </section>
-  <p class="footer-note" id="storage-note">Profils extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. La rareté reflète le meilleur rang enregistré; chaque carte renvoie à son classement source. Collection invitée enregistrée sur cet appareil.</p>
+  <p class="footer-note" id="storage-note">Profils extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les photos libres affichent leur auteur et leur licence sur la carte. La rareté reflète le meilleur rang enregistré; chaque carte renvoie à son classement source. Collection invitée enregistrée sur cet appareil.</p>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
@@ -365,6 +374,118 @@ let accountUser = null;
 let accountProfile = null;
 let cloudSaveTimer = null;
 let accountMode = "signin";
+const photoQueue = [];
+const photoCache = new Map();
+const photoLookups = new Map();
+let activePhotoLookups = 0;
+const PHOTO_LOOKUP_LIMIT = 2;
+
+function parseMetadataText(value) {
+  return new DOMParser().parseFromString(`<body>${value || ""}</body>`, "text/html").body.textContent.trim();
+}
+
+async function findLicensedPhoto(riderName) {
+  const search = `filetype:bitmap "${riderName}" cyclist`;
+  const params = new URLSearchParams({
+    action: "query", generator: "search", gsrsearch: search, gsrnamespace: "6", gsrlimit: "10",
+    prop: "imageinfo", iiprop: "url|extmetadata", iiurlwidth: "360", format: "json", origin: "*",
+  });
+  const response = await fetch(`https://commons.wikimedia.org/w/api.php?${params}`);
+  if (!response.ok) return null;
+  const data = await response.json();
+  const tokens = normalize(riderName).split(" ").filter(token => token.length > 2);
+  const pages = Object.values(data.query?.pages || {});
+  for (const page of pages) {
+    const image = page.imageinfo?.[0];
+    if (!image?.thumburl || !image.descriptionurl) continue;
+    const metadata = image.extmetadata || {};
+    const license = parseMetadataText(metadata.LicenseShortName?.value);
+    if (!/^(CC0|CC BY(?:-SA)?\s*[1-4](?:\.\d)?|Public domain|PD(?:-|\s))/i.test(license)) continue;
+    const author = parseMetadataText(metadata.Artist?.value || metadata.Credit?.value);
+    if (!author && !/^(CC0|Public domain|PD(?:-|\s))/i.test(license)) continue;
+    const searchable = normalize(`${page.title} ${parseMetadataText(metadata.ImageDescription?.value)} ${parseMetadataText(metadata.Categories?.value)}`);
+    if (!tokens.every(token => searchable.includes(token))) continue;
+    const photoUrl = new URL(image.thumburl);
+    const sourceUrl = new URL(image.descriptionurl);
+    if (!["upload.wikimedia.org", "thumb.wikimedia.org"].includes(photoUrl.hostname)) continue;
+    if (sourceUrl.hostname !== "commons.wikimedia.org") continue;
+    return { url: photoUrl.href, source: sourceUrl.href, author: author || "Domaine public", license };
+  }
+  return null;
+}
+
+async function pumpPhotoQueue() {
+  while (activePhotoLookups < PHOTO_LOOKUP_LIMIT && photoQueue.length) {
+    const job = photoQueue.shift();
+    activePhotoLookups += 1;
+    findLicensedPhoto(job.name).then(photo => {
+      photoCache.set(job.id, photo);
+      try { sessionStorage.setItem(`uci-photo-${job.id}`, JSON.stringify(photo)); } catch {}
+      job.resolve(photo);
+    }).catch(() => {
+      photoCache.set(job.id, null);
+      job.resolve(null);
+    }).finally(() => {
+      photoLookups.delete(job.id);
+      activePhotoLookups -= 1;
+      pumpPhotoQueue();
+    });
+  }
+}
+
+function lookupPhoto(id, name) {
+  if (photoCache.has(id)) return Promise.resolve(photoCache.get(id));
+  if (photoLookups.has(id)) return photoLookups.get(id);
+  try {
+    const saved = sessionStorage.getItem(`uci-photo-${id}`);
+    if (saved !== null) {
+      const photo = JSON.parse(saved);
+      photoCache.set(id, photo);
+      return Promise.resolve(photo);
+    }
+  } catch {}
+  const promise = new Promise(resolve => photoQueue.push({ id, name, resolve }));
+  photoLookups.set(id, promise);
+  pumpPhotoQueue();
+  return promise;
+}
+
+function showCardPhoto(illustration) {
+  const id = illustration.dataset.riderId;
+  const name = illustration.dataset.riderName;
+  lookupPhoto(id, name).then(photo => {
+    if (!photo || !illustration.isConnected) return;
+    const image = illustration.querySelector(".rider-photo");
+    const credit = illustration.querySelector(".photo-credit");
+    image.alt = `Photo de ${name}`;
+    image.addEventListener("load", () => {
+      if (!illustration.isConnected) return;
+      illustration.classList.add("has-photo");
+      credit.href = photo.source;
+      credit.textContent = `Photo : ${photo.author} · ${photo.license}`;
+      credit.hidden = false;
+    }, { once: true });
+    image.src = photo.url;
+  });
+}
+
+const cardPhotoObserver = "IntersectionObserver" in window
+  ? new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        cardPhotoObserver.unobserve(entry.target);
+        showCardPhoto(entry.target);
+      }
+    }, { rootMargin: "100px" })
+  : null;
+
+function observeCardPhotos(root) {
+  const illustrations = root.querySelectorAll(".rider-illustration[data-rider-id]");
+  for (const illustration of illustrations) {
+    if (cardPhotoObserver) cardPhotoObserver.observe(illustration);
+    else showCardPhoto(illustration);
+  }
+}
 
 function saveState() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
@@ -707,7 +828,11 @@ function renderCard(card, options = {}) {
     : `<h3 class="rider-name">${esc(card.rider)}</h3>`;
   return `<article class="rider-card" data-rarity="${esc(card.rarity)}" style="--delay:${delay}ms">
     <div class="rider-top"><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span><span class="rank-tag">MEILLEUR RANG ${card.bestRank || card.rank}</span></div>
-    <div class="rider-illustration">${riderArt(card)}</div>
+      <div class="rider-illustration" data-rider-id="${esc(card.id)}" data-rider-name="${esc(card.rider)}">
+        <img class="rider-photo" alt="" decoding="async">
+        ${riderArt(card)}
+        <a class="photo-credit" hidden target="_blank" rel="noopener"></a>
+      </div>
     <div class="rider-copy">${riderMarkup}<p class="rider-team">${esc(card.team)}</p></div>
     <div class="rider-bottom"><span class="rider-race">${esc(card.race)}<br>${esc(dateLabel(card.date))}</span>
       <span class="rider-count" aria-label="${count ? `${count} exemplaires` : "Nouvelle carte"}">${count || card.countryCode || "+"}</span></div>
@@ -725,6 +850,7 @@ function renderOpening() {
   const hasCards = state.lastPack.length > 0;
   $("opening-empty").hidden = hasCards;
   $("opening-grid").innerHTML = hasCards ? state.lastPack.map((card, index) => renderCard(card, { delay: index * 75 })).join("") : "";
+  observeCardPhotos($("opening-grid"));
   $("opening-subtitle").textContent = hasCards ? `Booster no ${state.packsOpened} · ${dateLabel(state.lastPack[0].date)}` : "Les cartes révélées apparaîtront ici.";
 }
 
@@ -736,6 +862,7 @@ function renderCollection() {
     return matchesText && (filter === "all" || card.rarity === filter);
   }).sort((a, b) => RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity] || a.bestRank - b.bestRank || a.rider.localeCompare(b.rider, "fr"));
   $("collection-grid").innerHTML = records.map(card => renderCard(card, { count: card.count })).join("");
+  observeCardPhotos($("collection-grid"));
   $("collection-empty").hidden = records.length > 0;
   if (!Object.keys(state.riders).length) $("collection-empty").textContent = "Ton classeur est vide. Ouvre ton premier booster.";
   else if (!records.length) $("collection-empty").textContent = "Aucun coureur ne correspond à ces filtres.";
