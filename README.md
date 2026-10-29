@@ -10,16 +10,19 @@ Les comptes utilisent Supabase Auth avec email et mot de passe. La progression e
 
 1. Crée un projet Supabase.
 2. Dans **SQL Editor**, exécute `supabase/migrations/202610290001_user_collections.sql`.
-3. Active la confirmation email et définis une longueur minimale de mot de passe de 12 caractères dans les réglages Auth.
-4. Dans les URL de redirection autorisées, ajoute `https://almaajik.github.io/Carte_interactive_UCI/collection.html` et `http://localhost:8000/collection.html` pour le développement local.
-5. Copie l’URL du projet et sa clé `publishable` dans `supabase-config.js`.
-6. Publie les changements sur GitHub Pages.
+3. Exécute aussi `supabase/migrations/202610290002_profiles.sql` pour activer les noms d’utilisateur uniques (insensibles à la casse).
+4. Active la confirmation email et définis une longueur minimale de mot de passe de 12 caractères dans les réglages Auth.
+5. Dans les URL de redirection autorisées, ajoute `https://almaajik.github.io/Carte_interactive_UCI/collection.html`, `https://almaajik.github.io/Carte_interactive_UCI/profile.html`, `http://localhost:8000/collection.html` et `http://localhost:8000/profile.html` pour le développement local.
+6. Copie l’URL du projet et sa clé `publishable` dans `supabase-config.js`.
+7. Publie les changements sur GitHub Pages.
 
 La clé publishable est destinée au navigateur. Les politiques RLS protègent les données. Ne mets jamais une clé `secret` ou `service_role` dans ce dépôt ou dans le code du site.
 
 À la première connexion, la collection invitée est fusionnée avec le compte. La déconnexion retire les données de compte du stockage local de l’appareil. Pour les comptes déjà créés avec l’ancien serveur Flask local, les utilisateurs et mots de passe ne sont pas migrés; les collections invitées restent importables lors de la première connexion Supabase.
 
-La récupération de mot de passe est gérée par Supabase Auth; configure aussi l’URL du site publiée dans **Authentication → URL Configuration**.
+Le bouton portant le nom d’utilisateur ouvre `profile.html`, où il est possible de modifier le nom unique et le mot de passe.
+
+La récupération de mot de passe est gérée par Supabase Auth et redirige vers `profile.html`; configure cette URL publiée dans **Authentication → URL Configuration**.
 
 ## Tests locaux
 
