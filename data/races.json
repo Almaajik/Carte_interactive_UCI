@@ -1132,8 +1132,8 @@
     "start": "2026-03-29",
     "end": "2026-03-29",
     "classes": [
-      "1.WWT",
-      "1.UWT"
+      "1.UWT",
+      "1.WWT"
     ],
     "entries": 2,
     "coords": {
@@ -1345,8 +1345,8 @@
     "start": "2026-04-12",
     "end": "2026-04-12",
     "classes": [
-      "1.WWT",
-      "1.UWT"
+      "1.UWT",
+      "1.WWT"
     ],
     "entries": 2,
     "coords": {
@@ -1451,8 +1451,8 @@
     "start": "2026-04-19",
     "end": "2026-04-19",
     "classes": [
-      "1.UWT",
-      "1.WWT"
+      "1.WWT",
+      "1.UWT"
     ],
     "entries": 2,
     "coords": {
@@ -3866,7 +3866,7 @@
   },
   {
     "name": "Tre Valle Varesine",
-    "country": "Italy",
+    "country": "",
     "start": "2026-10-06",
     "end": "2026-10-06",
     "classes": [
@@ -3881,7 +3881,7 @@
   },
   {
     "name": "Tre Valle Varesine",
-    "country": "",
+    "country": "Italy",
     "start": "2026-10-06",
     "end": "2026-10-06",
     "classes": [

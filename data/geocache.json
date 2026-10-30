@@ -71,7 +71,9 @@
     "lon": -8.1353519,
     "display": "Portugal"
   },
-  "Trofeo Oro in Euro, Italy": null,
+  "Trofeo Oro in Euro, Italy": {
+    "_not_found": "2026-10-30"
+  },
   "Italy": {
     "lat": 42.6384261,
     "lon": 12.674297,
@@ -98,14 +100,18 @@
   "Clásica Jaén, Spain": null,
   "UAE Tour, United Arab Emirates": null,
   "Volta ao Algarve, Portugal": null,
-  "Vuelta a Andalucia - Ruta del Sol, Spain": null,
+  "Vuelta a Andalucia - Ruta del Sol, Spain": {
+    "_not_found": "2026-10-30"
+  },
   "Classic Var, France": {
     "lat": 43.4078379,
     "lon": 6.0642511,
     "display": "Classic All Blacks, Boulevard Saint-Louis, Brignoles, Var, Provence-Alpes-Côte d'Azur, Metropolitan France, 83170, France"
   },
   "Classica de Almeria, Spain": null,
-  "Midwest Cycling Classic, Belgium": null,
+  "Midwest Cycling Classic, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Belgium": {
     "lat": 50.6402809,
     "lon": 4.6667145,
@@ -129,7 +135,9 @@
   },
   "Faun Ardèche Classic, France": null,
   "Omloop Nieuwsblad, Belgium": null,
-  "Visit South Aegean GP, Greece": null,
+  "Visit South Aegean GP, Greece": {
+    "_not_found": "2026-10-30"
+  },
   "Greece": {
     "lat": 38.9953683,
     "lon": 21.9877132,
@@ -138,7 +146,9 @@
   "Faun Drôme Classic, France": null,
   "Kuurne-Brussels-Kuurne, Belgium": null,
   "Omloop Van Het Hageland, Belgium": null,
-  "Region On Dodecanese GP, Greece": null,
+  "Region On Dodecanese GP, Greece": {
+    "_not_found": "2026-10-30"
+  },
   "Le Samyn des Dames, Belgium": null,
   "Le Samyn, Belgium": null,
   "Trofeo Laigueglia, Italy": null,
@@ -216,7 +226,9 @@
   },
   "La Route Adélie de Vitré, France": null,
   "GP Miguel Indurain, Spain": null,
-  "NXT Classic, Netherlands": null,
+  "NXT Classic, Netherlands": {
+    "_not_found": "2026-10-30"
+  },
   "Netherlands": {
     "lat": 52.2434979,
     "lon": 5.6343227,
@@ -274,7 +286,9 @@
     "display": "Amstel Gold Race Xperience, Plenkertstraat, Valkenburg, Valkenburg aan de Geul, Limburg, Netherlands, 6301 GK, Netherlands"
   },
   "GP Féminin de Chambéry, France": null,
-  "Tour of the Alps, Italy": null,
+  "Tour of the Alps, Italy": {
+    "_not_found": "2026-10-30"
+  },
   "La Flèche Wallonne, Belgium": null,
   "Vuelta Asturias, Spain": {
     "lat": 43.0062836,
@@ -288,7 +302,9 @@
     "lon": 6.0247975,
     "display": "Prussia Belgium Luxembourg No 75, Steinemannstraße, Thommen, Burg-Reuland, Gouvy, Verviers, Liège, Wallonia, 4791, Belgium"
   },
-  "Tour of Türkiye, Türkiye": null,
+  "Tour of Türkiye, Türkiye": {
+    "_not_found": "2026-10-30"
+  },
   "Türkiye": {
     "lat": 39.294076,
     "lon": 35.2316631,
@@ -305,8 +321,12 @@
     "lon": 8.577856,
     "display": "Eschborner Dreieck;Eschborn, A 66, Sossenheim, West, Frankfurt, Hesse, 65936, Germany"
   },
-  "GP Anicolor, Portugal": null,
-  "GP Immo Zone Vloer-en-Chapewerken, Belgium": null,
+  "GP Anicolor, Portugal": {
+    "_not_found": "2026-10-30"
+  },
+  "GP Immo Zone Vloer-en-Chapewerken, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Festival Elsy Jacobs, Luxembourg": null,
   "Luxembourg": {
     "lat": 49.8158683,
@@ -319,8 +339,12 @@
     "lon": 8.8877001,
     "display": "Memoriale Albo d'Oro del Giro dell'Appennino, Via dei Marmi SP5 della Bocchetta (Antica Via Postumia), Pietralavezzara, Campomorone, Genoa, Liguria, 16014, Italy"
   },
-  "Vuelta España Femenina, Spain": null,
-  "Tour of Hellas, Greece": null,
+  "Vuelta España Femenina, Spain": {
+    "_not_found": "2026-10-30"
+  },
+  "Tour of Hellas, Greece": {
+    "_not_found": "2026-10-30"
+  },
   "Giro d'Italia, Italy": {
     "lat": 44.1221124,
     "lon": 12.3993372,
@@ -344,7 +368,9 @@
     "lon": -4.5179885,
     "display": "Résidence Tro Bro Léon, Saint-Sébastien, Lannilis, Brest, Finistère, Brittany, Metropolitan France, 29870, France"
   },
-  "Trofee Maarten Wynants, Belgium": null,
+  "Trofee Maarten Wynants, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Navaraa Women's Classic, Spain": null,
   "Flèche du Sud, Luxembourg": null,
   "Tour de Hongrie, Hungary": {
@@ -383,10 +409,14 @@
   "Antwerp Port Epic Ladies, Belgium": null,
   "GP Criquelion, Belgium": null,
   "Antwerp Port Epic - Sels Trophy, Belgium": null,
-  "GP Mazda, Belgium": null,
+  "GP Mazda, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Boucles de la Mayenne, France": null,
   "Bretagne Ladies Tour, France": null,
-  "Giro d'Italia Women, Italy": null,
+  "Giro d'Italia Women, Italy": {
+    "_not_found": "2026-10-30"
+  },
   "GP Ciudad de Eibar, Spain": null,
   "Tour de Wallonie, Belgium": {
     "lat": 50.6948774,
@@ -420,9 +450,15 @@
   "Dwars Door Het Hageland, Belgium": null,
   "Elfstedenronde, Belgium": null,
   "Flanders Diamond Tour, Belgium": null,
-  "GP Gippingen, Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany": null,
-  "Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany": null,
-  "Baloise Belgium Tour, Belgium": null,
+  "GP Gippingen, Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany": {
+    "_not_found": "2026-10-30"
+  },
+  "Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany": {
+    "_not_found": "2026-10-30"
+  },
+  "Baloise Belgium Tour, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Tour de Suisse, Switzerland": {
     "lat": 47.645973,
     "lon": 9.185936,
@@ -447,7 +483,9 @@
     "lon": 1.5732033,
     "display": "Andorra"
   },
-  "Women Cycling Day, Germany": null,
+  "Women Cycling Day, Germany": {
+    "_not_found": "2026-10-30"
+  },
   "Germany": {
     "lat": 51.1638175,
     "lon": 10.4478313,
@@ -466,13 +504,17 @@
   },
   "Argenta Classic - Deurne, Belgium": null,
   "Tour of Magnificent Qinghai, China": null,
-  "Tour of Austria, Austria": null,
+  "Tour of Austria, Austria": {
+    "_not_found": "2026-10-30"
+  },
   "Austria": {
     "lat": 47.59397,
     "lon": 14.12456,
     "display": "Austria"
   },
-  "Baloise Ladies Tour, Belgium": null,
+  "Baloise Ladies Tour, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "La Périgord Ladies, France": null,
   "La Picto en Nouvelle-Aquitaine, France": null,
   "Clásica de Ordizia, Spain": null,
@@ -525,7 +567,9 @@
     "lon": 15.1667989,
     "display": "Scandia - Czech tour, Poštovní, Centrum, Jablonec nad Nisou, okres Jablonec nad Nisou, Liberec Region, 466 01, Czechia"
   },
-  "Tour de Pologne Women, Poland": null,
+  "Tour de Pologne Women, Poland": {
+    "_not_found": "2026-10-30"
+  },
   "Poland": {
     "lat": 52.215933,
     "lon": 19.134422,
@@ -533,7 +577,9 @@
   },
   "GP Yvonne Reynders, Belgium": null,
   "ADAC Cyclassics, Germany": null,
-  "La Polynormande, France": null,
+  "La Polynormande, France": {
+    "_not_found": "2026-10-30"
+  },
   "Egmont Cycling Race Women, Belgium": null,
   "Tour du Limousin, France": {
     "lat": 45.0499243,
@@ -545,8 +591,12 @@
     "lon": 7.7548175,
     "display": "Wölfe in Deutschland, Otto-Eisel-Pfad, Dahn, Dahner Felsenland, Südwestpfalz, Rhineland-Palatinate, 66994, Germany"
   },
-  "Renewi Tour, Belgium": null,
-  "Tour of Britain Women, United Kingdom": null,
+  "Renewi Tour, Belgium": {
+    "_not_found": "2026-10-30"
+  },
+  "Tour of Britain Women, United Kingdom": {
+    "_not_found": "2026-10-30"
+  },
   "United Kingdom": {
     "lat": 54.7023545,
     "lon": -3.2765753,
@@ -580,7 +630,9 @@
     "lon": 127.6961188,
     "display": "South Korea"
   },
-  "Tour of Britain Men, United Kingdom": null,
+  "Tour of Britain Men, United Kingdom": {
+    "_not_found": "2026-10-30"
+  },
   "ZLM Tour, Netherlands": null,
   "Classic Lorient Agglomération, France": null,
   "Tout Commence En Finistère Ladies Classic, France": null,
@@ -628,7 +680,9 @@
     "display": "GP Automobile, 8, Rue de la science, Parc d'activité économique de Nivelles Sud, Thines, Nivelles, Walloon Brabant, Wallonia, 1402, Belgium"
   },
   "GP de Wallonie Dames, Belgium": null,
-  "Okolo Slovenska, Slovakia": null,
+  "Okolo Slovenska, Slovakia": {
+    "_not_found": "2026-10-30"
+  },
   "Slovakia": {
     "lat": 48.7411522,
     "lon": 19.4528646,
@@ -640,14 +694,18 @@
     "lon": -75.7144052,
     "display": "Place du Centre (Tour), 200, Promenade du Portage, Hull, Gatineau, Outaouais, Quebec, J8X 0A4, Canada"
   },
-  "Kampioenscap Van Vlaanderen, Belgium": null,
+  "Kampioenscap Van Vlaanderen, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Tour of Huangshan, China": null,
   "GP del Lazio, Italy": {
     "lat": 41.8337032,
     "lon": 12.835738,
     "display": "Auto GP, 24/c, Via Valle del Formale, Borgo San Martino, Zagarolo, Roma Capitale, Lazio, 00039, Italy"
   },
-  "Super 8 Classic, Belgium": null,
+  "Super 8 Classic, Belgium": {
+    "_not_found": "2026-10-30"
+  },
   "Giro della Romagna, Italy": {
     "lat": 44.1435359,
     "lon": 11.6690657,
@@ -712,8 +770,12 @@
     "lon": 114.1582831,
     "display": "Hong Kong, China"
   },
-  "Eneco Tour, Netherlands": null,
-  "Eneco Tour Women, Netherlands": null,
+  "Eneco Tour, Netherlands": {
+    "_not_found": "2026-10-30"
+  },
+  "Eneco Tour Women, Netherlands": {
+    "_not_found": "2026-10-30"
+  },
   "Tour of Guangxi, China": null,
   "Giro del Veneto, Italy": {
     "lat": 45.9034482,

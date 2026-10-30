@@ -1,0 +1,77 @@
+{
+ "classes": [
+  "1.WWT"
+ ],
+ "classification": "Result Result [ 1 ]",
+ "country": "Australia",
+ "end": "2026-01-31",
+ "fetched": "2026-10-30",
+ "key": "Cadel Evans Great Ocean Road Race|2026-01-31|Australia",
+ "name": "Cadel Evans Great Ocean Road Race",
+ "rows": [
+  {
+   "rank": 1,
+   "rider": "Ally Wollaston ( NZL )",
+   "team": "FDJ United–Suez",
+   "time": "3h 54' 55\""
+  },
+  {
+   "rank": 2,
+   "rider": "Josie Nelson ( GBR )",
+   "team": "Team Picnic–PostNL",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 3,
+   "rider": "Mireia Benito ( ESP )",
+   "team": "AG Insurance–Soudal",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 4,
+   "rider": "Mackenzie Coupland ( AUS )",
+   "team": "Liv AlUla Jayco",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 5,
+   "rider": "Dominika Włodarczyk ( POL )",
+   "team": "UAE Team ADQ",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 6,
+   "rider": "Sarah Van Dam ( CAN )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 7,
+   "rider": "Noemi Rüegg ( SUI )",
+   "team": "EF Education–Oatly",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 8,
+   "rider": "Ella Wyllie ( NZL )",
+   "team": "Liv AlUla Jayco",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 9,
+   "rider": "Rosita Reijnhout ( NED )",
+   "team": "Visma–Lease a Bike",
+   "time": "+ 0\""
+  },
+  {
+   "rank": 10,
+   "rider": "Amber Kraak ( NED )",
+   "team": "FDJ United–Suez",
+   "time": "+ 0\""
+  }
+ ],
+ "source": "Wikipédia (CC BY-SA 4.0)",
+ "start": "2026-01-31",
+ "title": "2026 Cadel Evans Great Ocean Road Race (women's race)",
+ "url": "https://en.wikipedia.org/wiki/2026_Cadel_Evans_Great_Ocean_Road_Race_%28women%27s_race%29"
+}
