@@ -85,9 +85,9 @@
   "tries": 1
  },
  "Chrono des Nations|2026-10-18|France": {
-  "last": "2026-10-30",
+  "last": "2026-10-31",
   "reason": "page Wikipédia introuvable",
-  "tries": 2
+  "tries": 3
  },
  "Circuit de Wallonie|2026-05-14|Belgium": {
   "last": "2026-10-29",
@@ -175,14 +175,14 @@
   "tries": 1
  },
  "Eneco Tour Women|2026-10-13|Netherlands": {
-  "last": "2026-10-30",
+  "last": "2026-10-31",
   "reason": "page Wikipédia introuvable",
-  "tries": 2
+  "tries": 3
  },
  "Eneco Tour|2026-10-13|Netherlands": {
-  "last": "2026-10-30",
+  "last": "2026-10-31",
   "reason": "page Wikipédia introuvable",
-  "tries": 2
+  "tries": 3
  },
  "Famenne Ardenne Classic|2026-05-03|Belgium": {
   "last": "2026-10-29",
