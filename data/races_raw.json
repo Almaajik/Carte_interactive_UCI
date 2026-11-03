@@ -144,6 +144,15 @@
     "description": null
   },
   {
+    "uid": "3mk435ccq6h2s9jopt3nb9mbam@google.com",
+    "name": "Pionera Race (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-02-01",
+    "end": "2026-02-02",
+    "location": "Spain",
+    "description": null
+  },
+  {
     "uid": "2bkaui3bndn2c4d8lvlpichuaq@google.com",
     "name": "GP La Marseillaise (1.1)",
     "uci_class": "1.1",
@@ -159,15 +168,6 @@
     "start": "2026-02-01",
     "end": "2026-02-02",
     "location": "Australia",
-    "description": null
-  },
-  {
-    "uid": "3mk435ccq6h2s9jopt3nb9mbam@google.com",
-    "name": "Pionera Race (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-02-01",
-    "end": "2026-02-02",
-    "location": "Spain",
     "description": null
   },
   {
@@ -225,21 +225,21 @@
     "description": null
   },
   {
-    "uid": "2hrvu5ks3ispmsh3ee5r073hms@google.com",
-    "name": "Aveiro Fegion Champions Classic (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-02-08",
-    "end": "2026-02-09",
-    "location": "Portugal",
-    "description": null
-  },
-  {
     "uid": "2n17hf4ver5uogmo6p3prvr4ug@google.com",
     "name": "Vuelta CV Feminas (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-02-08",
     "end": "2026-02-09",
     "location": "Spain",
+    "description": null
+  },
+  {
+    "uid": "2hrvu5ks3ispmsh3ee5r073hms@google.com",
+    "name": "Aveiro Fegion Champions Classic (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-02-08",
+    "end": "2026-02-09",
+    "location": "Portugal",
     "description": null
   },
   {
@@ -261,21 +261,21 @@
     "description": null
   },
   {
-    "uid": "2abei8ik9f58bdfbt7f6iuaig4@google.com",
-    "name": "Vuelta a Murcia (2.1)",
-    "uci_class": "2.1",
-    "start": "2026-02-13",
-    "end": "2026-02-15",
-    "location": "Spain",
-    "description": null
-  },
-  {
     "uid": "4qgeamggamrj2l6t35akk51gu3@google.com",
     "name": "Tour de La Provence (2.1)",
     "uci_class": "2.1",
     "start": "2026-02-13",
     "end": "2026-02-16",
     "location": "France",
+    "description": null
+  },
+  {
+    "uid": "2abei8ik9f58bdfbt7f6iuaig4@google.com",
+    "name": "Vuelta a Murcia (2.1)",
+    "uci_class": "2.1",
+    "start": "2026-02-13",
+    "end": "2026-02-15",
+    "location": "Spain",
     "description": null
   },
   {
@@ -315,15 +315,6 @@
     "description": null
   },
   {
-    "uid": "0757rat48n48cj51ie3gi5469o@google.com",
-    "name": "Vuelta a Andalucia - Ruta del Sol (2.Pro)",
-    "uci_class": "2.Pro",
-    "start": "2026-02-18",
-    "end": "2026-02-23",
-    "location": "Spain",
-    "description": null
-  },
-  {
     "uid": "5mbisktofnbe98gq4bnuo7krht@google.com",
     "name": "Volta ao Algarve (2.Pro)",
     "uci_class": "2.Pro",
@@ -333,20 +324,20 @@
     "description": null
   },
   {
+    "uid": "0757rat48n48cj51ie3gi5469o@google.com",
+    "name": "Vuelta a Andalucia - Ruta del Sol (2.Pro)",
+    "uci_class": "2.Pro",
+    "start": "2026-02-18",
+    "end": "2026-02-23",
+    "location": "Spain",
+    "description": null
+  },
+  {
     "uid": "7erpgorgn5ddeifukmlei1bslj@google.com",
     "name": "Classic Var (1.1)",
     "uci_class": "1.1",
     "start": "2026-02-21",
     "end": "2026-02-22",
-    "location": "France",
-    "description": null
-  },
-  {
-    "uid": "2rffc47vudedqgfjdangoqltq0@google.com",
-    "name": "Tour des Alpes-Maritimes (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-02-22",
-    "end": "2026-02-23",
     "location": "France",
     "description": null
   },
@@ -360,21 +351,30 @@
     "description": null
   },
   {
-    "uid": "4cspjb8rdik5m8lh16cfu7dfln@google.com",
-    "name": "Tour du Rwanda (2.1)",
-    "uci_class": "2.1",
-    "start": "2026-02-22",
-    "end": "2026-03-02",
-    "location": "Rwanda",
-    "description": null
-  },
-  {
     "uid": "4pgm1l9gbm8hhrvuim9fda2rk3@google.com",
     "name": "Classica de Almeria (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-02-22",
     "end": "2026-02-23",
     "location": "Spain",
+    "description": null
+  },
+  {
+    "uid": "2rffc47vudedqgfjdangoqltq0@google.com",
+    "name": "Tour des Alpes-Maritimes (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-02-22",
+    "end": "2026-02-23",
+    "location": "France",
+    "description": null
+  },
+  {
+    "uid": "4cspjb8rdik5m8lh16cfu7dfln@google.com",
+    "name": "Tour du Rwanda (2.1)",
+    "uci_class": "2.1",
+    "start": "2026-02-22",
+    "end": "2026-03-02",
+    "location": "Rwanda",
     "description": null
   },
   {
@@ -405,21 +405,21 @@
     "description": null
   },
   {
-    "uid": "2ng1hbd9v5rnlbc93h8hvoh8ej@google.com",
-    "name": "Faun Ardèche Classic (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-02-28",
-    "end": "2026-03-01",
-    "location": "France",
-    "description": null
-  },
-  {
     "uid": "1u42p1lu03cvv3i1r7jveo925h@google.com",
     "name": "Omloop Nieuwsblad (1.UWT)",
     "uci_class": "1.UWT",
     "start": "2026-02-28",
     "end": "2026-03-01",
     "location": "Belgium",
+    "description": null
+  },
+  {
+    "uid": "2ng1hbd9v5rnlbc93h8hvoh8ej@google.com",
+    "name": "Faun Ardèche Classic (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-02-28",
+    "end": "2026-03-01",
+    "location": "France",
     "description": null
   },
   {
@@ -432,21 +432,21 @@
     "description": null
   },
   {
-    "uid": "68anoeqoevffmes7cd3u0kanou@google.com",
-    "name": "Omloop Van Het Hageland (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-03-01",
-    "end": "2026-03-02",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "2epl1ni08oh9nq4nhie65d483i@google.com",
     "name": "Faun Drôme Classic (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-03-01",
     "end": "2026-03-02",
     "location": "France",
+    "description": null
+  },
+  {
+    "uid": "68anoeqoevffmes7cd3u0kanou@google.com",
+    "name": "Omloop Van Het Hageland (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-03-01",
+    "end": "2026-03-02",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -648,21 +648,21 @@
     "description": null
   },
   {
-    "uid": "3b7c7ancq13fcbnvo5vbu4qkrh@google.com",
-    "name": "Ronde Van Brugge (1.UWT)",
-    "uci_class": "1.UWT",
-    "start": "2026-03-25",
-    "end": "2026-03-26",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "62bc2tb71h8doen0kc1is1h20l@google.com",
     "name": "Settimana Coppi e Bartali (2.1)",
     "uci_class": "2.1",
     "start": "2026-03-25",
     "end": "2026-03-30",
     "location": "Italy",
+    "description": null
+  },
+  {
+    "uid": "3b7c7ancq13fcbnvo5vbu4qkrh@google.com",
+    "name": "Ronde Van Brugge (1.UWT)",
+    "uci_class": "1.UWT",
+    "start": "2026-03-25",
+    "end": "2026-03-26",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -684,15 +684,6 @@
     "description": null
   },
   {
-    "uid": "4l5l2eht88ascjtk10hmtma1u9@google.com",
-    "name": "Gent-Wevelgem (1.UWT)",
-    "uci_class": "1.UWT",
-    "start": "2026-03-29",
-    "end": "2026-03-30",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "49hcq0g70p0ockvq9k1l8skb4u@google.com",
     "name": "La Roue Tourangelle (1.1)",
     "uci_class": "1.1",
@@ -702,21 +693,30 @@
     "description": null
   },
   {
-    "uid": "6r40dcjabu4di4sik31bt52701@google.com",
-    "name": "Gent-Wevelgem (1.WWT)",
-    "uci_class": "1.WWT",
-    "start": "2026-03-29",
-    "end": "2026-03-30",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "690d744cfdqbpvafoedsmp668t@google.com",
     "name": "GP Emilia (1.1)",
     "uci_class": "1.1",
     "start": "2026-03-29",
     "end": "2026-03-30",
     "location": "Italy",
+    "description": null
+  },
+  {
+    "uid": "4l5l2eht88ascjtk10hmtma1u9@google.com",
+    "name": "Gent-Wevelgem (1.UWT)",
+    "uci_class": "1.UWT",
+    "start": "2026-03-29",
+    "end": "2026-03-30",
+    "location": "Belgium",
+    "description": null
+  },
+  {
+    "uid": "6r40dcjabu4di4sik31bt52701@google.com",
+    "name": "Gent-Wevelgem (1.WWT)",
+    "uci_class": "1.WWT",
+    "start": "2026-03-29",
+    "end": "2026-03-30",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -765,21 +765,21 @@
     "description": null
   },
   {
-    "uid": "3e7r4g5qfeet3l773fuj14spa7@google.com",
-    "name": "GP Miguel Indurain (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-04-04",
-    "end": "2026-04-05",
-    "location": "Spain",
-    "description": null
-  },
-  {
     "uid": "2tl7hkh488hffv57fomdsh8r7b@google.com",
     "name": "NXT Classic (1.1)",
     "uci_class": "1.1",
     "start": "2026-04-04",
     "end": "2026-04-05",
     "location": "Netherlands",
+    "description": null
+  },
+  {
+    "uid": "3e7r4g5qfeet3l773fuj14spa7@google.com",
+    "name": "GP Miguel Indurain (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-04-04",
+    "end": "2026-04-05",
+    "location": "Spain",
     "description": null
   },
   {
@@ -828,7 +828,7 @@
     "description": null
   },
   {
-    "uid": "6eghl4hid0312bv5ufod4svgan@google.com",
+    "uid": "3254rqudb2oqchiko9j7gb8ft1@google.com",
     "name": "Scheldeprijs (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-04-08",
@@ -837,7 +837,7 @@
     "description": null
   },
   {
-    "uid": "3254rqudb2oqchiko9j7gb8ft1@google.com",
+    "uid": "6eghl4hid0312bv5ufod4svgan@google.com",
     "name": "Scheldeprijs (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-04-08",
@@ -855,18 +855,18 @@
     "description": null
   },
   {
-    "uid": "462siqhpjm82dcv55hlbu3mclm@google.com",
-    "name": "Paris-Roubaix (1.WWT)",
-    "uci_class": "1.WWT",
+    "uid": "2eu9b6q8qid8igltdd1jr7865g@google.com",
+    "name": "Paris-Roubaix (1.UWT)",
+    "uci_class": "1.UWT",
     "start": "2026-04-12",
     "end": "2026-04-13",
     "location": "France",
     "description": null
   },
   {
-    "uid": "2eu9b6q8qid8igltdd1jr7865g@google.com",
-    "name": "Paris-Roubaix (1.UWT)",
-    "uci_class": "1.UWT",
+    "uid": "462siqhpjm82dcv55hlbu3mclm@google.com",
+    "name": "Paris-Roubaix (1.WWT)",
+    "uci_class": "1.WWT",
     "start": "2026-04-12",
     "end": "2026-04-13",
     "location": "France",
@@ -882,21 +882,21 @@
     "description": null
   },
   {
-    "uid": "6th522na2hh5tntqbgdll1i39a@google.com",
-    "name": "Ronde Van Limburg (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-04-15",
-    "end": "2026-04-16",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "4n7hastqhsoli95mja5t064ua4@google.com",
     "name": "Tour of Hainan (2.Pro)",
     "uci_class": "2.Pro",
     "start": "2026-04-15",
     "end": "2026-04-20",
     "location": "China",
+    "description": null
+  },
+  {
+    "uid": "6th522na2hh5tntqbgdll1i39a@google.com",
+    "name": "Ronde Van Limburg (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-04-15",
+    "end": "2026-04-16",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -972,18 +972,18 @@
     "description": null
   },
   {
-    "uid": "3g0foj3ikfaddaabrq27jjrhc9@google.com",
-    "name": "La Flèche Wallonne (1.WWT)",
-    "uci_class": "1.WWT",
+    "uid": "3hdg6enp3u9j4p3nlkol1um1h5@google.com",
+    "name": "La Flèche Wallonne (1.UWT)",
+    "uci_class": "1.UWT",
     "start": "2026-04-22",
     "end": "2026-04-23",
     "location": "Belgium",
     "description": null
   },
   {
-    "uid": "3hdg6enp3u9j4p3nlkol1um1h5@google.com",
-    "name": "La Flèche Wallonne (1.UWT)",
-    "uci_class": "1.UWT",
+    "uid": "3g0foj3ikfaddaabrq27jjrhc9@google.com",
+    "name": "La Flèche Wallonne (1.WWT)",
+    "uci_class": "1.WWT",
     "start": "2026-04-22",
     "end": "2026-04-23",
     "location": "Belgium",
@@ -1017,21 +1017,21 @@
     "description": null
   },
   {
-    "uid": "7aj5tmlvpdbbhp5a2mbs9qas97@google.com",
-    "name": "Liège-Bastogne-Liège (1.UWT)",
-    "uci_class": "1.UWT",
-    "start": "2026-04-26",
-    "end": "2026-04-27",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "15e7cqdeh1ufuhb2h94vhsls71@google.com",
     "name": "GP della Liberazione Donne (1.1)",
     "uci_class": "1.1",
     "start": "2026-04-26",
     "end": "2026-04-27",
     "location": "Italy",
+    "description": null
+  },
+  {
+    "uid": "7aj5tmlvpdbbhp5a2mbs9qas97@google.com",
+    "name": "Liège-Bastogne-Liège (1.UWT)",
+    "uci_class": "1.UWT",
+    "start": "2026-04-26",
+    "end": "2026-04-27",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -1053,15 +1053,6 @@
     "description": null
   },
   {
-    "uid": "2qe52ahsjmut8g6s0l5bh73nsc@google.com",
-    "name": "GP Anicolor (2.1)",
-    "uci_class": "2.1",
-    "start": "2026-05-01",
-    "end": "2026-05-04",
-    "location": "Portugal",
-    "description": null
-  },
-  {
     "uid": "45ou6k2bugkuu354dm4io7qsqd@google.com",
     "name": "GP Immo Zone Vloer-en-Chapewerken (1.1)",
     "uci_class": "1.1",
@@ -1080,21 +1071,21 @@
     "description": null
   },
   {
+    "uid": "2qe52ahsjmut8g6s0l5bh73nsc@google.com",
+    "name": "GP Anicolor (2.1)",
+    "uci_class": "2.1",
+    "start": "2026-05-01",
+    "end": "2026-05-04",
+    "location": "Portugal",
+    "description": null
+  },
+  {
     "uid": "4rhf67i0o919j17hub7t6vsu16@google.com",
     "name": "Festival Elsy Jacobs (1.1)",
     "uci_class": "1.1",
     "start": "2026-05-02",
     "end": "2026-05-03",
     "location": "Luxembourg",
-    "description": null
-  },
-  {
-    "uid": "7ob8lguub1l6is4v56t9t0veb1@google.com",
-    "name": "Giro dell'Appennino (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-05-03",
-    "end": "2026-05-04",
-    "location": "Italy",
     "description": null
   },
   {
@@ -1107,21 +1098,30 @@
     "description": null
   },
   {
-    "uid": "76sivp0l8nbhv8rijm59on2cop@google.com",
-    "name": "Festival Elsy Jacobs (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-05-03",
-    "end": "2026-05-04",
-    "location": "Luxembourg",
-    "description": null
-  },
-  {
     "uid": "580o4pa8l4ak9ie4dvkg6vok45@google.com",
     "name": "Vuelta España Femenina (2.WWT)",
     "uci_class": "2.WWT",
     "start": "2026-05-03",
     "end": "2026-05-11",
     "location": "Spain",
+    "description": null
+  },
+  {
+    "uid": "7ob8lguub1l6is4v56t9t0veb1@google.com",
+    "name": "Giro dell'Appennino (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-05-03",
+    "end": "2026-05-04",
+    "location": "Italy",
+    "description": null
+  },
+  {
+    "uid": "76sivp0l8nbhv8rijm59on2cop@google.com",
+    "name": "Festival Elsy Jacobs (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-05-03",
+    "end": "2026-05-04",
+    "location": "Luxembourg",
     "description": null
   },
   {
@@ -1152,18 +1152,18 @@
     "description": null
   },
   {
-    "uid": "14a5c6dt006cb1l04a6lpgldk6@google.com",
-    "name": "GP du Morbihan (1.Pro)",
-    "uci_class": "1.Pro",
+    "uid": "3t8sl022m5n4f8enu11ap1r5pa@google.com",
+    "name": "GP du Morbihan Femmes (1.1)",
+    "uci_class": "1.1",
     "start": "2026-05-09",
     "end": "2026-05-10",
     "location": "France",
     "description": null
   },
   {
-    "uid": "3t8sl022m5n4f8enu11ap1r5pa@google.com",
-    "name": "GP du Morbihan Femmes (1.1)",
-    "uci_class": "1.1",
+    "uid": "14a5c6dt006cb1l04a6lpgldk6@google.com",
+    "name": "GP du Morbihan (1.Pro)",
+    "uci_class": "1.Pro",
     "start": "2026-05-09",
     "end": "2026-05-10",
     "location": "France",
@@ -1179,21 +1179,21 @@
     "description": null
   },
   {
-    "uid": "0bcacfiginqeha8peoa2thtf7j@google.com",
-    "name": "Trofee Maarten Wynants (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-05-10",
-    "end": "2026-05-11",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "3q9d914fbfqhq1g1uuriqh8p5g@google.com",
     "name": "Tro-Bro Léon (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-05-10",
     "end": "2026-05-11",
     "location": "France",
+    "description": null
+  },
+  {
+    "uid": "0bcacfiginqeha8peoa2thtf7j@google.com",
+    "name": "Trofee Maarten Wynants (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-05-10",
+    "end": "2026-05-11",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -1377,18 +1377,18 @@
     "description": null
   },
   {
-    "uid": "0kaaumv3ehq1e0hse3r4vnk22d@google.com",
-    "name": "Bretagne Ladies Tour (2.1)",
-    "uci_class": "2.1",
+    "uid": "0jsta6msc84tko1p80jg6qrjqo@google.com",
+    "name": "Boucles de la Mayenne (2.Pro)",
+    "uci_class": "2.Pro",
     "start": "2026-05-28",
     "end": "2026-06-01",
     "location": "France",
     "description": null
   },
   {
-    "uid": "0jsta6msc84tko1p80jg6qrjqo@google.com",
-    "name": "Boucles de la Mayenne (2.Pro)",
-    "uci_class": "2.Pro",
+    "uid": "0kaaumv3ehq1e0hse3r4vnk22d@google.com",
+    "name": "Bretagne Ladies Tour (2.1)",
+    "uci_class": "2.1",
     "start": "2026-05-28",
     "end": "2026-06-01",
     "location": "France",
@@ -1458,6 +1458,15 @@
     "description": null
   },
   {
+    "uid": "0hbjmdlafld3n2leh301mmovud@google.com",
+    "name": "Alpes Grésivaudan Classic (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-06-07",
+    "end": "2026-06-08",
+    "location": "France",
+    "description": null
+  },
+  {
     "uid": "0d7a63r8o0433erpe8vo3nn5t6@google.com",
     "name": "Dwars Door De Westhoek (1.1)",
     "uci_class": "1.1",
@@ -1473,15 +1482,6 @@
     "start": "2026-06-07",
     "end": "2026-06-08",
     "location": "Belgium",
-    "description": null
-  },
-  {
-    "uid": "0hbjmdlafld3n2leh301mmovud@google.com",
-    "name": "Alpes Grésivaudan Classic (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-06-07",
-    "end": "2026-06-08",
-    "location": "France",
     "description": null
   },
   {
@@ -1530,12 +1530,12 @@
     "description": null
   },
   {
-    "uid": "0gl7m3hlfa8rk6g81gqgfukhhc@google.com",
-    "name": "GP Gippingen (1.1)",
-    "uci_class": "1.1",
+    "uid": "1nlvhceeeh4rao9rf18m9pllji@google.com",
+    "name": "Copenhagen Sprint (1.UWT)",
+    "uci_class": "1.UWT",
     "start": "2026-06-14",
     "end": "2026-06-15",
-    "location": "Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany",
+    "location": "Denmark",
     "description": null
   },
   {
@@ -1548,6 +1548,15 @@
     "description": null
   },
   {
+    "uid": "0gl7m3hlfa8rk6g81gqgfukhhc@google.com",
+    "name": "GP Gippingen (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-06-14",
+    "end": "2026-06-15",
+    "location": "Trier Arena, Fort-Worth-Platz 1, 54292 Trier, Germany",
+    "description": null
+  },
+  {
     "uid": "049a8pmjdgacj81s2thad7s5nl@google.com",
     "name": "Flanders Diamond Tour (1.1)",
     "uci_class": "1.1",
@@ -1557,30 +1566,12 @@
     "description": null
   },
   {
-    "uid": "1nlvhceeeh4rao9rf18m9pllji@google.com",
-    "name": "Copenhagen Sprint (1.UWT)",
-    "uci_class": "1.UWT",
-    "start": "2026-06-14",
-    "end": "2026-06-15",
-    "location": "Denmark",
-    "description": null
-  },
-  {
     "uid": "672du2i44i44h4skjq5f3bbdgf@google.com",
     "name": "Tour de Suisse Women (2.WWT)",
     "uci_class": "2.WWT",
     "start": "2026-06-17",
     "end": "2026-06-22",
     "location": "Switzerland",
-    "description": null
-  },
-  {
-    "uid": "4305mhnlgni3ogmko2sg1h947s@google.com",
-    "name": "Baloise Belgium Tour (2.Pro)",
-    "uci_class": "2.Pro",
-    "start": "2026-06-17",
-    "end": "2026-06-22",
-    "location": "Belgium",
     "description": null
   },
   {
@@ -1602,6 +1593,15 @@
     "description": null
   },
   {
+    "uid": "4305mhnlgni3ogmko2sg1h947s@google.com",
+    "name": "Baloise Belgium Tour (2.Pro)",
+    "uci_class": "2.Pro",
+    "start": "2026-06-17",
+    "end": "2026-06-22",
+    "location": "Belgium",
+    "description": null
+  },
+  {
     "uid": "30nu43ssllekht8havdfik80hr@google.com",
     "name": "La Route d'Occitanie (2.1)",
     "uci_class": "2.1",
@@ -1620,15 +1620,6 @@
     "description": null
   },
   {
-    "uid": "6mutd1j9k7gvqf41naacb3dr0d@google.com",
-    "name": "Andorra Classic (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-06-21",
-    "end": "2026-06-22",
-    "location": "Andorra",
-    "description": null
-  },
-  {
     "uid": "23oedc6j7us9njete1eu3s0q5s@google.com",
     "name": "Women Cycling Day (1.Pro)",
     "uci_class": "1.Pro",
@@ -1638,12 +1629,12 @@
     "description": null
   },
   {
-    "uid": "02pckt4p9op2sutfvb771g5dum@google.com",
-    "name": "Sibiu Tour (2.1)",
-    "uci_class": "2.1",
-    "start": "2026-07-04",
-    "end": "2026-07-08",
-    "location": "Romania",
+    "uid": "6mutd1j9k7gvqf41naacb3dr0d@google.com",
+    "name": "Andorra Classic (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-06-21",
+    "end": "2026-06-22",
+    "location": "Andorra",
     "description": null
   },
   {
@@ -1653,6 +1644,15 @@
     "start": "2026-07-04",
     "end": "2026-07-27",
     "location": "France",
+    "description": null
+  },
+  {
+    "uid": "02pckt4p9op2sutfvb771g5dum@google.com",
+    "name": "Sibiu Tour (2.1)",
+    "uci_class": "2.1",
+    "start": "2026-07-04",
+    "end": "2026-07-08",
+    "location": "Romania",
     "description": null
   },
   {
@@ -1764,21 +1764,21 @@
     "description": null
   },
   {
-    "uid": "1g19cpmitdfkm7dgoqqebkhf8n@google.com",
-    "name": "Circuito de Getxo (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-08-02",
-    "end": "2026-08-03",
-    "location": "Spain",
-    "description": null
-  },
-  {
     "uid": "6udlkt17gimghjopn3qm82kisr@google.com",
     "name": "China Xizang Trans-Himalaya (2.1)",
     "uci_class": "2.1",
     "start": "2026-08-02",
     "end": "2026-08-07",
     "location": "China",
+    "description": null
+  },
+  {
+    "uid": "1g19cpmitdfkm7dgoqqebkhf8n@google.com",
+    "name": "Circuito de Getxo (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-08-02",
+    "end": "2026-08-03",
+    "location": "Spain",
     "description": null
   },
   {
@@ -1863,21 +1863,21 @@
     "description": null
   },
   {
-    "uid": "5529tflr7qds4fpap7khgeig11@google.com",
-    "name": "Tour du Limousin (2.1)",
-    "uci_class": "2.1",
-    "start": "2026-08-18",
-    "end": "2026-08-22",
-    "location": "France",
-    "description": null
-  },
-  {
     "uid": "3ea13u3h1ki2c2j0a91scbuh0q@google.com",
     "name": "Egmont Cycling Race Women (1.1)",
     "uci_class": "1.1",
     "start": "2026-08-18",
     "end": "2026-08-19",
     "location": "Belgium",
+    "description": null
+  },
+  {
+    "uid": "5529tflr7qds4fpap7khgeig11@google.com",
+    "name": "Tour du Limousin (2.1)",
+    "uci_class": "2.1",
+    "start": "2026-08-18",
+    "end": "2026-08-22",
+    "location": "France",
     "description": null
   },
   {
@@ -1890,21 +1890,21 @@
     "description": null
   },
   {
-    "uid": "59tb4tbohnfedn274o6jnablcc@google.com",
-    "name": "Renewi Tour (2.UWT)",
-    "uci_class": "2.UWT",
-    "start": "2026-08-19",
-    "end": "2026-08-24",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "5t62a19bt8n05bvko4me1j1qnp@google.com",
     "name": "Tour of Britain Women (2.WWT)",
     "uci_class": "2.WWT",
     "start": "2026-08-19",
     "end": "2026-08-24",
     "location": "United Kingdom",
+    "description": null
+  },
+  {
+    "uid": "59tb4tbohnfedn274o6jnablcc@google.com",
+    "name": "Renewi Tour (2.UWT)",
+    "uci_class": "2.UWT",
+    "start": "2026-08-19",
+    "end": "2026-08-24",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -1962,15 +1962,6 @@
     "description": null
   },
   {
-    "uid": "27mpunmvfqdid4fje73afacpdq@google.com",
-    "name": "Philadelphia Cycling Classic (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-08-30",
-    "end": "2026-08-31",
-    "location": "United States",
-    "description": null
-  },
-  {
     "uid": "69ibp3uv7msdbdmabcd3v5dbpa@google.com",
     "name": "GP Kranj (1.1)",
     "uci_class": "1.1",
@@ -1980,12 +1971,12 @@
     "description": null
   },
   {
-    "uid": "72vq8ntaqbtdgjfcsuqkbuu6c7@google.com",
-    "name": "Bretagne Classic - Ouest France (1.UWT)",
-    "uci_class": "1.UWT",
+    "uid": "27mpunmvfqdid4fje73afacpdq@google.com",
+    "name": "Philadelphia Cycling Classic (1.1)",
+    "uci_class": "1.1",
     "start": "2026-08-30",
     "end": "2026-08-31",
-    "location": "France",
+    "location": "United States",
     "description": null
   },
   {
@@ -1995,6 +1986,15 @@
     "start": "2026-08-30",
     "end": "2026-08-31",
     "location": "United States",
+    "description": null
+  },
+  {
+    "uid": "72vq8ntaqbtdgjfcsuqkbuu6c7@google.com",
+    "name": "Bretagne Classic - Ouest France (1.UWT)",
+    "uci_class": "1.UWT",
+    "start": "2026-08-30",
+    "end": "2026-08-31",
+    "location": "France",
     "description": null
   },
   {
@@ -2133,30 +2133,12 @@
     "description": null
   },
   {
-    "uid": "0bu91giv728uqhnkora1q4kmb7@google.com",
-    "name": "Women's Cycling GP Stuttgart (1.Pro)",
+    "uid": "0sj2al5njbpjkkl3sied9mgb85@google.com",
+    "name": "GP de Fourmies - La Voix du Nord (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-09-13",
     "end": "2026-09-14",
-    "location": "Germany",
-    "description": null
-  },
-  {
-    "uid": "585a97jo8ofdck8cqpkv70n5p8@google.com",
-    "name": "Trofeo Matteotti (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-09-13",
-    "end": "2026-09-14",
-    "location": "Italy",
-    "description": null
-  },
-  {
-    "uid": "4trdu97e26t31c1fdk4cgg653i@google.com",
-    "name": "GP de Montréal (1.UWT)",
-    "uci_class": "1.UWT",
-    "start": "2026-09-13",
-    "end": "2026-09-14",
-    "location": "Canada",
+    "location": "France",
     "description": null
   },
   {
@@ -2169,12 +2151,30 @@
     "description": null
   },
   {
-    "uid": "0sj2al5njbpjkkl3sied9mgb85@google.com",
-    "name": "GP de Fourmies - La Voix du Nord (1.Pro)",
+    "uid": "0bu91giv728uqhnkora1q4kmb7@google.com",
+    "name": "Women's Cycling GP Stuttgart (1.Pro)",
     "uci_class": "1.Pro",
     "start": "2026-09-13",
     "end": "2026-09-14",
-    "location": "France",
+    "location": "Germany",
+    "description": null
+  },
+  {
+    "uid": "4trdu97e26t31c1fdk4cgg653i@google.com",
+    "name": "GP de Montréal (1.UWT)",
+    "uci_class": "1.UWT",
+    "start": "2026-09-13",
+    "end": "2026-09-14",
+    "location": "Canada",
+    "description": null
+  },
+  {
+    "uid": "585a97jo8ofdck8cqpkv70n5p8@google.com",
+    "name": "Trofeo Matteotti (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-09-13",
+    "end": "2026-09-14",
+    "location": "Italy",
     "description": null
   },
   {
@@ -2196,24 +2196,6 @@
     "description": null
   },
   {
-    "uid": "527o9sn5mdmicq0bg6c2hen8fm@google.com",
-    "name": "Chrono Féminin du Gatineau (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-09-16",
-    "end": "2026-09-17",
-    "location": "Canada",
-    "description": null
-  },
-  {
-    "uid": "4vibsf73d3kl2jfvjlb7vl61pv@google.com",
-    "name": "GP de Wallonie Dames (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-09-16",
-    "end": "2026-09-17",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "0o23s1dj36tof1dsquqtiagbfe@google.com",
     "name": "Tour of Luxembourg (2.Pro)",
     "uci_class": "2.Pro",
@@ -2229,6 +2211,24 @@
     "start": "2026-09-16",
     "end": "2026-09-21",
     "location": "Slovakia",
+    "description": null
+  },
+  {
+    "uid": "527o9sn5mdmicq0bg6c2hen8fm@google.com",
+    "name": "Chrono Féminin du Gatineau (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-09-16",
+    "end": "2026-09-17",
+    "location": "Canada",
+    "description": null
+  },
+  {
+    "uid": "4vibsf73d3kl2jfvjlb7vl61pv@google.com",
+    "name": "GP de Wallonie Dames (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-09-16",
+    "end": "2026-09-17",
+    "location": "Belgium",
     "description": null
   },
   {
@@ -2259,15 +2259,6 @@
     "description": null
   },
   {
-    "uid": "19h984babli27rf1iephnnn07l@google.com",
-    "name": "Super 8 Classic (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-09-19",
-    "end": "2026-09-20",
-    "location": "Belgium",
-    "description": null
-  },
-  {
     "uid": "0p0k7d338jvr4gg0jv6hvdnelo@google.com",
     "name": "GP del Lazio (1.1)",
     "uci_class": "1.1",
@@ -2277,8 +2268,35 @@
     "description": null
   },
   {
+    "uid": "19h984babli27rf1iephnnn07l@google.com",
+    "name": "Super 8 Classic (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-09-19",
+    "end": "2026-09-20",
+    "location": "Belgium",
+    "description": null
+  },
+  {
+    "uid": "1jhcu3ipb90h7q6dkp0153lmri@google.com",
+    "name": "Gooikse Pijl (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-09-20",
+    "end": "2026-09-21",
+    "location": "Belgium",
+    "description": null
+  },
+  {
     "uid": "7q2bh1otge8hsi4ksrmgoutn8h@google.com",
     "name": "World Championships: Women's TT",
+    "uci_class": null,
+    "start": "2026-09-20",
+    "end": "2026-09-21",
+    "location": "Canada",
+    "description": null
+  },
+  {
+    "uid": "4le90gv1kjuqkac34i7a06opk4@google.com",
+    "name": "World Championships: Men's TT",
     "uci_class": null,
     "start": "2026-09-20",
     "end": "2026-09-21",
@@ -2292,24 +2310,6 @@
     "start": "2026-09-20",
     "end": "2026-09-21",
     "location": "Italy",
-    "description": null
-  },
-  {
-    "uid": "1jhcu3ipb90h7q6dkp0153lmri@google.com",
-    "name": "Gooikse Pijl (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-09-20",
-    "end": "2026-09-21",
-    "location": "Belgium",
-    "description": null
-  },
-  {
-    "uid": "4le90gv1kjuqkac34i7a06opk4@google.com",
-    "name": "World Championships: Men's TT",
-    "uci_class": null,
-    "start": "2026-09-20",
-    "end": "2026-09-21",
-    "location": "Canada",
     "description": null
   },
   {
@@ -2340,6 +2340,15 @@
     "description": null
   },
   {
+    "uid": "2b3u9metgsqjdmf9vlr5lciq20@google.com",
+    "name": "Tour de Langkawi (2.Pro)",
+    "uci_class": "2.Pro",
+    "start": "2026-09-27",
+    "end": "2026-10-05",
+    "location": "Malaysia",
+    "description": null
+  },
+  {
     "uid": "2a1ck8p21i1e9quapnn1f3mvr9@google.com",
     "name": "Paris-Chauny (1.1)",
     "uci_class": "1.1",
@@ -2358,12 +2367,21 @@
     "description": null
   },
   {
-    "uid": "2b3u9metgsqjdmf9vlr5lciq20@google.com",
-    "name": "Tour de Langkawi (2.Pro)",
-    "uci_class": "2.Pro",
-    "start": "2026-09-27",
-    "end": "2026-10-05",
-    "location": "Malaysia",
+    "uid": "5nlf4v853kaucb5ti6ruplrg4j@google.com",
+    "name": "Giro dell'Emilia (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-10-03",
+    "end": "2026-10-04",
+    "location": "Italy",
+    "description": null
+  },
+  {
+    "uid": "3meehm1ld713fnubilah1lcife@google.com",
+    "name": "Giro dell'Emilia Donne (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-10-03",
+    "end": "2026-10-04",
+    "location": "Italy",
     "description": null
   },
   {
@@ -2385,21 +2403,12 @@
     "description": null
   },
   {
-    "uid": "3meehm1ld713fnubilah1lcife@google.com",
-    "name": "Giro dell'Emilia Donne (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-10-03",
-    "end": "2026-10-04",
-    "location": "Italy",
-    "description": null
-  },
-  {
-    "uid": "5nlf4v853kaucb5ti6ruplrg4j@google.com",
-    "name": "Giro dell'Emilia (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-10-03",
-    "end": "2026-10-04",
-    "location": "Italy",
+    "uid": "4q3t253p0dn17tq96ncfq0aadq@google.com",
+    "name": "Tour de Vendée (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-10-04",
+    "end": "2026-10-05",
+    "location": "France",
     "description": null
   },
   {
@@ -2409,15 +2418,6 @@
     "start": "2026-10-04",
     "end": "2026-10-05",
     "location": "Italy",
-    "description": null
-  },
-  {
-    "uid": "4q3t253p0dn17tq96ncfq0aadq@google.com",
-    "name": "Tour de Vendée (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-10-04",
-    "end": "2026-10-05",
-    "location": "France",
     "description": null
   },
   {
@@ -2448,7 +2448,7 @@
     "description": null
   },
   {
-    "uid": "5kdbfs4do2u51j8p81pb4r42kg@google.com",
+    "uid": "7fflgt53je7maer5is628v7f98@google.com",
     "name": "Binche-Chimay-Binche (1.1)",
     "uci_class": "1.1",
     "start": "2026-10-06",
@@ -2457,7 +2457,7 @@
     "description": null
   },
   {
-    "uid": "7fflgt53je7maer5is628v7f98@google.com",
+    "uid": "5kdbfs4do2u51j8p81pb4r42kg@google.com",
     "name": "Binche-Chimay-Binche (1.1)",
     "uci_class": "1.1",
     "start": "2026-10-06",
@@ -2502,15 +2502,6 @@
     "description": null
   },
   {
-    "uid": "3a6jo01cfdan61m5bshc2ft3ic@google.com",
-    "name": "Paris-Tours (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-10-11",
-    "end": "2026-10-12",
-    "location": "France",
-    "description": null
-  },
-  {
     "uid": "3u6c6md3rrqc3q4g9kll9ggpq3@google.com",
     "name": "Sun Hung Kai Hong Kong Cyclothon (1.1)",
     "uci_class": "1.1",
@@ -2520,12 +2511,12 @@
     "description": null
   },
   {
-    "uid": "4gpdsp6oc1tif1fa78qgml2i3p@google.com",
-    "name": "Tour of Guangxi (2.UWT)",
-    "uci_class": "2.UWT",
-    "start": "2026-10-13",
-    "end": "2026-10-19",
-    "location": "China",
+    "uid": "3a6jo01cfdan61m5bshc2ft3ic@google.com",
+    "name": "Paris-Tours (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-10-11",
+    "end": "2026-10-12",
+    "location": "France",
     "description": null
   },
   {
@@ -2547,6 +2538,15 @@
     "description": null
   },
   {
+    "uid": "4gpdsp6oc1tif1fa78qgml2i3p@google.com",
+    "name": "Tour of Guangxi (2.UWT)",
+    "uci_class": "2.UWT",
+    "start": "2026-10-13",
+    "end": "2026-10-19",
+    "location": "China",
+    "description": null
+  },
+  {
     "uid": "5iknmlruo6bvqhbg292dsrmj1i@google.com",
     "name": "Veneto Women (1.1)",
     "uci_class": "1.1",
@@ -2565,25 +2565,7 @@
     "description": null
   },
   {
-    "uid": "7va4ku80i1dol28kjpo7onpfo9@google.com",
-    "name": "Utsunomiya Japan Cup (1.Pro)",
-    "uci_class": "1.Pro",
-    "start": "2026-10-18",
-    "end": "2026-10-19",
-    "location": "Japan",
-    "description": null
-  },
-  {
     "uid": "4qhs9nd8o7vua436rjv9keod0f@google.com",
-    "name": "Chrono des Nations (1.1)",
-    "uci_class": "1.1",
-    "start": "2026-10-18",
-    "end": "2026-10-19",
-    "location": "France",
-    "description": null
-  },
-  {
-    "uid": "235pqamfl6s4gffb3kjootjft3@google.com",
     "name": "Chrono des Nations (1.1)",
     "uci_class": "1.1",
     "start": "2026-10-18",
@@ -2598,6 +2580,24 @@
     "start": "2026-10-18",
     "end": "2026-10-19",
     "location": "Italy",
+    "description": null
+  },
+  {
+    "uid": "235pqamfl6s4gffb3kjootjft3@google.com",
+    "name": "Chrono des Nations (1.1)",
+    "uci_class": "1.1",
+    "start": "2026-10-18",
+    "end": "2026-10-19",
+    "location": "France",
+    "description": null
+  },
+  {
+    "uid": "7va4ku80i1dol28kjpo7onpfo9@google.com",
+    "name": "Utsunomiya Japan Cup (1.Pro)",
+    "uci_class": "1.Pro",
+    "start": "2026-10-18",
+    "end": "2026-10-19",
+    "location": "Japan",
     "description": null
   }
 ]
