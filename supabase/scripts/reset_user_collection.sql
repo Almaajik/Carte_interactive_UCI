@@ -3,7 +3,7 @@ DO $reset_collection$
 DECLARE
   target_email text := 'REMPLACER_PAR_EMAIL';
   target_user_id uuid;
-  empty_collection jsonb := '{"riders":{},"dust":0,"freeDate":"","packsOpened":0,"lastPack":[]}'::jsonb;
+  empty_collection jsonb := '{"riders":{},"drops":0,"boosterTokens":0,"freeDate":"","packsOpened":0,"lastPack":[]}'::jsonb;
 BEGIN
   IF target_email !~ '^[^[:space:]@]+@[^[:space:]@]+\.[^[:space:]@]+$' THEN
     RAISE EXCEPTION 'Set target_email to a valid account email before running this script.';

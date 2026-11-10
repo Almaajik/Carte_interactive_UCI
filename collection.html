@@ -76,6 +76,41 @@
   .tab[aria-selected="true"] { color: var(--ink); background: #dfe8dd; box-shadow: inset 0 -3px var(--coral); }
   .tab:hover { color: var(--ink); }
   .view { padding: 24px 0 56px; }
+  .mail-open { position: relative; width: 36px; height: 36px; border: 1px solid rgba(238,244,233,.3); border-radius: 4px;
+               color: #f7f5e9; background: transparent; cursor: pointer; font-size: 18px; }
+  .mail-open:hover { border-color: #e8c66f; color: #e8c66f; }
+  .mail-count { position: absolute; top: -7px; right: -7px; min-width: 17px; padding: 1px 4px; border-radius: 9px;
+                color: white; background: var(--coral); font: 10px/1.4 var(--mono); }
+  .race-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+  .race-tools input { min-height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
+  .race-list { display: grid; gap: 10px; }
+  .race-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 18px;
+              border: 1px solid var(--line); border-radius: 5px; background: var(--card); }
+  .race-row h3 { margin: 0; font: 600 15px/1.3 var(--display); }
+  .race-row p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
+  .race-status { color: var(--teal); font: 500 11px/1.4 var(--mono); text-align: right; }
+  .race-open, .race-submit, .mail-claim { min-height: 36px; padding: 0 12px; border: 0; border-radius: 4px; color: #fff;
+                                           background: var(--ink); cursor: pointer; font-weight: 600; }
+  .race-open:hover:not(:disabled), .race-submit:hover:not(:disabled), .mail-claim:hover:not(:disabled) { background: var(--teal); }
+  .race-open:disabled, .race-submit:disabled, .mail-claim:disabled { cursor: not-allowed; opacity: .48; }
+  .race-detail { margin-top: 20px; padding: 20px; border: 1px solid var(--line); border-radius: 5px; background: var(--card); }
+  .race-detail h3 { margin: 0; font: 600 18px/1.3 var(--display); }
+  .race-detail > p { color: var(--muted); }
+  .team-picker, .race-standings, .mail-list { display: grid; gap: 8px; margin: 14px 0; }
+  .team-card { display: flex; align-items: center; gap: 10px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 4px; }
+  .team-card input { width: 17px; height: 17px; accent-color: var(--teal); }
+  .team-card span { flex: 1; }
+  .team-card small { color: var(--muted); font: 11px/1.4 var(--mono); }
+  .team-card:has(input:disabled) { opacity: .62; }
+  .race-standing, .mail-item { padding: 12px; border: 1px solid var(--line); border-radius: 4px; }
+  .race-standing strong, .mail-item strong { display: block; }
+  .race-standing p, .mail-item p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+  .mail-dialog { width: min(560px, calc(100% - 28px)); max-height: min(80vh, 700px); padding: 0; overflow: auto;
+                 border: 1px solid var(--line); border-radius: 7px; color: var(--ink); background: var(--paper); }
+  .mail-dialog::backdrop { background: rgba(15,35,29,.62); backdrop-filter: blur(3px); }
+  .mail-content { padding: 18px 24px 24px; }
+  .mail-empty { color: var(--muted); }
+  .error-note { color: var(--coral) !important; }
   .pack-stage { min-height: 342px; display: grid; grid-template-columns: minmax(0, 1fr) 310px; align-items: center; gap: 32px;
                 padding: 34px 46px; overflow: hidden; border-radius: 7px; color: #f7f5e9; background: var(--ink);
                 background-image: linear-gradient(110deg, transparent 55%, rgba(244,239,214,.045) 55% 56%, transparent 56%),
@@ -145,6 +180,8 @@
   .rider-copy { position: relative; z-index: 2; margin-top: auto; padding-top: 108px; }
   .rider-name { margin: 0; font: 600 14px/1.22 var(--display); overflow-wrap: anywhere; }
   .rider-team { min-height: 18px; margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.25; }
+  .rider-profile { display: inline-block; margin-top: 4px; color: var(--teal); font: 500 9px/1.3 var(--mono); text-transform: uppercase; }
+  .rider-score { margin-top: 3px; color: var(--ink-soft); font: 10px/1.3 var(--mono); }
   .rider-bottom { align-items: end; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
   .rider-race { max-width: 76%; color: var(--ink-soft); font-size: 10px; line-height: 1.25; }
   .rider-count { flex: none; display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid var(--line);
@@ -178,6 +215,7 @@
     .masthead { min-height: 56px; padding: 10px 12px; }
     .masthead-actions { gap: 8px; }
     .account-open { min-height: 34px; padding: 0 8px; font-size: 12px; }
+    .mail-open { width: 34px; height: 34px; }
     .back { font-size: 12px; }
     .account-dialog-head { padding: 18px 18px 12px; }
     .account-content { padding: 16px 18px 20px; }
@@ -200,6 +238,12 @@
     .collection-tools input { flex: 1; width: 100%; }
     .collection-tools select { flex: 1; }
     .collection-tools .text-button { margin-left: auto; }
+    .race-row { align-items: flex-start; padding: 12px; }
+    .race-row h3 { font-size: 13px; }
+    .race-row > div:last-child { flex: none; }
+    .race-open { padding: 0 8px; font-size: 12px; }
+    .race-detail { padding: 14px; }
+    .mail-content { padding: 16px 18px 20px; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -213,6 +257,9 @@
     <span class="brand-name">LE PELOTON</span>
   </a>
   <div class="masthead-actions">
+    <button class="mail-open" id="mail-open" type="button" aria-label="Ouvrir la boîte de réception" title="Boîte de réception">
+      <span aria-hidden="true">✉</span><span class="mail-count" id="mail-count" hidden>0</span>
+    </button>
     <button class="account-open" id="account-open" type="button">Compte</button>
     <a class="back" href="index.html">← Carte des courses</a>
   </div>
@@ -247,6 +294,14 @@
   </div>
 </dialog>
 
+<dialog class="mail-dialog" id="mail-dialog" aria-labelledby="mail-title">
+  <div class="account-dialog-head">
+    <div><p class="eyebrow">Le Peloton · récompenses</p><h2 id="mail-title">Boîte de réception</h2></div>
+    <button class="dialog-close" id="mail-close" type="button" aria-label="Fermer">×</button>
+  </div>
+  <div class="mail-content" id="mail-content"><p class="mail-empty">Connecte-toi pour consulter tes récompenses.</p></div>
+</dialog>
+
 <main class="shell">
   <section class="hero" aria-labelledby="page-title">
     <div>
@@ -257,13 +312,14 @@
     <div class="stats" aria-label="Statistiques de collection">
       <div class="stat"><strong id="stat-unique">0</strong><span>coureurs</span></div>
       <div class="stat"><strong id="stat-total">0</strong><span>cartes</span></div>
-      <div class="stat"><strong id="stat-dust">0</strong><span>poussières</span></div>
+      <div class="stat"><strong id="stat-drops">0</strong><span>drops</span></div>
     </div>
   </section>
 
   <nav class="tabs" role="tablist" aria-label="Vues de la collection">
     <button class="tab" id="tab-booster" type="button" role="tab" aria-selected="true" aria-controls="view-booster">Boosters</button>
     <button class="tab" id="tab-collection" type="button" role="tab" aria-selected="false" aria-controls="view-collection">Ma collection</button>
+    <button class="tab" id="tab-races" type="button" role="tab" aria-selected="false" aria-controls="view-races">Courses</button>
   </nav>
 
   <section class="view" id="view-booster" role="tabpanel" aria-labelledby="tab-booster">
@@ -303,7 +359,7 @@
 
   <section class="view" id="view-collection" role="tabpanel" aria-labelledby="tab-collection" hidden>
     <div class="section-head">
-      <div><h2>Le classeur</h2><p id="collection-subtitle">Les coureurs déjà trouvés, doublons compris.</p></div>
+      <div><h2>Le classeur</h2><p id="collection-subtitle">10e = 1 pt · podium : +5 / +3 / +1 · classement général ×2.</p></div>
       <div class="collection-tools">
         <input id="search-cards" type="search" placeholder="Nom ou équipe" aria-label="Rechercher dans la collection">
         <select id="filter-rarity" aria-label="Filtrer par rareté">
@@ -316,6 +372,14 @@
     <div class="collection-grid" id="collection-grid"></div>
     <div class="empty-state" id="collection-empty">Aucune carte pour l’instant. Ouvre ton premier booster.</div>
   </section>
+  <section class="view" id="view-races" role="tabpanel" aria-labelledby="tab-races" hidden>
+    <div class="section-head">
+      <div><h2>Course du jour</h2><p>Chaque jour, une course tirée au sort du calendrier · équipe de 5 cartes · départ à 20 h.</p></div>
+    </div>
+    <p id="race-notice" class="hero-note" aria-live="polite">Chargement du calendrier…</p>
+    <div class="race-list" id="race-list"></div>
+    <div class="race-detail" id="race-detail" hidden></div>
+  </section>
   <p class="footer-note" id="storage-note">Profils extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les photos libres affichent leur auteur et leur licence sur la carte. La rareté reflète le meilleur rang enregistré; chaque carte renvoie à son classement source. Collection invitée enregistrée sur cet appareil.</p>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
@@ -326,13 +390,13 @@
 const STORAGE_KEY = "uci-peloton-collection-v1";
 const ACCOUNT_OWNER_KEY = "uci-peloton-account-owner-v1";
 const ACCOUNT_DIRTY_KEY = "uci-peloton-account-dirty-v1";
-const EMPTY_COLLECTION = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
+const EMPTY_COLLECTION = { riders: {}, drops: 0, boosterTokens: 0, freeDate: "", packsOpened: 0, lastPack: [] };
 const SUPABASE_CONFIG = window.SUPABASE_CONFIG || {};
 const supabaseClient = window.supabase?.createClient && SUPABASE_CONFIG.url?.startsWith("https://")
   && SUPABASE_CONFIG.publishableKey?.startsWith("sb_publishable_")
   ? window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.publishableKey)
   : null;
-const DUST_COST = 100;
+const DROPS_COST = 100;
 const PACK_SIZE = 5;
 const RARITY_DROPS = [
   { rarity: "legendary", label: "Légendaire", weight: 3 },
@@ -353,17 +417,19 @@ const dateLabel = value => {
   return `${day} ${MONTHS[month - 1]} ${year}`;
 };
 const rarityOf = rank => rank === 1 ? "legendary" : rank <= 3 ? "epic" : rank <= 10 ? "rare" : "common";
-const dustOf = rarity => ({ legendary: 40, epic: 25, rare: 10, common: 4 })[rarity] || 0;
+const dropsOf = rarity => ({ legendary: 40, epic: 25, rare: 10, common: 4 })[rarity] || 0;
 const migrateCard = card => RARITY_LABEL[card?.rarity] ? card : { ...card, rarity: rarityOf(Number(card?.bestRank || card?.rank) || 11) };
 
 function readState() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
     const riders = saved.riders && typeof saved.riders === "object" ? saved.riders : {};
-    return { riders: Object.fromEntries(Object.entries(riders).map(([id, card]) => [id, migrateCard(card)])), dust: Number(saved.dust) || 0,
+    return { riders: Object.fromEntries(Object.entries(riders).map(([id, card]) => [id, migrateCard(card)])),
+             drops: Number(saved.drops ?? saved["dust"]) || 0,
+             boosterTokens: Number(saved.boosterTokens) || 0,
              freeDate: saved.freeDate || "", packsOpened: Number(saved.packsOpened) || 0,
          lastPack: Array.isArray(saved.lastPack) ? saved.lastPack.map(migrateCard) : [] };
-  } catch { return { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] }; }
+  } catch { return { ...EMPTY_COLLECTION }; }
 }
 
 let state = readState();
@@ -374,6 +440,15 @@ let accountUser = null;
 let accountProfile = null;
 let cloudSaveTimer = null;
 let accountMode = "signin";
+let raceEvents = [];
+let selectedRace = null;
+let raceEntries = [];
+let inboxMessages = [];
+let raceCatalogCount = 0;
+let displayedParisDate = "";
+let settlementCheckDate = "";
+let raceBackendReady = false;
+let raceBackendMessage = "Chargement du calendrier…";
 const photoQueue = [];
 const photoCache = new Map();
 const photoLookups = new Map();
@@ -497,10 +572,13 @@ function saveState() {
   }
 }
 
-function mergeCollections(remote, local) {
+function mergeCollections(remote, local, preferLocalBalances = false) {
   const merged = {
     riders: { ...(remote?.riders || {}) },
-    dust: Math.max(Number(remote?.dust) || 0, Number(local?.dust) || 0),
+    drops: preferLocalBalances ? Number(local?.drops) || 0
+      : Math.max(Number(remote?.drops ?? remote?.["dust"]) || 0, Number(local?.drops) || 0),
+    boosterTokens: preferLocalBalances ? Number(local?.boosterTokens) || 0
+      : Math.max(Number(remote?.boosterTokens) || 0, Number(local?.boosterTokens) || 0),
     freeDate: [remote?.freeDate || "", local?.freeDate || ""].sort().at(-1),
     packsOpened: Math.max(Number(remote?.packsOpened) || 0, Number(local?.packsOpened) || 0),
     lastPack: (Number(remote?.packsOpened) || 0) >= (Number(local?.packsOpened) || 0)
@@ -526,7 +604,7 @@ function mergeCollections(remote, local) {
 
 function resolveAccountCollection(remote, local, ownerId, dirtyOwner, userId) {
   if (ownerId === userId) {
-    return mergeCollections(remote, dirtyOwner === userId ? local : { ...EMPTY_COLLECTION });
+    return mergeCollections(remote, dirtyOwner === userId ? local : { ...EMPTY_COLLECTION }, dirtyOwner === userId);
   }
   return mergeCollections(remote, ownerId ? { ...EMPTY_COLLECTION } : local);
 }
@@ -544,6 +622,7 @@ async function loadAccountSession() {
     if (accountUser) {
       await loadAccountProfile();
       await loadCloudCollection();
+      await safelyRefreshRaceAccountData();
     }
     else if (localStorage.getItem(ACCOUNT_OWNER_KEY)) {
       localStorage.removeItem(STORAGE_KEY);
@@ -665,6 +744,7 @@ async function authenticate(mode) {
     accountUser = data.user;
     await loadAccountProfile();
     await loadCloudCollection();
+    await safelyRefreshRaceAccountData();
     refreshUI();
     $("account-form").reset();
     $("account-dialog").close();
@@ -686,6 +766,8 @@ async function logoutAccount() {
     if (error) throw error;
     accountUser = null;
     accountProfile = null;
+    inboxMessages = [];
+    refreshMailBadge();
     state = { ...EMPTY_COLLECTION };
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(ACCOUNT_OWNER_KEY);
@@ -727,6 +809,8 @@ function watchAuthChanges() {
       const hadAccount = Boolean(localStorage.getItem(ACCOUNT_OWNER_KEY));
       accountUser = null;
       accountProfile = null;
+      inboxMessages = [];
+      refreshMailBadge();
       if (hadAccount) {
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(ACCOUNT_OWNER_KEY);
@@ -749,6 +833,31 @@ function riderIdentity(rawName) {
   return { id: `${normalize(name)}${countryCode ? `-${countryCode.toLowerCase()}` : ""}`, name, countryCode };
 }
 
+function rankingType(label) {
+  const value = normalize(label);
+  if (/mountain|montagne|climber|king of the mountains/.test(value)) return "mountain";
+  if (/points|sprint|green jersey/.test(value)) return "sprint";
+  if (/youth|young rider|jeune/.test(value)) return "youth";
+  if (/general|overall|final/.test(value)) return "general";
+  return "race";
+}
+
+function pointsForRank(rank, type) {
+  if (!Number.isInteger(rank) || rank < 1 || rank > 10) return 0;
+  const placePoints = 11 - rank;
+  const podiumBonus = rank === 1 ? 5 : rank === 2 ? 3 : rank === 3 ? 1 : 0;
+  return (placePoints + podiumBonus) * (type === "general" ? 2 : 1);
+}
+
+function riderProfile(points) {
+  if (points.mountain && points.mountain >= points.sprint && points.mountain >= points.general) return "Grimpeur";
+  if (points.sprint && points.sprint >= points.mountain && points.sprint >= points.general) return "Sprinteur";
+  if (points.general && points.general >= points.mountain && points.general >= points.sprint) return "Spécialiste du général";
+  if (points.race) return "Coureur de classiques";
+  if (points.youth) return "Jeune talent";
+  return "Profil à préciser";
+}
+
 async function loadPool() {
   const button = $("open-pack");
   const note = $("pack-note");
@@ -757,36 +866,58 @@ async function loadPool() {
     if (!response.ok) throw new Error("Index des résultats introuvable");
     const index = await response.json();
     const entries = Object.values(index).filter(entry => entry && /^[a-z0-9-]+$/.test(entry.slug));
+    const catalogue = new Map();
     for (let i = 0; i < entries.length; i += 12) {
       const batch = await Promise.all(entries.slice(i, i + 12).map(async entry => {
         try {
           const resultResponse = await fetch(`data/results/${entry.slug}.json`);
           if (!resultResponse.ok) return [];
           const result = await resultResponse.json();
-          return (result.rows || []).filter(row => Number.isInteger(row.rank) && row.rider).map(row => {
-            const identity = riderIdentity(row.rider);
-            return { id: identity.id, rider: identity.name, countryCode: identity.countryCode, team: row.team || "Équipe inconnue",
-                     rank: row.rank, rarity: rarityOf(row.rank), race: result.name, date: result.start, slug: entry.slug,
-                     country: result.country || "", classes: result.classes || [] };
-          });
+          const rankings = Array.isArray(result.classifications) && result.classifications.length
+            ? result.classifications
+            : [{ classification: result.classification || "Résultat", rows: result.rows || [] }];
+          return rankings.flatMap(ranking => (ranking.rows || [])
+            .filter(row => Number.isInteger(row.rank) && row.rider)
+            .map(row => {
+              const identity = riderIdentity(row.rider);
+              const type = rankingType(ranking.classification || result.classification || "");
+              return { id: identity.id, rider: identity.name, countryCode: identity.countryCode, team: row.team || "Équipe inconnue",
+                       rank: row.rank, points: pointsForRank(row.rank, type), rankingType: type,
+                       race: result.name, date: result.start, slug: entry.slug,
+                       country: result.country || "", classes: result.classes || [] };
+            }));
         } catch { return []; }
       }));
-      pool.push(...batch.flat());
-      note.textContent = `${Math.min(i + 12, entries.length)} / ${entries.length} classements chargés`;
-    }
-    const catalogue = new Map();
-    for (const appearance of pool) {
-      const current = catalogue.get(appearance.id);
-      if (!current) {
-        catalogue.set(appearance.id, { ...appearance, bestRank: appearance.rank, appearances: 1 });
-      } else {
-        current.appearances += 1;
+      const entriesAppearances = batch.flat();
+      const raceRiders = new Set();
+      for (const appearance of entriesAppearances) {
+        let current = catalogue.get(appearance.id);
+        if (!current) {
+          current = { ...appearance, bestRank: appearance.rank, appearances: 0, score: 0,
+            rankingPoints: { general: 0, mountain: 0, sprint: 0, youth: 0, race: 0 } };
+          catalogue.set(appearance.id, current);
+        }
+        if (!raceRiders.has(`${appearance.slug}:${appearance.id}`)) {
+          current.appearances += 1;
+          raceRiders.add(`${appearance.slug}:${appearance.id}`);
+        }
+        current.score += appearance.points;
+        current.rankingPoints[appearance.rankingType] += appearance.points;
         if (appearance.rank < current.bestRank || (appearance.rank === current.bestRank && appearance.date > current.date)) {
-          Object.assign(current, appearance, { bestRank: appearance.rank, appearances: current.appearances });
+          Object.assign(current, appearance, { bestRank: appearance.rank });
         }
       }
+      note.textContent = `${Math.min(i + 12, entries.length)} / ${entries.length} classements chargés`;
     }
-    pool = [...catalogue.values()].map(card => ({ ...card, rank: card.bestRank, rarity: rarityOf(card.bestRank) }));
+    pool = [...catalogue.values()].map(card => ({
+      ...card, rank: card.bestRank, rarity: rarityOf(card.bestRank), profile: riderProfile(card.rankingPoints),
+    }));
+    const catalogueById = new Map(pool.map(card => [card.id, card]));
+    for (const card of [...Object.values(state.riders), ...state.lastPack]) {
+      const latest = catalogueById.get(card.id);
+      if (latest) Object.assign(card, latest, { count: card.count, duplicates: card.duplicates });
+    }
+    if (state.drops || state.packsOpened || Object.keys(state.riders).length) saveState();
     if (pool.length < PACK_SIZE) throw new Error("Pas assez de coureurs pour composer un booster");
     $("pool-summary").innerHTML = `<strong>${pool.length}</strong> coureurs uniques · <strong>${entries.length}</strong> classements`;
     note.textContent = `${pool.length} coureurs uniques · meilleures places issues des résultats enregistrés`;
@@ -826,6 +957,9 @@ function renderCard(card, options = {}) {
   const riderMarkup = link
     ? `<a href="${esc(link)}" aria-label="Voir le classement de ${esc(card.race)}"><h3 class="rider-name">${esc(card.rider)}</h3></a>`
     : `<h3 class="rider-name">${esc(card.rider)}</h3>`;
+  const rankingLabels = { general: "Général", mountain: "Montagne", sprint: "Sprint", youth: "Jeunes", race: "Courses" };
+  const scoreDetails = Object.entries(card.rankingPoints || {}).filter(([, points]) => points > 0)
+    .map(([type, points]) => `${rankingLabels[type]} : ${points} pts`).join(" · ");
   return `<article class="rider-card" data-rarity="${esc(card.rarity)}" style="--delay:${delay}ms">
     <div class="rider-top"><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span><span class="rank-tag">MEILLEUR RANG ${card.bestRank || card.rank}</span></div>
       <div class="rider-illustration" data-rider-id="${esc(card.id)}" data-rider-name="${esc(card.rider)}">
@@ -833,7 +967,10 @@ function renderCard(card, options = {}) {
         ${riderArt(card)}
         <a class="photo-credit" hidden target="_blank" rel="noopener"></a>
       </div>
-    <div class="rider-copy">${riderMarkup}<p class="rider-team">${esc(card.team)}</p></div>
+    <div class="rider-copy">${riderMarkup}<p class="rider-team">${esc(card.team)}</p>
+      <span class="rider-profile">${esc(card.profile || "Profil à préciser")}</span>
+      <p class="rider-score" title="${esc(scoreDetails || "Aucun point enregistré")}">${Number(card.score) || 0} pts</p>
+    </div>
     <div class="rider-bottom"><span class="rider-race">${esc(card.race)}<br>${esc(dateLabel(card.date))}</span>
       <span class="rider-count" aria-label="${count ? `${count} exemplaires` : "Nouvelle carte"}">${count || card.countryCode || "+"}</span></div>
   </article>`;
@@ -843,7 +980,7 @@ function renderStats() {
   const records = Object.values(state.riders);
   $("stat-unique").textContent = String(records.length);
   $("stat-total").textContent = String(records.reduce((total, card) => total + card.count, 0));
-  $("stat-dust").textContent = String(state.dust);
+  $("stat-drops").textContent = String(state.drops);
 }
 
 function renderOpening() {
@@ -872,11 +1009,14 @@ function refreshUI() {
   renderStats(); renderOpening(); renderCollection();
   refreshAccountUI();
   const freeAvailable = state.freeDate !== today();
-  const canExchange = !freeAvailable && state.dust >= DUST_COST;
+  const canExchange = !freeAvailable && state.drops >= DROPS_COST;
+  const canUseRewardBooster = !freeAvailable && state.boosterTokens > 0;
   const button = $("open-pack");
-  button.disabled = pool.length === 0 || (!freeAvailable && !canExchange);
-  button.textContent = freeAvailable ? "Ouvrir le booster du jour" : canExchange ? `Échanger ${DUST_COST} poussières` : "Prochain booster demain";
-  if (pool.length) $("pack-note").textContent = freeAvailable ? "Un paquet gratuit chaque jour" : canExchange ? "Un booster gratuit est déjà ouvert aujourd’hui" : `Encore ${DUST_COST - state.dust} poussières pour un booster`;
+  button.disabled = pool.length === 0 || (!freeAvailable && !canExchange && !canUseRewardBooster);
+  button.textContent = freeAvailable ? "Ouvrir le booster du jour" : canUseRewardBooster ? "Ouvrir un booster gagné" : canExchange ? `Échanger ${DROPS_COST} drops` : "Prochain booster demain";
+  if (pool.length) $("pack-note").textContent = freeAvailable ? "Un paquet gratuit chaque jour" : canUseRewardBooster
+    ? `${state.boosterTokens} booster(s) gagné(s) disponible(s)` : canExchange
+      ? "Un booster gratuit est déjà ouvert aujourd’hui" : `Encore ${DROPS_COST - state.drops} drops pour un booster`;
 }
 
 function chooseCard(used) {
@@ -900,15 +1040,17 @@ function chooseCard(used) {
 
 function openPack() {
   const freeAvailable = state.freeDate !== today();
-  if (!freeAvailable && state.dust < DUST_COST) return;
+  const hasRewardBooster = !freeAvailable && state.boosterTokens > 0;
+  if (!freeAvailable && !hasRewardBooster && state.drops < DROPS_COST) return;
   if (freeAvailable) state.freeDate = today();
-  else state.dust -= DUST_COST;
+  else if (hasRewardBooster) state.boosterTokens -= 1;
+  else state.drops -= DROPS_COST;
   const used = new Set();
   const cards = Array.from({ length: PACK_SIZE }, () => chooseCard(used)).filter(Boolean);
   for (const card of cards) {
     const existing = state.riders[card.id];
     if (existing) {
-      existing.count += 1; existing.duplicates += 1; state.dust += dustOf(card.rarity);
+      existing.count += 1; existing.duplicates += 1; state.drops += dropsOf(card.rarity);
       if (card.rank < existing.bestRank) Object.assign(existing, card, { count: existing.count, duplicates: existing.duplicates, bestRank: card.rank });
     } else state.riders[card.id] = { ...card, count: 1, duplicates: 0, bestRank: card.rank };
   }
@@ -926,15 +1068,316 @@ function showToast(message) {
 
 function selectTab(tab) {
   activeTab = tab;
-  const boosterSelected = tab === "booster";
-  $("tab-booster").setAttribute("aria-selected", String(boosterSelected));
-  $("tab-collection").setAttribute("aria-selected", String(!boosterSelected));
-  $("view-booster").hidden = !boosterSelected;
-  $("view-collection").hidden = boosterSelected;
-  if (!boosterSelected) renderCollection();
+  for (const name of ["booster", "collection", "races"]) {
+    const selected = tab === name;
+    $(`tab-${name}`).setAttribute("aria-selected", String(selected));
+    $(`view-${name}`).hidden = !selected;
+  }
+  if (tab === "collection") renderCollection();
+  if (tab === "races") renderRaces();
+}
+
+function parisClock() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+  }).formatToParts(new Date()).map(part => [part.type, part.value]));
+  return { date: `${parts.year}-${parts.month}-${parts.day}`, minutes: Number(parts.hour) * 60 + Number(parts.minute) };
+}
+
+function racePhase(race, clock = parisClock()) {
+  if (race.race_date > clock.date) return "À venir";
+  if (race.race_date < clock.date) return "Terminée";
+  if (clock.minutes < 19 * 60 + 55) return "Inscriptions ouvertes";
+  if (clock.minutes < 20 * 60) return "Équipes verrouillées";
+  return "Résultats disponibles";
+}
+
+function raceSlug(race) {
+  return normalize(`${race.name} ${race.start || race.race_date} ${race.country}`).replace(/ /g, "-");
+}
+
+function localRaceCatalog(races) {
+  return races.filter(race => race.coords && race.start).map(race => ({
+    slug: raceSlug(race), name: race.name, race_date: race.start, country: race.country,
+  }));
+}
+
+function renderRaces() {
+  const clock = parisClock();
+  $("race-list").innerHTML = raceEvents.map(race => `
+    <article class="race-row">
+      <div><h3>${esc(race.name)}</h3><p>${esc(race.country)} · course du ${esc(dateLabel(race.race_date))}${race.edition_date ? ` · édition du ${esc(dateLabel(race.edition_date))}` : ""} · départ 20 h (Paris)</p></div>
+      <div><div class="race-status">${esc(racePhase(race, clock))}</div>
+        <button class="race-open" type="button" data-race-date="${esc(race.race_date)}">Voir la course</button></div>
+    </article>`).join("");
+  const note = $("race-notice");
+  note.classList.remove("error-note");
+  if (!supabaseClient || !raceBackendReady) note.textContent = raceBackendMessage;
+  else if (raceEvents.length) note.textContent = `Course tirée au sort parmi ${raceCatalogCount} courses du calendrier. Inscriptions aujourd’hui jusqu’à 19 h 55, heure de Paris.`;
+  else note.textContent = "Aucune course disponible dans le calendrier.";
+}
+
+function dailyLocalRace(races, date) {
+  const catalog = localRaceCatalog(races).sort((a, b) => a.slug.localeCompare(b.slug));
+  if (!catalog.length) return [];
+  let seed = 2166136261;
+  for (const char of date) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619) >>> 0;
+  const race = catalog[seed % catalog.length];
+  return [{ ...race, edition_date: race.race_date, race_date: date }];
+}
+
+async function loadRaceData() {
+  try {
+    if (supabaseClient) {
+      const { data, error } = await supabaseClient.rpc("get_daily_race");
+      if (error) throw error;
+      raceEvents = data?.length ? [{
+        slug: data[0].race_slug, name: data[0].name, country: data[0].country,
+        race_date: data[0].race_date, edition_date: data[0].edition_date,
+      }] : [];
+      const { count, error: countError } = await supabaseClient.from("race_events").select("slug", { count: "exact", head: true });
+      if (countError) throw countError;
+      raceCatalogCount = count || 0;
+      displayedParisDate = data?.[0]?.race_date || parisClock().date;
+      raceBackendReady = true;
+      raceBackendMessage = "Connecte-toi pour inscrire ton équipe.";
+    } else {
+      const response = await fetch("data/races.json");
+      if (!response.ok) throw new Error("Calendrier introuvable.");
+      const catalog = await response.json();
+      raceCatalogCount = localRaceCatalog(catalog).length;
+      displayedParisDate = parisClock().date;
+      raceEvents = dailyLocalRace(catalog, displayedParisDate);
+      raceBackendMessage = "Sélection locale en lecture seule. Configure Supabase et applique la migration des courses pour participer.";
+    }
+    renderRaces();
+    if (accountUser) await safelyRefreshRaceAccountData();
+  } catch (error) {
+    raceBackendReady = false;
+    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que la migration 202611100002_races_and_rewards.sql a été appliquée.`;
+    try {
+      const response = await fetch("data/races.json");
+      if (!response.ok) throw new Error("Calendrier introuvable.");
+      const catalog = await response.json();
+      raceCatalogCount = localRaceCatalog(catalog).length;
+      displayedParisDate = parisClock().date;
+      raceEvents = dailyLocalRace(catalog, displayedParisDate);
+    } catch (catalogError) {
+      $("race-notice").textContent = `Impossible de charger le calendrier : ${catalogError.message}`;
+      return;
+    }
+    renderRaces();
+  }
+}
+
+async function refreshRaceAccountData() {
+  if (!accountUser || !supabaseClient || !raceBackendReady) return;
+  const { error: settleError } = await supabaseClient.rpc("settle_due_races");
+  if (settleError) throw settleError;
+  await loadInbox();
+  if (selectedRace) {
+    await loadRaceEntries(selectedRace);
+    renderRaceDetail();
+  }
+  renderRaces();
+}
+
+async function safelyRefreshRaceAccountData() {
+  try {
+    await refreshRaceAccountData();
+  } catch (error) {
+    $("race-notice").textContent = error.message;
+    $("race-notice").classList.add("error-note");
+  }
+}
+
+function watchDailyRace() {
+  setInterval(() => {
+    const clock = parisClock();
+    if (clock.date !== displayedParisDate) {
+      selectedRace = null;
+      raceEntries = [];
+      $("race-detail").hidden = true;
+      loadRaceData();
+      return;
+    }
+    renderRaces();
+    if (accountUser && raceBackendReady && clock.minutes >= 20 * 60 && settlementCheckDate !== clock.date) {
+      settlementCheckDate = clock.date;
+      safelyRefreshRaceAccountData();
+    }
+  }, 60_000);
+}
+
+async function loadRaceEntries(race) {
+  raceEntries = [];
+  if (!accountUser || !supabaseClient || !raceBackendReady) return;
+  const { data, error } = await supabaseClient.from("race_entries")
+    .select("user_id,display_name,rider_ids,score,updated_at")
+    .eq("race_date", race.race_date).order("score", { ascending: false }).order("updated_at", { ascending: true });
+  if (error) throw error;
+  raceEntries = data || [];
+}
+
+function renderRaceDetail() {
+  const detail = $("race-detail");
+  if (!selectedRace) {
+    detail.hidden = true;
+    return;
+  }
+  detail.hidden = false;
+  const phase = racePhase(selectedRace);
+  const canRegister = phase === "Inscriptions ouvertes" && Boolean(accountUser) && raceBackendReady;
+  const ownEntry = raceEntries.find(entry => entry.user_id === accountUser?.id);
+  const cards = Object.values(state.riders).sort((a, b) => (b.score || 0) - (a.score || 0) || a.rider.localeCompare(b.rider, "fr"));
+  const selectedIds = new Set(ownEntry?.rider_ids || []);
+  let previousScore = null;
+  let place = 0;
+  const entriesMarkup = raceEntries.length ? raceEntries.map((entry, index) => {
+    if (index === 0 || entry.score !== previousScore) place = index + 1;
+    previousScore = entry.score;
+    const team = entry.rider_ids.map(id => state.riders[id]?.rider || pool.find(card => card.id === id)?.rider || id).join(", ");
+    return `<article class="race-standing"><strong>${place}. ${esc(entry.display_name)} · ${Number(entry.score) || 0} pts</strong><p>${esc(team)}</p></article>`;
+  }).join("") : `<p class="mail-empty">${phase === "Terminée" || phase === "Résultats disponibles" ? "Aucune équipe inscrite." : "Aucune équipe pour le moment."}</p>`;
+  detail.innerHTML = `
+    <h3>${esc(selectedRace.name)} · ${esc(dateLabel(selectedRace.race_date))}</h3>
+    <p>${esc(selectedRace.country)} · départ à 20 h, heure de Paris. Ton équipe doit contenir 5 cartes distinctes; le score est recalculé par le serveur à partir des classements.</p>
+    ${phase === "Inscriptions ouvertes" ? `
+      <h3>${ownEntry ? "Modifier mon équipe" : "Composer mon équipe"}</h3>
+      ${accountUser ? cards.length ? `
+        <p id="team-selection-summary">Sélectionne 5 cartes.</p>
+        <div class="team-picker">${cards.map(card => `
+          <label class="team-card"><input type="checkbox" name="team-card" value="${esc(card.id)}"
+            ${selectedIds.has(card.id) ? "checked" : ""} ${!selectedIds.has(card.id) && selectedIds.size >= 5 ? "disabled" : ""}>
+            <span>${esc(card.rider)} <small>${esc(card.profile || "Profil à préciser")}</small></span><small>${Number(card.score) || 0} pts</small></label>`).join("")}</div>
+        <button class="race-submit" id="race-submit" type="button" ${canRegister ? "" : "disabled"}>${ownEntry ? "Mettre à jour mon équipe" : "Inscrire mon équipe"}</button>
+        <p class="mail-empty">Les inscriptions ferment à 19 h 55. Chaque participant reçoit 20 drops; les boosters (3, 2 et 1) sont partagés en cas d’égalité.</p>
+      ` : `<p class="mail-empty">Il te faut au moins 5 cartes dans ta collection.</p>` : `<p>Connecte-toi pour inscrire une équipe.</p><button class="race-submit" id="race-login" type="button">Se connecter</button>`}
+    ` : `<p class="mail-empty">${phase === "À venir" ? "Les inscriptions ouvrent à 0 h le jour de la course." : phase === "Équipes verrouillées" ? "Les inscriptions sont fermées; départ à 20 h." : "Cette course est terminée. Les inscriptions rétroactives sont désactivées."}</p>`}
+    <h3>Classement des équipes (${raceEntries.length})</h3><div class="race-standings">${entriesMarkup}</div>`;
+  detail.querySelectorAll('input[name="team-card"]').forEach(input => input.addEventListener("change", updateTeamSelection));
+  $("race-submit")?.addEventListener("click", submitRaceTeam);
+  $("race-login")?.addEventListener("click", () => $("account-open").click());
+  updateTeamSelection();
+}
+
+function updateTeamSelection() {
+  const inputs = [...document.querySelectorAll('input[name="team-card"]')];
+  if (!inputs.length) return;
+  const chosen = inputs.filter(input => input.checked).length;
+  for (const input of inputs) input.disabled = !input.checked && chosen >= 5;
+  $("team-selection-summary").textContent = `${chosen} / 5 cartes sélectionnées · ${inputs.filter(input => input.checked)
+    .reduce((sum, input) => sum + (Number(state.riders[input.value]?.score) || 0), 0)} pts`;
+  $("race-submit").disabled = chosen !== 5 || !accountUser || !raceBackendReady;
+}
+
+async function submitRaceTeam() {
+  const button = $("race-submit");
+  const riderIds = [...document.querySelectorAll('input[name="team-card"]:checked')].map(input => input.value);
+  button.disabled = true;
+  try {
+    if (!accountUser) throw new Error("Connecte-toi pour inscrire une équipe.");
+    if (!await syncCollection()) throw new Error("La collection doit être synchronisée avant l’inscription.");
+    const { error } = await supabaseClient.rpc("register_race_team", {
+      p_race_date: selectedRace.race_date, p_rider_ids: riderIds,
+    });
+    if (error) throw error;
+    await loadRaceEntries(selectedRace);
+    renderRaceDetail();
+    showToast("Équipe inscrite");
+  } catch (error) {
+    $("race-notice").textContent = error.message;
+    $("race-notice").classList.add("error-note");
+    button.disabled = false;
+  }
+}
+
+async function loadInbox() {
+  if (!accountUser || !supabaseClient || !raceBackendReady) {
+    inboxMessages = [];
+    refreshMailBadge();
+    return;
+  }
+  const { data, error } = await supabaseClient.from("race_mail")
+    .select("id,title,body,drops_reward,boosters_reward,created_at,claimed_at")
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  inboxMessages = data || [];
+  refreshMailBadge();
+}
+
+function refreshMailBadge() {
+  const unread = inboxMessages.filter(message => !message.claimed_at).length;
+  $("mail-count").textContent = String(unread);
+  $("mail-count").hidden = unread === 0;
+  $("mail-open").title = unread ? `${unread} récompense(s) à réclamer` : "Boîte de réception";
+}
+
+function renderInbox() {
+  const content = $("mail-content");
+  if (!accountUser) {
+    content.innerHTML = `<p class="mail-empty">Connecte-toi pour consulter tes récompenses.</p><button class="race-submit" id="mail-login" type="button">Se connecter</button>`;
+    $("mail-login").addEventListener("click", () => { $("mail-dialog").close(); $("account-open").click(); });
+    return;
+  }
+  if (!inboxMessages.length) {
+    content.innerHTML = `<p class="mail-empty">Aucune récompense pour l’instant. Les résultats des courses terminées apparaîtront ici.</p>`;
+    return;
+  }
+  content.innerHTML = `<div class="mail-list">${inboxMessages.map(message => `
+    <article class="mail-item"><strong>${esc(message.title)}${message.claimed_at ? " · Réclamée" : ""}</strong>
+      <p>${esc(message.body)}</p><p>${Number(message.drops_reward) || 0} drops · ${Number(message.boosters_reward) || 0} booster(s)</p>
+      ${message.claimed_at ? "" : `<button class="mail-claim" type="button" data-mail-id="${esc(message.id)}">Réclamer</button>`}
+    </article>`).join("")}</div>`;
+  content.querySelectorAll(".mail-claim").forEach(button => button.addEventListener("click", () => claimReward(button.dataset.mailId, button)));
+}
+
+async function claimReward(mailId, button) {
+  button.disabled = true;
+  try {
+    if (!await syncCollection()) throw new Error("Synchronise ta collection avant de réclamer la récompense.");
+    const { error } = await supabaseClient.rpc("claim_race_reward", { p_mail_id: mailId });
+    if (error) throw error;
+    localStorage.removeItem(ACCOUNT_DIRTY_KEY);
+    await loadCloudCollection();
+    await loadInbox();
+    renderInbox();
+    showToast("Récompense ajoutée à ta collection");
+  } catch (error) {
+    button.disabled = false;
+    button.insertAdjacentText("afterend", ` ${error.message}`);
+  }
 }
 
 $("open-pack").addEventListener("click", openPack);
+$("race-list").addEventListener("click", async event => {
+  const button = event.target.closest("[data-race-date]");
+  if (!button) return;
+  selectedRace = raceEvents.find(race => race.race_date === button.dataset.raceDate);
+  try {
+    await loadRaceEntries(selectedRace);
+    renderRaceDetail();
+    $("race-detail").scrollIntoView({ behavior: "smooth", block: "start" });
+  } catch (error) {
+    $("race-notice").textContent = error.message;
+    $("race-notice").classList.add("error-note");
+  }
+});
+$("mail-open").addEventListener("click", async () => {
+  try {
+    if (accountUser) await safelyRefreshRaceAccountData();
+    renderInbox();
+    $("mail-dialog").showModal();
+  } catch (error) {
+    $("mail-content").innerHTML = `<p class="error-note">${esc(error.message)}</p>`;
+    $("mail-dialog").showModal();
+  }
+});
+$("mail-close").addEventListener("click", () => $("mail-dialog").close());
+$("mail-dialog").addEventListener("click", event => {
+  if (event.target === $("mail-dialog")) $("mail-dialog").close();
+});
 $("account-open").addEventListener("click", async () => {
   if (accountUser) {
     location.href = "profile.html";
@@ -956,18 +1399,22 @@ $("account-dialog").addEventListener("click", event => {
 });
 $("tab-booster").addEventListener("click", () => selectTab("booster"));
 $("tab-collection").addEventListener("click", () => selectTab("collection"));
+$("tab-races").addEventListener("click", () => selectTab("races"));
 $("search-cards").addEventListener("input", renderCollection);
 $("filter-rarity").addEventListener("change", renderCollection);
 $("reset-collection").addEventListener("click", () => {
   if (!confirm("Effacer la collection enregistrée sur cet appareil ?")) return;
-  state = { riders: {}, dust: 0, freeDate: "", packsOpened: 0, lastPack: [] };
+  state = { ...EMPTY_COLLECTION };
   saveState(); refreshUI(); showToast("Collection effacée");
 });
 
 watchAuthChanges();
 refreshUI();
+refreshMailBadge();
 loadPool();
 loadAccountSession();
+loadRaceData();
+watchDailyRace();
 </script>
 </body>
 </html>
