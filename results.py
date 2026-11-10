@@ -8,6 +8,7 @@ n'affichent simplement rien sur le site.
 Usage :
     py results.py                      # traite jusqu'à 40 courses terminées sans résultat
     py results.py --limit 300          # rattrapage d'un gros retard (compter ~2 s par course)
+    py results.py --refresh --limit 300  # actualise les classements annexes des courses déjà enregistrées
     py results.py --race "Il Lombardia" --year 2026   # TEST : affiche ce qui est trouvé, n'écrit rien
 
 Fichiers :
@@ -138,7 +139,7 @@ def columns(table):
 
 
 def parse_results(html: str, stage_race: bool, women_race: bool = False, title: str = ""):
-    """Renvoie {'classification', 'rows'} ou None si aucun tableau de classement n'est trouvé."""
+    """Renvoie le classement principal et les classements annexes reconnus."""
     soup = BeautifulSoup(html, "html.parser")
     candidates = []
     for table in soup.select("table.wikitable"):
@@ -168,34 +169,77 @@ def parse_results(html: str, stage_race: bool, women_race: bool = False, title: 
         if not candidates:
             return None
 
-    pick = candidates[0]
-    if stage_race:
-        for c in candidates:
-            if re.search(r"general|overall|final", c[2], re.I):
-                pick = c
-                break
-    table, idx, heading, _ = pick
-
-    rows = []
-    for tr in table.find_all("tr")[1:]:
-        cells = tr.find_all(["th", "td"])
-        if len(cells) <= max(idx.values()):
-            continue
-        rank = cell_text(cells[idx["rank"]])
-        if not rank.isdigit():
-            continue
-        row = {"rank": int(rank), "rider": cell_text(cells[idx["rider"]])}
-        if "team" in idx:
-            row["team"] = cell_text(cells[idx["team"]])
-        if "time" in idx:
-            row["time"] = cell_text(cells[idx["time"]])
-        if row["rider"]:
-            rows.append(row)
-        if len(rows) >= MAX_ROWS:
-            break
-    if len(rows) < 3:
+    def category(label):
+        value = norm(label)
+        if re.search(r"\bstage\s+\d+\b|\bafter stage\b", value):
+            return None
+        if re.search(r"mountain|montagne|climber|king of the mountains", value):
+            return "mountain"
+        if re.search(r"points|sprint|green jersey", value):
+            return "sprint"
+        if re.search(r"youth|young rider|jeune", value):
+            return "youth"
+        if re.search(r"general|overall|final", value):
+            return "general"
         return None
-    return {"classification": heading or ("Classement général" if stage_race else "Résultat"), "rows": rows}
+
+    def parse_table(candidate):
+        table, idx, _, _ = candidate
+        rows = []
+        for tr in table.find_all("tr")[1:]:
+            cells = tr.find_all(["th", "td"])
+            if len(cells) <= max(idx.values()):
+                continue
+            rank = cell_text(cells[idx["rank"]])
+            if not rank.isdigit():
+                continue
+            row = {"rank": int(rank), "rider": cell_text(cells[idx["rider"]])}
+            if "team" in idx:
+                row["team"] = cell_text(cells[idx["team"]])
+            if "time" in idx:
+                row["time"] = cell_text(cells[idx["time"]])
+            if row["rider"]:
+                rows.append(row)
+            if len(rows) >= MAX_ROWS:
+                break
+        return rows if len(rows) >= 3 else None
+
+    if stage_race:
+        selected = []
+        for kind in ("general", "mountain", "sprint", "youth"):
+            matches = [c for c in candidates if category(c[2]) == kind]
+            candidate = next((c for c in matches if re.search(r"final|overall", norm(c[2]))), None)
+            candidate = candidate or (matches[0] if matches else None)
+            if candidate:
+                selected.append((candidate, kind))
+        if not selected:
+            fallback = next((c for c in candidates if not re.search(r"\bstage\s+\d+\b", norm(c[2]))), candidates[0])
+            selected = [(fallback, None)]
+    else:
+        selected = [(candidates[0], category(candidates[0][2]))]
+
+    classifications = []
+    for candidate, kind in selected:
+        rows = parse_table(candidate)
+        if not rows:
+            continue
+        heading = {
+            "general": "General classification",
+            "mountain": "Mountain classification",
+            "sprint": "Points classification",
+            "youth": "Youth classification",
+        }.get(kind) or candidate[2].strip() or ("General classification" if stage_race else "Result")
+        classifications.append({"classification": heading, "rows": rows, "_kind": kind})
+    if not classifications:
+        return None
+    primary = next((c for c in classifications if c["_kind"] == "general"), classifications[0])
+    parsed = {"classification": primary["classification"], "rows": primary["rows"]}
+    if len(classifications) > 1:
+        parsed["classifications"] = [
+            {"classification": c["classification"], "rows": c["rows"]}
+            for c in classifications
+        ]
+    return parsed
 
 
 def fetch_result(r: dict):
@@ -236,6 +280,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=40)
     ap.add_argument("--force", action="store_true", help="réessaie aussi les courses abandonnées")
+    ap.add_argument("--refresh", action="store_true", help="actualise aussi les résultats déjà enregistrés")
     ap.add_argument("--race")
     ap.add_argument("--year")
     ap.add_argument("--women", action="store_true", help="teste un résultat féminin")
@@ -250,7 +295,9 @@ def main():
         if not r.get("start") or not r.get("end") or r["end"] >= TODAY:
             return False
         k = race_key(r)
-        if k in index:
+        if args.refresh and k not in index:
+            return False
+        if k in index and not args.refresh:
             return False
         m = misses.get(k)
         if m and not args.force:

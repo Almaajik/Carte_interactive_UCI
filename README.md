@@ -2,15 +2,15 @@
 
 ## Site
 
-Le site est statique et peut être publié avec GitHub Pages. Les classements sont servis depuis `data/results/`.
+Le site est statique et peut être publié avec GitHub Pages. Les classements sont servis depuis `data/results/`. Les courses en équipe utilisent Supabase comme backend commun.
 
 ## Comptes et collection
 
 Les comptes utilisent Supabase Auth avec email et mot de passe. La progression est sauvegardée dans la table `public.user_collections`; la sécurité au niveau des lignes (RLS) garantit qu’un utilisateur ne peut lire ou modifier que sa propre collection. Le tableau de bord Supabase permet de consulter la table avec **Database → Table Editor**.
 
 1. Crée un projet Supabase.
-2. Dans **SQL Editor**, exécute `supabase/migrations/202610290001_user_collections.sql`.
-3. Exécute aussi `supabase/migrations/202610290002_profiles.sql` pour activer les noms d’utilisateur uniques (insensibles à la casse).
+2. Dans **SQL Editor**, exécute `supabase/migrations/202610290001_user_collections.sql`, puis `supabase/migrations/202611100001_user_collections_drops.sql` pour initialiser la monnaie en drops.
+3. Exécute `supabase/migrations/202610290002_profiles.sql` pour activer les noms d’utilisateur uniques (insensibles à la casse), puis `supabase/migrations/202611100002_races_and_rewards.sql` pour créer le calendrier partagé, les inscriptions, les classements et la boîte de réception.
 4. Active la confirmation email et définis une longueur minimale de mot de passe de 12 caractères dans les réglages Auth.
 5. Dans les URL de redirection autorisées, ajoute `https://almaajik.github.io/Carte_interactive_UCI/collection.html`, `https://almaajik.github.io/Carte_interactive_UCI/profile.html`, `http://localhost:8000/collection.html` et `http://localhost:8000/profile.html` pour le développement local.
 6. Copie l’URL du projet et sa clé `publishable` dans `supabase-config.js`.
@@ -24,9 +24,15 @@ Le bouton portant le nom d’utilisateur ouvre `profile.html`, où il est possib
 
 La récupération de mot de passe est gérée par Supabase Auth et redirige vers `profile.html`; configure cette URL publiée dans **Authentication → URL Configuration**.
 
+### Courses en équipe
+
+L’onglet **Courses** tire une course au sort dans le calendrier chaque jour. Supabase conserve le choix quotidien pour que tous les joueurs participent à la même course. Les inscriptions sont ouvertes de 0 h à 19 h 55 et ferment avant le départ de 20 h, selon le fuseau `Europe/Paris`. Une équipe contient cinq cartes distinctes; le score est recalculé côté Supabase avec les scores issus des classements enregistrés. Chaque participant reçoit 20 drops; les places 1 à 3 gagnent respectivement 3, 2 et 1 booster. En cas d’égalité, les boosters des places concernées sont partagés; les boosters indivisibles restants vont aux comptes dans l’ordre déterministe de leur identifiant. Les récompenses se réclament dans la boîte de réception et sont ajoutées une seule fois à la collection.
+
+La date de l’édition d’origine est indiquée à titre informatif; l’inscription porte sur la course quotidienne et non sur sa date passée du calendrier. Lorsqu’une nouvelle saison est ajoutée, son calendrier doit aussi être ajouté à `public.race_events` dans Supabase. En mode invité, le choix quotidien est seulement local et les inscriptions restent désactivées. Les résultats des courses terminées sont réglés par Supabase lors de la prochaine consultation du jeu après 20 h; les récompenses apparaissent alors dans la boîte de réception.
+
 ### Réinitialiser une collection
 
-Dans `supabase/scripts/reset_user_collection.sql`, remplace `REMPLACER_PAR_EMAIL` par l’adresse du compte à réinitialiser, puis exécute le fichier dans **SQL Editor**. Cela remet à zéro les cartes, poussières et boosters, sans supprimer le compte ni son nom de profil. L’action est irréversible.
+Dans `supabase/scripts/reset_user_collection.sql`, remplace `REMPLACER_PAR_EMAIL` par l’adresse du compte à réinitialiser, puis exécute le fichier dans **SQL Editor**. Cela remet à zéro les cartes, drops et boosters, sans supprimer le compte ni son nom de profil. L’action est irréversible.
 
 ## Tests locaux
 
@@ -36,7 +42,7 @@ Ouvre `index.html` avec un serveur statique, ou exécute :
 python -m http.server 8000
 ```
 
-Sans configuration Supabase, la carte, les classements et les boosters restent utilisables en mode invité. Les fonctions de compte affichent un message demandant de configurer Supabase.
+Sans configuration Supabase, la carte, les classements et les boosters restent utilisables en mode invité. Le calendrier des courses est consultable en lecture seule; participer et récupérer des récompenses nécessite un compte Supabase et la migration des courses.
 
 Les tests Python des scripts de calendrier et de résultats se lancent avec :
 

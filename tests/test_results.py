@@ -44,6 +44,22 @@ class ResultsTests(unittest.TestCase):
 
         self.assertIsNone(parsed)
 
+    def test_parser_keeps_general_mountain_and_points_classifications(self):
+        html = (
+            "<h2>Stage 1 General classification after Stage 1</h2>" + result_table("Stage Rider")
+            + "<h2>General classification</h2>" + result_table("General Rider")
+            + "<h2>Mountains classification</h2>" + result_table("Climber")
+            + "<h2>Points classification</h2>" + result_table("Sprinter")
+        )
+
+        parsed = results.parse_results(html, stage_race=True)
+
+        self.assertEqual("General Rider 1", parsed["rows"][0]["rider"])
+        self.assertEqual(
+            ["General Rider 1", "Climber 1", "Sprinter 1"],
+            [ranking["rows"][0]["rider"] for ranking in parsed["classifications"]],
+        )
+
     def test_detects_womens_uci_class(self):
         self.assertTrue(results.is_womens_race({"name": "Cadel Evans Great Ocean Road Race", "classes": ["1.WWT"]}))
 

@@ -1,6 +1,6 @@
 create table if not exists public.user_collections (
   user_id uuid primary key references auth.users (id) on delete cascade,
-  payload jsonb not null default '{"riders":{},"dust":0,"freeDate":"","packsOpened":0,"lastPack":[]}'::jsonb,
+  payload jsonb not null default '{"riders":{},"drops":0,"freeDate":"","packsOpened":0,"lastPack":[]}'::jsonb,
   updated_at timestamptz not null default now(),
   constraint user_collections_payload_size check (pg_column_size(payload) <= 900000),
   constraint user_collections_payload_object check (jsonb_typeof(payload) = 'object')
