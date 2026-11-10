@@ -1,0 +1,5240 @@
+[
+    {
+        "rider_id":  "paul magnier-fra",
+        "rider_name":  "Paul Magnier",
+        "mountain":  40,
+        "sprint":  69,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  149
+    },
+    {
+        "rider_id":  "mike teunissen-ned",
+        "rider_name":  "Mike Teunissen",
+        "mountain":  55,
+        "sprint":  72,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  167
+    },
+    {
+        "rider_id":  "laurence pithie-nzl",
+        "rider_name":  "Laurence Pithie",
+        "mountain":  55,
+        "sprint":  63,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  158
+    },
+    {
+        "rider_id":  "paul penhoet-fra",
+        "rider_name":  "Paul PenhoÃ«t",
+        "mountain":  40,
+        "sprint":  65,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  145
+    },
+    {
+        "rider_id":  "henri uhlig-ger",
+        "rider_name":  "Henri Uhlig",
+        "mountain":  40,
+        "sprint":  58,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  138
+    },
+    {
+        "rider_id":  "milan fretin-bel",
+        "rider_name":  "Milan Fretin",
+        "mountain":  40,
+        "sprint":  83,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  163
+    },
+    {
+        "rider_id":  "noah hobbs-gbr",
+        "rider_name":  "Noah Hobbs",
+        "mountain":  40,
+        "sprint":  55,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  135
+    },
+    {
+        "rider_id":  "s ren w renskjold-nor",
+        "rider_name":  "SÃ¸ren WÃ¦renskjold",
+        "mountain":  51,
+        "sprint":  57,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  148
+    },
+    {
+        "rider_id":  "huub artz-ned",
+        "rider_name":  "Huub Artz",
+        "mountain":  40,
+        "sprint":  51,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  131
+    },
+    {
+        "rider_id":  "arnaud de lie-bel",
+        "rider_name":  "Arnaud De Lie",
+        "mountain":  57,
+        "sprint":  58,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  155
+    },
+    {
+        "rider_id":  "jan christen-sui",
+        "rider_name":  "Jan Christen",
+        "mountain":  78,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  158
+    },
+    {
+        "rider_id":  "sergio higuita-col",
+        "rider_name":  "Sergio Higuita",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "igor arrieta-esp",
+        "rider_name":  "Igor Arrieta",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "stefan de bod-rsa",
+        "rider_name":  "Stefan De Bod",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "afonso eulalio-por",
+        "rider_name":  "Afonso EulÃ¡lio",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "yannis voisard-sui",
+        "rider_name":  "Yannis Voisard",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "nicolas vinokurov-kaz",
+        "rider_name":  "Nicolas Vinokurov",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "mauri vansevenant-bel",
+        "rider_name":  "Mauri Vansevenant",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "jan castellon-esp",
+        "rider_name":  "Jan Castellon",
+        "mountain":  67,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  147
+    },
+    {
+        "rider_id":  "bjoern koerdt-gbr",
+        "rider_name":  "Bjoern Koerdt",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "remco evenepoel-bel",
+        "rider_name":  "Remco Evenepoel",
+        "mountain":  96,
+        "sprint":  72,
+        "rouleur":  96,
+        "profile":  "Grimpeur",
+        "score":  264
+    },
+    {
+        "rider_id":  "mattias skjelmose-den",
+        "rider_name":  "Mattias Skjelmose",
+        "mountain":  78,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  158
+    },
+    {
+        "rider_id":  "benoit cosnefroy-fra",
+        "rider_name":  "BenoÃ®t Cosnefroy",
+        "mountain":  78,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  158
+    },
+    {
+        "rider_id":  "romain gregoire-fra",
+        "rider_name":  "Romain GrÃ©goire",
+        "mountain":  82,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  162
+    },
+    {
+        "rider_id":  "emiel verstrynge-bel",
+        "rider_name":  "Emiel Verstrynge",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "mauro schmid-sui",
+        "rider_name":  "Mauro Schmid",
+        "mountain":  85,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  165
+    },
+    {
+        "rider_id":  "albert withen philipsen-den",
+        "rider_name":  "Albert Withen Philipsen",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "ewen costiou-fra",
+        "rider_name":  "Ewen Costiou",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "marco frigo-ita",
+        "rider_name":  "Marco Frigo",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "guillermo thomas silva-uru",
+        "rider_name":  "Guillermo Thomas Silva",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "lennert van eetvelt-bel",
+        "rider_name":  "Lennert Van Eetvelt",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "alessandro pinarello-ita",
+        "rider_name":  "Alessandro Pinarello",
+        "mountain":  65,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  145
+    },
+    {
+        "rider_id":  "felix engelhardt-ger",
+        "rider_name":  "Felix Engelhardt",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "sebastian berwick-aus",
+        "rider_name":  "Sebastian Berwick",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "thomas bonnet-fra",
+        "rider_name":  "Thomas Bonnet",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "wout poels-ned",
+        "rider_name":  "Wout Poels",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "cedrik bakke christophersen-nor",
+        "rider_name":  "Cedrik Bakke Christophersen",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "joris delbove-fra",
+        "rider_name":  "Joris Delbove",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "johannes kulset-nor",
+        "rider_name":  "Johannes Kulset",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "josh burnett-nzl",
+        "rider_name":  "Josh Burnett",
+        "mountain":  65,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  145
+    },
+    {
+        "rider_id":  "henok mulueberhan-eri",
+        "rider_name":  "Henok Mulueberhan",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "alexandre balmer-sui",
+        "rider_name":  "Alexandre Balmer",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "eric fagundez-uru",
+        "rider_name":  "Eric FagÃºndez",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "luca covili-ita",
+        "rider_name":  "Luca Covili",
+        "mountain":  59,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  139
+    },
+    {
+        "rider_id":  "urko berrade-esp",
+        "rider_name":  "Urko Berrade",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "santiago umba-col",
+        "rider_name":  "Santiago Umba",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "diego uriarte-esp",
+        "rider_name":  "Diego Uriarte",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "alessio martinelli-ita",
+        "rider_name":  "Alessio Martinelli",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "carlos garcia pierna-esp",
+        "rider_name":  "Carlos GarcÃ­a Pierna",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "thibaud gruel-fra",
+        "rider_name":  "Thibaud Gruel",
+        "mountain":  60,
+        "sprint":  57,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  157
+    },
+    {
+        "rider_id":  "noa isidore-fra",
+        "rider_name":  "Noa Isidore",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "mads pedersen-den",
+        "rider_name":  "Mads Pedersen",
+        "mountain":  70,
+        "sprint":  98,
+        "rouleur":  80,
+        "profile":  "Sprinteur",
+        "score":  248
+    },
+    {
+        "rider_id":  "clement izquierdo-fra",
+        "rider_name":  "ClÃ©ment Izquierdo",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "aubin sparfel-fra",
+        "rider_name":  "Aubin Sparfel",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "louis barre-fra",
+        "rider_name":  "Louis BarrÃ©",
+        "mountain":  72,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  152
+    },
+    {
+        "rider_id":  "alexandre delettre-fra",
+        "rider_name":  "Alexandre Delettre",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "vincenzo albanese-ita",
+        "rider_name":  "Vincenzo Albanese",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "marco brenner-ger",
+        "rider_name":  "Marco Brenner",
+        "mountain":  75,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  155
+    },
+    {
+        "rider_id":  "anders foldager-den",
+        "rider_name":  "Anders Foldager",
+        "mountain":  54,
+        "sprint":  51,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  145
+    },
+    {
+        "rider_id":  "quinten hermans-bel",
+        "rider_name":  "Quinten Hermans",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "eduard prades-esp",
+        "rider_name":  "Eduard Prades",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "fredrik dversnes-nor",
+        "rider_name":  "Fredrik Dversnes",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "luca van boven-bel",
+        "rider_name":  "Luca Van Boven",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "fernando barcelo-esp",
+        "rider_name":  "Fernando BarcelÃ³",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "brady gilmore-aus",
+        "rider_name":  "Brady Gilmore",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "alex molenaar-ned",
+        "rider_name":  "Alex Molenaar",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "alex aranburu-esp",
+        "rider_name":  "Alex Aranburu",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "alexander kamp-den",
+        "rider_name":  "Alexander Kamp",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "alessandro borgo-ita",
+        "rider_name":  "Alessandro Borgo",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "emil herzog-ger",
+        "rider_name":  "Emil Herzog",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "jenno berckmoes-bel",
+        "rider_name":  "Jenno Berckmoes",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "paul lapeira-fra",
+        "rider_name":  "Paul Lapeira",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "rick pluimers-ned",
+        "rider_name":  "Rick Pluimers",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "andrea vendrame-ita",
+        "rider_name":  "Andrea Vendrame",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "jordi meeus-bel",
+        "rider_name":  "Jordi Meeus",
+        "mountain":  40,
+        "sprint":  100,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  180
+    },
+    {
+        "rider_id":  "biniam girmay-eri",
+        "rider_name":  "Biniam Girmay",
+        "mountain":  40,
+        "sprint":  77,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  157
+    },
+    {
+        "rider_id":  "frits biesterbos-ned",
+        "rider_name":  "Frits Biesterbos",
+        "mountain":  40,
+        "sprint":  77,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  157
+    },
+    {
+        "rider_id":  "arvid de kleijn-ned",
+        "rider_name":  "Arvid de Kleijn",
+        "mountain":  40,
+        "sprint":  60,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  140
+    },
+    {
+        "rider_id":  "tobias muller-ger",
+        "rider_name":  "Tobias MÃ¼ller",
+        "mountain":  40,
+        "sprint":  65,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  145
+    },
+    {
+        "rider_id":  "anthony turgis-fra",
+        "rider_name":  "Anthony Turgis",
+        "mountain":  40,
+        "sprint":  65,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  145
+    },
+    {
+        "rider_id":  "toon aerts-bel",
+        "rider_name":  "Toon Aerts",
+        "mountain":  40,
+        "sprint":  53,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  133
+    },
+    {
+        "rider_id":  "tobias lund andresen-den",
+        "rider_name":  "Tobias Lund Andresen",
+        "mountain":  40,
+        "sprint":  80,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  160
+    },
+    {
+        "rider_id":  "matthew brennan-gbr",
+        "rider_name":  "Matthew Brennan",
+        "mountain":  40,
+        "sprint":  69,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  149
+    },
+    {
+        "rider_id":  "natnael tesfatsion-eri",
+        "rider_name":  "Natnael Tesfatsion",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "filippo zana-ita",
+        "rider_name":  "Filippo Zana",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "gal glivar-slo",
+        "rider_name":  "Gal Glivar",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "francesco busatto-ita",
+        "rider_name":  "Francesco Busatto",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "aaron gate-nzl",
+        "rider_name":  "Aaron Gate",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "corbin strong-nzl",
+        "rider_name":  "Corbin Strong",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "francisco joel penuela-ven",
+        "rider_name":  "Francisco Joel PeÃ±uela",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "clement venturini-fra",
+        "rider_name":  "ClÃ©ment Venturini",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "eduard prades-spa",
+        "rider_name":  "Eduard Prades",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marijn van den berg-ned",
+        "rider_name":  "Marijn van den Berg",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "pau miquel-esp",
+        "rider_name":  "Pau Miquel",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marcel camprubi-esp",
+        "rider_name":  "Marcel CamprubÃ­",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "ludovico crescioli-ita",
+        "rider_name":  "Ludovico Crescioli",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "giulio ciccone-ita",
+        "rider_name":  "Giulio Ciccone",
+        "mountain":  67,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  147
+    },
+    {
+        "rider_id":  "jordi lopez-esp",
+        "rider_name":  "Jordi LÃ³pez",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "mathieu burgaudeau-fra",
+        "rider_name":  "Mathieu Burgaudeau",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "cesar perez-esp",
+        "rider_name":  "CÃ©sar PÃ©rez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "dario giuliano-fra",
+        "rider_name":  "Dario Giuliano",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "matteo moschetti-ita",
+        "rider_name":  "Matteo Moschetti",
+        "mountain":  40,
+        "sprint":  63,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  143
+    },
+    {
+        "rider_id":  "dylan groenewegen-ned",
+        "rider_name":  "Dylan Groenewegen",
+        "mountain":  40,
+        "sprint":  75,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  155
+    },
+    {
+        "rider_id":  "phil bauhaus-ger",
+        "rider_name":  "Phil Bauhaus",
+        "mountain":  40,
+        "sprint":  58,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  138
+    },
+    {
+        "rider_id":  "enrico zanoncello-ita",
+        "rider_name":  "Enrico Zanoncello",
+        "mountain":  40,
+        "sprint":  55,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  135
+    },
+    {
+        "rider_id":  "pascal ackermann-ger",
+        "rider_name":  "Pascal Ackermann",
+        "mountain":  40,
+        "sprint":  69,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  149
+    },
+    {
+        "rider_id":  "manuel penalver-esp",
+        "rider_name":  "Manuel PeÃ±alver",
+        "mountain":  40,
+        "sprint":  51,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  131
+    },
+    {
+        "rider_id":  "fernando gaviria-col",
+        "rider_name":  "Fernando Gaviria",
+        "mountain":  40,
+        "sprint":  48,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  128
+    },
+    {
+        "rider_id":  "artem shmidt-usa",
+        "rider_name":  "Artem Shmidt",
+        "mountain":  40,
+        "sprint":  69,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  149
+    },
+    {
+        "rider_id":  "pierre gautherat-fra",
+        "rider_name":  "Pierre Gautherat",
+        "mountain":  40,
+        "sprint":  66,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  146
+    },
+    {
+        "rider_id":  "alessio magagnotti-ita",
+        "rider_name":  "Alessio Magagnotti",
+        "mountain":  40,
+        "sprint":  60,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  140
+    },
+    {
+        "rider_id":  "kim heiduk-ger",
+        "rider_name":  "Kim Heiduk",
+        "mountain":  53,
+        "sprint":  55,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  148
+    },
+    {
+        "rider_id":  "marius mayrhofer-ger",
+        "rider_name":  "Marius Mayrhofer",
+        "mountain":  40,
+        "sprint":  53,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  133
+    },
+    {
+        "rider_id":  "matys grisel-fra",
+        "rider_name":  "Matys Grisel",
+        "mountain":  62,
+        "sprint":  60,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  162
+    },
+    {
+        "rider_id":  "jon barrenetxea-esp",
+        "rider_name":  "Jon Barrenetxea",
+        "mountain":  46,
+        "sprint":  48,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  134
+    },
+    {
+        "rider_id":  "jasper philipsen-bel",
+        "rider_name":  "Jasper Philipsen",
+        "mountain":  62,
+        "sprint":  94,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  196
+    },
+    {
+        "rider_id":  "sam welsford-aus",
+        "rider_name":  "Sam Welsford",
+        "mountain":  40,
+        "sprint":  72,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  152
+    },
+    {
+        "rider_id":  "tord gudmestad-nor",
+        "rider_name":  "Tord Gudmestad",
+        "mountain":  40,
+        "sprint":  68,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  148
+    },
+    {
+        "rider_id":  "danny van poppel-ned",
+        "rider_name":  "Danny van Poppel",
+        "mountain":  40,
+        "sprint":  66,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  146
+    },
+    {
+        "rider_id":  "max walscheid-ger",
+        "rider_name":  "Max Walscheid",
+        "mountain":  40,
+        "sprint":  64,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  144
+    },
+    {
+        "rider_id":  "jason tesson-fra",
+        "rider_name":  "Jason Tesson",
+        "mountain":  40,
+        "sprint":  61,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  141
+    },
+    {
+        "rider_id":  "rune herregodts-bel",
+        "rider_name":  "Rune Herregodts",
+        "mountain":  40,
+        "sprint":  55,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  135
+    },
+    {
+        "rider_id":  "s ren kragh andersen-den",
+        "rider_name":  "SÃ¸ren Kragh Andersen",
+        "mountain":  51,
+        "sprint":  51,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "tommaso dati-ita",
+        "rider_name":  "Tommaso Dati",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "orluis aular-ven",
+        "rider_name":  "Orluis Aular",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "alessandro romele-ita",
+        "rider_name":  "Alessandro Romele",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "dorian godon-fra",
+        "rider_name":  "Dorian Godon",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "pepijn reinderink-ned",
+        "rider_name":  "Pepijn Reinderink",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "davide donati-ita",
+        "rider_name":  "Davide Donati",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "filippo baroncini-ita",
+        "rider_name":  "Filippo Baroncini",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "sakarias koller l land-nor",
+        "rider_name":  "Sakarias Koller LÃ¸land",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "christian scaroni-ita",
+        "rider_name":  "Christian Scaroni",
+        "mountain":  83,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  163
+    },
+    {
+        "rider_id":  "giulio pellizzari-ita",
+        "rider_name":  "Giulio Pellizzari",
+        "mountain":  84,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  164
+    },
+    {
+        "rider_id":  "markus hoelgaard-nor",
+        "rider_name":  "Markus Hoelgaard",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lukas nerurkar-gbr",
+        "rider_name":  "Lukas Nerurkar",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "andrew august-usa",
+        "rider_name":  "Andrew August",
+        "mountain":  65,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  145
+    },
+    {
+        "rider_id":  "alessandro fancellu-ita",
+        "rider_name":  "Alessandro Fancellu",
+        "mountain":  80,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  160
+    },
+    {
+        "rider_id":  "domenico pozzovivo-ita",
+        "rider_name":  "Domenico Pozzovivo",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "filippo turconi-ita",
+        "rider_name":  "Filippo Turconi",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "nicolas breuillard-fra",
+        "rider_name":  "Nicolas Breuillard",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "max bock-ger",
+        "rider_name":  "Max Bock",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "vaclav jezek-cze",
+        "rider_name":  "VÃ¡clav JeÅ¾ek",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "embret svestad bardseng-nor",
+        "rider_name":  "Embret Svestad-BÃ¥rdseng",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "jan hirt-cze",
+        "rider_name":  "Jan Hirt",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "alex tolio-ita",
+        "rider_name":  "Alex Tolio",
+        "mountain":  59,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  139
+    },
+    {
+        "rider_id":  "isaac del toro-mex",
+        "rider_name":  "Isaac del Toro",
+        "mountain":  93,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  173
+    },
+    {
+        "rider_id":  "marc hirschi-sui",
+        "rider_name":  "Marc Hirschi",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "andrea raccagni-ita",
+        "rider_name":  "Andrea Raccagni",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "mathias vacek-cze",
+        "rider_name":  "Mathias Vacek",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "gorka sorarrain-esp",
+        "rider_name":  "Gorka Sorarrain",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "stefano oldani-ita",
+        "rider_name":  "Stefano Oldani",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "max schachmann-ger",
+        "rider_name":  "Max Schachmann",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "edgar cadena-mex",
+        "rider_name":  "Edgar Cadena",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "filippo ganna-ita",
+        "rider_name":  "Filippo Ganna",
+        "mountain":  42,
+        "sprint":  62,
+        "rouleur":  100,
+        "profile":  "Rouleur",
+        "score":  204
+    },
+    {
+        "rider_id":  "wout van aert-bel",
+        "rider_name":  "Wout van Aert",
+        "mountain":  84,
+        "sprint":  98,
+        "rouleur":  91,
+        "profile":  "Sprinteur",
+        "score":  273
+    },
+    {
+        "rider_id":  "christophe laporte-fra",
+        "rider_name":  "Christophe Laporte",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "vito braet-bel",
+        "rider_name":  "Vito Braet",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "mathieu van der poel-ned",
+        "rider_name":  "Mathieu van der Poel",
+        "mountain":  83,
+        "sprint":  99,
+        "rouleur":  78,
+        "profile":  "Sprinteur",
+        "score":  260
+    },
+    {
+        "rider_id":  "per strand hagenes-nor",
+        "rider_name":  "Per Strand Hagenes",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "florian vermeersch-bel",
+        "rider_name":  "Florian Vermeersch",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "stan dewulf-bel",
+        "rider_name":  "Stan Dewulf",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "jonas abrahamsen-nor",
+        "rider_name":  "Jonas Abrahamsen",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "gianni vermeersch-bel",
+        "rider_name":  "Gianni Vermeersch",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "matteo trentin-ita",
+        "rider_name":  "Matteo Trentin",
+        "mountain":  50,
+        "sprint":  63,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  153
+    },
+    {
+        "rider_id":  "georg zimmermann-ger",
+        "rider_name":  "Georg Zimmermann",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "tom pidcock-gbr",
+        "rider_name":  "Tom Pidcock",
+        "mountain":  88,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  168
+    },
+    {
+        "rider_id":  "ben tulett-gbr",
+        "rider_name":  "Ben Tulett",
+        "mountain":  63,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  143
+    },
+    {
+        "rider_id":  "pello bilbao-esp",
+        "rider_name":  "Pello Bilbao",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "simone gualdi-ita",
+        "rider_name":  "Simone Gualdi",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "ion izagirre-esp",
+        "rider_name":  "Ion Izagirre",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "alex baudin-fra",
+        "rider_name":  "Alex Baudin",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "florian stork-ger",
+        "rider_name":  "Florian Stork",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "adria pericas-esp",
+        "rider_name":  "AdriÃ  Pericas",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "maxime decomble-fra",
+        "rider_name":  "Maxime Decomble",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "lukas kubis-svk",
+        "rider_name":  "LukÃ¡Å¡ KubiÅ¡",
+        "mountain":  55,
+        "sprint":  65,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  160
+    },
+    {
+        "rider_id":  "niklas larsen-den",
+        "rider_name":  "Niklas Larsen",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "dylan teuns-bel",
+        "rider_name":  "Dylan Teuns",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "mathieu kockelmann-lux",
+        "rider_name":  "Mathieu Kockelmann",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "xabier azparren-esp",
+        "rider_name":  "Xabier Azparren",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "leandre lozouet-fra",
+        "rider_name":  "LÃ©andre Lozouet",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "paul seixas-fra",
+        "rider_name":  "Paul Seixas",
+        "mountain":  100,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  180
+    },
+    {
+        "rider_id":  "lenny martinez-fra",
+        "rider_name":  "Lenny Martinez",
+        "mountain":  84,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  164
+    },
+    {
+        "rider_id":  "matteo jorgenson-usa",
+        "rider_name":  "Matteo Jorgenson",
+        "mountain":  79,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  159
+    },
+    {
+        "rider_id":  "davide piganzoli-ita",
+        "rider_name":  "Davide Piganzoli",
+        "mountain":  75,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  155
+    },
+    {
+        "rider_id":  "egan bernal-col",
+        "rider_name":  "Egan Bernal",
+        "mountain":  67,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  147
+    },
+    {
+        "rider_id":  "jefferson alveiro cepeda-ecu",
+        "rider_name":  "Jefferson Alveiro Cepeda",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "matteo vercher-fra",
+        "rider_name":  "MattÃ©o Vercher",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "antonio morgado-por",
+        "rider_name":  "AntÃ³nio Morgado",
+        "mountain":  51,
+        "sprint":  48,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  139
+    },
+    {
+        "rider_id":  "pau marti-esp",
+        "rider_name":  "Pau MartÃ­",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "jarno widar-bel",
+        "rider_name":  "Jarno Widar",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "brandon mcnulty-usa",
+        "rider_name":  "Brandon McNulty",
+        "mountain":  73,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  153
+    },
+    {
+        "rider_id":  "felix gro schartner-aut",
+        "rider_name":  "Felix GroÃŸschartner",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "daniel martinez-col",
+        "rider_name":  "Daniel MartÃ­nez",
+        "mountain":  63,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  143
+    },
+    {
+        "rider_id":  "thomas gloag-gbr",
+        "rider_name":  "Thomas Gloag",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "anthon charmig-den",
+        "rider_name":  "Anthon Charmig",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "roger adria-esp",
+        "rider_name":  "Roger AdriÃ ",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "antonio tiberi-ita",
+        "rider_name":  "Antonio Tiberi",
+        "mountain":  73,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  153
+    },
+    {
+        "rider_id":  "thomas gachignard-fra",
+        "rider_name":  "Thomas Gachignard",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "mathys rondel-fra",
+        "rider_name":  "Mathys Rondel",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "ben o connor-aus",
+        "rider_name":  "Ben O\u0027Connor",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "quinn simmons-usa",
+        "rider_name":  "Quinn Simmons",
+        "mountain":  70,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  150
+    },
+    {
+        "rider_id":  "andrea bagioli-ita",
+        "rider_name":  "Andrea Bagioli",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "clement champoussin-fra",
+        "rider_name":  "ClÃ©ment Champoussin",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "markel beloki-esp",
+        "rider_name":  "Markel Beloki",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "haimar etxeberria-esp",
+        "rider_name":  "Haimar Etxeberria",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "axel zingle-fra",
+        "rider_name":  "Axel Zingle",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "valentin ferron-fra",
+        "rider_name":  "Valentin Ferron",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "riley sheehan-usa",
+        "rider_name":  "Riley Sheehan",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "brent van moer-bel",
+        "rider_name":  "Brent Van Moer",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "axel mariault-fra",
+        "rider_name":  "Axel Mariault",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "robert donaldson-gbr",
+        "rider_name":  "Robert Donaldson",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "luca mozzato-ita",
+        "rider_name":  "Luca Mozzato",
+        "mountain":  40,
+        "sprint":  70,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  150
+    },
+    {
+        "rider_id":  "aime de gendt-bel",
+        "rider_name":  "AimÃ© De Gendt",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "jasper stuyven-bel",
+        "rider_name":  "Jasper Stuyven",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "demi vollering-ned",
+        "rider_name":  "Demi Vollering",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "antonia niedermaier-ger",
+        "rider_name":  "Antonia Niedermaier",
+        "mountain":  69,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  149
+    },
+    {
+        "rider_id":  "anna van der breggen-ned",
+        "rider_name":  "Anna van der Breggen",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "elisa longo borghini-ita",
+        "rider_name":  "Elisa Longo Borghini",
+        "mountain":  73,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  153
+    },
+    {
+        "rider_id":  "niamh fisher black-nzl",
+        "rider_name":  "Niamh Fisher-Black",
+        "mountain":  59,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  139
+    },
+    {
+        "rider_id":  "femke de vries-ned",
+        "rider_name":  "Femke de Vries",
+        "mountain":  69,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  149
+    },
+    {
+        "rider_id":  "isabella holmgren-can",
+        "rider_name":  "Isabella Holmgren",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "urska zigart-slo",
+        "rider_name":  "UrÅ¡ka Å½igart",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "valentina cavallar-aut",
+        "rider_name":  "Valentina Cavallar",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "lore de schepper-bel",
+        "rider_name":  "Lore De Schepper",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "jonas vingegaard-den",
+        "rider_name":  "Jonas Vingegaard",
+        "mountain":  99,
+        "sprint":  58,
+        "rouleur":  86,
+        "profile":  "Grimpeur",
+        "score":  243
+    },
+    {
+        "rider_id":  "felix gall-aut",
+        "rider_name":  "Felix Gall",
+        "mountain":  79,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  159
+    },
+    {
+        "rider_id":  "jai hindley-aus",
+        "rider_name":  "Jai Hindley",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "thymen arensman-ned",
+        "rider_name":  "Thymen Arensman",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "derek gee west-can",
+        "rider_name":  "Derek Gee-West",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "michael storer-aus",
+        "rider_name":  "Michael Storer",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "damiano caruso-ita",
+        "rider_name":  "Damiano Caruso",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "alessandro covi-ita",
+        "rider_name":  "Alessandro Covi",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "fabio christen-sui",
+        "rider_name":  "Fabio Christen",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "simone velasco-ita",
+        "rider_name":  "Simone Velasco",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "oscar onley-gbr",
+        "rider_name":  "Oscar Onley",
+        "mountain":  73,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  153
+    },
+    {
+        "rider_id":  "ben healy-irl",
+        "rider_name":  "Ben Healy",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "lorenzo fortunato-ita",
+        "rider_name":  "Lorenzo Fortunato",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "adam yates-gbr",
+        "rider_name":  "Adam Yates",
+        "mountain":  70,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  150
+    },
+    {
+        "rider_id":  "alberto bettiol-ita",
+        "rider_name":  "Alberto Bettiol",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "fred wright-gbr",
+        "rider_name":  "Fred Wright",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "michael matthews-aus",
+        "rider_name":  "Michael Matthews",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "jhonatan narvaez-col",
+        "rider_name":  "Jhonatan NarvÃ¡ez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "kevin vauquelin-fra",
+        "rider_name":  "KÃ©vin Vauquelin",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "nicola conci-ita",
+        "rider_name":  "Nicola Conci",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "lennart jasch-ger",
+        "rider_name":  "Lennart Jasch",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "diego ulissi-ita",
+        "rider_name":  "Diego Ulissi",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "nicolo garibbo-ita",
+        "rider_name":  "NicolÃ² Garibbo",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "enric mas-esp",
+        "rider_name":  "Enric Mas",
+        "mountain":  73,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  153
+    },
+    {
+        "rider_id":  "thomas pidcock-gbr",
+        "rider_name":  "Thomas Pidcock",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "florian lipowitz-ger",
+        "rider_name":  "Florian Lipowitz",
+        "mountain":  81,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  161
+    },
+    {
+        "rider_id":  "tobias halland johannessen-nor",
+        "rider_name":  "Tobias Halland Johannessen",
+        "mountain":  75,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  155
+    },
+    {
+        "rider_id":  "javier romo-esp",
+        "rider_name":  "Javier Romo",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "mischa bredewold-ned",
+        "rider_name":  "Mischa Bredewold",
+        "mountain":  69,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  149
+    },
+    {
+        "rider_id":  "yara kastelijn-ned",
+        "rider_name":  "Yara Kastelijn",
+        "mountain":  70,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  150
+    },
+    {
+        "rider_id":  "lauren dickson-gbr",
+        "rider_name":  "Lauren Dickson",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "riejanne markus-ned",
+        "rider_name":  "Riejanne Markus",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "evita muzic-fra",
+        "rider_name":  "Ã‰vita Muzic",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "usoa ostolaza-esp",
+        "rider_name":  "Usoa Ostolaza",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "juliette berthet-fra",
+        "rider_name":  "Juliette Berthet",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "dominika w odarczyk-pol",
+        "rider_name":  "Dominika WÅ‚odarczyk",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "ricarda bauernfeind-ger",
+        "rider_name":  "Ricarda Bauernfeind",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "pavel bittner-cze",
+        "rider_name":  "Pavel Bittner",
+        "mountain":  40,
+        "sprint":  74,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  154
+    },
+    {
+        "rider_id":  "steffen de schuyteneer-bel",
+        "rider_name":  "Steffen De Schuyteneer",
+        "mountain":  40,
+        "sprint":  66,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  146
+    },
+    {
+        "rider_id":  "max kanter-ger",
+        "rider_name":  "Max Kanter",
+        "mountain":  40,
+        "sprint":  58,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  138
+    },
+    {
+        "rider_id":  "stanis aw anio kowski-pol",
+        "rider_name":  "StanisÅ‚aw AnioÅ‚kowski",
+        "mountain":  40,
+        "sprint":  57,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  137
+    },
+    {
+        "rider_id":  "alexis renard-fra",
+        "rider_name":  "Alexis Renard",
+        "mountain":  40,
+        "sprint":  53,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  133
+    },
+    {
+        "rider_id":  "gerben thijssen-bel",
+        "rider_name":  "Gerben Thijssen",
+        "mountain":  40,
+        "sprint":  48,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  128
+    },
+    {
+        "rider_id":  "matevz govekar-slo",
+        "rider_name":  "MatevÅ¾ Govekar",
+        "mountain":  40,
+        "sprint":  60,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  140
+    },
+    {
+        "rider_id":  "laurenz rex-bel",
+        "rider_name":  "Laurenz Rex",
+        "mountain":  40,
+        "sprint":  71,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  151
+    },
+    {
+        "rider_id":  "cees bol-ned",
+        "rider_name":  "Cees Bol",
+        "mountain":  40,
+        "sprint":  53,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  133
+    },
+    {
+        "rider_id":  "luke lamperti-usa",
+        "rider_name":  "Luke Lamperti",
+        "mountain":  40,
+        "sprint":  51,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  131
+    },
+    {
+        "rider_id":  "andreas kron-den",
+        "rider_name":  "Andreas Kron",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "hugo hofstetter-fra",
+        "rider_name":  "Hugo Hofstetter",
+        "mountain":  40,
+        "sprint":  74,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  154
+    },
+    {
+        "rider_id":  "jenthe biermans-bel",
+        "rider_name":  "Jenthe Biermans",
+        "mountain":  40,
+        "sprint":  65,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  145
+    },
+    {
+        "rider_id":  "matevz govekar-svn",
+        "rider_name":  "MatevÅ¾ Govekar",
+        "mountain":  40,
+        "sprint":  55,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  135
+    },
+    {
+        "rider_id":  "florian senechal-fra",
+        "rider_name":  "Florian SÃ©nÃ©chal",
+        "mountain":  40,
+        "sprint":  53,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  133
+    },
+    {
+        "rider_id":  "florian dauphin-fra",
+        "rider_name":  "Florian Dauphin",
+        "mountain":  40,
+        "sprint":  60,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  140
+    },
+    {
+        "rider_id":  "tadej pogacar-slo",
+        "rider_name":  "Tadej PogaÄar",
+        "mountain":  99,
+        "sprint":  92,
+        "rouleur":  91,
+        "profile":  "Grimpeur",
+        "score":  282
+    },
+    {
+        "rider_id":  "mikkel honore-den",
+        "rider_name":  "Mikkel HonorÃ©",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lotte kopecky-bel",
+        "rider_name":  "Lotte Kopecky",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "noemi ruegg-sui",
+        "rider_name":  "Noemi RÃ¼egg",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "eleonora gasparrini-ita",
+        "rider_name":  "Eleonora Gasparrini",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "puck pieterse-ned",
+        "rider_name":  "Puck Pieterse",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lorena wiebes-ned",
+        "rider_name":  "Lorena Wiebes",
+        "mountain":  70,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  150
+    },
+    {
+        "rider_id":  "ally wollaston-nzl",
+        "rider_name":  "Ally Wollaston",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "elisa balsamo-ita",
+        "rider_name":  "Elisa Balsamo",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "charlotte kool-ned",
+        "rider_name":  "Charlotte Kool",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "chiara consonni-ita",
+        "rider_name":  "Chiara Consonni",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "primoz roglic-slo",
+        "rider_name":  "PrimoÅ¾ RogliÄ",
+        "mountain":  94,
+        "sprint":  70,
+        "rouleur":  87,
+        "profile":  "Grimpeur",
+        "score":  251
+    },
+    {
+        "rider_id":  "cian uijtdebroeks-bel",
+        "rider_name":  "Cian Uijtdebroeks",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "jefferson alexander cepeda-ecu",
+        "rider_name":  "Jefferson Alexander Cepeda",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "luke plapp-aus",
+        "rider_name":  "Luke Plapp",
+        "mountain":  68,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  148
+    },
+    {
+        "rider_id":  "bart lemmen-ned",
+        "rider_name":  "Bart Lemmen",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "rasmus tiller-nor",
+        "rider_name":  "Rasmus Tiller",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "rui oliveira-por",
+        "rider_name":  "Rui Oliveira",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "henok mulubrhan-eri",
+        "rider_name":  "Henok Mulubrhan",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "juan sebastian molano-col",
+        "rider_name":  "Juan SebastiÃ¡n Molano",
+        "mountain":  40,
+        "sprint":  63,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  143
+    },
+    {
+        "rider_id":  "emilien jeanniere-fra",
+        "rider_name":  "Emilien JeanniÃ¨re",
+        "mountain":  40,
+        "sprint":  70,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  150
+    },
+    {
+        "rider_id":  "milan menten-bel",
+        "rider_name":  "Milan Menten",
+        "mountain":  40,
+        "sprint":  58,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  138
+    },
+    {
+        "rider_id":  "j rgen nordhagen-nor",
+        "rider_name":  "JÃ¸rgen Nordhagen",
+        "mountain":  67,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  147
+    },
+    {
+        "rider_id":  "abel balderstone-esp",
+        "rider_name":  "Abel Balderstone",
+        "mountain":  65,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  145
+    },
+    {
+        "rider_id":  "ivan romeo-esp",
+        "rider_name":  "IvÃ¡n Romeo",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "jose felix parra-esp",
+        "rider_name":  "JosÃ© FÃ©lix Parra",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "txomin juaristi-esp",
+        "rider_name":  "Txomin Juaristi",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "george bennett-nzl",
+        "rider_name":  "George Bennett",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "jesus herrada-esp",
+        "rider_name":  "JesÃºs Herrada",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "artem nych",
+        "rider_name":  "Artem Nych",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "tim van dijke-ned",
+        "rider_name":  "Tim van Dijke",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "georg steinhauser-ger",
+        "rider_name":  "Georg Steinhauser",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "marc soler-esp",
+        "rider_name":  "Marc Soler",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "harold tejada-col",
+        "rider_name":  "Harold Tejada",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "mick van dijke-ned",
+        "rider_name":  "Mick van Dijke",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "stefan bissegger-sui",
+        "rider_name":  "Stefan Bissegger",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "nils politt-ger",
+        "rider_name":  "Nils Politt",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lewis askey-gbr",
+        "rider_name":  "Lewis Askey",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "toms skujins-lat",
+        "rider_name":  "Toms SkujiÅ†Å¡",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "olav kooij-ned",
+        "rider_name":  "Olav Kooij",
+        "mountain":  57,
+        "sprint":  69,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  166
+    },
+    {
+        "rider_id":  "alec segaert-bel",
+        "rider_name":  "Alec Segaert",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "filippo fiorelli-ita",
+        "rider_name":  "Filippo Fiorelli",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "antoine l hote-fra",
+        "rider_name":  "Antoine L\u0027Hote",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "martin marcellusi-ita",
+        "rider_name":  "Martin Marcellusi",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "killian theot-fra",
+        "rider_name":  "Killian ThÃ©ot",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "lander loockx-bel",
+        "rider_name":  "Lander Loockx",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "axel van der tuuk-ned",
+        "rider_name":  "Axel van der Tuuk",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "bryan coquard-fra",
+        "rider_name":  "Bryan Coquard",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "tim merlier-bel",
+        "rider_name":  "Tim Merlier",
+        "mountain":  40,
+        "sprint":  69,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  149
+    },
+    {
+        "rider_id":  "dusan rajovic-srb",
+        "rider_name":  "DuÅ¡an RajoviÄ‡",
+        "mountain":  51,
+        "sprint":  60,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  151
+    },
+    {
+        "rider_id":  "zak erzen-slo",
+        "rider_name":  "Å½ak ErÅ¾en",
+        "mountain":  40,
+        "sprint":  58,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  138
+    },
+    {
+        "rider_id":  "david dekker-ned",
+        "rider_name":  "David Dekker",
+        "mountain":  40,
+        "sprint":  55,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  135
+    },
+    {
+        "rider_id":  "tom crabbe-bel",
+        "rider_name":  "Tom Crabbe",
+        "mountain":  40,
+        "sprint":  48,
+        "rouleur":  40,
+        "profile":  "Sprinteur",
+        "score":  128
+    },
+    {
+        "rider_id":  "axel laurance-fra",
+        "rider_name":  "Axel Laurance",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "alan hatherly-rsa",
+        "rider_name":  "Alan Hatherly",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "thomas pesenti-ita",
+        "rider_name":  "Thomas Pesenti",
+        "mountain":  63,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  143
+    },
+    {
+        "rider_id":  "anton schiffer-ger",
+        "rider_name":  "Anton Schiffer",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "matteo fabbro-ita",
+        "rider_name":  "Matteo Fabbro",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "giovanni aleotti-ita",
+        "rider_name":  "Giovanni Aleotti",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "jardi christiaan van der lee-ned",
+        "rider_name":  "Jardi Christiaan van der Lee",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "lionel taminiaux-bel",
+        "rider_name":  "Lionel Taminiaux",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marcin budzinski-pol",
+        "rider_name":  "Marcin BudziÅ„ski",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "nicolo buratti-ita",
+        "rider_name":  "Nicolo Buratti",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "joseph pidcock-gbr",
+        "rider_name":  "Joseph Pidcock",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "gari ugarte-esp",
+        "rider_name":  "Gari Ugarte",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "emils liepins-lat",
+        "rider_name":  "EmÄ«ls LiepiÅ†Å¡",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "santiago buitrago-col",
+        "rider_name":  "Santiago Buitrago",
+        "mountain":  65,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  145
+    },
+    {
+        "rider_id":  "magnus sheffield-usa",
+        "rider_name":  "Magnus Sheffield",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "luke tuckwell-aus",
+        "rider_name":  "Luke Tuckwell",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "juan ayuso-esp",
+        "rider_name":  "Juan Ayuso",
+        "mountain":  72,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  152
+    },
+    {
+        "rider_id":  "cristian rodriguez-esp",
+        "rider_name":  "CristiÃ¡n RodrÃ­guez",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "guillaume martin-fra",
+        "rider_name":  "Guillaume Martin",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "jay vine-aus",
+        "rider_name":  "Jay Vine",
+        "mountain":  71,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  151
+    },
+    {
+        "rider_id":  "harry sweeny-aus",
+        "rider_name":  "Harry Sweeny",
+        "mountain":  64,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  144
+    },
+    {
+        "rider_id":  "andrea raccagni noviero-ita",
+        "rider_name":  "Andrea Raccagni Noviero",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "matteo sobrero-ita",
+        "rider_name":  "Matteo Sobrero",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "katarzyna niewiadoma phinney-pol",
+        "rider_name":  "Katarzyna Niewiadoma-Phinney",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "paula blasi-esp",
+        "rider_name":  "Paula Blasi",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "cedrine kerbaol-fra",
+        "rider_name":  "CÃ©drine Kerbaol",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "kimberley le court pienaar-mri",
+        "rider_name":  "Kimberley Le Court-Pienaar",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "richard carapaz-ecu",
+        "rider_name":  "Richard Carapaz",
+        "mountain":  69,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  149
+    },
+    {
+        "rider_id":  "jordan jegat-fra",
+        "rider_name":  "Jordan Jegat",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "jakob soderqvist-swe",
+        "rider_name":  "Jakob SÃ¶derqvist",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "junior lecerf-bel",
+        "rider_name":  "Junior Lecerf",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "walter calzoni-ita",
+        "rider_name":  "Walter Calzoni",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "jakob omrzel-slo",
+        "rider_name":  "Jakob Omrzel",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "attila valter-hun",
+        "rider_name":  "Attila Valter",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "artem fofonov-fra",
+        "rider_name":  "Artem Fofonov",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "ivo oliveira-por",
+        "rider_name":  "Ivo Oliveira",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "luke mudgway-nzl",
+        "rider_name":  "Luke Mudgway",
+        "mountain":  61,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  141
+    },
+    {
+        "rider_id":  "alessio delle vedove-ita",
+        "rider_name":  "Alessio Delle Vedove",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "alessandro iacchi-ita",
+        "rider_name":  "Alessandro Iacchi",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "mathias bregnh j-den",
+        "rider_name":  "Mathias BregnhÃ¸j",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "yuma koishi-jpn",
+        "rider_name":  "Yuma Koishi",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "matteo regnanti-ita",
+        "rider_name":  "Matteo Regnanti",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "ben granger-gbr",
+        "rider_name":  "Ben Granger",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "jose manuel diaz-esp",
+        "rider_name":  "JosÃ© Manuel DÃ­az",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "eivind broholt fougner-nor",
+        "rider_name":  "Eivind Broholt Fougner",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "jorge gutierrez-esp",
+        "rider_name":  "Jorge GutiÃ©rrez",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "mathis le berre-fra",
+        "rider_name":  "Mathis Le Berre",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "finn fisher black-nzl",
+        "rider_name":  "Finn Fisher-Black",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "aleksandr vlasov",
+        "rider_name":  "Aleksandr Vlasov",
+        "mountain":  59,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  139
+    },
+    {
+        "rider_id":  "marlen reusser-sui",
+        "rider_name":  "Marlen Reusser",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "kim le court pienaar-mri",
+        "rider_name":  "Kim Le Court-Pienaar",
+        "mountain":  67,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  147
+    },
+    {
+        "rider_id":  "steffi haberlin-sui",
+        "rider_name":  "Steffi HÃ¤berlin",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "sarah van dam-can",
+        "rider_name":  "Sarah Van Dam",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "tobias foss-nor",
+        "rider_name":  "Tobias Foss",
+        "mountain":  72,
+        "sprint":  58,
+        "rouleur":  96,
+        "profile":  "Rouleur",
+        "score":  226
+    },
+    {
+        "rider_id":  "ilan van wilder-bel",
+        "rider_name":  "Ilan Van Wilder",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "matthew riccitello-usa",
+        "rider_name":  "Matthew Riccitello",
+        "mountain":  59,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  139
+    },
+    {
+        "rider_id":  "matthew fox-aus",
+        "rider_name":  "Matthew Fox",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "nil gimeno-esp",
+        "rider_name":  "Nil Gimeno",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "dylan hopkins-aus",
+        "rider_name":  "Dylan Hopkins",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "ivan cobo-esp",
+        "rider_name":  "IvÃ¡n Cobo",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "fergus browning-aus",
+        "rider_name":  "Fergus Browning",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "carter bettles-aus",
+        "rider_name":  "Carter Bettles",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "lorenzo quartucci-ita",
+        "rider_name":  "Lorenzo Quartucci",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "ben oliver-nzl",
+        "rider_name":  "Ben Oliver",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "adrien boichis-fra",
+        "rider_name":  "Adrien Boichis",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "carlos canal-esp",
+        "rider_name":  "Carlos Canal",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "lennert teugels-bel",
+        "rider_name":  "Lennert Teugels",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "henri vandenabeele-bel",
+        "rider_name":  "Henri Vandenabeele",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "jamie meehan-irl",
+        "rider_name":  "Jamie Meehan",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "henrique bravo-bra",
+        "rider_name":  "Henrique Bravo",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "remi arsac-fra",
+        "rider_name":  "RÃ©mi Arsac",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "jefferson alexander cepeda-col",
+        "rider_name":  "Jefferson Alexander Cepeda",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "huw buck jones-gbr",
+        "rider_name":  "Huw Buck Jones",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "adam howell-gbr",
+        "rider_name":  "Adam Howell",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "jose said cisneros-mex",
+        "rider_name":  "JosÃ© Said Cisneros",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "gregor muhlberger-aut",
+        "rider_name":  "Gregor MÃ¼hlberger",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "kevin vermaerke-usa",
+        "rider_name":  "Kevin Vermaerke",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "hector alvarez-esp",
+        "rider_name":  "HÃ©ctor Ãlvarez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "bauke mollema-ned",
+        "rider_name":  "Bauke Mollema",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "michael gogl-aut",
+        "rider_name":  "Michael Gogl",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "finlay pickering-gbr",
+        "rider_name":  "Finlay Pickering",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "paul double-gbr",
+        "rider_name":  "Paul Double",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "carlos rodriguez-esp",
+        "rider_name":  "Carlos RodrÃ­guez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "tim wellens-bel",
+        "rider_name":  "Tim Wellens",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "daan hoole-ned",
+        "rider_name":  "Daan Hoole",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "elliot rowe-gbr",
+        "rider_name":  "Elliot Rowe",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "paul wright-nzl",
+        "rider_name":  "Paul Wright",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "liane lippert-ger",
+        "rider_name":  "Liane Lippert",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "caroline andersson-swe",
+        "rider_name":  "Caroline Andersson",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "karlijn swinkels-ned",
+        "rider_name":  "Karlijn Swinkels",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "cecilie uttrup ludwig-den",
+        "rider_name":  "Cecilie Uttrup Ludwig",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "josie nelson-gbr",
+        "rider_name":  "Josie Nelson",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "lara gillespie-irl",
+        "rider_name":  "Lara Gillespie",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "clara copponi-fra",
+        "rider_name":  "Clara Copponi",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "kathrin schweinberger-aut",
+        "rider_name":  "Kathrin Schweinberger",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "maggie coles lyster-can",
+        "rider_name":  "Maggie Coles-Lyster",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "tang xin-chn",
+        "rider_name":  "Tang Xin",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "margot vanpachtenbeke-bel",
+        "rider_name":  "Margot Vanpachtenbeke",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "jarmila machacova-cze",
+        "rider_name":  "Jarmila Machacova",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "henrietta colborne-gbr",
+        "rider_name":  "Henrietta Colborne",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "josie talbot-aus",
+        "rider_name":  "Josie Talbot",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "martin tj tta-nor",
+        "rider_name":  "Martin TjÃ¸tta",
+        "mountain":  56,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  136
+    },
+    {
+        "rider_id":  "juan ayuso-spa",
+        "rider_name":  "Juan Ayuso",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "jhonatan narvaez-ecu",
+        "rider_name":  "Jhonatan NarvÃ¡ez",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "clement braz afonso-fra",
+        "rider_name":  "ClÃ©ment Braz Afonso",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "maxim van gils-bel",
+        "rider_name":  "Maxim Van Gils",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "xabier berasategi-esp",
+        "rider_name":  "Xabier Berasategi",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "clement alleno-fra",
+        "rider_name":  "ClÃ©ment Alleno",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "fabrizio crozzolo-arg",
+        "rider_name":  "Fabrizio Crozzolo",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "aurelien paret peintre-fra",
+        "rider_name":  "AurÃ©lien Paret-Peintre",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "tijmen graat-ned",
+        "rider_name":  "Tijmen Graat",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "sam oomen-ned",
+        "rider_name":  "Sam Oomen",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "eike behrens-ger",
+        "rider_name":  "Eike Behrens",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "jonathan klever caicedo-ecu",
+        "rider_name":  "Jonathan Klever Caicedo",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "eric antonio fagundez-uru",
+        "rider_name":  "Eric Antonio FagÃºndez",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "fernando tercero-esp",
+        "rider_name":  "Fernando Tercero",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "eduardo sepulveda-arg",
+        "rider_name":  "Eduardo SepÃºlveda",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "emanuel buchmann-ger",
+        "rider_name":  "Emanuel Buchmann",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "nairo quintana-col",
+        "rider_name":  "Nairo Quintana",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "diego pescador-col",
+        "rider_name":  "Diego Pescador",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "louis rouland-fra",
+        "rider_name":  "Louis Rouland",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "samuel fernandez-esp",
+        "rider_name":  "Samuel FernÃ¡ndez",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "joel nicolau-esp",
+        "rider_name":  "Joel Nicolau",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "matteo malucelli-ita",
+        "rider_name":  "Matteo Malucelli",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "joshua giddings-gbr",
+        "rider_name":  "Joshua Giddings",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "gleb syritsa",
+        "rider_name":  "Gleb Syritsa",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "cameron scott-aus",
+        "rider_name":  "Cameron Scott",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "markus pajur-est",
+        "rider_name":  "Markus Pajur",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "paul hennequin-fra",
+        "rider_name":  "Paul Hennequin",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "lucas de rossi-fra",
+        "rider_name":  "Lucas De Rossi",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "chris harper-aus",
+        "rider_name":  "Chris Harper",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "mie bj rndal ottestad-nor",
+        "rider_name":  "Mie BjÃ¸rndal Ottestad",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "blanka vas-hun",
+        "rider_name":  "Blanka Vas",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "letizia borghesi-ita",
+        "rider_name":  "Letizia Borghesi",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marianne vos-ned",
+        "rider_name":  "Marianne Vos",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "celia gery-fra",
+        "rider_name":  "CÃ©lia Gery",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "shirin van anrooij-ned",
+        "rider_name":  "Shirin van Anrooij",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "monica trinca colonel-ita",
+        "rider_name":  "Monica Trinca Colonel",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "kimberley le court-mri",
+        "rider_name":  "Kimberley Le Court",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "katarzyna niewiadoma-pol",
+        "rider_name":  "Katarzyna Niewiadoma",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "eleonora ciabocco-ita",
+        "rider_name":  "Eleonora Ciabocco",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "justine ghekiere-bel",
+        "rider_name":  "Justine Ghekiere",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "ben healy-ire",
+        "rider_name":  "Ben Healy",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "julien bernard-fra",
+        "rider_name":  "Julien Bernard",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "sam maisonobe-fra",
+        "rider_name":  "Sam Maisonobe",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "federico iacomoni-ita",
+        "rider_name":  "Federico Iacomoni",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "baptiste vadic-fra",
+        "rider_name":  "Baptiste Vadic",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "pavel sivakov-fra",
+        "rider_name":  "Pavel Sivakov",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "clement berthet-fra",
+        "rider_name":  "ClÃ©ment Berthet",
+        "mountain":  58,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  138
+    },
+    {
+        "rider_id":  "joao almeida-por",
+        "rider_name":  "JoÃ£o Almeida",
+        "mountain":  66,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  146
+    },
+    {
+        "rider_id":  "ben turner-gbr",
+        "rider_name":  "Ben Turner",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "viktor soenens-bel",
+        "rider_name":  "Viktor Soenens",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "valentin paret peintre-fra",
+        "rider_name":  "Valentin Paret-Peintre",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "alexis guerin-fra",
+        "rider_name":  "Alexis GuÃ©rin",
+        "mountain":  62,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  142
+    },
+    {
+        "rider_id":  "artem nych-rus",
+        "rider_name":  "Artem Nych",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "pedro silva-por",
+        "rider_name":  "Pedro Silva",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "jose fernandes-por",
+        "rider_name":  "JosÃ© Fernandes",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "tiago antunes-por",
+        "rider_name":  "Tiago Antunes",
+        "mountain":  53,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  133
+    },
+    {
+        "rider_id":  "jokin murguialday-esp",
+        "rider_name":  "Jokin Murguialday",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "emanuel duarte-por",
+        "rider_name":  "Emanuel Duarte",
+        "mountain":  50,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  130
+    },
+    {
+        "rider_id":  "rui carvalho-por",
+        "rider_name":  "Rui Carvalho",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "diogo barbosa-por",
+        "rider_name":  "Diogo Barbosa",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "andreas leknessund-nor",
+        "rider_name":  "Andreas Leknessund",
+        "mountain":  60,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  140
+    },
+    {
+        "rider_id":  "usoa ostolaza-spa",
+        "rider_name":  "Usoa Ostolaza",
+        "mountain":  57,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  137
+    },
+    {
+        "rider_id":  "mireia benito-spa",
+        "rider_name":  "Mireia Benito",
+        "mountain":  55,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  135
+    },
+    {
+        "rider_id":  "amanda spratt-aus",
+        "rider_name":  "Amanda Spratt",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "nadia gontova-can",
+        "rider_name":  "Nadia Gontova",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "maud oudeman-ned",
+        "rider_name":  "Maud Oudeman",
+        "mountain":  46,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  126
+    },
+    {
+        "rider_id":  "leo bisiaux-fra",
+        "rider_name":  "LÃ©o Bisiaux",
+        "mountain":  51,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  131
+    },
+    {
+        "rider_id":  "matteo vanhuffel-bel",
+        "rider_name":  "Matteo Vanhuffel",
+        "mountain":  48,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  128
+    },
+    {
+        "rider_id":  "sepp kuss-usa",
+        "rider_name":  "Sepp Kuss",
+        "mountain":  54,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  134
+    },
+    {
+        "rider_id":  "julius johansen-den",
+        "rider_name":  "Julius Johansen",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "matej mohoric-slo",
+        "rider_name":  "Matej MohoriÄ",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "matyas kopecky-cze",
+        "rider_name":  "MatyÃ¡Å¡ KopeckÃ½",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "maximo quiles",
+        "rider_name":  "MÃ¡ximo Quiles",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "david almansa",
+        "rider_name":  "David Almansa",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "brian uriarte",
+        "rider_name":  "Brian Uriarte",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "alvaro carpe",
+        "rider_name":  "Ãlvaro Carpe",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "adrian fernandez",
+        "rider_name":  "AdriÃ¡n FernÃ¡ndez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marco morelli",
+        "rider_name":  "Marco Morelli",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "valentin perrone",
+        "rider_name":  "ValentÃ­n Perrone",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "veda pratama",
+        "rider_name":  "Veda Pratama",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "hakim danish",
+        "rider_name":  "Hakim Danish",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "matteo bertelle",
+        "rider_name":  "Matteo Bertelle",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "rico salmela",
+        "rider_name":  "Rico Salmela",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "adrian cruces",
+        "rider_name":  "AdriÃ¡n Cruces",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "guido pini",
+        "rider_name":  "Guido Pini",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "joel esteban",
+        "rider_name":  "Joel Esteban",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "casey o gorman",
+        "rider_name":  "Casey O\u0027Gorman",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "joel kelso",
+        "rider_name":  "Joel Kelso",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "eddie o shea",
+        "rider_name":  "Eddie O\u0027Shea",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "david munoz",
+        "rider_name":  "David MuÃ±oz",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "jesus rios",
+        "rider_name":  "JesÃºs RÃ­os",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "ryusei yamanaka",
+        "rider_name":  "Ryusei Yamanaka",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "scott ogden",
+        "rider_name":  "Scott Ogden",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "david gonzalez",
+        "rider_name":  "David GonzÃ¡lez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marcos uriarte",
+        "rider_name":  "Marcos Uriarte",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "cormac buchanan",
+        "rider_name":  "Cormac Buchanan",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "leo rammerstorfer",
+        "rider_name":  "Leo Rammerstorfer",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "kiattisak singhapong",
+        "rider_name":  "Kiattisak Singhapong",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "zen mitani",
+        "rider_name":  "Zen Mitani",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "ruche moodley",
+        "rider_name":  "RuchÃ© Moodley",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "ryota ogiwara",
+        "rider_name":  "Ryota Ogiwara",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "nicola carraro",
+        "rider_name":  "Nicola Carraro",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "leonardo abruzzo",
+        "rider_name":  "Leonardo Abruzzo",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "eduardo gutierrez",
+        "rider_name":  "Eduardo GutiÃ©rrez",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marlen reusser",
+        "rider_name":  "Marlen Reusser",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "juliette berthet",
+        "rider_name":  "Juliette Berthet",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "puck pieterse",
+        "rider_name":  "Puck Pieterse",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "celia gery",
+        "rider_name":  "CÃ©lia Gery",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "dominika wlodarczyk",
+        "rider_name":  "Dominika Wlodarczyk",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "maeva squiban",
+        "rider_name":  "Maeva Squiban",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "franziska koch",
+        "rider_name":  "Franziska Koch",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "pfeiffer georgi",
+        "rider_name":  "Pfeiffer Georgi",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "eleonora gasparrini",
+        "rider_name":  "Eleonora Gasparrini",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "steffi haberlin",
+        "rider_name":  "Steffi Haberlin",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "liane lippert",
+        "rider_name":  "Liane Lippert",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "noemi ruegg",
+        "rider_name":  "Noemi Ruegg",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "henrietta christie",
+        "rider_name":  "Henrietta Christie",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "sarah van dam",
+        "rider_name":  "Sarah van Dam",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lauren dickson",
+        "rider_name":  "Lauren Dickson",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "ashleigh moolman",
+        "rider_name":  "Ashleigh Moolman",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lotte kopecky",
+        "rider_name":  "Lotte Kopecky",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "kristen faulkner",
+        "rider_name":  "Kristen Faulkner",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "sara casasola",
+        "rider_name":  "Sara Casasola",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "paula patino",
+        "rider_name":  "Paula Patino",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "shari bossuyt",
+        "rider_name":  "Shari Bossuyt",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "monica trinca colonel",
+        "rider_name":  "Monica Trinca Colonel",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "mavi garcia",
+        "rider_name":  "Mavi GarcÃ­a",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "margot vanpachtenbeke",
+        "rider_name":  "Margot Vanpachtenbeke",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "antonia niedermaier",
+        "rider_name":  "Antonia Niedermaier",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "karlijn swinkels",
+        "rider_name":  "Karlijn Swinkels",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "silvia persico",
+        "rider_name":  "Silvia Persico",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "mireia benito",
+        "rider_name":  "Mireia Benito",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "cedrine kerbaol",
+        "rider_name":  "CÃ©drine Kerbaol",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "ginia lara caluori fr",
+        "rider_name":  "Ginia-Lara Caluori [ fr ]",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "zoe backstedt",
+        "rider_name":  "Zoe BÃ¤ckstedt",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "francesca barale",
+        "rider_name":  "Francesca Barale",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "nina berton",
+        "rider_name":  "Nina Berton",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "ana vitoria magalhaes",
+        "rider_name":  "Ana VitÃ³ria MagalhÃ£es",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "riejanne markus",
+        "rider_name":  "Riejanne Markus",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "amanda spratt",
+        "rider_name":  "Amanda Spratt",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lauren stephens",
+        "rider_name":  "Lauren Stephens",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "nadia gontova",
+        "rider_name":  "Nadia Gontova",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "sarah gigante",
+        "rider_name":  "Sarah Gigante",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "marte berg edseth",
+        "rider_name":  "Marte Berg Edseth",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "lieke nooijen",
+        "rider_name":  "Lieke Nooijen",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "kimberley le court",
+        "rider_name":  "Kimberley Le Court",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "anna henderson",
+        "rider_name":  "Anna Henderson",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "katharina sadnik",
+        "rider_name":  "Katharina Sadnik",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "femke de vries",
+        "rider_name":  "Femke de Vries",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    },
+    {
+        "rider_id":  "evita muzic",
+        "rider_name":  "Ã‰vita Muzic",
+        "mountain":  40,
+        "sprint":  40,
+        "rouleur":  40,
+        "profile":  "Grimpeur",
+        "score":  120
+    }
+]

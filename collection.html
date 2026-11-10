@@ -105,6 +105,22 @@
   .race-standing, .mail-item { padding: 12px; border: 1px solid var(--line); border-radius: 4px; }
   .race-standing strong, .mail-item strong { display: block; }
   .race-standing p, .mail-item p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+  .race-course-profile { margin: 16px 0 22px; padding: 16px; border: 1px solid var(--line); border-radius: 5px; background: #f5f4ed; }
+  .race-course-profile h4, .race-key-point h5 { margin: 0; font: 600 14px/1.35 var(--display); }
+  .race-profile-note { margin: 5px 0 12px; color: var(--muted); font-size: 12px; }
+  .race-escape-result { padding: 10px 12px; border-left: 3px solid var(--coral); background: #fffaf0; font-size: 13px; }
+  .race-profile-mix { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .race-profile-mix span { padding: 6px 9px; border: 1px solid var(--line); border-radius: 4px; font: 11px/1.3 var(--mono); }
+  .race-profile-chart { display: block; width: 100%; max-height: 150px; color: var(--teal); }
+  .race-profile-chart line { stroke: var(--line); }
+  .race-profile-chart polyline { fill: none; stroke: currentColor; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+  .race-profile-chart circle { fill: var(--coral); stroke: var(--paper); stroke-width: 3; }
+  .race-key-point-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 9px; margin-top: 12px; }
+  .race-key-point { padding: 11px; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
+  .race-key-point > p { margin: 4px 0 8px; color: var(--muted); font-size: 11px; }
+  .race-key-point ol { margin: 0; padding-left: 21px; font-size: 12px; }
+  .race-key-point li { padding: 2px 0; }
+  .race-key-point li small { display: block; color: var(--muted); font-size: 10px; }
   .mail-dialog { width: min(560px, calc(100% - 28px)); max-height: min(80vh, 700px); padding: 0; overflow: auto;
                  border: 1px solid var(--line); border-radius: 7px; color: var(--ink); background: var(--paper); }
   .mail-dialog::backdrop { background: rgba(15,35,29,.62); backdrop-filter: blur(3px); }
@@ -153,15 +169,19 @@
   .loading-state { font: 12px/1.5 var(--mono); }
   .error-state { color: var(--coral); }
   .rider-card { --rarity: var(--teal); position: relative; min-width: 0; aspect-ratio: .72; display: flex; flex-direction: column;
-                justify-content: space-between; padding: 13px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--rarity) 44%, #fff);
+                justify-content: flex-start; padding: 13px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--rarity) 44%, #fff);
                 border-radius: 10px; color: var(--ink); background: linear-gradient(155deg, #fffef9 0%, #f6f5ea 100%);
                 box-shadow: 0 5px 14px rgba(24,62,52,.1), inset 0 0 0 3px rgba(255,255,255,.72);
                 animation: reveal .42s both; animation-delay: var(--delay, 0ms); transition: transform .18s, box-shadow .18s; }
   .rider-card:hover { z-index: 3; transform: translateY(-5px) rotate(-.4deg); box-shadow: 0 14px 28px rgba(24,62,52,.18), inset 0 0 0 3px rgba(255,255,255,.72); }
   .rider-card[data-rarity="legendary"] { --rarity: #ca4937; }
+  .rider-card[data-rarity="mythic"] { --rarity: #7544b8; }
   .rider-card[data-rarity="epic"] { --rarity: #a87417; }
   .rider-card[data-rarity="rare"] { --rarity: #087c72; }
   .rider-card[data-rarity="common"] { --rarity: #52665c; }
+  .rider-card.is-shiny { border-color: #d3a735; background: linear-gradient(145deg, #fffdf2, #f8edc8 52%, #fffef7); }
+  .rider-card.is-shiny::before { height: 5px; background: linear-gradient(90deg, #ab70df, #f0c84b, #70c5ca, #ee8ca6); }
+  .rider-card.is-shiny::after { border-color: rgba(195,147,37,.3); }
   .rider-card::before { content: ""; position: absolute; z-index: 1; top: 0; right: 15px; left: 15px; height: 4px;
                         border-radius: 0 0 5px 5px; background: linear-gradient(90deg, transparent, var(--rarity), transparent); }
   .rider-card::after { content: ""; position: absolute; top: 42px; right: -34px; width: 120px; height: 120px;
@@ -170,12 +190,20 @@
                        pointer-events: none; }
   .rider-top, .rider-bottom { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 6px; }
   .rider-top { min-height: 23px; }
-  .rarity-tag, .rank-tag, .country-tag { font: 500 9px/1.3 var(--mono); text-transform: uppercase; }
+  .rarity-tag, .country-tag { font: 500 9px/1.3 var(--mono); text-transform: uppercase; }
   .rarity-tag { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; border: 1px solid color-mix(in srgb, var(--rarity) 25%, transparent);
                 border-radius: 99px; color: var(--rarity); background: color-mix(in srgb, var(--rarity) 7%, white); letter-spacing: .04em; }
   .rarity-tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 7px currentColor; }
-  .rank-tag { color: var(--muted); font-size: 8px; text-align: right; }
-  .rider-illustration { position: absolute; inset: 48px 9px auto; height: 43%; display: grid; place-items: center;
+  .points-tag { display: inline-flex; align-items: baseline; gap: 4px; padding: 4px 7px; border: 1px solid color-mix(in srgb, var(--rarity) 25%, transparent);
+                border-radius: 99px; color: var(--rarity); background: color-mix(in srgb, var(--rarity) 7%, white);
+                font: 500 8px/1.3 var(--mono); white-space: nowrap; }
+  .points-tag strong { font: 600 11px/1 var(--display); font-variant-numeric: tabular-nums; }
+  .shiny-odds { margin: -12px 0 20px; color: #e4ecdf; font: 11px/1.5 var(--mono); }
+  .shiny-stamp { position: absolute; top: 7px; right: 7px; z-index: 2; padding: 4px 7px; border: 1px solid rgba(255,255,255,.82);
+                 border-radius: 99px; color: #fff; background: linear-gradient(110deg, #7350a8, #bb8520, #167f83);
+                 box-shadow: 0 2px 8px rgba(24,62,52,.24); font: 500 8px/1.2 var(--mono); letter-spacing: .06em; }
+  .shiny-count { margin-right: auto; color: #8a6413; font: 500 8px/1.2 var(--mono); text-transform: uppercase; }
+  .rider-illustration { position: relative; inset: auto; flex: none; height: 38%; margin: 8px 0 0; display: grid; place-items: center;
                        overflow: hidden; border-radius: 7px; color: var(--rarity);
                        background: radial-gradient(ellipse at 50% 35%, color-mix(in srgb, var(--rarity) 18%, white), transparent 68%),
                                    linear-gradient(155deg, #e6e9dc, #f8f6ea 68%); }
@@ -191,26 +219,25 @@
   .photo-credit:hover { background: rgba(16,39,33,.97); }
   .photo-credit-author, .photo-credit-license { overflow: hidden; font-size: 7px; line-height: 1; text-overflow: ellipsis; white-space: nowrap; }
   .photo-credit-license { color: #d3ded3; font: 6px/1 var(--mono); }
-  .rider-copy { position: relative; z-index: 2; margin-top: auto; padding-top: 99px; }
+  .rider-copy { position: relative; z-index: 2; margin-top: 7px; padding-top: 0; }
   .rider-name { display: -webkit-box; min-height: 34px; margin: 0; overflow: hidden; font: 600 13px/1.3 var(--display);
                 overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
   .rider-team { min-height: 16px; margin: 3px 0 0; overflow: hidden; color: var(--muted); font-size: 10px; line-height: 1.3;
                 text-overflow: ellipsis; white-space: nowrap; }
   .rider-meta { display: flex; align-items: center; justify-content: space-between; gap: 5px; margin-top: 7px; }
-  .rider-profile { display: inline-block; max-width: calc(100% - 58px); overflow: hidden; padding: 4px 6px; border-radius: 4px;
+  .rider-profile { display: inline-block; max-width: 100%; overflow: hidden; padding: 4px 6px; border-radius: 4px;
                    color: var(--rarity); background: color-mix(in srgb, var(--rarity) 9%, white);
                    font: 500 8px/1.2 var(--mono); text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
-  .rider-score { display: inline-flex; align-items: baseline; gap: 3px; margin: 0; color: var(--ink); white-space: nowrap; }
-  .rider-score strong { font: 600 15px/1 var(--display); font-variant-numeric: tabular-nums; }
-  .rider-score span { color: var(--muted); font: 8px/1 var(--mono); text-transform: uppercase; }
-  .rider-bottom { align-items: end; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(24,62,52,.12); }
-  .rider-race { display: -webkit-box; max-width: 80%; overflow: hidden; color: var(--ink-soft); font-size: 9px; line-height: 1.3;
-                -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .rider-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 6px; }
+  .rider-stat { min-width: 0; padding: 4px 3px; border: 1px solid rgba(24,62,52,.12); border-radius: 4px;
+                text-align: center; background: rgba(255,255,255,.55); }
+  .rider-stat-label { display: block; overflow: hidden; color: var(--muted); font: 6px/1.2 var(--mono); text-overflow: ellipsis; text-transform: uppercase; }
+  .rider-stat-value { display: block; margin-top: 2px; color: var(--ink); font: 600 8px/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+  .rider-bottom { align-items: end; margin-top: auto; padding-top: 8px; border-top: 1px solid rgba(24,62,52,.12); }
   .rider-count { flex: none; display: grid; place-items: center; min-width: 28px; height: 25px; padding: 0 5px;
                  border: 1px solid color-mix(in srgb, var(--rarity) 35%, transparent); border-radius: 6px;
                  color: var(--rarity); background: color-mix(in srgb, var(--rarity) 7%, white); font: 500 9px/1 var(--mono); }
   .rider-card a { color: inherit; text-decoration: none; }
-  .rider-card a:hover .rider-name { color: var(--coral); }
   .rider-card .country-tag { color: var(--muted); }
   .collection-tools { display: flex; align-items: center; gap: 9px; }
   .collection-tools input, .collection-tools select { height: 38px; padding: 0 10px; border: 1px solid var(--line-strong);
@@ -252,17 +279,17 @@
     .pack-art-wrap { min-height: 230px; }
     .pack-art { width: 150px; height: 205px; }
     .opening-grid, .collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .rider-card { aspect-ratio: .55; padding: 10px; border-radius: 8px; }
+    .rider-card { aspect-ratio: .51; padding: 10px; border-radius: 8px; }
     .rider-top { gap: 3px; }
     .rarity-tag { padding: 3px 5px; font-size: 8px; }
-    .rank-tag { font-size: 7px; }
+    .points-tag { gap: 2px; padding: 3px 4px; font-size: 7px; }
+    .points-tag strong { font-size: 9px; }
     .rider-name { min-height: 29px; font-size: 11px; }
-    .rider-copy { padding-top: 132px; }
+    .rider-copy { margin-top: 6px; }
     .rider-team { font-size: 9px; }
     .rider-meta { margin-top: 5px; }
     .rider-profile { font-size: 7px; }
-    .rider-score strong { font-size: 13px; }
-    .rider-illustration { inset: 44px 7px auto; height: 31%; }
+    .rider-illustration { height: 31%; margin-top: 7px; }
     .photo-credit { padding: 2px 4px; }
     .photo-credit-author { font-size: 5px; }
     .photo-credit-license { font-size: 4px; }
@@ -360,13 +387,11 @@
       <div class="stage-copy">
         <span class="stage-label">Le paquet du jour</span>
         <h2>Un nouveau peloton t’attend.</h2>
-        <p>Cinq coureurs distincts. La rareté reflète leur meilleure place dans les classements enregistrés.</p>
-        <div class="guarantees" aria-label="Probabilités par carte et chances par paquet de cinq">
-          <span class="guarantee">Légendaire 3% · 14% / booster</span>
-          <span class="guarantee">Épique 12% · 47% / booster</span>
-          <span class="guarantee">Rare 30% · 83% / booster</span>
-          <span class="guarantee">Commune 55% · 98% / booster</span>
+        <p>Cinq coureurs distincts. Les 10 premiers au classement des points sont Mythiques; la rareté des autres reflète leur meilleure place. Plus un coureur a de points, plus sa chance de tirage augmente.</p>
+        <div class="guarantees" id="guarantees" aria-label="Probabilités au premier tirage, calculées selon les points">
+          <span class="guarantee">Calcul des probabilités…</span>
         </div>
+        <p class="shiny-odds" id="shiny-odds">Probabilité shiny en cours de calcul…</p>
         <div class="pack-action">
           <button class="open-button" id="open-pack" type="button" disabled>Chargement des classements…</button>
           <span class="pack-note" id="pack-note" aria-live="polite">Connexion aux résultats de la saison</span>
@@ -392,11 +417,11 @@
 
   <section class="view" id="view-collection" role="tabpanel" aria-labelledby="tab-collection" hidden>
     <div class="section-head">
-      <div><h2>Le classeur</h2><p id="collection-subtitle">10e = 1 pt · podium : +5 / +3 / +1 · classement général ×2.</p></div>
+      <div><h2>Le classeur</h2><p id="collection-subtitle">Compétences estimées sur 100 et ajustées subjectivement; le score est leur somme, sur 300.</p></div>
       <div class="collection-tools">
         <input id="search-cards" type="search" placeholder="Nom ou équipe" aria-label="Rechercher dans la collection">
         <select id="filter-rarity" aria-label="Filtrer par rareté">
-          <option value="all">Toutes les raretés</option><option value="legendary">Légendaires</option>
+          <option value="all">Toutes les raretés</option><option value="mythic">Mythiques</option><option value="legendary">Légendaires</option>
           <option value="epic">Épiques</option><option value="rare">Rares</option><option value="common">Communes</option>
         </select>
         <button class="text-button" id="reset-collection" type="button">Effacer la collection</button>
@@ -413,7 +438,7 @@
     <div class="race-list" id="race-list"></div>
     <div class="race-detail" id="race-detail" hidden></div>
   </section>
-  <p class="footer-note" id="storage-note">Profils extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les photos libres affichent leur auteur et leur licence sur la carte. La rareté reflète le meilleur rang enregistré; chaque carte renvoie à son classement source. Collection invitée enregistrée sur cet appareil.</p>
+  <p class="footer-note" id="storage-note">Profils et stats extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les photos libres affichent leur auteur et leur licence sur la carte. Les compétences sont estimées à partir des résultats puis ajustées subjectivement; le score est leur somme, sur 300. Les 10 meilleurs aux points sont Mythiques; les autres raretés reflètent le meilleur rang. Les tirages sont pondérés par les points et les shiny suivent le taux de base Pokémon. Collection invitée enregistrée sur cet appareil.</p>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
@@ -431,14 +456,16 @@ const supabaseClient = window.supabase?.createClient && SUPABASE_CONFIG.url?.sta
   : null;
 const DROPS_COST = 100;
 const PACK_SIZE = 5;
-const RARITY_DROPS = [
-  { rarity: "legendary", label: "Légendaire", weight: 3 },
-  { rarity: "epic", label: "Épique", weight: 12 },
-  { rarity: "rare", label: "Rare", weight: 30 },
-  { rarity: "common", label: "Commune", weight: 55 },
+const SHINY_CHANCE = 1 / 4096;
+const RARITIES = [
+  { rarity: "mythic", label: "Mythique" },
+  { rarity: "legendary", label: "Légendaire" },
+  { rarity: "epic", label: "Épique" },
+  { rarity: "rare", label: "Rare" },
+  { rarity: "common", label: "Commune" },
 ];
-const RARITY_LABEL = Object.fromEntries(RARITY_DROPS.map(drop => [drop.rarity, drop.label]));
-const RARITY_ORDER = Object.fromEntries(RARITY_DROPS.map((drop, index) => [drop.rarity, index]));
+const RARITY_LABEL = Object.fromEntries(RARITIES.map(drop => [drop.rarity, drop.label]));
+const RARITY_ORDER = Object.fromEntries(RARITIES.map((drop, index) => [drop.rarity, index]));
 const MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
@@ -450,7 +477,7 @@ const dateLabel = value => {
   return `${day} ${MONTHS[month - 1]} ${year}`;
 };
 const rarityOf = rank => rank === 1 ? "legendary" : rank <= 3 ? "epic" : rank <= 10 ? "rare" : "common";
-const dropsOf = rarity => ({ legendary: 40, epic: 25, rare: 10, common: 4 })[rarity] || 0;
+const dropsOf = rarity => ({ mythic: 40, legendary: 40, epic: 25, rare: 10, common: 4 })[rarity] || 0;
 const migrateCard = card => RARITY_LABEL[card?.rarity] ? card : { ...card, rarity: rarityOf(Number(card?.bestRank || card?.rank) || 11) };
 
 function readState() {
@@ -474,6 +501,7 @@ let accountProfile = null;
 let cloudSaveTimer = null;
 let accountMode = "signin";
 let raceEvents = [];
+let raceProfiles = {};
 let selectedRace = null;
 let raceEntries = [];
 let inboxMessages = [];
@@ -487,6 +515,7 @@ const photoCache = new Map();
 const photoLookups = new Map();
 let activePhotoLookups = 0;
 const PHOTO_LOOKUP_LIMIT = 2;
+let availableStats = new Set();
 
 function parseMetadataText(value) {
   return new DOMParser().parseFromString(`<body>${value || ""}</body>`, "text/html").body.textContent.trim();
@@ -650,6 +679,7 @@ function mergeCollections(remote, local, preferLocalBalances = false) {
       count,
       duplicates: Math.max(Number(saved.duplicates) || 0, Number(guest.duplicates) || 0, count - 1),
       bestRank,
+      shinyCount: Math.max(Number(saved.shinyCount) || 0, Number(guest.shinyCount) || 0),
     };
   }
   return merged;
@@ -739,8 +769,8 @@ function refreshAccountUI() {
   $("account-signed-in").hidden = !signedIn;
   $("account-user-label").textContent = signedIn ? `Connecté·e en tant que ${accountProfile?.username || accountUser.email}` : "";
   $("storage-note").textContent = signedIn
-    ? "Cartes générées à partir des classements disponibles. Collection synchronisée avec Supabase."
-    : "Cartes générées à partir des classements disponibles. Collection invitée enregistrée sur cet appareil.";
+    ? "Les compétences sont estimées d’après les résultats puis ajustées subjectivement; le score est leur somme, sur 300. Collection synchronisée avec Supabase."
+    : "Les compétences sont estimées d’après les résultats puis ajustées subjectivement; le score est leur somme, sur 300. Collection invitée enregistrée sur cet appareil.";
 }
 
 async function authenticate(mode) {
@@ -886,13 +916,41 @@ function riderIdentity(rawName) {
   return { id: `${normalize(name)}${countryCode ? `-${countryCode.toLowerCase()}` : ""}`, name, countryCode };
 }
 
-function rankingType(label) {
+function rankingType(label, raceName = "", sourceTitle = "") {
   const value = normalize(label);
+  const event = normalize(raceName);
+  const title = normalize(sourceTitle);
+  if (!/moto\d*/.test(title) && /time trial|contre la montre|chronometre|\btt\b/.test(`${value} ${event}`)) return "rouleur";
   if (/mountain|montagne|climber|king of the mountains/.test(value)) return "mountain";
   if (/points|sprint|green jersey/.test(value)) return "sprint";
   if (/youth|young rider|jeune/.test(value)) return "youth";
   if (/general|overall|final/.test(value)) return "general";
   return "race";
+}
+
+const SPRINT_RACES = /ADAC Cyclassics|Cl[aá]sica de Almer[ií]a|Brussels Cycling Classic|Copenhagen Sprint|Koksijde Classic|Kuurne.Brussels.Kuurne|Le Samyn|Nokere Koerse|Scheldeprijs|Sparkassen M[uü]nsterland Giro|Tour of Chongming Island|Classique Dunkerque/i;
+const CLIMBING_RACES = /Amstel Gold Race|Faun Ard[eè]che Classic|Faun Dr[oô]me Classic|Giro dell.Emilia|GP Industria|GP Miguel Indurain|Il Lombardia|La Fl[eè]che Wallonne|Li[eè]ge.Bastogne.Li[eè]ge|Milano.Torino|Strade Bianche|Trofeo Laigueglia|Utsunomiya Japan Cup|Veneto Classic/i;
+const SUBJECTIVE_SKILL_OVERRIDES = {
+  "tobias foss": { mountain: 72, sprint: 58, rouleur: 96 },
+  "filippo ganna": { mountain: 42, sprint: 62, rouleur: 100 },
+  "remco evenepoel": { mountain: 96, sprint: 72, rouleur: 96 },
+  "tadej pogacar": { mountain: 99, sprint: 92, rouleur: 91 },
+  "jonas vingegaard": { mountain: 99, sprint: 58, rouleur: 86 },
+  "primoz roglic": { mountain: 94, sprint: 70, rouleur: 87 },
+  "wout van aert": { mountain: 84, sprint: 98, rouleur: 91 },
+  "mathieu van der poel": { mountain: 83, sprint: 99, rouleur: 78 },
+  "mads pedersen": { mountain: 70, sprint: 98, rouleur: 80 },
+};
+
+function inferredSpecialty(type, raceName, sourceTitle, stageRace) {
+  if (/moto\d*/.test(normalize(sourceTitle))) return null;
+  if (["mountain", "sprint", "rouleur"].includes(type)) return { type, estimated: false };
+  if (type === "general" && stageRace) return { type: "mountain", estimated: true };
+  if (type !== "race") return null;
+  if (SPRINT_RACES.test(raceName)) return { type: "sprint", estimated: true };
+  if (CLIMBING_RACES.test(raceName)) return { type: "mountain", estimated: true };
+  if (rankingType("Result", raceName, sourceTitle) === "rouleur") return { type: "rouleur", estimated: false };
+  return null;
 }
 
 function pointsForRank(rank, type) {
@@ -903,12 +961,12 @@ function pointsForRank(rank, type) {
 }
 
 function riderProfile(points) {
-  if (points.mountain && points.mountain >= points.sprint && points.mountain >= points.general) return "Grimpeur";
-  if (points.sprint && points.sprint >= points.mountain && points.sprint >= points.general) return "Sprinteur";
-  if (points.general && points.general >= points.mountain && points.general >= points.sprint) return "Spécialiste du général";
-  if (points.race) return "Coureur de classiques";
-  if (points.youth) return "Jeune talent";
-  return "Profil à préciser";
+  const specialties = [
+    { score: Number(points.mountain) || 0, profile: "Grimpeur" },
+    { score: Number(points.sprint) || 0, profile: "Sprinteur" },
+    { score: Number(points.rouleur) || 0, profile: "Rouleur" },
+  ];
+  return specialties.reduce((best, specialty) => specialty.score > best.score ? specialty : best).profile;
 }
 
 async function loadPool() {
@@ -920,6 +978,7 @@ async function loadPool() {
     const index = await response.json();
     const entries = Object.values(index).filter(entry => entry && /^[a-z0-9-]+$/.test(entry.slug));
     const catalogue = new Map();
+    availableStats = new Set();
     for (let i = 0; i < entries.length; i += 12) {
       const batch = await Promise.all(entries.slice(i, i + 12).map(async entry => {
         try {
@@ -929,16 +988,20 @@ async function loadPool() {
           const rankings = Array.isArray(result.classifications) && result.classifications.length
             ? result.classifications
             : [{ classification: result.classification || "Résultat", rows: result.rows || [] }];
-          return rankings.flatMap(ranking => (ranking.rows || [])
-            .filter(row => Number.isInteger(row.rank) && row.rider)
-            .map(row => {
+          return rankings.flatMap(ranking => {
+            const type = rankingType(ranking.classification || result.classification || "", result.name, result.title);
+            const rows = (ranking.rows || []).filter(row => Number.isInteger(row.rank) && row.rider);
+            const specialty = inferredSpecialty(type, result.name || "", result.title || "", result.start !== result.end);
+            if (specialty && rows.length) availableStats.add(specialty.type);
+            return rows.map(row => {
               const identity = riderIdentity(row.rider);
-              const type = rankingType(ranking.classification || result.classification || "");
               return { id: identity.id, rider: identity.name, countryCode: identity.countryCode, team: row.team || "Équipe inconnue",
                        rank: row.rank, points: pointsForRank(row.rank, type), rankingType: type,
+                       specialtyType: specialty?.type || "", specialtyEstimated: specialty?.estimated || false,
                        race: result.name, date: result.start, slug: entry.slug,
                        country: result.country || "", classes: result.classes || [] };
-            }));
+            });
+          });
         } catch { return []; }
       }));
       const entriesAppearances = batch.flat();
@@ -947,24 +1010,58 @@ async function loadPool() {
         let current = catalogue.get(appearance.id);
         if (!current) {
           current = { ...appearance, bestRank: appearance.rank, appearances: 0, score: 0,
-            rankingPoints: { general: 0, mountain: 0, sprint: 0, youth: 0, race: 0 } };
+            rankingPoints: { general: 0, mountain: 0, sprint: 0, rouleur: 0, youth: 0, race: 0 },
+            specialtyPoints: { mountain: 0, sprint: 0, rouleur: 0 },
+            estimatedSpecialties: { mountain: false, sprint: false, rouleur: false } };
           catalogue.set(appearance.id, current);
         }
         if (!raceRiders.has(`${appearance.slug}:${appearance.id}`)) {
           current.appearances += 1;
           raceRiders.add(`${appearance.slug}:${appearance.id}`);
         }
-        current.score += appearance.points;
         current.rankingPoints[appearance.rankingType] += appearance.points;
+        if (appearance.specialtyType) {
+          current.specialtyPoints[appearance.specialtyType] += pointsForRank(appearance.rank, appearance.specialtyType);
+          current.estimatedSpecialties[appearance.specialtyType] ||= appearance.specialtyEstimated;
+        }
         if (appearance.rank < current.bestRank || (appearance.rank === current.bestRank && appearance.date > current.date)) {
           Object.assign(current, appearance, { bestRank: appearance.rank });
         }
       }
       note.textContent = `${Math.min(i + 12, entries.length)} / ${entries.length} classements chargés`;
     }
-    pool = [...catalogue.values()].map(card => ({
-      ...card, rank: card.bestRank, rarity: rarityOf(card.bestRank), profile: riderProfile(card.rankingPoints),
-    }));
+    for (const card of catalogue.values()) {
+      card.score = card.specialtyPoints.mountain + card.specialtyPoints.sprint + card.specialtyPoints.rouleur;
+    }
+    const riders = [...catalogue.values()];
+    const maxSpecialtyPoints = Object.fromEntries(
+      ["mountain", "sprint", "rouleur"].map(type => [
+        type,
+        Math.max(0, ...riders.map(card => Number(card.specialtyPoints[type]) || 0)),
+      ]),
+    );
+    for (const card of riders) {
+      card.rawSpecialtyPoints = { ...card.specialtyPoints };
+      card.subjectiveSpecialties = {};
+      const manualRatings = SUBJECTIVE_SKILL_OVERRIDES[normalize(card.rider)];
+      for (const type of ["mountain", "sprint", "rouleur"]) {
+        const max = maxSpecialtyPoints[type];
+        const rawPoints = Number(card.specialtyPoints[type]) || 0;
+        const evidenceRating = max
+          ? Math.round(40 + 60 * Math.sqrt(rawPoints / max))
+          : 40;
+        card.specialtyPoints[type] = manualRatings?.[type] ?? evidenceRating;
+        card.subjectiveSpecialties[type] = manualRatings
+          ? `${card.specialtyPoints[type]}/100 · ajustement subjectif manuel`
+          : `${card.specialtyPoints[type]}/100 · base 40, ajustée selon les résultats`;
+      }
+      card.score = card.specialtyPoints.mountain + card.specialtyPoints.sprint + card.specialtyPoints.rouleur;
+    }
+    pool = applyMythicRarity(riders.map(card => ({
+      ...card, rank: card.bestRank, rarity: rarityOf(card.bestRank),
+      profile: riderProfile(card.specialtyPoints),
+    })));
+    renderProbabilities();
     const catalogueById = new Map(pool.map(card => [card.id, card]));
     for (const card of [...Object.values(state.riders), ...state.lastPack]) {
       const latest = catalogueById.get(card.id);
@@ -979,6 +1076,7 @@ async function loadPool() {
     button.disabled = true;
     button.textContent = "Classements indisponibles";
     note.textContent = error.message;
+    $("guarantees").textContent = "Probabilités indisponibles sans les classements.";
     $("opening-empty").textContent = "Impossible de charger les classements. Ouvre cette page depuis le site ou relance le serveur.";
     $("opening-empty").classList.add("error-state");
   }
@@ -1001,31 +1099,62 @@ function riderArt(card) {
   </svg>`;
 }
 
+function applyMythicRarity(cards) {
+  const topScorers = new Set([...cards]
+    .sort((first, second) => second.score - first.score
+      || first.rider.localeCompare(second.rider, "fr") || first.id.localeCompare(second.id))
+    .slice(0, 10)
+    .map(card => card.id));
+  return cards.map(card => ({ ...card, rarity: topScorers.has(card.id) ? "mythic" : card.rarity }));
+}
+
 function renderCard(card, options = {}) {
   const count = options.count || 0;
   const delay = options.delay || 0;
-  const link = card.slug ? `results.html?race=${encodeURIComponent(card.slug)}` : "";
-  const riderMarkup = link
-    ? `<a href="${esc(link)}" aria-label="Voir le classement de ${esc(card.race)}"><h3 class="rider-name">${esc(card.rider)}</h3></a>`
-    : `<h3 class="rider-name">${esc(card.rider)}</h3>`;
-  const rankingLabels = { general: "Général", mountain: "Montagne", sprint: "Sprint", youth: "Jeunes", race: "Courses" };
-  const scoreDetails = Object.entries(card.rankingPoints || {}).filter(([, points]) => points > 0)
-    .map(([type, points]) => `${rankingLabels[type]} : ${points} pts`).join(" · ");
-  return `<article class="rider-card" data-rarity="${esc(card.rarity)}" style="--delay:${delay}ms">
-    <div class="rider-top"><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span><span class="rank-tag">MEILLEUR RANG ${card.bestRank || card.rank}</span></div>
+  const specialtyPoints = card.specialtyPoints || card.rankingPoints || {};
+  const score = ["mountain", "sprint", "rouleur"].reduce((total, type) => total + (Number(specialtyPoints[type]) || 0), 0);
+  const shinyCount = Number(options.shinyCount ?? card.shinyCount) || 0;
+  const isShiny = Boolean(options.shiny ?? card.shiny ?? shinyCount);
+  const scoreDetails = [
+    ["Montagne", "mountain"],
+    ["Sprint", "sprint"],
+    ["Rouleur", "rouleur"],
+  ].map(([label, type]) => {
+    const points = Number(specialtyPoints[type]) || 0;
+    const explanation = card.subjectiveSpecialties?.[type]
+      || (card.estimatedSpecialties?.[type] ? "estimation selon le type de course" : "estimation selon les résultats disponibles");
+    return `${label} : ${points}/100 (${explanation})`;
+  }).join(" · ");
+  const statMarkup = [
+    ["mountain", "Montagne", "Mont."],
+    ["sprint", "Sprint", "Sprint"],
+    ["rouleur", "Rouleur", "Roul."],
+  ].map(([type, label, shortLabel]) => {
+    const points = Number(card.specialtyPoints?.[type] ?? card.rankingPoints?.[type]) || 0;
+    const isAvailable = availableStats.has(type);
+    const isEstimated = Boolean(card.estimatedSpecialties?.[type]);
+    const value = `${points}/100`;
+    const detail = card.subjectiveSpecialties?.[type]
+      || `${isEstimated ? "estimation selon le type de course, " : ""}${points} sur 100`;
+    return `<span class="rider-stat" title="${label} : ${detail}" aria-label="${label} : ${value} points">
+      <span class="rider-stat-label">${shortLabel}</span><span class="rider-stat-value">${value}</span></span>`;
+  }).join("");
+  return `<article class="rider-card${isShiny ? " is-shiny" : ""}" data-rarity="${esc(card.rarity)}" style="--delay:${delay}ms">
+    <div class="rider-top"><span class="points-tag" title="${esc(scoreDetails || "Aucun point enregistré")}"><strong>${score}</strong> pts</span><span class="rarity-tag">${RARITY_LABEL[card.rarity]}</span></div>
       <div class="rider-illustration" data-rider-id="${esc(card.id)}" data-rider-name="${esc(card.rider)}">
         <img class="rider-photo" alt="" decoding="async">
         ${riderArt(card)}
+        ${isShiny ? `<span class="shiny-stamp" aria-label="Carte shiny">✦ SHINY</span>` : ""}
         <a class="photo-credit" hidden target="_blank" rel="noopener">
           <span class="photo-credit-author"></span>
           <span class="photo-credit-license"></span>
         </a>
       </div>
-    <div class="rider-copy">${riderMarkup}<p class="rider-team">${esc(card.team)}</p>
-      <div class="rider-meta"><span class="rider-profile">${esc(card.profile || "Profil à préciser")}</span>
-        <p class="rider-score" title="${esc(scoreDetails || "Aucun point enregistré")}"><strong>${Number(card.score) || 0}</strong><span>pts</span></p></div>
+    <div class="rider-copy"><h3 class="rider-name">${esc(card.rider)}</h3><p class="rider-team">${esc(card.team)}</p>
+      <div class="rider-meta"><span class="rider-profile" title="Profil déterminé par la compétence la mieux notée parmi montagne, sprint et rouleur.">${esc(card.profile || "Profil à préciser")}</span></div>
+      <div class="rider-stats" aria-label="Points par spécialité">${statMarkup}</div>
     </div>
-    <div class="rider-bottom"><span class="rider-race">${esc(card.race)}<br>${esc(dateLabel(card.date))}</span>
+    <div class="rider-bottom">${shinyCount ? `<span class="shiny-count">✦ ${shinyCount} shiny</span>` : ""}
       <span class="rider-count" aria-label="${count ? `${count} exemplaires` : "Nouvelle carte"}">${count || card.countryCode || "+"}</span></div>
   </article>`;
 }
@@ -1049,10 +1178,12 @@ function renderCollection() {
   const query = normalize($("search-cards").value);
   const filter = $("filter-rarity").value;
   const records = Object.values(state.riders).filter(card => {
-    const matchesText = !query || normalize(`${card.rider} ${card.team} ${card.race}`).includes(query);
+    const matchesText = !query || normalize(`${card.rider} ${card.team}`).includes(query);
     return matchesText && (filter === "all" || card.rarity === filter);
   }).sort((a, b) => RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity] || a.bestRank - b.bestRank || a.rider.localeCompare(b.rider, "fr"));
-  $("collection-grid").innerHTML = records.map(card => renderCard(card, { count: card.count })).join("");
+  $("collection-grid").innerHTML = records.map(card => renderCard(card, {
+    count: card.count, shinyCount: card.shinyCount, shiny: Number(card.shinyCount) > 0,
+  })).join("");
   observeCardPhotos($("collection-grid"));
   $("collection-empty").hidden = records.length > 0;
   if (!Object.keys(state.riders).length) $("collection-empty").textContent = "Ton classeur est vide. Ouvre ton premier booster.";
@@ -1073,23 +1204,36 @@ function refreshUI() {
       ? "Un booster gratuit est déjà ouvert aujourd’hui" : `Encore ${DROPS_COST - state.drops} drops pour un booster`;
 }
 
+function cardWeight(card) {
+  const points = Number(card.score);
+  return Number.isFinite(points) ? Math.max(1, points + 1) : 1;
+}
+
+function renderProbabilities() {
+  const totalWeight = pool.reduce((total, card) => total + cardWeight(card), 0);
+  if (!totalWeight) return;
+  const formatPercent = value => new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 1 }).format(value);
+  $("guarantees").innerHTML = RARITIES.map(({ rarity, label }) => {
+    const rarityWeight = pool.filter(card => card.rarity === rarity)
+      .reduce((total, card) => total + cardWeight(card), 0);
+    return `<span class="guarantee">${label} ${formatPercent(rarityWeight / totalWeight * 100)}% · au 1er tirage</span>`;
+  }).join("");
+  const packOdds = 1 - (1 - SHINY_CHANCE) ** PACK_SIZE;
+  $("shiny-odds").textContent = `Shiny : 1 chance sur 4 096 par carte, soit environ 1 sur ${Math.round(1 / packOdds)} par booster de ${PACK_SIZE} (taux de base Pokémon).`;
+}
+
 function chooseCard(used) {
-  const roll = Math.random() * 100;
-  let total = 0;
-  let rarity = RARITY_DROPS[RARITY_DROPS.length - 1].rarity;
-  for (const drop of RARITY_DROPS) {
-    total += drop.weight;
-    if (roll < total) {
-      rarity = drop.rarity;
-      break;
-    }
-  }
-  const exact = pool.filter(card => card.rarity === rarity && !used.has(card.id));
-  const candidates = exact.length ? exact : pool.filter(card => !used.has(card.id));
-  const card = candidates[Math.floor(Math.random() * candidates.length)];
+  const candidates = pool.filter(card => !used.has(card.id));
+  const totalWeight = candidates.reduce((total, card) => total + cardWeight(card), 0);
+  let roll = Math.random() * totalWeight;
+  const card = candidates.find(candidate => (roll -= cardWeight(candidate)) < 0) || candidates.at(-1);
   if (!card) return null;
   used.add(card.id);
   return card;
+}
+
+function rollShiny() {
+  return Math.random() < SHINY_CHANCE;
 }
 
 function openPack() {
@@ -1100,13 +1244,21 @@ function openPack() {
   else if (hasRewardBooster) state.boosterTokens -= 1;
   else state.drops -= DROPS_COST;
   const used = new Set();
-  const cards = Array.from({ length: PACK_SIZE }, () => chooseCard(used)).filter(Boolean);
+  const cards = Array.from({ length: PACK_SIZE }, () => {
+    const card = chooseCard(used);
+    if (card) card.shiny = rollShiny();
+    return card;
+  }).filter(Boolean);
   for (const card of cards) {
+    const { shiny, ...cardData } = card;
     const existing = state.riders[card.id];
     if (existing) {
       existing.count += 1; existing.duplicates += 1; state.drops += dropsOf(card.rarity);
-      if (card.rank < existing.bestRank) Object.assign(existing, card, { count: existing.count, duplicates: existing.duplicates, bestRank: card.rank });
-    } else state.riders[card.id] = { ...card, count: 1, duplicates: 0, bestRank: card.rank };
+      if (shiny) existing.shinyCount = (Number(existing.shinyCount) || 0) + 1;
+      if (card.rank < existing.bestRank) Object.assign(existing, cardData, { count: existing.count, duplicates: existing.duplicates, bestRank: card.rank });
+    } else state.riders[card.id] = {
+      ...cardData, shinyCount: shiny ? 1 : 0, count: 1, duplicates: 0, bestRank: card.rank,
+    };
   }
   state.packsOpened += 1;
   state.lastPack = cards;
@@ -1161,7 +1313,7 @@ function renderRaces() {
   const clock = parisClock();
   $("race-list").innerHTML = raceEvents.map(race => `
     <article class="race-row">
-      <div><h3>${esc(race.name)}</h3><p>${esc(race.country)} · course du ${esc(dateLabel(race.race_date))}${race.edition_date ? ` · édition du ${esc(dateLabel(race.edition_date))}` : ""} · départ 20 h (Paris)</p></div>
+      <div><h3>${esc(race.name)}</h3><p>${esc(race.country)} · course du ${esc(dateLabel(race.race_date))}${race.edition_date ? ` · édition du ${esc(dateLabel(race.edition_date))}` : ""} · profil estimé ${Number(race.profile?.climb_pct) || 0}% montée · échappée : ${Number(race.profile?.escape_probability) || 0}% · départ 20 h (Paris)</p></div>
       <div><div class="race-status">${esc(racePhase(race, clock))}</div>
         <button class="race-open" type="button" data-race-date="${esc(race.race_date)}">Voir la course</button></div>
     </article>`).join("");
@@ -1181,15 +1333,33 @@ function dailyLocalRace(races, date) {
   return [{ ...race, edition_date: race.race_date, race_date: date }];
 }
 
+async function loadRaceProfiles() {
+  if (Object.keys(raceProfiles).length) return;
+  const response = await fetch("data/race_profiles.json");
+  if (!response.ok) throw new Error("Profils de parcours introuvables.");
+  raceProfiles = await response.json();
+}
+
 async function loadRaceData() {
   try {
+    await loadRaceProfiles();
     if (supabaseClient) {
       const { data, error } = await supabaseClient.rpc("get_daily_race");
       if (error) throw error;
-      raceEvents = data?.length ? [{
-        slug: data[0].race_slug, name: data[0].name, country: data[0].country,
-        race_date: data[0].race_date, edition_date: data[0].edition_date,
-      }] : [];
+      if (data?.length) {
+        const { data: profile, error: profileError } = await supabaseClient.from("race_events")
+          .select("climb_pct,rolling_pct,sprint_pct,sprint_finish,escape_probability,profile_source,key_points")
+          .eq("slug", data[0].race_slug).single();
+        if (profileError) throw profileError;
+        const { data: result, error: resultError } = await supabaseClient.from("daily_races")
+          .select("race_result").eq("race_date", data[0].race_date).maybeSingle();
+        if (resultError) throw resultError;
+        raceEvents = [{
+          slug: data[0].race_slug, name: data[0].name, country: data[0].country,
+          race_date: data[0].race_date, edition_date: data[0].edition_date, profile,
+          result: result?.race_result || null,
+        }];
+      } else raceEvents = [];
       const { count, error: countError } = await supabaseClient.from("race_events").select("slug", { count: "exact", head: true });
       if (countError) throw countError;
       raceCatalogCount = count || 0;
@@ -1202,21 +1372,28 @@ async function loadRaceData() {
       const catalog = await response.json();
       raceCatalogCount = localRaceCatalog(catalog).length;
       displayedParisDate = parisClock().date;
-      raceEvents = dailyLocalRace(catalog, displayedParisDate);
+      raceEvents = dailyLocalRace(catalog, displayedParisDate).map(race => ({
+        ...race, profile: raceProfiles[race.slug], result: null,
+      }));
       raceBackendMessage = "Sélection locale en lecture seule. Configure Supabase et applique la migration des courses pour participer.";
     }
+    if (raceEvents.some(race => !race.profile)) throw new Error("Profil estimé manquant pour la course sélectionnée.");
     renderRaces();
     if (accountUser) await safelyRefreshRaceAccountData();
   } catch (error) {
     raceBackendReady = false;
-    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que la migration 202611100002_races_and_rewards.sql a été appliquée.`;
+    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations 202611100002_races_and_rewards.sql, 202611100003_race_course_profiles.sql et 202611100004_race_breakaways.sql ont été appliquées.`;
     try {
+      await loadRaceProfiles();
       const response = await fetch("data/races.json");
       if (!response.ok) throw new Error("Calendrier introuvable.");
       const catalog = await response.json();
       raceCatalogCount = localRaceCatalog(catalog).length;
       displayedParisDate = parisClock().date;
-      raceEvents = dailyLocalRace(catalog, displayedParisDate);
+      raceEvents = dailyLocalRace(catalog, displayedParisDate).map(race => ({
+        ...race, profile: raceProfiles[race.slug], result: null,
+      }));
+      if (raceEvents.some(race => !race.profile)) throw new Error("Profil estimé manquant pour la course sélectionnée.");
     } catch (catalogError) {
       $("race-notice").textContent = `Impossible de charger le calendrier : ${catalogError.message}`;
       return;
@@ -1231,6 +1408,7 @@ async function refreshRaceAccountData() {
   if (settleError) throw settleError;
   await loadInbox();
   if (selectedRace) {
+    await loadRaceResult(selectedRace);
     await loadRaceEntries(selectedRace);
     renderRaceDetail();
   }
@@ -1274,6 +1452,152 @@ async function loadRaceEntries(race) {
   raceEntries = data || [];
 }
 
+async function loadRaceResult(race) {
+  if (!race || !supabaseClient || !raceBackendReady) return;
+  const { data, error } = await supabaseClient.from("daily_races")
+    .select("race_result").eq("race_date", race.race_date).maybeSingle();
+  if (error) throw error;
+  race.result = data?.race_result || null;
+}
+
+function raceCardIndex() {
+  return new Map(pool.map(card => [card.id, card]));
+}
+
+function raceCardSkill(card, type) {
+  return Number(card?.specialtyPoints?.[type] ?? 40) || 40;
+}
+
+function raceTeamScore(riderIds, profile, cards = raceCardIndex()) {
+  return riderIds.reduce((total, riderId) => {
+    const card = cards.get(riderId) || state.riders[riderId];
+    const mountain = raceCardSkill(card, "mountain");
+    const rouleur = raceCardSkill(card, "rouleur");
+    const sprint = raceCardSkill(card, "sprint");
+    return total + Math.round((
+      mountain * Number(profile.climb_pct)
+      + rouleur * Number(profile.rolling_pct)
+      + sprint * Number(profile.sprint_pct)
+    ) / 100);
+  }, 0);
+}
+
+function racePointWeight(profile, terrain) {
+  return terrain === "mountain" ? Number(profile.climb_pct)
+    : terrain === "sprint" ? Number(profile.sprint_pct)
+      : Number(profile.rolling_pct);
+}
+
+function racePointScore(riderIds, profile, point, cards = raceCardIndex()) {
+  if (point.progress === 100) return raceTeamScore(riderIds, profile, cards);
+  const type = point.terrain === "mountain" ? "mountain"
+    : point.terrain === "sprint" ? "sprint" : "rouleur";
+  return riderIds.reduce((total, riderId) => {
+    const card = cards.get(riderId) || state.riders[riderId];
+    return total + raceCardSkill(card, type) * racePointWeight(profile, point.terrain) / 100;
+  }, 0);
+}
+
+function raceRiderScore(card, profile) {
+  return Math.round((
+    raceCardSkill(card, "mountain") * Number(profile.climb_pct)
+    + raceCardSkill(card, "rouleur") * Number(profile.rolling_pct)
+    + raceCardSkill(card, "sprint") * Number(profile.sprint_pct)
+  ) / 100);
+}
+
+function raceProfileChart(profile) {
+  const heightByTerrain = { mountain: 30, rouleur: 76, sprint: 92, finish: 55 };
+  const points = profile.key_points.map(point => {
+    const x = 30 + 540 * Number(point.progress) / 100;
+    const finishHeight = profile.climb_pct >= 28 ? 30 : profile.climb_pct >= 12 ? 52 : 76;
+    const y = point.progress === 100
+      ? finishHeight
+      : heightByTerrain[point.terrain] || heightByTerrain.rouleur;
+    return { ...point, x, y };
+  });
+  const last = points[points.length - 1];
+  if (last) last.terrain = "finish";
+  const line = points.map(point => `${point.x},${point.y}`).join(" ");
+  const markers = points.map(point => `<circle cx="${point.x}" cy="${point.y}" r="6"><title>${esc(point.progress)}% · ${esc(point.label)}</title></circle>`).join("");
+  return `<svg class="race-profile-chart" viewBox="0 0 600 120" role="img" aria-label="Profil schématique estimé de la course">
+    <line x1="30" y1="105" x2="570" y2="105"></line><polyline points="${line}"></polyline>${markers}
+  </svg>`;
+}
+
+function raceKeyPointResults(race, entries, cards) {
+  const { profile } = race;
+  if (!entries.length) return `<p class="mail-empty">Aucune équipe inscrite : les classements des points clés ne sont pas disponibles.</p>`;
+  return `<div class="race-key-point-grid">${profile.key_points.map(point => {
+    const finalPoint = point.progress === 100;
+    const weight = finalPoint ? null : racePointWeight(profile, point.terrain);
+    const playerResults = entries.map(entry => ({
+      entry,
+      score: finalPoint && race.result ? Number(entry.score) || 0
+        : racePointScore(entry.rider_ids, profile, point, cards),
+    })).sort((first, second) => second.score - first.score
+      || first.entry.display_name.localeCompare(second.entry.display_name, "fr")).slice(0, 3);
+    const finishTop3 = finalPoint && race.result?.breakaway_won
+      ? race.result.finish_top3.map(result => {
+        const card = cards.get(result.rider_id) || pool.find(candidate => candidate.id === result.rider_id)
+          || { id: result.rider_id, rider: result.rider_name };
+        const entry = entries.find(candidate => candidate.rider_ids.includes(result.rider_id));
+        return { card, player: entry?.display_name || "Échappée", score: [30, 20, 10][result.place - 1] || 0 };
+      })
+      : null;
+    const riderResults = finishTop3 || entries.flatMap(entry => entry.rider_ids.map(riderId => {
+      const card = cards.get(riderId) || state.riders[riderId];
+      if (!card) return null;
+      const type = point.terrain === "mountain" ? "mountain"
+        : point.terrain === "sprint" ? "sprint" : "rouleur";
+      const score = finalPoint
+        ? raceRiderScore(card, profile)
+        : raceCardSkill(card, type) * weight / 100;
+      return { card, player: entry.display_name, score };
+    }).filter(Boolean)).sort((first, second) => second.score - first.score
+      || first.card.rider.localeCompare(second.card.rider, "fr")
+      || first.player.localeCompare(second.player, "fr")).slice(0, 3);
+    const terrainLabel = finalPoint ? "Arrivée · score pondéré"
+      : point.terrain === "mountain" ? `Montée > 3 % · ${profile.climb_pct}% du parcours`
+        : point.terrain === "sprint" ? `Sprint final · ${profile.sprint_pct}% du score`
+          : `Secteur roulant · ${profile.rolling_pct}% du parcours`;
+    const playerMarkup = playerResults.length ? playerResults.map(({ entry, score }) =>
+      `<li>${esc(entry.display_name)}<small>${score.toFixed(1)} pts équipe</small></li>`).join("") : "<li>Pas de résultat</li>";
+    const riderMarkup = riderResults.length ? riderResults.map(({ card, player, score }) =>
+      `<li>${esc(card.rider)}<small>${esc(player)} · ${score.toFixed(1)} pts${finishTop3 ? " · échappée gagnante" : ""}</small></li>`).join("") : "<li>Pas de résultat</li>";
+    return `<article class="race-key-point">
+      <h5>${esc(point.progress)}% · ${esc(finalPoint ? (profile.sprint_finish ? "Arrivée au sprint" : "Arrivée") : point.label)}</h5>
+      <p>${esc(terrainLabel)}</p>
+      <strong>Top joueurs</strong><ol>${playerMarkup}</ol>
+      <strong>Top coureurs des équipes</strong><ol>${riderMarkup}</ol>
+    </article>`;
+  }).join("")}</div>`;
+}
+
+function raceProfileMarkup(race, showResults) {
+  const profile = race.profile;
+  if (!profile) return `<p class="error-note">Le profil de parcours de cette course est indisponible.</p>`;
+  const cards = raceCardIndex();
+  const mix = `<div class="race-profile-mix">
+    <span>Montée > 3 % · ${profile.climb_pct}%</span>
+    <span>Rouleur · ${profile.rolling_pct}%</span>
+    <span>Sprint · ${profile.sprint_pct}%</span>
+    <span>Échappée victorieuse · ${profile.escape_probability}%</span>
+  </div>`;
+  const resultMarkup = race.result
+    ? race.result.breakaway_won
+      ? `<p class="race-escape-result"><strong>Échappée gagnante !</strong> ${race.result.finish_top3.map((rider, index) =>
+        `${index + 1}. ${esc(rider.rider_name)}`).join(" · ")}. Bonus d’équipe à l’arrivée : 30, 20 et 10 pts par coureur placé.</p>`
+      : `<p class="race-escape-result"><strong>Le peloton s’impose.</strong> L’échappée n’est pas allée au bout.</p>`
+    : `<p class="race-profile-note">Chance estimée que l’échappée aille au bout : ${Number(profile.escape_probability) || 0} %. Groupe simulé parmi les coureurs des équipes inscrites; aucune startlist officielle n’est disponible.</p>`;
+  return `<section class="race-course-profile" aria-label="Profil du parcours">
+    <h4>Profil estimé du parcours</h4>
+    <p class="race-profile-note">${esc(profile.profile_source || "Estimation automatique")} · schéma indicatif, pas un relevé GPS. ${profile.sprint_finish ? "Arrivée jugée favorable au sprint." : "Pas d’arrivée au sprint retenue."}</p>
+    ${mix}${resultMarkup}${raceProfileChart(profile)}
+    ${showResults ? `<h4>Classements aux points clés</h4>${raceKeyPointResults(race, raceEntries, cards)}` : ""}
+  </section>`;
+}
+
 function renderRaceDetail() {
   const detail = $("race-detail");
   if (!selectedRace) {
@@ -1286,6 +1610,7 @@ function renderRaceDetail() {
   const ownEntry = raceEntries.find(entry => entry.user_id === accountUser?.id);
   const cards = Object.values(state.riders).sort((a, b) => (b.score || 0) - (a.score || 0) || a.rider.localeCompare(b.rider, "fr"));
   const selectedIds = new Set(ownEntry?.rider_ids || []);
+  const showResults = phase === "Résultats disponibles" || phase === "Terminée";
   let previousScore = null;
   let place = 0;
   const entriesMarkup = raceEntries.length ? raceEntries.map((entry, index) => {
@@ -1296,7 +1621,8 @@ function renderRaceDetail() {
   }).join("") : `<p class="mail-empty">${phase === "Terminée" || phase === "Résultats disponibles" ? "Aucune équipe inscrite." : "Aucune équipe pour le moment."}</p>`;
   detail.innerHTML = `
     <h3>${esc(selectedRace.name)} · ${esc(dateLabel(selectedRace.race_date))}</h3>
-    <p>${esc(selectedRace.country)} · départ à 20 h, heure de Paris. Ton équipe doit contenir 5 cartes distinctes; le score est recalculé par le serveur à partir des classements.</p>
+    <p>${esc(selectedRace.country)} · départ à 20 h, heure de Paris. Le score de l’équipe est pondéré selon les montées, les secteurs roulants et la possibilité d’un sprint final.</p>
+    ${raceProfileMarkup(selectedRace, showResults)}
     ${phase === "Inscriptions ouvertes" ? `
       <h3>${ownEntry ? "Modifier mon équipe" : "Composer mon équipe"}</h3>
       ${accountUser ? cards.length ? `
@@ -1304,7 +1630,7 @@ function renderRaceDetail() {
         <div class="team-picker">${cards.map(card => `
           <label class="team-card"><input type="checkbox" name="team-card" value="${esc(card.id)}"
             ${selectedIds.has(card.id) ? "checked" : ""} ${!selectedIds.has(card.id) && selectedIds.size >= 5 ? "disabled" : ""}>
-            <span>${esc(card.rider)} <small>${esc(card.profile || "Profil à préciser")}</small></span><small>${Number(card.score) || 0} pts</small></label>`).join("")}</div>
+            <span>${esc(card.rider)} <small>${esc(card.profile || "Profil à préciser")} · Mont. ${raceCardSkill(card, "mountain")} · Sprint ${raceCardSkill(card, "sprint")} · Roul. ${raceCardSkill(card, "rouleur")}</small></span><small>${Number(card.score) || 0} pts</small></label>`).join("")}</div>
         <button class="race-submit" id="race-submit" type="button" ${canRegister ? "" : "disabled"}>${ownEntry ? "Mettre à jour mon équipe" : "Inscrire mon équipe"}</button>
         <p class="mail-empty">Les inscriptions ferment à 19 h 55. Chaque participant reçoit 20 drops; les boosters (3, 2 et 1) sont partagés en cas d’égalité.</p>
       ` : `<p class="mail-empty">Il te faut au moins 5 cartes dans ta collection.</p>` : `<p>Connecte-toi pour inscrire une équipe.</p><button class="race-submit" id="race-login" type="button">Se connecter</button>`}
@@ -1321,8 +1647,9 @@ function updateTeamSelection() {
   if (!inputs.length) return;
   const chosen = inputs.filter(input => input.checked).length;
   for (const input of inputs) input.disabled = !input.checked && chosen >= 5;
-  $("team-selection-summary").textContent = `${chosen} / 5 cartes sélectionnées · ${inputs.filter(input => input.checked)
-    .reduce((sum, input) => sum + (Number(state.riders[input.value]?.score) || 0), 0)} pts`;
+  const selectedIds = inputs.filter(input => input.checked).map(input => input.value);
+  const score = selectedRace?.profile ? raceTeamScore(selectedIds, selectedRace.profile) : 0;
+  $("team-selection-summary").textContent = `${chosen} / 5 cartes sélectionnées · ${score} pts pondérés sur ce parcours`;
   $("race-submit").disabled = chosen !== 5 || !accountUser || !raceBackendReady;
 }
 
@@ -1410,6 +1737,7 @@ $("race-list").addEventListener("click", async event => {
   if (!button) return;
   selectedRace = raceEvents.find(race => race.race_date === button.dataset.raceDate);
   try {
+    await loadRaceResult(selectedRace);
     await loadRaceEntries(selectedRace);
     renderRaceDetail();
     $("race-detail").scrollIntoView({ behavior: "smooth", block: "start" });
