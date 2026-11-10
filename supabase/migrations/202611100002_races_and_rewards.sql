@@ -94,7 +94,7 @@ begin
   end if;
   insert into public.daily_races (race_date, race_slug)
     values (v_today, v_race_slug)
-    on conflict (race_date) do nothing;
+    on conflict on constraint daily_races_pkey do nothing;
   return query
     select daily.race_date, events.slug, events.name, events.country, events.race_date
     from public.daily_races as daily
