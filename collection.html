@@ -1348,9 +1348,10 @@ function parisTime(value) {
 function racePhase(race) {
   const start = Date.parse(race.slot_start);
   const now = Date.now();
-  if (now < start) return "À venir";
-  if (now < start + 55 * 60_000) return "Inscriptions ouvertes";
-  if (now < start + 60 * 60_000) return "Sprint final · équipes verrouillées";
+  if (now < start - 60 * 60_000) return "À venir";
+  if (now < start - 5 * 60_000) return "Inscriptions ouvertes";
+  if (now < start) return "Équipes verrouillées · départ imminent";
+  if (now < start + 60 * 60_000) return "Course en cours · équipes verrouillées";
   return "Résultats disponibles";
 }
 
@@ -1384,31 +1385,35 @@ function renderRaces() {
   const note = $("race-notice");
   note.classList.remove("error-note");
   if (!supabaseClient || !raceBackendReady) note.textContent = raceBackendMessage;
-  else if (raceEvents.length) note.textContent = `Chaque heure, une course différente est tirée au sort parmi ${raceCatalogCount} parcours. Inscriptions jusqu’à :55, puis arrivée et récompenses à l’heure suivante.`;
+  else if (raceEvents.length) note.textContent = `Chaque heure, une course différente est tirée au sort parmi ${raceCatalogCount} parcours. Les inscriptions concernent la prochaine manche et ferment cinq minutes avant son départ.`;
   else note.textContent = "Aucune course disponible dans le calendrier.";
 }
 
 function renderRaceClock() {
-  const currentRace = raceEvents[0];
+  const now = Date.now();
+  const currentRace = raceEvents.find(race => Date.parse(race.slot_start) > now)
+    || raceEvents.find(race => Date.parse(race.slot_start) <= now
+      && Date.parse(race.slot_start) + 60 * 60_000 > now)
+    || raceEvents[0];
   const clock = $("race-clock");
   if (!clock || !currentRace) {
     if (clock) clock.innerHTML = "";
     return;
   }
-  const now = Date.now();
   const start = Date.parse(currentRace.slot_start);
-  const closeAt = start + 55 * 60_000;
-  const finishAt = start + 60 * 60_000;
-  const target = now < closeAt ? closeAt : finishAt;
+  const closeAt = start - 5 * 60_000;
+  const target = now < closeAt ? closeAt : start;
   const remaining = Math.max(0, target - now);
   const minutes = Math.floor(remaining / 60_000);
   const seconds = Math.floor(remaining % 60_000 / 1000);
   const phase = racePhase(currentRace);
   const label = phase === "Inscriptions ouvertes"
-    ? "Temps avant fermeture des inscriptions"
-    : phase === "Sprint final · équipes verrouillées"
-      ? "Arrivée dans"
-      : "Prochaine manche dans";
+    ? "Inscriptions ferment dans"
+    : phase === "Équipes verrouillées · départ imminent"
+      ? "Départ dans"
+      : phase === "Course en cours · équipes verrouillées"
+        ? "Course en cours"
+        : "Prochaine manche dans";
   clock.innerHTML = `<strong>${esc(currentRace.name)} · ${esc(phase)}</strong><span>${label} ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")} · départ ${esc(parisTime(currentRace.slot_start))} Paris</span>`;
   for (const status of document.querySelectorAll("[data-race-status]")) {
     const race = raceEvents.find(item => item.slot_start === status.dataset.raceStatus);
@@ -1430,23 +1435,31 @@ async function loadRaceData() {
       const { data, error } = await supabaseClient.rpc("get_hourly_race");
       if (error) throw error;
       if (data?.length) {
-        const current = { ...data[0], slot_start: new Date(data[0].slot_start).toISOString() };
-        const { data: latest, error: latestError } = await supabaseClient.from("hourly_races")
-          .select("slot_start,race_slug,race_result")
-          .lt("slot_start", current.slot_start).not("race_result", "is", null)
-          .order("slot_start", { ascending: false }).limit(1).maybeSingle();
-        if (latestError) throw latestError;
-        const raceRows = [current];
-        if (latest) {
-          const { data: previous, error: previousError } = await supabaseClient.from("race_events")
-            .select("slug,name,country,race_date")
-            .eq("slug", latest.race_slug).single();
-          if (previousError) throw previousError;
-          raceRows.push({
-            ...previous, edition_date: previous.race_date,
-            slot_start: new Date(latest.slot_start).toISOString(),
-            result: latest.race_result,
-          });
+        const scheduled = data.map(race => ({
+          ...race, slot_start: new Date(race.race_slot_start || race.slot_start).toISOString(),
+        }));
+        const currentSlot = currentRaceSlot();
+        const current = scheduled.find(race => race.slot_start === currentSlot)
+          || scheduled.find(race => Date.parse(race.slot_start) <= Date.now());
+        const upcoming = scheduled.find(race => Date.parse(race.slot_start) > Date.now());
+        const raceRows = [current, upcoming].filter(Boolean);
+        if (current) {
+          const { data: latest, error: latestError } = await supabaseClient.from("hourly_races")
+            .select("slot_start,race_slug,race_result")
+            .lt("slot_start", current.slot_start).not("race_result", "is", null)
+            .order("slot_start", { ascending: false }).limit(1).maybeSingle();
+          if (latestError) throw latestError;
+          if (latest) {
+            const { data: previous, error: previousError } = await supabaseClient.from("race_events")
+              .select("slug,name,country,race_date")
+              .eq("slug", latest.race_slug).single();
+            if (previousError) throw previousError;
+            raceRows.push({
+              ...previous, edition_date: previous.race_date,
+              slot_start: new Date(latest.slot_start).toISOString(),
+              result: latest.race_result,
+            });
+          }
         }
         raceEvents = [];
         for (const race of raceRows) {
@@ -1463,7 +1476,7 @@ async function loadRaceData() {
       const { count, error: countError } = await supabaseClient.from("race_events").select("slug", { count: "exact", head: true });
       if (countError) throw countError;
       raceCatalogCount = count || 0;
-      displayedRaceSlot = data?.[0]?.slot_start ? new Date(data[0].slot_start).toISOString() : currentRaceSlot();
+      displayedRaceSlot = currentRaceSlot();
       raceBackendReady = true;
       raceBackendMessage = "Une nouvelle manche commence chaque heure.";
     } else {
@@ -1482,7 +1495,7 @@ async function loadRaceData() {
     if (accountUser) await safelyRefreshRaceAccountData();
   } catch (error) {
     raceBackendReady = false;
-    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations de courses, jusqu’à 202611110006_hourly_races.sql, ont été appliquées.`;
+    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations horaires, notamment 202611110008_next_hourly_race.sql, ont été appliquées.`;
     try {
       await loadRaceProfiles();
       const response = await fetch("data/races.json");
@@ -1538,7 +1551,7 @@ function watchHourlyRace() {
       return;
     }
     renderRaceClock();
-    const phase = raceEvents[0] ? racePhase(raceEvents[0]) : "";
+    const phase = raceEvents.map(racePhase).join("|");
     if (phase !== watchedRacePhase) {
       watchedRacePhase = phase;
       if (selectedRace) renderRaceDetail();
@@ -1546,7 +1559,7 @@ function watchHourlyRace() {
     const minute = Math.floor(Date.now() / 60_000);
     if (minute !== watchedMinute) {
       watchedMinute = minute;
-      if (selectedRace && selectedRace.slot_start === displayedRaceSlot) {
+      if (selectedRace && raceEvents.some(race => race.slot_start === selectedRace.slot_start)) {
         if (accountUser && raceBackendReady) {
           loadRaceEntries(selectedRace).then(renderRaceDetail).catch(error => {
             $("race-notice").textContent = error.message;
@@ -1891,9 +1904,9 @@ function renderRaceDetail() {
             ${selectedIds.has(card.id) ? "checked" : ""} ${!selectedIds.has(card.id) && selectedIds.size >= 5 ? "disabled" : ""}>
             <span>${esc(card.rider)} <small>${esc(card.profile || "Profil à préciser")} · Mont. ${raceCardSkill(card, "mountain")} · Sprint ${raceCardSkill(card, "sprint")} · Roul. ${raceCardSkill(card, "rouleur")}</small></span><small>${Number(card.score) || 0} pts</small></label>`).join("")}</div>
         <button class="race-submit" id="race-submit" type="button" ${canRegister ? "" : "disabled"}>${ownEntry ? "Mettre à jour mon équipe" : "Inscrire mon équipe"}</button>
-        <p class="mail-empty">Les inscriptions ferment à :55. Chaque participant reçoit 20 drops; le podium gagne 3, 2 et 1 booster(s), partagés en cas d’égalité.</p>
+        <p class="mail-empty">Les inscriptions pour cette prochaine manche ferment cinq minutes avant le départ. Chaque participant reçoit 20 drops; le podium gagne 3, 2 et 1 booster(s), partagés en cas d’égalité.</p>
       ` : `<p class="mail-empty">Il te faut au moins 5 cartes dans ta collection.</p>` : `<p>Connecte-toi pour inscrire une équipe.</p><button class="race-submit" id="race-login" type="button">Se connecter</button>`}
-    ` : `<p class="mail-empty">${phase === "À venir" ? "Les inscriptions ouvrent au départ de la manche." : phase.startsWith("Sprint final") ? "Équipes verrouillées ! Le final se joue maintenant; résultat et récompenses à l’heure suivante." : "Cette course est terminée. Revivez son fil d’événements ci-dessus."}</p>`}
+    ` : `<p class="mail-empty">${phase === "À venir" ? "Les inscriptions ouvriront au début de l’heure précédant cette manche." : phase === "Équipes verrouillées · départ imminent" ? "Les équipes sont verrouillées; le départ de cette manche est imminent." : phase === "Course en cours · équipes verrouillées" ? "La course est en cours; les équipes sont verrouillées. Inscris-toi à la prochaine manche." : "Cette course est terminée. Revivez son fil d’événements ci-dessus."}</p>`}
     <h3>Classement des équipes (${raceEntries.length})</h3><div class="race-standings">${entriesMarkup}</div>`;
   detail.querySelectorAll('input[name="team-card"]').forEach(input => input.addEventListener("change", updateTeamSelection));
   $("race-submit")?.addEventListener("click", submitRaceTeam);
