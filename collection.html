@@ -81,8 +81,11 @@
   .mail-open:hover { border-color: #e8c66f; color: #e8c66f; }
   .mail-count { position: absolute; top: -7px; right: -7px; min-width: 17px; padding: 1px 4px; border-radius: 9px;
                 color: white; background: var(--coral); font: 10px/1.4 var(--mono); }
-  .race-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
-  .race-tools input { min-height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
+  .race-clock { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+                margin: 14px 0; padding: 14px 16px; border: 1px solid var(--line); border-left: 4px solid var(--coral);
+                border-radius: 5px; background: var(--card); }
+  .race-clock strong { font: 600 14px/1.35 var(--display); }
+  .race-clock span { color: var(--muted); font: 12px/1.4 var(--mono); }
   .race-list { display: grid; gap: 10px; }
   .race-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 18px;
               border: 1px solid var(--line); border-radius: 5px; background: var(--card); }
@@ -115,6 +118,20 @@
   .race-profile-chart line { stroke: var(--line); }
   .race-profile-chart polyline { fill: none; stroke: currentColor; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
   .race-profile-chart circle { fill: var(--coral); stroke: var(--paper); stroke-width: 3; }
+  .race-live, .race-story { margin: 14px 0; padding: 14px; border: 1px solid var(--line); border-radius: 5px; background: var(--card); }
+  .race-live-head, .race-story-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+  .race-live h4, .race-story h4 { margin: 0; font: 600 14px/1.35 var(--display); }
+  .race-live-status, .race-gap { color: var(--teal); font: 11px/1.4 var(--mono); }
+  .race-progress { height: 8px; margin: 11px 0; overflow: hidden; border-radius: 99px; background: #e2e8dd; }
+  .race-progress span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal), #e8c66f, var(--coral)); transition: width .45s ease; }
+  .race-timeline { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+  .race-timeline li { position: relative; padding: 9px 11px; border-left: 3px solid var(--line); background: #f5f4ed; font-size: 13px; }
+  .race-timeline li.is-live { border-left-color: var(--coral); background: #fff5ec; }
+  .race-timeline li.is-upcoming { opacity: .5; }
+  .race-timeline strong { display: block; margin-bottom: 2px; font-size: 12px; }
+  .race-timeline small { display: block; margin-top: 3px; color: var(--muted); font: 10px/1.4 var(--mono); }
+  .race-replay { min-height: 32px; padding: 0 10px; border: 1px solid var(--line); border-radius: 4px; background: transparent; cursor: pointer; font-size: 12px; font-weight: 600; }
+  .race-replay:hover { border-color: var(--teal); color: var(--teal); }
   .race-key-point-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 9px; margin-top: 12px; }
   .race-key-point { padding: 11px; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
   .race-key-point > p { margin: 4px 0 8px; color: var(--muted); font-size: 11px; }
@@ -387,7 +404,7 @@
       <div class="stage-copy">
         <span class="stage-label">Le paquet du jour</span>
         <h2>Un nouveau peloton t’attend.</h2>
-        <p>Cinq coureurs distincts. Les 10 premiers au classement des points sont Mythiques; la rareté des autres reflète leur meilleure place. Plus un coureur a de points, plus sa chance de tirage augmente.</p>
+        <p>La rareté dépend du classement général aux points : top 10 Mythique, top 50 Légendaire, top 150 Épique, top 300 Rare, puis Commune. Plus un coureur a de points, plus sa chance de tirage augmente.</p>
         <div class="guarantees" id="guarantees" aria-label="Probabilités au premier tirage, calculées selon les points">
           <span class="guarantee">Calcul des probabilités…</span>
         </div>
@@ -432,13 +449,14 @@
   </section>
   <section class="view" id="view-races" role="tabpanel" aria-labelledby="tab-races" hidden>
     <div class="section-head">
-      <div><h2>Course du jour</h2><p>Chaque jour, une course tirée au sort du calendrier · équipe de 5 cartes · départ à 20 h.</p></div>
+      <div><h2>Courses en direct</h2><p>Une nouvelle manche chaque heure · compose une équipe de 5 cartes · suis les attaques et le retour du peloton.</p></div>
     </div>
     <p id="race-notice" class="hero-note" aria-live="polite">Chargement du calendrier…</p>
+    <div class="race-clock" id="race-clock" aria-live="polite"></div>
     <div class="race-list" id="race-list"></div>
     <div class="race-detail" id="race-detail" hidden></div>
   </section>
-  <p class="footer-note" id="storage-note">Profils et stats extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les photos libres affichent leur auteur et leur licence sur la carte. Les compétences sont estimées à partir des résultats puis ajustées subjectivement; le score est leur somme, sur 300. Les 10 meilleurs aux points sont Mythiques; les autres raretés reflètent le meilleur rang. Les tirages sont pondérés par les points et les shiny suivent le taux de base Pokémon. Collection invitée enregistrée sur cet appareil.</p>
+  <p class="footer-note" id="storage-note">Profils et stats extraits des classements disponibles, sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Les photos libres affichent leur auteur et leur licence sur la carte. Les compétences sont estimées à partir des résultats puis ajustées subjectivement; le score est leur somme, sur 300. Les raretés suivent le classement général aux points : top 10 Mythique, top 50 Légendaire, top 150 Épique, top 300 Rare, puis Commune. Les tirages sont pondérés par les points et les shiny suivent le taux de base Pokémon. Collection invitée enregistrée sur cet appareil.</p>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
@@ -466,6 +484,13 @@ const RARITIES = [
 ];
 const RARITY_LABEL = Object.fromEntries(RARITIES.map(drop => [drop.rarity, drop.label]));
 const RARITY_ORDER = Object.fromEntries(RARITIES.map((drop, index) => [drop.rarity, index]));
+const RARITY_RANK_LIMITS = [
+  { through: 10, rarity: "mythic" },
+  { through: 25, rarity: "legendary" },
+  { through: 150, rarity: "epic" },
+  { through: 300, rarity: "rare" },
+  { through: Infinity, rarity: "common" },
+];
 const MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
@@ -476,9 +501,8 @@ const dateLabel = value => {
   const [year, month, day] = value.split("-").map(Number);
   return `${day} ${MONTHS[month - 1]} ${year}`;
 };
-const rarityOf = rank => rank === 1 ? "legendary" : rank <= 3 ? "epic" : rank <= 10 ? "rare" : "common";
 const dropsOf = rarity => ({ mythic: 40, legendary: 40, epic: 25, rare: 10, common: 4 })[rarity] || 0;
-const migrateCard = card => RARITY_LABEL[card?.rarity] ? card : { ...card, rarity: rarityOf(Number(card?.bestRank || card?.rank) || 11) };
+const migrateCard = card => RARITY_LABEL[card?.rarity] ? card : { ...card, rarity: "common" };
 
 function readState() {
   try {
@@ -504,10 +528,13 @@ let raceEvents = [];
 let raceProfiles = {};
 let selectedRace = null;
 let raceEntries = [];
+const raceTeamDraft = new Map();
 let inboxMessages = [];
 let raceCatalogCount = 0;
-let displayedParisDate = "";
-let settlementCheckDate = "";
+let displayedRaceSlot = "";
+let watchedRacePhase = "";
+let watchedMinute = -1;
+let raceReplayTimer = null;
 let raceBackendReady = false;
 let raceBackendMessage = "Chargement du calendrier…";
 const photoQueue = [];
@@ -949,7 +976,7 @@ function inferredSpecialty(type, raceName, sourceTitle, stageRace) {
   if (type !== "race") return null;
   if (SPRINT_RACES.test(raceName)) return { type: "sprint", estimated: true };
   if (CLIMBING_RACES.test(raceName)) return { type: "mountain", estimated: true };
-  if (rankingType("Result", raceName, sourceTitle) === "rouleur") return { type: "rouleur", estimated: false };
+  if (!stageRace) return { type: "rouleur", estimated: true };
   return null;
 }
 
@@ -958,6 +985,13 @@ function pointsForRank(rank, type) {
   const placePoints = 11 - rank;
   const podiumBonus = rank === 1 ? 5 : rank === 2 ? 3 : rank === 3 ? 1 : 0;
   return (placePoints + podiumBonus) * (type === "general" ? 2 : 1);
+}
+
+function specialtyRating(results) {
+  const top10 = Number(results?.top10) || 0;
+  const podiums = Number(results?.podiums) || 0;
+  const wins = Number(results?.wins) || 0;
+  return Math.min(100, 20 + top10 * 3 + podiums * 4 + wins * 6);
 }
 
 function riderProfile(points) {
@@ -979,6 +1013,7 @@ async function loadPool() {
     const entries = Object.values(index).filter(entry => entry && /^[a-z0-9-]+$/.test(entry.slug));
     const catalogue = new Map();
     availableStats = new Set();
+    const countedSpecialtyResults = new Set();
     for (let i = 0; i < entries.length; i += 12) {
       const batch = await Promise.all(entries.slice(i, i + 12).map(async entry => {
         try {
@@ -1012,6 +1047,11 @@ async function loadPool() {
           current = { ...appearance, bestRank: appearance.rank, appearances: 0, score: 0,
             rankingPoints: { general: 0, mountain: 0, sprint: 0, rouleur: 0, youth: 0, race: 0 },
             specialtyPoints: { mountain: 0, sprint: 0, rouleur: 0 },
+            specialtyResults: {
+              mountain: { top10: 0, podiums: 0, wins: 0 },
+              sprint: { top10: 0, podiums: 0, wins: 0 },
+              rouleur: { top10: 0, podiums: 0, wins: 0 },
+            },
             estimatedSpecialties: { mountain: false, sprint: false, rouleur: false } };
           catalogue.set(appearance.id, current);
         }
@@ -1020,8 +1060,13 @@ async function loadPool() {
           raceRiders.add(`${appearance.slug}:${appearance.id}`);
         }
         current.rankingPoints[appearance.rankingType] += appearance.points;
-        if (appearance.specialtyType) {
+        const specialtyResultId = `${appearance.slug}:${appearance.id}:${appearance.specialtyType}`;
+        if (appearance.specialtyType && !countedSpecialtyResults.has(specialtyResultId)) {
+          countedSpecialtyResults.add(specialtyResultId);
           current.specialtyPoints[appearance.specialtyType] += pointsForRank(appearance.rank, appearance.specialtyType);
+          if (appearance.rank <= 10) current.specialtyResults[appearance.specialtyType].top10 += 1;
+          if (appearance.rank <= 3) current.specialtyResults[appearance.specialtyType].podiums += 1;
+          if (appearance.rank === 1) current.specialtyResults[appearance.specialtyType].wins += 1;
           current.estimatedSpecialties[appearance.specialtyType] ||= appearance.specialtyEstimated;
         }
         if (appearance.rank < current.bestRank || (appearance.rank === current.bestRank && appearance.date > current.date)) {
@@ -1034,31 +1079,22 @@ async function loadPool() {
       card.score = card.specialtyPoints.mountain + card.specialtyPoints.sprint + card.specialtyPoints.rouleur;
     }
     const riders = [...catalogue.values()];
-    const maxSpecialtyPoints = Object.fromEntries(
-      ["mountain", "sprint", "rouleur"].map(type => [
-        type,
-        Math.max(0, ...riders.map(card => Number(card.specialtyPoints[type]) || 0)),
-      ]),
-    );
     for (const card of riders) {
       card.rawSpecialtyPoints = { ...card.specialtyPoints };
       card.subjectiveSpecialties = {};
       const manualRatings = SUBJECTIVE_SKILL_OVERRIDES[normalize(card.rider)];
       for (const type of ["mountain", "sprint", "rouleur"]) {
-        const max = maxSpecialtyPoints[type];
-        const rawPoints = Number(card.specialtyPoints[type]) || 0;
-        const evidenceRating = max
-          ? Math.round(40 + 60 * Math.sqrt(rawPoints / max))
-          : 40;
+        const results = card.specialtyResults[type];
+        const evidenceRating = specialtyRating(results);
         card.specialtyPoints[type] = manualRatings?.[type] ?? evidenceRating;
         card.subjectiveSpecialties[type] = manualRatings
           ? `${card.specialtyPoints[type]}/100 · ajustement subjectif manuel`
-          : `${card.specialtyPoints[type]}/100 · base 40, ajustée selon les résultats`;
+          : `${card.specialtyPoints[type]}/100 · ${results.top10} top 10, ${results.podiums} podium(s), ${results.wins} victoire(s)`;
       }
       card.score = card.specialtyPoints.mountain + card.specialtyPoints.sprint + card.specialtyPoints.rouleur;
     }
-    pool = applyMythicRarity(riders.map(card => ({
-      ...card, rank: card.bestRank, rarity: rarityOf(card.bestRank),
+    pool = applyRankedRarity(riders.map(card => ({
+      ...card, rank: card.bestRank, rarity: "common",
       profile: riderProfile(card.specialtyPoints),
     })));
     renderProbabilities();
@@ -1099,13 +1135,15 @@ function riderArt(card) {
   </svg>`;
 }
 
-function applyMythicRarity(cards) {
-  const topScorers = new Set([...cards]
+function applyRankedRarity(cards) {
+  const rarityById = new Map([...cards]
     .sort((first, second) => second.score - first.score
       || first.rider.localeCompare(second.rider, "fr") || first.id.localeCompare(second.id))
-    .slice(0, 10)
-    .map(card => card.id));
-  return cards.map(card => ({ ...card, rarity: topScorers.has(card.id) ? "mythic" : card.rarity }));
+    .map((card, index) => [
+      card.id,
+      RARITY_RANK_LIMITS.find(tier => index + 1 <= tier.through).rarity,
+    ]));
+  return cards.map(card => ({ ...card, rarity: rarityById.get(card.id) }));
 }
 
 function renderCard(card, options = {}) {
@@ -1291,11 +1329,22 @@ function parisClock() {
   return { date: `${parts.year}-${parts.month}-${parts.day}`, minutes: Number(parts.hour) * 60 + Number(parts.minute) };
 }
 
-function racePhase(race, clock = parisClock()) {
-  if (race.race_date > clock.date) return "À venir";
-  if (race.race_date < clock.date) return "Terminée";
-  if (clock.minutes < 19 * 60 + 55) return "Inscriptions ouvertes";
-  if (clock.minutes < 20 * 60) return "Équipes verrouillées";
+function currentRaceSlot() {
+  return new Date(Math.floor(Date.now() / 3_600_000) * 3_600_000).toISOString();
+}
+
+function parisTime(value) {
+  return new Intl.DateTimeFormat("fr-FR", {
+    timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit",
+  }).format(new Date(value));
+}
+
+function racePhase(race) {
+  const start = Date.parse(race.slot_start);
+  const now = Date.now();
+  if (now < start) return "À venir";
+  if (now < start + 55 * 60_000) return "Inscriptions ouvertes";
+  if (now < start + 60 * 60_000) return "Sprint final · équipes verrouillées";
   return "Résultats disponibles";
 }
 
@@ -1309,28 +1358,56 @@ function localRaceCatalog(races) {
   }));
 }
 
-function renderRaces() {
-  const clock = parisClock();
-  $("race-list").innerHTML = raceEvents.map(race => `
-    <article class="race-row">
-      <div><h3>${esc(race.name)}</h3><p>${esc(race.country)} · course du ${esc(dateLabel(race.race_date))}${race.edition_date ? ` · édition du ${esc(dateLabel(race.edition_date))}` : ""} · profil estimé ${Number(race.profile?.climb_pct) || 0}% montée · échappée : ${Number(race.profile?.escape_probability) || 0}% · départ 20 h (Paris)</p></div>
-      <div><div class="race-status">${esc(racePhase(race, clock))}</div>
-        <button class="race-open" type="button" data-race-date="${esc(race.race_date)}">Voir la course</button></div>
-    </article>`).join("");
-  const note = $("race-notice");
-  note.classList.remove("error-note");
-  if (!supabaseClient || !raceBackendReady) note.textContent = raceBackendMessage;
-  else if (raceEvents.length) note.textContent = `Course tirée au sort parmi ${raceCatalogCount} courses du calendrier. Inscriptions aujourd’hui jusqu’à 19 h 55, heure de Paris.`;
-  else note.textContent = "Aucune course disponible dans le calendrier.";
-}
-
-function dailyLocalRace(races, date) {
+function localRaceForSlot(races, slotStart) {
   const catalog = localRaceCatalog(races).sort((a, b) => a.slug.localeCompare(b.slug));
   if (!catalog.length) return [];
   let seed = 2166136261;
-  for (const char of date) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619) >>> 0;
+  for (const char of slotStart) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619) >>> 0;
   const race = catalog[seed % catalog.length];
-  return [{ ...race, edition_date: race.race_date, race_date: date }];
+  return [{ ...race, edition_date: race.race_date, slot_start: slotStart }];
+}
+
+function renderRaces() {
+  $("race-list").innerHTML = raceEvents.map(race => `
+    <article class="race-row">
+      <div><h3>${esc(race.name)}</h3><p>${esc(race.country)} · édition du ${esc(dateLabel(race.edition_date))} · départ ${esc(parisTime(race.slot_start))} (Paris) · ${Number(race.profile?.climb_pct) || 0}% de montée · ${Number(race.profile?.escape_probability) || 0}% de chance d’échappée</p></div>
+      <div><div class="race-status" data-race-status="${esc(race.slot_start)}">${esc(racePhase(race))}</div>
+        <button class="race-open" type="button" data-race-slot="${esc(race.slot_start)}">${race.result ? "Revoir la course" : "Suivre la course"}</button></div>
+    </article>`).join("");
+  renderRaceClock();
+  const note = $("race-notice");
+  note.classList.remove("error-note");
+  if (!supabaseClient || !raceBackendReady) note.textContent = raceBackendMessage;
+  else if (raceEvents.length) note.textContent = `Chaque heure, une course différente est tirée au sort parmi ${raceCatalogCount} parcours. Inscriptions jusqu’à :55, puis arrivée et récompenses à l’heure suivante.`;
+  else note.textContent = "Aucune course disponible dans le calendrier.";
+}
+
+function renderRaceClock() {
+  const currentRace = raceEvents[0];
+  const clock = $("race-clock");
+  if (!clock || !currentRace) {
+    if (clock) clock.innerHTML = "";
+    return;
+  }
+  const now = Date.now();
+  const start = Date.parse(currentRace.slot_start);
+  const closeAt = start + 55 * 60_000;
+  const finishAt = start + 60 * 60_000;
+  const target = now < closeAt ? closeAt : finishAt;
+  const remaining = Math.max(0, target - now);
+  const minutes = Math.floor(remaining / 60_000);
+  const seconds = Math.floor(remaining % 60_000 / 1000);
+  const phase = racePhase(currentRace);
+  const label = phase === "Inscriptions ouvertes"
+    ? "Temps avant fermeture des inscriptions"
+    : phase === "Sprint final · équipes verrouillées"
+      ? "Arrivée dans"
+      : "Prochaine manche dans";
+  clock.innerHTML = `<strong>${esc(currentRace.name)} · ${esc(phase)}</strong><span>${label} ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")} · départ ${esc(parisTime(currentRace.slot_start))} Paris</span>`;
+  for (const status of document.querySelectorAll("[data-race-status]")) {
+    const race = raceEvents.find(item => item.slot_start === status.dataset.raceStatus);
+    if (race) status.textContent = racePhase(race);
+  }
 }
 
 async function loadRaceProfiles() {
@@ -1344,35 +1421,52 @@ async function loadRaceData() {
   try {
     await loadRaceProfiles();
     if (supabaseClient) {
-      const { data, error } = await supabaseClient.rpc("get_daily_race");
+      const { data, error } = await supabaseClient.rpc("get_hourly_race");
       if (error) throw error;
       if (data?.length) {
-        const { data: profile, error: profileError } = await supabaseClient.from("race_events")
-          .select("climb_pct,rolling_pct,sprint_pct,sprint_finish,escape_probability,profile_source,key_points")
-          .eq("slug", data[0].race_slug).single();
-        if (profileError) throw profileError;
-        const { data: result, error: resultError } = await supabaseClient.from("daily_races")
-          .select("race_result").eq("race_date", data[0].race_date).maybeSingle();
-        if (resultError) throw resultError;
-        raceEvents = [{
-          slug: data[0].race_slug, name: data[0].name, country: data[0].country,
-          race_date: data[0].race_date, edition_date: data[0].edition_date, profile,
-          result: result?.race_result || null,
-        }];
+        const current = { ...data[0], slot_start: new Date(data[0].slot_start).toISOString() };
+        const { data: latest, error: latestError } = await supabaseClient.from("hourly_races")
+          .select("slot_start,race_slug,race_result")
+          .lt("slot_start", current.slot_start).not("race_result", "is", null)
+          .order("slot_start", { ascending: false }).limit(1).maybeSingle();
+        if (latestError) throw latestError;
+        const raceRows = [current];
+        if (latest) {
+          const { data: previous, error: previousError } = await supabaseClient.from("race_events")
+            .select("slug,name,country,race_date")
+            .eq("slug", latest.race_slug).single();
+          if (previousError) throw previousError;
+          raceRows.push({
+            ...previous, edition_date: previous.race_date,
+            slot_start: new Date(latest.slot_start).toISOString(),
+            result: latest.race_result,
+          });
+        }
+        raceEvents = [];
+        for (const race of raceRows) {
+          const { data: profile, error: profileError } = await supabaseClient.from("race_events")
+            .select("climb_pct,rolling_pct,sprint_pct,sprint_finish,escape_probability,profile_source,key_points")
+            .eq("slug", race.race_slug || race.slug).single();
+          if (profileError) throw profileError;
+          raceEvents.push({
+            ...race, slug: race.race_slug || race.slug, profile,
+            result: race.result || null,
+          });
+        }
       } else raceEvents = [];
       const { count, error: countError } = await supabaseClient.from("race_events").select("slug", { count: "exact", head: true });
       if (countError) throw countError;
       raceCatalogCount = count || 0;
-      displayedParisDate = data?.[0]?.race_date || parisClock().date;
+      displayedRaceSlot = data?.[0]?.slot_start ? new Date(data[0].slot_start).toISOString() : currentRaceSlot();
       raceBackendReady = true;
-      raceBackendMessage = "Connecte-toi pour inscrire ton équipe.";
+      raceBackendMessage = "Une nouvelle manche commence chaque heure.";
     } else {
       const response = await fetch("data/races.json");
       if (!response.ok) throw new Error("Calendrier introuvable.");
       const catalog = await response.json();
       raceCatalogCount = localRaceCatalog(catalog).length;
-      displayedParisDate = parisClock().date;
-      raceEvents = dailyLocalRace(catalog, displayedParisDate).map(race => ({
+      displayedRaceSlot = currentRaceSlot();
+      raceEvents = localRaceForSlot(catalog, displayedRaceSlot).map(race => ({
         ...race, profile: raceProfiles[race.slug], result: null,
       }));
       raceBackendMessage = "Sélection locale en lecture seule. Configure Supabase et applique la migration des courses pour participer.";
@@ -1382,15 +1476,15 @@ async function loadRaceData() {
     if (accountUser) await safelyRefreshRaceAccountData();
   } catch (error) {
     raceBackendReady = false;
-    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations 202611100002_races_and_rewards.sql, 202611100003_race_course_profiles.sql et 202611100004_race_breakaways.sql ont été appliquées.`;
+    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations de courses, jusqu’à 202611110006_hourly_races.sql, ont été appliquées.`;
     try {
       await loadRaceProfiles();
       const response = await fetch("data/races.json");
       if (!response.ok) throw new Error("Calendrier introuvable.");
       const catalog = await response.json();
       raceCatalogCount = localRaceCatalog(catalog).length;
-      displayedParisDate = parisClock().date;
-      raceEvents = dailyLocalRace(catalog, displayedParisDate).map(race => ({
+      displayedRaceSlot = currentRaceSlot();
+      raceEvents = localRaceForSlot(catalog, displayedRaceSlot).map(race => ({
         ...race, profile: raceProfiles[race.slug], result: null,
       }));
       if (raceEvents.some(race => !race.profile)) throw new Error("Profil estimé manquant pour la course sélectionnée.");
@@ -1404,7 +1498,9 @@ async function loadRaceData() {
 
 async function refreshRaceAccountData() {
   if (!accountUser || !supabaseClient || !raceBackendReady) return;
-  const { error: settleError } = await supabaseClient.rpc("settle_due_races");
+  const { error: oldSettleError } = await supabaseClient.rpc("settle_due_races");
+  if (oldSettleError) throw oldSettleError;
+  const { error: settleError } = await supabaseClient.rpc("settle_due_hourly_races");
   if (settleError) throw settleError;
   await loadInbox();
   if (selectedRace) {
@@ -1424,38 +1520,52 @@ async function safelyRefreshRaceAccountData() {
   }
 }
 
-function watchDailyRace() {
+function watchHourlyRace() {
   setInterval(() => {
-    const clock = parisClock();
-    if (clock.date !== displayedParisDate) {
+    const slot = currentRaceSlot();
+    if (displayedRaceSlot && slot !== displayedRaceSlot) {
       selectedRace = null;
       raceEntries = [];
       $("race-detail").hidden = true;
+      watchedRacePhase = "";
       loadRaceData();
       return;
     }
-    renderRaces();
-    if (accountUser && raceBackendReady && clock.minutes >= 20 * 60 && settlementCheckDate !== clock.date) {
-      settlementCheckDate = clock.date;
-      safelyRefreshRaceAccountData();
+    renderRaceClock();
+    const phase = raceEvents[0] ? racePhase(raceEvents[0]) : "";
+    if (phase !== watchedRacePhase) {
+      watchedRacePhase = phase;
+      if (selectedRace) renderRaceDetail();
     }
-  }, 60_000);
+    const minute = Math.floor(Date.now() / 60_000);
+    if (minute !== watchedMinute) {
+      watchedMinute = minute;
+      if (selectedRace && selectedRace.slot_start === displayedRaceSlot) {
+        if (accountUser && raceBackendReady) {
+          loadRaceEntries(selectedRace).then(renderRaceDetail).catch(error => {
+            $("race-notice").textContent = error.message;
+            $("race-notice").classList.add("error-note");
+          });
+        } else renderRaceDetail();
+      }
+    }
+  }, 1_000);
 }
 
 async function loadRaceEntries(race) {
   raceEntries = [];
   if (!accountUser || !supabaseClient || !raceBackendReady) return;
-  const { data, error } = await supabaseClient.from("race_entries")
+  const { data, error } = await supabaseClient.from("hourly_race_entries")
     .select("user_id,display_name,rider_ids,score,updated_at")
-    .eq("race_date", race.race_date).order("score", { ascending: false }).order("updated_at", { ascending: true });
+    .eq("slot_start", race.slot_start).order("score", { ascending: false }).order("updated_at", { ascending: true });
   if (error) throw error;
   raceEntries = data || [];
 }
 
 async function loadRaceResult(race) {
   if (!race || !supabaseClient || !raceBackendReady) return;
-  const { data, error } = await supabaseClient.from("daily_races")
-    .select("race_result").eq("race_date", race.race_date).maybeSingle();
+  const { data, error } = await supabaseClient.from("hourly_races")
+    .select("race_result").eq("slot_start", race.slot_start).maybeSingle();
   if (error) throw error;
   race.result = data?.race_result || null;
 }
@@ -1574,6 +1684,84 @@ function raceKeyPointResults(race, entries, cards) {
   }).join("")}</div>`;
 }
 
+function raceLiveStoryMarkup(race) {
+  const startedAt = Date.parse(race.slot_start);
+  const progress = Math.max(0, Math.min(100, (Date.now() - startedAt) / 36_000));
+  const riders = [...new Set(raceEntries.flatMap(entry => entry.rider_ids))]
+    .map(id => state.riders[id] || pool.find(card => card.id === id))
+    .filter(Boolean);
+  let seed = 2166136261;
+  for (const char of race.slot_start) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619) >>> 0;
+  const attacker = riders.length ? riders[seed % riders.length].rider : null;
+  const dropped = [...riders].sort((a, b) => raceRiderScore(a, race.profile) - raceRiderScore(b, race.profile))[0]?.rider;
+  const events = [
+    { progress: 8, title: "Départ réel", comment: "Le peloton s’élance et les équipes prennent leurs marques.", gap: 0 },
+    { progress: 22, title: "La première attaque", comment: attacker
+      ? `${attacker} tente de sortir du peloton et provoque les premières accélérations.`
+      : "Les coureurs s’observent; une première attaque tente de prendre quelques longueurs.", gap: 2.8 },
+    { progress: 46, title: "Le peloton accélère", comment: "Les équipiers se relaient en tête. L’écart commence à fondre.", gap: 1.7 },
+    { progress: 66, title: "Un coureur est lâché", comment: dropped
+      ? `${dropped} cède du terrain quand le rythme s’intensifie.`
+      : "Le rythme élevé étire le peloton et les premiers coureurs décrochent.", gap: 1.1 },
+    { progress: 88, title: "Le final approche", comment: race.profile.sprint_finish
+      ? "Les trains de sprinteurs se mettent en place; l’échappée est sous pression."
+      : "Les favoris accélèrent dans le final; les échappés résistent encore.", gap: .5 },
+    { progress: 100, title: "Arrivée", comment: "La ligne est franchie : le classement et les récompenses arrivent à la fin de la manche.", gap: 0 },
+  ];
+  const currentIndex = events.reduce((last, event, index) => event.progress <= progress ? index : last, -1);
+  return `<section class="race-live" aria-label="Commentaires de course en direct">
+    <div class="race-live-head"><h4>Radio-course · simulation en direct</h4><span class="race-live-status">${Math.round(progress)}% · ${riders.length} coureur(s) engagé(s)</span></div>
+    <div class="race-progress" role="progressbar" aria-label="Progression simulée de la course" aria-valuenow="${Math.round(progress)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${progress}%"></span></div>
+    <ol class="race-timeline">${events.map((event, index) => `<li class="${index === currentIndex ? "is-live" : ""} ${index > currentIndex ? "is-upcoming" : ""}">
+      <strong>${esc(event.title)} · ${event.progress}%</strong>${esc(event.comment)}
+      <small>${event.gap ? `Écart estimé : ${event.gap.toFixed(1)} km` : "Peloton groupé"}</small>
+    </li>`).join("")}</ol>
+    <p class="race-profile-note">Les commentaires décrivent une simulation de course. Le résultat officiel est calculé à la fin de la manche.</p>
+  </section>`;
+}
+
+function raceStoryMarkup(race) {
+  const events = race.result?.story;
+  if (!Array.isArray(events) || !events.length) return raceLiveStoryMarkup(race);
+  return `<section class="race-story" aria-label="Journal de la course">
+    <div class="race-story-head"><h4>Le film de la course</h4><button class="race-replay" id="race-replay" type="button">Revivre la course</button></div>
+    <div class="race-progress" role="progressbar" aria-label="Progression de la course" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span style="width:100%"></span></div>
+    <ol class="race-timeline">${events.map(event => `<li>
+      <strong>${esc(event.title)} · ${esc(event.progress)}%</strong>${esc(event.comment)}
+      <small>${Number(event.gap_km) > 0 ? `Écart : ${Number(event.gap_km).toFixed(1)} km` : "Peloton groupé"}${event.dropped_rider ? ` · Lâché : ${esc(event.dropped_rider)}` : ""}</small>
+    </li>`).join("")}</ol>
+  </section>`;
+}
+
+function replayRaceStory() {
+  clearInterval(raceReplayTimer);
+  const events = [...document.querySelectorAll(".race-story .race-timeline li")];
+  const button = $("race-replay");
+  if (!events.length || !button) return;
+  let current = 0;
+  const revealNext = () => {
+    events.forEach((event, index) => {
+      event.hidden = index > current;
+      event.classList.toggle("is-live", index === current);
+    });
+    const progress = Math.round(Number(events[current].querySelector("strong").textContent.match(/·\s*(\d+)%/)?.[1]) || 0);
+    const bar = document.querySelector(".race-story .race-progress span");
+    const container = document.querySelector(".race-story .race-progress");
+    bar.style.width = `${progress}%`;
+    container.setAttribute("aria-valuenow", String(progress));
+    button.textContent = current < events.length - 1 ? `Lecture ${current + 1}/${events.length}` : "Terminé · revoir";
+    if (current < events.length - 1) {
+      current += 1;
+      raceReplayTimer = setTimeout(revealNext, 1_300);
+    } else {
+      button.disabled = false;
+    }
+  };
+  button.disabled = true;
+  current = 0;
+  revealNext();
+}
+
 function raceProfileMarkup(race, showResults) {
   const profile = race.profile;
   if (!profile) return `<p class="error-note">Le profil de parcours de cette course est indisponible.</p>`;
@@ -1593,12 +1781,13 @@ function raceProfileMarkup(race, showResults) {
   return `<section class="race-course-profile" aria-label="Profil du parcours">
     <h4>Profil estimé du parcours</h4>
     <p class="race-profile-note">${esc(profile.profile_source || "Estimation automatique")} · schéma indicatif, pas un relevé GPS. ${profile.sprint_finish ? "Arrivée jugée favorable au sprint." : "Pas d’arrivée au sprint retenue."}</p>
-    ${mix}${resultMarkup}${raceProfileChart(profile)}
+    ${mix}${resultMarkup}${raceProfileChart(profile)}${raceStoryMarkup(race)}
     ${showResults ? `<h4>Classements aux points clés</h4>${raceKeyPointResults(race, raceEntries, cards)}` : ""}
   </section>`;
 }
 
 function renderRaceDetail() {
+  clearTimeout(raceReplayTimer);
   const detail = $("race-detail");
   if (!selectedRace) {
     detail.hidden = true;
@@ -1609,8 +1798,8 @@ function renderRaceDetail() {
   const canRegister = phase === "Inscriptions ouvertes" && Boolean(accountUser) && raceBackendReady;
   const ownEntry = raceEntries.find(entry => entry.user_id === accountUser?.id);
   const cards = Object.values(state.riders).sort((a, b) => (b.score || 0) - (a.score || 0) || a.rider.localeCompare(b.rider, "fr"));
-  const selectedIds = new Set(ownEntry?.rider_ids || []);
-  const showResults = phase === "Résultats disponibles" || phase === "Terminée";
+  const selectedIds = new Set(raceTeamDraft.get(selectedRace.slot_start) || ownEntry?.rider_ids || []);
+  const showResults = Boolean(selectedRace.result) || phase === "Résultats disponibles" || phase === "Terminée";
   let previousScore = null;
   let place = 0;
   const entriesMarkup = raceEntries.length ? raceEntries.map((entry, index) => {
@@ -1620,8 +1809,8 @@ function renderRaceDetail() {
     return `<article class="race-standing"><strong>${place}. ${esc(entry.display_name)} · ${Number(entry.score) || 0} pts</strong><p>${esc(team)}</p></article>`;
   }).join("") : `<p class="mail-empty">${phase === "Terminée" || phase === "Résultats disponibles" ? "Aucune équipe inscrite." : "Aucune équipe pour le moment."}</p>`;
   detail.innerHTML = `
-    <h3>${esc(selectedRace.name)} · ${esc(dateLabel(selectedRace.race_date))}</h3>
-    <p>${esc(selectedRace.country)} · départ à 20 h, heure de Paris. Le score de l’équipe est pondéré selon les montées, les secteurs roulants et la possibilité d’un sprint final.</p>
+    <h3>${esc(selectedRace.name)} · manche ${esc(parisTime(selectedRace.slot_start))}–${esc(parisTime(Date.parse(selectedRace.slot_start) + 60 * 60_000))}</h3>
+    <p>${esc(selectedRace.country)} · édition du ${esc(dateLabel(selectedRace.edition_date))} · heure de Paris. Score pondéré selon le profil; les équipes sont verrouillées à :55.</p>
     ${raceProfileMarkup(selectedRace, showResults)}
     ${phase === "Inscriptions ouvertes" ? `
       <h3>${ownEntry ? "Modifier mon équipe" : "Composer mon équipe"}</h3>
@@ -1632,13 +1821,14 @@ function renderRaceDetail() {
             ${selectedIds.has(card.id) ? "checked" : ""} ${!selectedIds.has(card.id) && selectedIds.size >= 5 ? "disabled" : ""}>
             <span>${esc(card.rider)} <small>${esc(card.profile || "Profil à préciser")} · Mont. ${raceCardSkill(card, "mountain")} · Sprint ${raceCardSkill(card, "sprint")} · Roul. ${raceCardSkill(card, "rouleur")}</small></span><small>${Number(card.score) || 0} pts</small></label>`).join("")}</div>
         <button class="race-submit" id="race-submit" type="button" ${canRegister ? "" : "disabled"}>${ownEntry ? "Mettre à jour mon équipe" : "Inscrire mon équipe"}</button>
-        <p class="mail-empty">Les inscriptions ferment à 19 h 55. Chaque participant reçoit 20 drops; les boosters (3, 2 et 1) sont partagés en cas d’égalité.</p>
+        <p class="mail-empty">Les inscriptions ferment à :55. Chaque participant reçoit 20 drops; le podium gagne 3, 2 et 1 booster(s), partagés en cas d’égalité.</p>
       ` : `<p class="mail-empty">Il te faut au moins 5 cartes dans ta collection.</p>` : `<p>Connecte-toi pour inscrire une équipe.</p><button class="race-submit" id="race-login" type="button">Se connecter</button>`}
-    ` : `<p class="mail-empty">${phase === "À venir" ? "Les inscriptions ouvrent à 0 h le jour de la course." : phase === "Équipes verrouillées" ? "Les inscriptions sont fermées; départ à 20 h." : "Cette course est terminée. Les inscriptions rétroactives sont désactivées."}</p>`}
+    ` : `<p class="mail-empty">${phase === "À venir" ? "Les inscriptions ouvrent au départ de la manche." : phase.startsWith("Sprint final") ? "Équipes verrouillées ! Le final se joue maintenant; résultat et récompenses à l’heure suivante." : "Cette course est terminée. Revivez son fil d’événements ci-dessus."}</p>`}
     <h3>Classement des équipes (${raceEntries.length})</h3><div class="race-standings">${entriesMarkup}</div>`;
   detail.querySelectorAll('input[name="team-card"]').forEach(input => input.addEventListener("change", updateTeamSelection));
   $("race-submit")?.addEventListener("click", submitRaceTeam);
   $("race-login")?.addEventListener("click", () => $("account-open").click());
+  $("race-replay")?.addEventListener("click", replayRaceStory);
   updateTeamSelection();
 }
 
@@ -1648,6 +1838,7 @@ function updateTeamSelection() {
   const chosen = inputs.filter(input => input.checked).length;
   for (const input of inputs) input.disabled = !input.checked && chosen >= 5;
   const selectedIds = inputs.filter(input => input.checked).map(input => input.value);
+  raceTeamDraft.set(selectedRace.slot_start, selectedIds);
   const score = selectedRace?.profile ? raceTeamScore(selectedIds, selectedRace.profile) : 0;
   $("team-selection-summary").textContent = `${chosen} / 5 cartes sélectionnées · ${score} pts pondérés sur ce parcours`;
   $("race-submit").disabled = chosen !== 5 || !accountUser || !raceBackendReady;
@@ -1660,10 +1851,11 @@ async function submitRaceTeam() {
   try {
     if (!accountUser) throw new Error("Connecte-toi pour inscrire une équipe.");
     if (!await syncCollection()) throw new Error("La collection doit être synchronisée avant l’inscription.");
-    const { error } = await supabaseClient.rpc("register_race_team", {
-      p_race_date: selectedRace.race_date, p_rider_ids: riderIds,
+    const { error } = await supabaseClient.rpc("register_hourly_race_team", {
+      p_slot_start: selectedRace.slot_start, p_rider_ids: riderIds,
     });
     if (error) throw error;
+    raceTeamDraft.set(selectedRace.slot_start, riderIds);
     await loadRaceEntries(selectedRace);
     renderRaceDetail();
     showToast("Équipe inscrite");
@@ -1684,7 +1876,14 @@ async function loadInbox() {
     .select("id,title,body,drops_reward,boosters_reward,created_at,claimed_at")
     .order("created_at", { ascending: false });
   if (error) throw error;
-  inboxMessages = data || [];
+  const { data: hourlyData, error: hourlyError } = await supabaseClient.from("hourly_race_mail")
+    .select("id,title,body,drops_reward,boosters_reward,created_at,claimed_at")
+    .order("created_at", { ascending: false });
+  if (hourlyError) throw hourlyError;
+  inboxMessages = [
+    ...(hourlyData || []).map(message => ({ ...message, rewardType: "hourly" })),
+    ...(data || []).map(message => ({ ...message, rewardType: "daily" })),
+  ].sort((first, second) => Date.parse(second.created_at) - Date.parse(first.created_at));
   refreshMailBadge();
 }
 
@@ -1709,16 +1908,17 @@ function renderInbox() {
   content.innerHTML = `<div class="mail-list">${inboxMessages.map(message => `
     <article class="mail-item"><strong>${esc(message.title)}${message.claimed_at ? " · Réclamée" : ""}</strong>
       <p>${esc(message.body)}</p><p>${Number(message.drops_reward) || 0} drops · ${Number(message.boosters_reward) || 0} booster(s)</p>
-      ${message.claimed_at ? "" : `<button class="mail-claim" type="button" data-mail-id="${esc(message.id)}">Réclamer</button>`}
+      ${message.claimed_at ? "" : `<button class="mail-claim" type="button" data-mail-id="${esc(message.id)}" data-mail-type="${esc(message.rewardType)}">Réclamer</button>`}
     </article>`).join("")}</div>`;
-  content.querySelectorAll(".mail-claim").forEach(button => button.addEventListener("click", () => claimReward(button.dataset.mailId, button)));
+  content.querySelectorAll(".mail-claim").forEach(button => button.addEventListener("click", () => claimReward(button.dataset.mailId, button, button.dataset.mailType)));
 }
 
-async function claimReward(mailId, button) {
+async function claimReward(mailId, button, rewardType) {
   button.disabled = true;
   try {
     if (!await syncCollection()) throw new Error("Synchronise ta collection avant de réclamer la récompense.");
-    const { error } = await supabaseClient.rpc("claim_race_reward", { p_mail_id: mailId });
+    const functionName = rewardType === "hourly" ? "claim_hourly_race_reward" : "claim_race_reward";
+    const { error } = await supabaseClient.rpc(functionName, { p_mail_id: mailId });
     if (error) throw error;
     localStorage.removeItem(ACCOUNT_DIRTY_KEY);
     await loadCloudCollection();
@@ -1733,9 +1933,9 @@ async function claimReward(mailId, button) {
 
 $("open-pack").addEventListener("click", openPack);
 $("race-list").addEventListener("click", async event => {
-  const button = event.target.closest("[data-race-date]");
+  const button = event.target.closest("[data-race-slot]");
   if (!button) return;
-  selectedRace = raceEvents.find(race => race.race_date === button.dataset.raceDate);
+  selectedRace = raceEvents.find(race => race.slot_start === button.dataset.raceSlot);
   try {
     await loadRaceResult(selectedRace);
     await loadRaceEntries(selectedRace);
@@ -1796,7 +1996,7 @@ refreshMailBadge();
 loadPool();
 loadAccountSession();
 loadRaceData();
-watchDailyRace();
+watchHourlyRace();
 </script>
 </body>
 </html>
