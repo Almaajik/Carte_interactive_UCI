@@ -97,7 +97,7 @@ set search_path = ''
 as $$
 declare
   v_user_id uuid := auth.uid();
-  v_current_slot timestamptz := date_trunc('hour', now() at time zone 'UTC') at time zone 'UTC';
+  v_next_slot timestamptz := date_trunc('hour', now() at time zone 'UTC') at time zone 'UTC' + interval '1 hour';
   v_collection jsonb;
   v_owned_count integer;
   v_score_count integer;
@@ -114,14 +114,17 @@ begin
                 where rider_id is null or length(rider_id) > 160) then
     raise exception 'Une équipe doit contenir exactement 5 cartes distinctes.';
   end if;
-  if p_slot_start is distinct from v_current_slot then
-    raise exception 'Seule la course de l’heure en cours accepte les inscriptions.';
+  if p_slot_start is distinct from v_next_slot then
+    raise exception 'Seule la prochaine course accepte les inscriptions.';
   end if;
-  if now() >= p_slot_start + interval '55 minutes' then
-    raise exception 'Les inscriptions ferment cinq minutes avant la fin de la manche.';
+  if now() < p_slot_start - interval '1 hour'
+     or now() >= p_slot_start - interval '5 minutes' then
+    raise exception 'Les inscriptions ouvrent une heure avant le départ et ferment cinq minutes avant la course.';
   end if;
-  if not exists (select 1 from public.hourly_races where slot_start = p_slot_start) then
-    raise exception 'La course de cette heure n’est pas encore sélectionnée.';
+  if not exists (
+    select 1 from public.hourly_races as races where races.slot_start = p_slot_start
+  ) then
+    raise exception 'La prochaine course n’est pas encore sélectionnée.';
   end if;
   select payload into v_collection from public.user_collections
     where user_id = v_user_id for update;
@@ -186,8 +189,8 @@ declare
   v_boosters integer;
   v_award_total integer;
 begin
-  select * into v_race from public.hourly_races
-    where slot_start = p_slot_start for update;
+  select races.* into v_race from public.hourly_races as races
+    where races.slot_start = p_slot_start for update;
   if not found or v_race.settled_at is not null then
     return;
   end if;
@@ -339,8 +342,8 @@ begin
     'story', v_story,
     'settled_at', now()
   );
-  update public.hourly_races set race_result = v_race_result
-    where slot_start = p_slot_start;
+  update public.hourly_races as races set race_result = v_race_result
+    where races.slot_start = p_slot_start;
 
   update public.hourly_race_entries as entries
     set score = public.score_hourly_race_team(entries.slot_start, entries.rider_ids)
@@ -358,7 +361,7 @@ begin
         rank() over (order by score desc)::integer as place,
         count(*) over (partition by score)::integer as tied,
         row_number() over (partition by score order by user_id)::integer as tie_order
-      from public.hourly_race_entries where slot_start = p_slot_start
+      from public.hourly_race_entries as entries where entries.slot_start = p_slot_start
     )
     select user_id, place, tied, tie_order,
       coalesce((
@@ -389,7 +392,7 @@ begin
     )
     on conflict (slot_start, user_id) do nothing;
   end loop;
-  update public.hourly_races set settled_at = now() where slot_start = p_slot_start;
+  update public.hourly_races as races set settled_at = now() where races.slot_start = p_slot_start;
 end;
 $$;
 
@@ -426,6 +429,7 @@ as $$
 #variable_conflict use_column
 declare
   v_current_slot timestamptz := date_trunc('hour', now() at time zone 'UTC') at time zone 'UTC';
+  v_next_slot timestamptz := date_trunc('hour', now() at time zone 'UTC') at time zone 'UTC' + interval '1 hour';
   v_previous_slug text;
   v_race_slug text;
   v_slot_start timestamptz;
@@ -442,53 +446,61 @@ begin
     perform public.settle_hourly_race(v_slot_start);
   end loop;
 
-  select races.race_slug into v_previous_slug from public.hourly_races as races
-    where races.slot_start = v_current_slot - interval '1 hour';
-  select events.slug into v_race_slug from public.race_events as events
-    where events.slug <> coalesce(v_previous_slug, '')
-    order by random() limit 1;
-  if v_race_slug is null then
-    select events.slug into v_race_slug from public.race_events as events order by random() limit 1;
-  end if;
-  if v_race_slug is null then
-    raise exception 'Le calendrier des courses est vide.';
-  end if;
-  select events.escape_probability into v_escape_probability
-    from public.race_events as events where events.slug = v_race_slug;
-  v_breakaway_formed := random() < 0.72;
-  v_breakaway_won := v_breakaway_formed
-    and random() * 100 < least(100::double precision, v_escape_probability::double precision / 0.72);
-  v_race_plan := jsonb_build_object(
-    'breakaway_formed', v_breakaway_formed,
-    'start_progress', 7 + floor(random() * 5)::integer,
-    'attack_progress', 17 + floor(random() * 12)::integer,
-    'chase_progress', 37 + floor(random() * 15)::integer,
-    'dropped_progress', 57 + floor(random() * 16)::integer,
-    'final_progress', 82 + floor(random() * 12)::integer,
-    'start_variant', floor(random() * 3)::integer,
-    'attack_variant', floor(random() * 3)::integer,
-    'chase_variant', floor(random() * 3)::integer,
-    'final_variant', floor(random() * 3)::integer,
-    'initial_gap_km', case when v_breakaway_formed
-      then round((2 + random() * 4)::numeric, 1)
-      else round((0.4 + random() * 1.8)::numeric, 1) end,
-    'chased_gap_km', case when v_breakaway_won
-      then round((0.7 + random() * 1.1)::numeric, 1)
-      else round((random() * 0.8)::numeric, 1) end,
-    'dropped_gap_km', round((random() * 1.4)::numeric, 1),
-    'final_gap_km', case when v_breakaway_won
-      then round((0.3 + random() * 1.1)::numeric, 1)
-      else round((random() * 0.35)::numeric, 1) end,
-    'finish_gap_km', round((0.1 + random() * 0.7)::numeric, 1)
-  );
-  insert into public.hourly_races (slot_start, race_slug, breakaway_won, race_plan)
-    values (v_current_slot, v_race_slug, v_breakaway_won, v_race_plan)
-    on conflict on constraint hourly_races_pkey do nothing;
+  for v_slot_start in select generate_series(v_current_slot, v_next_slot, interval '1 hour')
+  loop
+    if not exists (
+      select 1 from public.hourly_races as races where races.slot_start = v_slot_start
+    ) then
+      select races.race_slug into v_previous_slug from public.hourly_races as races
+        where races.slot_start = v_slot_start - interval '1 hour';
+      select events.slug into v_race_slug from public.race_events as events
+        where events.slug <> coalesce(v_previous_slug, '')
+        order by random() limit 1;
+      if v_race_slug is null then
+        select events.slug into v_race_slug from public.race_events as events order by random() limit 1;
+      end if;
+      if v_race_slug is null then
+        raise exception 'Le calendrier des courses est vide.';
+      end if;
+      select events.escape_probability into v_escape_probability
+        from public.race_events as events where events.slug = v_race_slug;
+      v_breakaway_formed := random() < 0.72;
+      v_breakaway_won := v_breakaway_formed
+        and random() * 100 < least(100::double precision, v_escape_probability::double precision / 0.72);
+      v_race_plan := jsonb_build_object(
+        'breakaway_formed', v_breakaway_formed,
+        'start_progress', 7 + floor(random() * 5)::integer,
+        'attack_progress', 17 + floor(random() * 12)::integer,
+        'chase_progress', 37 + floor(random() * 15)::integer,
+        'dropped_progress', 57 + floor(random() * 16)::integer,
+        'final_progress', 82 + floor(random() * 12)::integer,
+        'start_variant', floor(random() * 3)::integer,
+        'attack_variant', floor(random() * 3)::integer,
+        'chase_variant', floor(random() * 3)::integer,
+        'final_variant', floor(random() * 3)::integer,
+        'initial_gap_km', case when v_breakaway_formed
+          then round((2 + random() * 4)::numeric, 1)
+          else round((0.4 + random() * 1.8)::numeric, 1) end,
+        'chased_gap_km', case when v_breakaway_won
+          then round((0.7 + random() * 1.1)::numeric, 1)
+          else round((random() * 0.8)::numeric, 1) end,
+        'dropped_gap_km', round((random() * 1.4)::numeric, 1),
+        'final_gap_km', case when v_breakaway_won
+          then round((0.3 + random() * 1.1)::numeric, 1)
+          else round((random() * 0.35)::numeric, 1) end,
+        'finish_gap_km', round((0.1 + random() * 0.7)::numeric, 1)
+      );
+      insert into public.hourly_races (slot_start, race_slug, breakaway_won, race_plan)
+        values (v_slot_start, v_race_slug, v_breakaway_won, v_race_plan)
+        on conflict on constraint hourly_races_pkey do nothing;
+    end if;
+  end loop;
   return query
     select races.slot_start, events.slug, events.name, events.country, events.race_date, races.race_plan
     from public.hourly_races as races
     join public.race_events as events on events.slug = races.race_slug
-    where races.slot_start = v_current_slot;
+    where races.slot_start in (v_current_slot, v_next_slot)
+    order by races.slot_start;
 end;
 $$;
 
