@@ -12,6 +12,9 @@ class HourlyRaceTests(unittest.TestCase):
             ROOT / "supabase" / "migrations" / "202611110008_next_hourly_race.sql"
         ).read_text(encoding="utf-8")
         cls.page = (ROOT / "collection.html").read_text(encoding="utf-8")
+        cls.schema_repair = (
+            ROOT / "supabase" / "migrations" / "202611110009_hourly_race_schema_repair.sql"
+        ).read_text(encoding="utf-8")
 
     def test_schedule_exposes_current_and_upcoming_races(self):
         self.assertIn("race_slot_start timestamptz", self.migration)
@@ -31,6 +34,13 @@ class HourlyRaceTests(unittest.TestCase):
         self.assertIn("race_slot_start || race.slot_start", self.page)
         self.assertIn("now < start - 60 * 60_000", self.page)
         self.assertIn("now < start - 5 * 60_000", self.page)
+
+    def test_schema_repair_adds_missing_columns_idempotently(self):
+        self.assertIn("alter table public.hourly_races", self.schema_repair)
+        for column in ("breakaway_won", "race_plan", "race_result", "settled_at", "created_at"):
+            with self.subTest(column=column):
+                self.assertIn(f"add column if not exists {column}", self.schema_repair)
+        self.assertIn("notify pgrst, 'reload schema'", self.schema_repair)
 
 
 if __name__ == "__main__":

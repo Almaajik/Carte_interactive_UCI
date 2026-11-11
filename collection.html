@@ -1495,7 +1495,7 @@ async function loadRaceData() {
     if (accountUser) await safelyRefreshRaceAccountData();
   } catch (error) {
     raceBackendReady = false;
-    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations horaires, notamment 202611110008_next_hourly_race.sql, ont été appliquées.`;
+    raceBackendMessage = `Courses en lecture seule : ${error.message}. Vérifie que les migrations horaires, notamment 202611110009_hourly_race_schema_repair.sql, ont été appliquées.`;
     try {
       await loadRaceProfiles();
       const response = await fetch("data/races.json");
