@@ -1,10 +1,16 @@
 create table if not exists public.hourly_races (
   slot_start timestamptz primary key,
   race_slug text not null references public.race_events (slug),
+  breakaway_won boolean not null default false,
+  race_plan jsonb not null default '{}'::jsonb,
   race_result jsonb,
   settled_at timestamptz,
   created_at timestamptz not null default now()
 );
+
+alter table public.hourly_races
+  add column if not exists breakaway_won boolean not null default false,
+  add column if not exists race_plan jsonb not null default '{}'::jsonb;
 
 create table if not exists public.hourly_race_entries (
   slot_start timestamptz not null references public.hourly_races (slot_start) on delete cascade,
@@ -39,7 +45,8 @@ alter table public.hourly_race_entries enable row level security;
 alter table public.hourly_race_mail enable row level security;
 
 revoke all on public.hourly_races, public.hourly_race_entries, public.hourly_race_mail from anon, authenticated;
-grant select on public.hourly_races to anon, authenticated;
+grant select (slot_start, race_slug, race_plan, race_result, settled_at, created_at)
+  on public.hourly_races to anon, authenticated;
 grant select on public.hourly_race_entries, public.hourly_race_mail to authenticated;
 
 drop policy if exists "Hourly race schedule is public" on public.hourly_races;
@@ -96,6 +103,7 @@ declare
   v_score_count integer;
   v_score integer;
   v_display_name text;
+  v_randomized_riders text[];
 begin
   if v_user_id is null then
     raise exception 'Connecte-toi pour inscrire une équipe.';
@@ -141,6 +149,14 @@ begin
     on conflict (slot_start, user_id) do update
       set display_name = excluded.display_name, rider_ids = excluded.rider_ids,
           score = excluded.score, updated_at = excluded.updated_at;
+  select array_agg(submitted.rider_id order by random()) into v_randomized_riders
+    from unnest(p_rider_ids) as submitted(rider_id);
+  update public.hourly_races as races
+    set race_plan = races.race_plan || jsonb_build_object(
+      'attacker_id', v_randomized_riders[1],
+      'dropped_id', v_randomized_riders[2]
+    )
+    where races.slot_start = p_slot_start and races.race_plan->>'attacker_id' is null;
 end;
 $$;
 
@@ -161,9 +177,11 @@ declare
   v_breakaway_riders jsonb := '[]'::jsonb;
   v_race_result jsonb;
   v_story jsonb;
+  v_breakaway_formed boolean := false;
   v_breakaway_won boolean := false;
   v_breakaway_leader text;
   v_weakest_rider text;
+  v_plan jsonb;
   v_entry record;
   v_boosters integer;
   v_award_total integer;
@@ -179,6 +197,7 @@ begin
   select events.name, events.escape_probability
     into v_race_name, v_escape_probability
     from public.race_events as events where events.slug = v_race.race_slug;
+  v_plan := v_race.race_plan;
 
   select count(distinct submitted.rider_id)
     into v_unique_riders
@@ -186,8 +205,11 @@ begin
     cross join lateral unnest(entries.rider_ids) as submitted(rider_id)
     where entries.slot_start = p_slot_start;
 
-  if v_unique_riders >= 3 and random() * 100 < v_escape_probability then
-    v_breakaway_won := true;
+  v_breakaway_formed := coalesce((v_plan->>'breakaway_formed')::boolean, false)
+    and v_unique_riders >= 3;
+  v_breakaway_won := v_breakaway_formed and v_race.breakaway_won;
+
+  if v_breakaway_formed then
     v_breakaway_size := least(v_unique_riders, 3 + floor(random() * 3)::integer);
     select array_agg(sampled.rider_id order by sampled.ability desc, sampled.tie_breaker)
       into v_breakaway_ids
@@ -204,6 +226,7 @@ begin
             from public.hourly_race_entries as entries
             cross join lateral unnest(entries.rider_ids) as submitted(rider_id)
             where entries.slot_start = p_slot_start
+              and submitted.rider_id <> coalesce(v_plan->>'dropped_id', '')
           ) as candidates
           order by random()
           limit v_breakaway_size
@@ -230,6 +253,16 @@ begin
     from public.hourly_race_entries as entries
     cross join lateral unnest(entries.rider_ids) as submitted(rider_id)
     join public.rider_scores as scores using (rider_id)
+    where entries.slot_start = p_slot_start
+      and scores.rider_id = coalesce(v_plan->>'dropped_id', '')
+      and (v_breakaway_ids is null or scores.rider_id <> all(v_breakaway_ids))
+    limit 1;
+
+  if v_weakest_rider is null then
+    select scores.rider_name into v_weakest_rider
+    from public.hourly_race_entries as entries
+    cross join lateral unnest(entries.rider_ids) as submitted(rider_id)
+    join public.rider_scores as scores using (rider_id)
     join public.race_events as events on events.slug = v_race.race_slug
     where entries.slot_start = p_slot_start
       and (v_breakaway_ids is null or scores.rider_id <> all(v_breakaway_ids))
@@ -237,42 +270,62 @@ begin
       scores.mountain * events.climb_pct
       + scores.rouleur * events.rolling_pct
       + scores.sprint * events.sprint_pct
-    ) asc, scores.rider_name
+    ) asc, random()
     limit 1;
+  end if;
 
   v_story := jsonb_build_array(
-    jsonb_build_object('progress', 8, 'title', 'Départ réel', 'gap_km', 0,
-      'comment', 'Le peloton s’élance. Les équipes se placent déjà pour contrôler la course.'),
-    jsonb_build_object('progress', 22, 'title', 'La première attaque', 'gap_km',
-      case when v_breakaway_won then 3.2 else 1.1 end,
-      'comment', case when v_breakaway_won
-        then v_breakaway_leader || ' lance une attaque et prend place dans l’échappée.'
-        else 'Plusieurs coureurs tentent de sortir, mais le peloton ne laisse pas l’échappée prendre le large.'
+    jsonb_build_object('progress', (v_plan->>'start_progress')::integer, 'title', 'Départ réel',
+      'gap_km', 0, 'comment', case (v_plan->>'start_variant')::integer
+        when 0 then 'Le peloton s’élance. Les équipes se placent déjà pour contrôler la course.'
+        when 1 then 'Départ rapide : chacun cherche à placer ses leaders à l’avant.'
+        else 'Le départ est donné; le peloton roule encore groupé.' end),
+    jsonb_build_object('progress', (v_plan->>'attack_progress')::integer,
+      'title', case when v_breakaway_formed then 'L’échappée se forme' else 'Premières attaques' end,
+      'gap_km', (v_plan->>'initial_gap_km')::numeric,
+      'comment', case when v_breakaway_formed then
+        coalesce(v_breakaway_leader, 'Un groupe de coureurs') || case (v_plan->>'attack_variant')::integer
+          when 0 then ' lance une attaque et tente de prendre quelques longueurs.'
+          when 1 then ' profite d’un moment de flottement pour sortir du peloton.'
+          else ' accélère; plusieurs coureurs sautent dans sa roue.' end
+        else case (v_plan->>'attack_variant')::integer
+          when 0 then 'Plusieurs attaques partent, mais le peloton contrôle la course.'
+          when 1 then 'Un groupe tente de sortir; les équipiers ramènent le peloton.'
+          else 'Le rythme s’accélère, sans qu’aucun coureur ne prenne le large.' end
       end),
-    jsonb_build_object('progress', 46, 'title', 'Le peloton réagit', 'gap_km',
-      case when v_breakaway_won then 1.8 else 0.5 end,
-      'comment', case when v_breakaway_won
-        then 'Les équipes de sprinteurs accélèrent. L’écart fond, mais les échappés résistent.'
-        else 'Le peloton accélère franchement et reprend les derniers attaquants.'
-      end),
-    jsonb_build_object('progress', 66, 'title', 'Le rythme fait des dégâts', 'gap_km',
-      case when v_breakaway_won then 1.2 else 0.2 end,
+    jsonb_build_object('progress', (v_plan->>'chase_progress')::integer,
+      'title', case (v_plan->>'chase_variant')::integer
+        when 0 then 'La chasse s’organise' when 1 then 'Le peloton accélère' else 'L’écart évolue' end,
+      'gap_km', (v_plan->>'chased_gap_km')::numeric,
+      'comment', case (v_plan->>'chase_variant')::integer
+        when 0 then 'Les équipiers se relaient en tête et réduisent l’écart.'
+        when 1 then 'Le peloton hausse le rythme; les poursuivants commencent à se regarder.'
+        else 'Une équipe organise la chasse tandis que l’échappée creuse son avance.' end),
+    jsonb_build_object('progress', (v_plan->>'dropped_progress')::integer,
+      'title', case when v_weakest_rider is null then 'Le peloton s’étire'
+        else v_weakest_rider || ' est lâché' end,
+      'gap_km', (v_plan->>'dropped_gap_km')::numeric,
       'comment', case when v_weakest_rider is null
-        then 'Le rythme monte dans le peloton, chacun cherche à garder sa place.'
-        else v_weakest_rider || ' est en difficulté et se fait lâcher à l’arrière du peloton.'
-      end,
+        then 'La hausse du rythme étire le groupe; plusieurs coureurs peinent à suivre.'
+        else v_weakest_rider || ' ne peut suivre l’accélération et perd le contact.' end,
       'dropped_rider', v_weakest_rider),
-    jsonb_build_object('progress', 88, 'title', 'La dernière accélération', 'gap_km',
-      case when v_breakaway_won then 0.7 else 0 end,
+    jsonb_build_object('progress', (v_plan->>'final_progress')::integer,
+      'title', case when (select sprint_finish from public.race_events where slug = v_race.race_slug)
+        then 'Les trains se mettent en place' else 'Les favoris accélèrent' end,
+      'gap_km', (v_plan->>'final_gap_km')::numeric,
       'comment', case when v_breakaway_won
-        then 'L’échappée aborde le final avec quelques secondes d’avance. Le peloton lance la poursuite.'
-        else 'Le peloton revient sur les échappés. Le sprint ou l’attaque finale se prépare.'
+        then 'L’échappée résiste encore, mais le peloton se rapproche.'
+        else case (v_plan->>'final_variant')::integer
+          when 0 then 'Le peloton revient à toute allure; le final est relancé.'
+          when 1 then 'L’écart s’effondre, les échappés sont presque repris.'
+          else 'Les équipes lancent leur dernier effort et bouchent le trou.' end
       end),
     jsonb_build_object('progress', 100, 'title', 'La ligne d’arrivée', 'gap_km',
-      case when v_breakaway_won then 0.3 else 0 end,
+      case when v_breakaway_won then (v_plan->>'finish_gap_km')::numeric else 0 end,
       'comment', case when v_breakaway_won
         then v_breakaway_leader || ' résiste au retour du peloton et remporte la course !'
-        else 'Le peloton reprend l’échappée avant la ligne. La victoire se joue dans le final.'
+        when v_breakaway_formed then 'Le peloton reprend l’échappée avant la ligne. La victoire se joue dans le final.'
+        else 'Le peloton reste groupé jusqu’à la ligne et se dispute la victoire.'
       end)
   );
 
@@ -362,17 +415,24 @@ begin
 end;
 $$;
 
-create or replace function public.get_hourly_race()
-returns table (slot_start timestamptz, race_slug text, name text, country text, edition_date date)
+drop function if exists public.get_hourly_race();
+
+create function public.get_hourly_race()
+returns table (slot_start timestamptz, race_slug text, name text, country text, edition_date date, race_plan jsonb)
 language plpgsql
 security definer
 set search_path = ''
 as $$
+#variable_conflict use_column
 declare
   v_current_slot timestamptz := date_trunc('hour', now() at time zone 'UTC') at time zone 'UTC';
   v_previous_slug text;
   v_race_slug text;
   v_slot_start timestamptz;
+  v_escape_probability integer;
+  v_breakaway_formed boolean;
+  v_breakaway_won boolean;
+  v_race_plan jsonb;
 begin
   for v_slot_start in
     select races.slot_start from public.hourly_races as races
@@ -393,11 +453,39 @@ begin
   if v_race_slug is null then
     raise exception 'Le calendrier des courses est vide.';
   end if;
-  insert into public.hourly_races (slot_start, race_slug)
-    values (v_current_slot, v_race_slug)
-    on conflict (slot_start) do nothing;
+  select events.escape_probability into v_escape_probability
+    from public.race_events as events where events.slug = v_race_slug;
+  v_breakaway_formed := random() < 0.72;
+  v_breakaway_won := v_breakaway_formed
+    and random() * 100 < least(100::double precision, v_escape_probability::double precision / 0.72);
+  v_race_plan := jsonb_build_object(
+    'breakaway_formed', v_breakaway_formed,
+    'start_progress', 7 + floor(random() * 5)::integer,
+    'attack_progress', 17 + floor(random() * 12)::integer,
+    'chase_progress', 37 + floor(random() * 15)::integer,
+    'dropped_progress', 57 + floor(random() * 16)::integer,
+    'final_progress', 82 + floor(random() * 12)::integer,
+    'start_variant', floor(random() * 3)::integer,
+    'attack_variant', floor(random() * 3)::integer,
+    'chase_variant', floor(random() * 3)::integer,
+    'final_variant', floor(random() * 3)::integer,
+    'initial_gap_km', case when v_breakaway_formed
+      then round((2 + random() * 4)::numeric, 1)
+      else round((0.4 + random() * 1.8)::numeric, 1) end,
+    'chased_gap_km', case when v_breakaway_won
+      then round((0.7 + random() * 1.1)::numeric, 1)
+      else round((random() * 0.8)::numeric, 1) end,
+    'dropped_gap_km', round((random() * 1.4)::numeric, 1),
+    'final_gap_km', case when v_breakaway_won
+      then round((0.3 + random() * 1.1)::numeric, 1)
+      else round((random() * 0.35)::numeric, 1) end,
+    'finish_gap_km', round((0.1 + random() * 0.7)::numeric, 1)
+  );
+  insert into public.hourly_races (slot_start, race_slug, breakaway_won, race_plan)
+    values (v_current_slot, v_race_slug, v_breakaway_won, v_race_plan)
+    on conflict on constraint hourly_races_pkey do nothing;
   return query
-    select races.slot_start, events.slug, events.name, events.country, events.race_date
+    select races.slot_start, events.slug, events.name, events.country, events.race_date, races.race_plan
     from public.hourly_races as races
     join public.race_events as events on events.slug = races.race_slug
     where races.slot_start = v_current_slot;

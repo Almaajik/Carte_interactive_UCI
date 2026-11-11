@@ -987,11 +987,17 @@ function pointsForRank(rank, type) {
   return (placePoints + podiumBonus) * (type === "general" ? 2 : 1);
 }
 
-function specialtyRating(results) {
+function specialtyRating(results, type, resultsByType) {
   const top10 = Number(results?.top10) || 0;
   const podiums = Number(results?.podiums) || 0;
   const wins = Number(results?.wins) || 0;
-  return Math.min(100, 20 + top10 * 3 + podiums * 4 + wins * 6);
+  const versatilityBonus = type === "rouleur"
+    ? Math.min(12, Math.round(Math.sqrt(
+      (Number(resultsByType?.mountain?.top10) || 0)
+      + (Number(resultsByType?.sprint?.top10) || 0),
+    ) * 3))
+    : 0;
+  return Math.min(100, 20 + top10 * 3 + podiums * 4 + wins * 6 + versatilityBonus);
 }
 
 function riderProfile(points) {
@@ -1085,7 +1091,7 @@ async function loadPool() {
       const manualRatings = SUBJECTIVE_SKILL_OVERRIDES[normalize(card.rider)];
       for (const type of ["mountain", "sprint", "rouleur"]) {
         const results = card.specialtyResults[type];
-        const evidenceRating = specialtyRating(results);
+        const evidenceRating = specialtyRating(results, type, card.specialtyResults);
         card.specialtyPoints[type] = manualRatings?.[type] ?? evidenceRating;
         card.subjectiveSpecialties[type] = manualRatings
           ? `${card.specialtyPoints[type]}/100 · ajustement subjectif manuel`
@@ -1555,11 +1561,17 @@ function watchHourlyRace() {
 async function loadRaceEntries(race) {
   raceEntries = [];
   if (!accountUser || !supabaseClient || !raceBackendReady) return;
-  const { data, error } = await supabaseClient.from("hourly_race_entries")
-    .select("user_id,display_name,rider_ids,score,updated_at")
-    .eq("slot_start", race.slot_start).order("score", { ascending: false }).order("updated_at", { ascending: true });
-  if (error) throw error;
-  raceEntries = data || [];
+  const [entriesResponse, raceResponse] = await Promise.all([
+    supabaseClient.from("hourly_race_entries")
+      .select("user_id,display_name,rider_ids,score,updated_at")
+      .eq("slot_start", race.slot_start).order("score", { ascending: false }).order("updated_at", { ascending: true }),
+    supabaseClient.from("hourly_races")
+      .select("race_plan").eq("slot_start", race.slot_start).maybeSingle(),
+  ]);
+  if (entriesResponse.error) throw entriesResponse.error;
+  if (raceResponse.error) throw raceResponse.error;
+  raceEntries = entriesResponse.data || [];
+  race.race_plan = raceResponse.data?.race_plan || race.race_plan || {};
 }
 
 async function loadRaceResult(race) {
@@ -1688,34 +1700,92 @@ function raceLiveStoryMarkup(race) {
   const startedAt = Date.parse(race.slot_start);
   const progress = Math.max(0, Math.min(100, (Date.now() - startedAt) / 36_000));
   const riders = [...new Set(raceEntries.flatMap(entry => entry.rider_ids))]
+    .sort((first, second) => first.localeCompare(second))
     .map(id => state.riders[id] || pool.find(card => card.id === id))
     .filter(Boolean);
   let seed = 2166136261;
-  for (const char of race.slot_start) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619) >>> 0;
-  const attacker = riders.length ? riders[seed % riders.length].rider : null;
-  const dropped = [...riders].sort((a, b) => raceRiderScore(a, race.profile) - raceRiderScore(b, race.profile))[0]?.rider;
-  const events = [
-    { progress: 8, title: "Départ réel", comment: "Le peloton s’élance et les équipes prennent leurs marques.", gap: 0 },
-    { progress: 22, title: "La première attaque", comment: attacker
-      ? `${attacker} tente de sortir du peloton et provoque les premières accélérations.`
-      : "Les coureurs s’observent; une première attaque tente de prendre quelques longueurs.", gap: 2.8 },
-    { progress: 46, title: "Le peloton accélère", comment: "Les équipiers se relaient en tête. L’écart commence à fondre.", gap: 1.7 },
-    { progress: 66, title: "Un coureur est lâché", comment: dropped
-      ? `${dropped} cède du terrain quand le rythme s’intensifie.`
-      : "Le rythme élevé étire le peloton et les premiers coureurs décrochent.", gap: 1.1 },
-    { progress: 88, title: "Le final approche", comment: race.profile.sprint_finish
-      ? "Les trains de sprinteurs se mettent en place; l’échappée est sous pression."
-      : "Les favoris accélèrent dans le final; les échappés résistent encore.", gap: .5 },
-    { progress: 100, title: "Arrivée", comment: "La ligne est franchie : le classement et les récompenses arrivent à la fin de la manche.", gap: 0 },
+  for (const char of `${race.slot_start}:${race.slug}`) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619) >>> 0;
+  const random = () => {
+    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+    return seed / 0x1_0000_0000;
+  };
+  const plan = race.race_plan || {};
+  const planned = (key, fallback) => Number.isFinite(Number(plan[key])) ? Number(plan[key]) : fallback();
+  const choose = values => values[Math.floor(random() * values.length)];
+  const choosePlanned = (values, key) => values[
+    Math.min(values.length - 1, Math.max(0, Math.floor(planned(key, () => random() * values.length))))
   ];
-  const currentIndex = events.reduce((last, event, index) => event.progress <= progress ? index : last, -1);
+  const plannedAttacker = plan.attacker_id
+    ? state.riders[plan.attacker_id] || pool.find(card => card.id === plan.attacker_id)
+    : null;
+  const attackerCard = plannedAttacker || (riders.length ? choose(riders) : null);
+  const attacker = attackerCard?.rider || null;
+  const pelotonRiders = riders.filter(card => card.id !== attackerCard?.id);
+  const droppedCandidates = pelotonRiders.length
+    ? [...pelotonRiders].sort((a, b) => raceRiderScore(a, race.profile) - raceRiderScore(b, race.profile))
+      .slice(0, Math.min(3, pelotonRiders.length))
+    : [];
+  const plannedDrop = plan.dropped_id
+    ? state.riders[plan.dropped_id] || pool.find(card => card.id === plan.dropped_id)
+    : null;
+  const dropped = (plannedDrop || (droppedCandidates.length
+    ? droppedCandidates[Math.floor(random() * droppedCandidates.length)]
+    : null))?.rider || null;
+  const breakawayForms = typeof plan.breakaway_formed === "boolean" ? plan.breakaway_formed : random() < .72;
+  const attackProgress = planned("attack_progress", () => 17 + Math.floor(random() * 12));
+  const chaseProgress = planned("chase_progress", () => 37 + Math.floor(random() * 15));
+  const droppedProgress = planned("dropped_progress", () => 57 + Math.floor(random() * 16));
+  const finalProgress = planned("final_progress", () => 82 + Math.floor(random() * 12));
+  const initialGap = planned("initial_gap_km", () => breakawayForms ? 2 + random() * 4 : .4 + random() * 1.8);
+  const chasedGap = planned("chased_gap_km", () => breakawayForms ? initialGap * (.5 + random() * .28) : initialGap * (.12 + random() * .18));
+  const attackComments = [
+    "lance une attaque et tente de prendre quelques longueurs.",
+    "profite d’un moment de flottement pour sortir du peloton.",
+    "accélère en tête de course; plusieurs coureurs sautent dans sa roue.",
+  ];
+  const chaseComments = [
+    "Les équipiers se relaient en tête et réduisent l’écart.",
+    "Le peloton hausse le rythme; les poursuivants commencent à se regarder.",
+    "Une équipe organise la chasse tandis que l’échappée creuse son avance.",
+  ];
+  const finaleComments = [
+    "Le peloton lance la poursuite; les échappés tentent de préserver leur avance.",
+    "L’écart évolue encore tandis que les équipes préparent le final.",
+    "Les attaques fusent et le peloton se rapproche à grande vitesse.",
+  ];
+  const events = [
+    { progress: planned("start_progress", () => 7 + Math.floor(random() * 5)), title: "Départ réel", comment: choosePlanned([
+      "Le peloton s’élance. Les équipes se disputent les premières positions.",
+      "Départ rapide : chacun cherche à placer ses leaders à l’avant.",
+      "Le départ est donné; le peloton roule encore groupé.",
+    ], "start_variant"), gap: 0 },
+    { progress: attackProgress, title: breakawayForms ? "L’échappée se forme" : "Premières attaques", comment: breakawayForms && attacker
+      ? `${attacker} ${choosePlanned(attackComments, "attack_variant")}`
+      : choosePlanned(["Plusieurs attaques partent, mais le peloton contrôle la course.",
+        "Un groupe tente de sortir; les équipiers ramènent le peloton.",
+        "Le rythme s’accélère, sans qu’aucun coureur ne prenne encore le large."], "attack_variant"),
+    gap: initialGap },
+    { progress: chaseProgress, title: choosePlanned(["La chasse s’organise", "Le peloton accélère", "L’écart évolue"], "chase_variant"),
+      comment: choosePlanned(chaseComments, "chase_variant"),
+      gap: Math.max(.2, chasedGap) },
+    { progress: droppedProgress, title: dropped ? `${dropped} est lâché` : "Le peloton s’étire", comment: dropped
+      ? `${dropped} ne peut suivre l’accélération et perd le contact.`
+      : "La hausse du rythme étire le groupe; plusieurs coureurs peinent à suivre.",
+    gap: planned("dropped_gap_km", () => Math.max(0, chasedGap + (random() - .55) * 1.4)) },
+    { progress: finalProgress, title: race.profile.sprint_finish ? "Les trains se mettent en place" : "Les favoris accélèrent",
+      comment: choosePlanned(finaleComments, "final_variant"),
+      gap: planned("final_gap_km", () => .2 + random() * 1.2) },
+    { progress: 100, title: "Arrivée", comment: "La ligne est franchie. Le classement et les récompenses sont calculés à la fin de la manche.", gap: 0 },
+  ];
+  const visibleEvents = events.filter(event => event.progress <= progress);
+  const currentIndex = visibleEvents.length - 1;
   return `<section class="race-live" aria-label="Commentaires de course en direct">
-    <div class="race-live-head"><h4>Radio-course · simulation en direct</h4><span class="race-live-status">${Math.round(progress)}% · ${riders.length} coureur(s) engagé(s)</span></div>
+    <div class="race-live-head"><h4>Radio-course · simulation en direct</h4><span class="race-live-status">${Math.round(progress)}% · ${visibleEvents.length} événement(s) · ${riders.length} coureur(s) engagé(s)</span></div>
     <div class="race-progress" role="progressbar" aria-label="Progression simulée de la course" aria-valuenow="${Math.round(progress)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${progress}%"></span></div>
-    <ol class="race-timeline">${events.map((event, index) => `<li class="${index === currentIndex ? "is-live" : ""} ${index > currentIndex ? "is-upcoming" : ""}">
+    ${visibleEvents.length ? `<ol class="race-timeline">${visibleEvents.map((event, index) => `<li class="${index === currentIndex ? "is-live" : ""}">
       <strong>${esc(event.title)} · ${event.progress}%</strong>${esc(event.comment)}
       <small>${event.gap ? `Écart estimé : ${event.gap.toFixed(1)} km` : "Peloton groupé"}</small>
-    </li>`).join("")}</ol>
+    </li>`).join("")}</ol>` : `<p class="race-profile-note">Le peloton se met en place. Les premiers commentaires arrivent au fil de la course.</p>`}
     <p class="race-profile-note">Les commentaires décrivent une simulation de course. Le résultat officiel est calculé à la fin de la manche.</p>
   </section>`;
 }
@@ -1725,8 +1795,8 @@ function raceStoryMarkup(race) {
   if (!Array.isArray(events) || !events.length) return raceLiveStoryMarkup(race);
   return `<section class="race-story" aria-label="Journal de la course">
     <div class="race-story-head"><h4>Le film de la course</h4><button class="race-replay" id="race-replay" type="button">Revivre la course</button></div>
-    <div class="race-progress" role="progressbar" aria-label="Progression de la course" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span style="width:100%"></span></div>
-    <ol class="race-timeline">${events.map(event => `<li>
+    <div class="race-progress" role="progressbar" aria-label="Progression de la course" aria-valuenow="${esc(events[0].progress)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${esc(events[0].progress)}%"></span></div>
+    <ol class="race-timeline">${events.map((event, index) => `<li ${index > 0 ? "hidden" : ""}>
       <strong>${esc(event.title)} · ${esc(event.progress)}%</strong>${esc(event.comment)}
       <small>${Number(event.gap_km) > 0 ? `Écart : ${Number(event.gap_km).toFixed(1)} km` : "Peloton groupé"}${event.dropped_rider ? ` · Lâché : ${esc(event.dropped_rider)}` : ""}</small>
     </li>`).join("")}</ol>
@@ -1734,7 +1804,7 @@ function raceStoryMarkup(race) {
 }
 
 function replayRaceStory() {
-  clearInterval(raceReplayTimer);
+  clearTimeout(raceReplayTimer);
   const events = [...document.querySelectorAll(".race-story .race-timeline li")];
   const button = $("race-replay");
   if (!events.length || !button) return;

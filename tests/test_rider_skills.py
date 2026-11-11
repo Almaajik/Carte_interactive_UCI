@@ -41,7 +41,7 @@ class RiderSkillTests(unittest.TestCase):
         for rider in self.riders:
             if normalize_name(rider["rider_name"]) in MANUAL_OVERRIDES:
                 continue
-            for skill in ("mountain", "sprint", "rouleur"):
+            for skill in ("mountain", "sprint"):
                 evidence = rider["specialtyResults"][skill]
                 expected = min(
                     100,
@@ -49,6 +49,42 @@ class RiderSkillTests(unittest.TestCase):
                 )
                 with self.subTest(rider=rider["rider_name"], skill=skill):
                     self.assertEqual(expected, rider[skill])
+
+    def test_rouleur_rating_includes_capped_all_rounder_bonus(self):
+        rouleur_values = set()
+        for rider in self.riders:
+            if normalize_name(rider["rider_name"]) in MANUAL_OVERRIDES:
+                continue
+            results = rider["specialtyResults"]
+            rouleur = results["rouleur"]
+            other_top10s = results["mountain"]["top10"] + results["sprint"]["top10"]
+            versatility_bonus = min(12, round(other_top10s**0.5 * 3))
+            expected = min(
+                100,
+                20 + rouleur["top10"] * 3 + rouleur["podiums"] * 4
+                + rouleur["wins"] * 6 + versatility_bonus,
+            )
+            with self.subTest(rider=rider["rider_name"]):
+                self.assertEqual(expected, rider["rouleur"])
+            rouleur_values.add(rider["rouleur"])
+
+        self.assertGreaterEqual(len(rouleur_values), 25)
+        self.assertLess(sum(rider["rouleur"] == 20 for rider in self.riders), 200)
+
+    def test_supabase_rouleur_migration_matches_the_rider_catalogue(self):
+        migration = (
+            ROOT / "supabase" / "migrations" / "202611110007_rider_rouleur_variety.sql"
+        ).read_text(encoding="utf-8")
+        rows = re.findall(r"\('([^']+)', (\d+), (\d+), (\d+)\)", migration)
+        expected = {
+            rider["rider_id"]: (rider["mountain"], rider["sprint"], rider["rouleur"])
+            for rider in self.riders
+        }
+        actual = {
+            rider_id: (int(mountain), int(sprint), int(rouleur))
+            for rider_id, mountain, sprint, rouleur in rows
+        }
+        self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":
